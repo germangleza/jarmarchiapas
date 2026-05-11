@@ -788,6 +788,7 @@
       transition: var(--transition);
     }
     .sucursal-btn:hover { background: var(--azul-medio); transform: translateY(-1px); box-shadow: 0 6px 20px var(--sombra-fuerte); }
+    .sucursal-card .sucursal-btn { display: flex; justify-content: center; }
     @media (max-width: 600px) {
       .sucursales-grid { grid-template-columns: 1fr; }
     }
@@ -908,8 +909,9 @@
       }
       .hero-stat { text-align: center; min-width: 90px; }
       .hero-img { display: none; }
-      .problema-inner { grid-template-columns: 1fr; gap: 40px; }
-      .problema-img-wrap { display: none; }
+      .problema-inner { grid-template-columns: 1fr; gap: 32px; }
+      .problema-img-wrap { display: block; }
+      .problema-img-frame { aspect-ratio: 4/3; }
       .pilares, .dif-grid, .servicios-grid { grid-template-columns: 1fr; }
       .stats-bar { grid-template-columns: repeat(2, 1fr); }
       .testimonios { grid-template-columns: 1fr; }
@@ -970,7 +972,7 @@
           60 años<br><em>viendo</em><br>por ti.
         </h1>
         <p class="hero-sub reveal delay-2">
-          Somos la óptica de referencia en Tuxtla Gutiérrez. Diagnóstico médico real, lentes que funcionan y estilo que te queda en un solo lugar, con la experiencia que solo dan seis décadas.
+          Somos la Clínica Óptica Boutique de referencia en Tuxtla Gutiérrez y Chiapas. Diagnóstico médico real, lentes que funcionan y estilo que te queda — todo en un solo lugar, con la experiencia que solo dan seis décadas.
         </p>
         <div class="hero-actions reveal delay-3">
           <a href="https://wa.me/529611855475?text=Hola,%20me%20gustar%C3%ADa%20agendar%20mi%20estudio%20visual" target="_blank" class="btn-primary">
@@ -1024,7 +1026,7 @@
         <span class="trust-icon">🏆</span>
         <div>
           <strong>+60 años</strong>
-          <span>En Chiapas</span>
+          <span>En Tuxtla Gutiérrez</span>
         </div>
       </div>
       <div class="trust-item">
@@ -1229,11 +1231,11 @@
           <div class="sucursal-badge">Sucursal 1</div>
           <h3>Plaza Cedros, Col. Arboledas</h3>
           <p>Tuxtla Gutiérrez, Chiapas</p>
-          <a href="https://maps.app.goo.gl/g2ZZd4kXs5LiX5H57" target="_blank" class="sucursal-btn" style="margin-bottom:10px;justify-content:center;">
+          <a href="https://maps.app.goo.gl/g2ZZd4kXs5LiX5H57" target="_blank" class="sucursal-btn" style="margin-bottom:10px;">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
             Ver en Google Maps
           </a>
-          <a href="https://wa.me/529612406013?text=Hola,%20me%20gustar%C3%ADa%20agendar%20una%20cita%20en%20%C3%93pticas%20Jarmar%20Plaza%20Cedros" target="_blank" class="sucursal-btn" style="background:#25D366;justify-content:center;">
+          <a href="https://wa.me/529612406013?text=Hola,%20me%20gustar%C3%ADa%20agendar%20una%20cita%20en%20%C3%93pticas%20Jarmar%20Plaza%20Cedros" target="_blank" class="sucursal-btn" style="background:#25D366;">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.117.549 4.107 1.514 5.836L.057 23.215a.75.75 0 00.918.899l5.444-1.428A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
             WhatsApp · 961 240 6013
           </a>
@@ -1243,11 +1245,11 @@
           <div class="sucursal-badge">Sucursal 2</div>
           <h3>Plaza Crystal</h3>
           <p>Tuxtla Gutiérrez, Chiapas</p>
-          <a href="https://maps.app.goo.gl/3cwL8wvXXwQtokMz9" target="_blank" class="sucursal-btn" style="margin-bottom:10px;justify-content:center;">
+          <a href="https://maps.app.goo.gl/3cwL8wvXXwQtokMz9" target="_blank" class="sucursal-btn" style="margin-bottom:10px;">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
             Ver en Google Maps
           </a>
-          <a href="https://wa.me/529611855475?text=Hola,%20me%20gustar%C3%ADa%20agendar%20una%20cita%20en%20%C3%93pticas%20Jarmar%20Plaza%20Crystal" target="_blank" class="sucursal-btn" style="background:#25D366;justify-content:center;">
+          <a href="https://wa.me/529611855475?text=Hola,%20me%20gustar%C3%ADa%20agendar%20una%20cita%20en%20%C3%93pticas%20Jarmar%20Plaza%20Crystal" target="_blank" class="sucursal-btn" style="background:#25D366;">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.117.549 4.107 1.514 5.836L.057 23.215a.75.75 0 00.918.899l5.444-1.428A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
             WhatsApp · 961 185 5475
           </a>
@@ -1398,7 +1400,7 @@
       <p class="cta-sub reveal delay-2">No esperes a que los síntomas empeoren. En Jarmar te atendemos con calidez, precisión y 60 años de experiencia respaldándote. Agenda hoy — es fácil, rápido y sin compromiso.</p>
       <div class="cta-actions reveal delay-3">
         <a href="https://wa.me/529611855475?text=Hola,%20me%20gustar%C3%ADa%20agendar%20mi%20estudio%20visual%20en%20%C3%93pticas%20Jarmar" target="_blank" class="btn-whatsapp">
-          <svg viewBox="0 0 24 24" width="22" height="22" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/><path d="M11.999 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.985-1.31A9.945 9.945 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z" fill-rule="evenodd" clip-rule="evenodd"/></svg>
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.999 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.985-1.31A9.945 9.945 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z" fill-rule="evenodd" clip-rule="evenodd"/></svg>
           Agenda por WhatsApp ahora
         </a>
         <a href="#servicios" class="btn-secondary" style="border-color:rgba(255,255,255,0.4);">
@@ -1475,7 +1477,7 @@
     <div class="wa-label">¡Agenda tu cita aquí!</div>
     <a href="https://wa.me/529611855475?text=Hola,%20me%20gustar%C3%ADa%20agendar%20mi%20estudio%20visual%20en%20%C3%93pticas%20Jarmar" target="_blank" class="wa-btn" aria-label="WhatsApp Ópticas Jarmar">
       <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/>
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
         <path d="M11.999 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.985-1.31A9.945 9.945 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/>
       </svg>
     </a>
@@ -1524,5 +1526,3 @@
       setTimeout(() => el.classList.add('visible'), 100);
     });
   </script>
-</body>
-</html>
