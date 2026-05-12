@@ -419,11 +419,7 @@
     }
     .btn-secondary:hover { border-color: rgba(255,255,255,0.7); background: rgba(255,255,255,0.08); }
     .hero-stats {
-      display: flex;
-      gap: 32px;
-      margin-top: 48px;
-      padding-top: 36px;
-      border-top: 1px solid rgba(255,255,255,0.15);
+      display: none;
     }
     .hero-stat strong { display: block; font-family: var(--font-display); font-size: 2rem; font-weight: 900; color: var(--blanco); line-height: 1; }
     .hero-stat span { font-size: 0.78rem; color: rgba(255,255,255,0.65); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 4px; display: block; }
@@ -482,8 +478,10 @@
     }
     .trust-item {
       display: flex;
+      flex-direction: column;
       align-items: center;
-      gap: 12px;
+      text-align: center;
+      gap: 6px;
       padding: 12px 32px;
       border-right: 1px solid rgba(255,255,255,0.12);
       color: var(--blanco);
