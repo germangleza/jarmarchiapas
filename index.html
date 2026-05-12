@@ -6,9 +6,57 @@
   <title>Ópticas Jarmar Tuxtla | Clínica Óptica Boutique</title>
   <meta name="description" content="60 años cuidando tu salud visual en Tuxtla. Diagnóstico de precisión, lentes graduados, de contacto, luz azul y nuestra línea Jarmar Eyewear. Agenda hoy." />
   <meta name="keywords" content="óptica tuxtla, lentes graduados tuxtla, estudio visual tuxtla, lentes de contacto tuxtla, lentes para niños tuxtla" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://jarmarchiapas.vercel.app/" />
+  <meta property="og:title" content="Ópticas Jarmar Tuxtla | Clínica Óptica Boutique" />
+  <meta property="og:description" content="60 años cuidando tu salud visual en Tuxtla. Diagnóstico de precisión, lentes graduados, de contacto, luz azul y nuestra línea Jarmar Eyewear. Agenda hoy." />
+  <meta property="og:image" content="https://jarmarchiapas.vercel.app/IMAGEN%201.jpg" />
+  <meta property="og:locale" content="es_MX" />
+  <meta property="og:site_name" content="Ópticas Jarmar" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ópticas Jarmar Tuxtla | Clínica Óptica Boutique" />
+  <meta name="twitter:description" content="60 años cuidando tu salud visual en Tuxtla. Diagnóstico de precisión, lentes graduados, de contacto, luz azul y nuestra línea Jarmar Eyewear." />
+  <meta name="twitter:image" content="https://jarmarchiapas.vercel.app/IMAGEN%201.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <!-- Schema.org LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Ópticas Jarmar",
+    "description": "Clínica Óptica Boutique con más de 60 años de experiencia en Tuxtla Gutiérrez, Chiapas.",
+    "url": "https://jarmarchiapas.vercel.app/",
+    "image": "https://jarmarchiapas.vercel.app/IMAGEN%201.jpg",
+    "logo": "https://jarmarchiapas.vercel.app/LogoS%20blanco.png",
+    "telephone": "+52-961-185-5475",
+    "priceRange": "$$",
+    "openingHours": "Mo-Sa 09:00-20:00",
+    "address": [
+      {
+        "@type": "PostalAddress",
+        "streetAddress": "Plaza Cedros, Col. Arboledas",
+        "addressLocality": "Tuxtla Gutiérrez",
+        "addressRegion": "Chiapas",
+        "addressCountry": "MX"
+      },
+      {
+        "@type": "PostalAddress",
+        "streetAddress": "Plaza Crystal",
+        "addressLocality": "Tuxtla Gutiérrez",
+        "addressRegion": "Chiapas",
+        "addressCountry": "MX"
+      }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/share/1AGdJJmuMo/?mibextid=wwXIfr",
+      "https://www.instagram.com/opticasjarmarchiapas"
+    ]
+  }
+  </script>
   <style>
     /* ===================== VARIABLES ===================== */
     :root {
@@ -936,7 +984,8 @@
 <body>
 
   <!-- ===================== NAVBAR ===================== -->
-  <nav class="navbar" id="navbar">
+  <header>
+  <nav class="navbar" id="navbar" aria-label="Navegación principal">
     <div class="container navbar-inner">
       <a href="#" class="logo">
         <div class="logo-mark"><img src="LogoS blanco.png" alt="Ópticas Jarmar" /></div>
@@ -958,9 +1007,12 @@
       </div>
     </div>
   </nav>
+  </header>
+
+  <main id="contenido-principal">
 
   <!-- ===================== HERO ===================== -->
-  <section class="hero" id="inicio">
+  <section class="hero" id="inicio" aria-label="Introducción">
     <div class="hero-orb hero-orb-1"></div>
     <div class="hero-orb hero-orb-2"></div>
     <div class="container hero-inner">
@@ -1051,7 +1103,7 @@
   </div>
 
   <!-- ===================== PROBLEMA ===================== -->
-  <section class="problema" id="problema">
+  <section class="problema" id="problema" aria-label="Por qué revisar tu vista">
     <div class="container problema-inner">
       <div class="problema-img-wrap reveal-left">
         <div class="problema-img-frame">
@@ -1082,7 +1134,7 @@
   </section>
 
   <!-- ===================== SOLUCIÓN ===================== -->
-  <section class="solucion" id="solucion">
+  <section class="solucion" id="solucion" aria-label="Nuestra solución integral">
     <div class="container">
       <div class="solucion-header reveal">
         <span class="section-tag">La solución completa</span>
@@ -1136,7 +1188,7 @@
   </section>
 
   <!-- ===================== DIFERENCIADORES ===================== -->
-  <section class="diferenciadores" id="diferenciadores">
+  <section class="diferenciadores" id="diferenciadores" aria-label="Por qué elegirnos">
     <div class="container">
       <div class="dif-header reveal">
         <span class="section-tag">Por qué elegirnos</span>
@@ -1160,7 +1212,7 @@
   </section>
 
   <!-- ===================== SERVICIOS ===================== -->
-  <section class="servicios" id="servicios">
+  <section class="servicios" id="servicios" aria-label="Nuestros servicios">
     <div class="container">
       <div class="servicios-header reveal">
         <span class="section-tag">Todo lo que necesitas</span>
@@ -1208,7 +1260,7 @@
   </section>
 
   <!-- ===================== SUCURSALES ===================== -->
-  <section class="sucursales" id="sucursales">
+  <section class="sucursales" id="sucursales" aria-label="Nuestras sucursales">
     <div class="container">
       <div class="sucursales-header reveal">
         <span class="section-tag">Encuéntranos</span>
@@ -1249,7 +1301,7 @@
   </section>
 
   <!-- ===================== PRUEBA SOCIAL ===================== -->
-  <section class="prueba-social" id="testimonios">
+  <section class="prueba-social" id="testimonios" aria-label="Testimonios y estadísticas">
     <div class="container">
       <div class="ps-header reveal">
         <span class="section-tag">Lo que dicen nuestros pacientes</span>
@@ -1310,7 +1362,7 @@
   </section>
 
   <!-- ===================== FAQ ===================== -->
-  <section class="faq" id="faq">
+  <section class="faq" id="faq" aria-label="Preguntas frecuentes">
     <div class="container faq-inner">
       <div class="faq-left reveal-left">
         <span class="section-tag">Preguntas frecuentes</span>
@@ -1381,7 +1433,7 @@
   </section>
 
   <!-- ===================== CTA FINAL ===================== -->
-  <section class="cta-final">
+  <section class="cta-final" aria-label="Agenda tu cita">
     <div class="cta-orb cta-orb-1"></div>
     <div class="cta-orb cta-orb-2"></div>
     <div class="container">
@@ -1401,8 +1453,10 @@
     </div>
   </section>
 
+  </main>
+
   <!-- ===================== FOOTER ===================== -->
-  <footer>
+  <footer aria-label="Pie de página">
     <div class="container">
       <div class="footer-inner">
         <div class="footer-brand">
@@ -1516,3 +1570,5 @@
       setTimeout(() => el.classList.add('visible'), 100);
     });
   </script>
+</body>
+</html>
