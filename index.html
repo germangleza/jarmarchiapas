@@ -19,6 +19,7 @@
   <meta name="twitter:title" content="Ópticas Jarmar Tuxtla | Clínica Óptica Boutique" />
   <meta name="twitter:description" content="60 años cuidando tu salud visual en Tuxtla. Diagnóstico de precisión, lentes graduados, de contacto, luz azul y nuestra línea Jarmar Eyewear." />
   <meta name="twitter:image" content="https://jarmarchiapas.vercel.app/IMAGEN%201.jpg" />
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -26,34 +27,159 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Ópticas Jarmar",
-    "description": "Clínica Óptica Boutique con más de 60 años de experiencia en Tuxtla Gutiérrez, Chiapas.",
-    "url": "https://jarmarchiapas.vercel.app/",
-    "image": "https://jarmarchiapas.vercel.app/IMAGEN%201.jpg",
-    "logo": "https://jarmarchiapas.vercel.app/LogoS%20blanco.png",
-    "telephone": "+52-961-185-5475",
-    "priceRange": "$$",
-    "openingHours": "Mo-Sa 09:00-20:00",
-    "address": [
+    "@graph": [
       {
-        "@type": "PostalAddress",
-        "streetAddress": "Plaza Cedros, Col. Arboledas",
-        "addressLocality": "Tuxtla Gutiérrez",
-        "addressRegion": "Chiapas",
-        "addressCountry": "MX"
-      },
-      {
-        "@type": "PostalAddress",
-        "streetAddress": "Plaza Crystal",
-        "addressLocality": "Tuxtla Gutiérrez",
-        "addressRegion": "Chiapas",
-        "addressCountry": "MX"
+        "@type": ["LocalBusiness", "Optician"],
+        "@id": "https://jarmarchiapas.vercel.app/#business",
+        "name": "Ópticas Jarmar",
+        "alternateName": "Jarmar Eyewear",
+        "description": "Clínica Óptica Boutique con más de 60 años de experiencia en Tuxtla Gutiérrez, Chiapas. Diagnóstico clínico ocular, lentes graduados, de contacto, luz azul y línea exclusiva Jarmar Eyewear.",
+        "url": "https://jarmarchiapas.vercel.app/",
+        "logo": "https://jarmarchiapas.vercel.app/LogoS%20blanco.png",
+        "image": "https://jarmarchiapas.vercel.app/IMAGEN%201.jpg",
+        "telephone": "+52-961-185-5475",
+        "priceRange": "$$",
+        "foundingDate": "1964",
+        "currenciesAccepted": "MXN",
+        "paymentAccepted": "Cash, Credit Card, Debit Card",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Plaza Crystal",
+          "addressLocality": "Tuxtla Gutiérrez",
+          "addressRegion": "Chiapas",
+          "addressCountry": "MX"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+            "opens": "09:00",
+            "closes": "20:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Saturday",
+            "opens": "09:00",
+            "closes": "18:00"
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "200"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Servicios Ópticos Jarmar",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Estudio de la Vista",
+                "description": "Examen visual completo con equipos de diagnóstico de alta precisión para adultos y niños."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Lentes Graduados",
+                "description": "Armazones y lentes de la mejor calidad adaptados a cada graduación."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Lentes de Luz Azul",
+                "description": "Protección contra el daño de pantallas para personas con uso intensivo de dispositivos digitales."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Lentes de Sol",
+                "description": "Con y sin graduación, protección UV completa para cada ocasión."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Lentes de Contacto",
+                "description": "Convencionales y especializados, incluyendo lentes esclerales para córneas irregulares."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Examen Visual Pediátrico",
+                "description": "Protocolo especial para niños desde los 3 años. Detección temprana de problemas visuales."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Jarmar Eyewear",
+                "description": "Línea exclusiva de armazones diseñada por Ópticas Jarmar."
+              }
+            }
+          ]
+        },
+        "department": [
+          {
+            "@type": ["LocalBusiness", "Optician"],
+            "name": "Ópticas Jarmar — Plaza Cedros",
+            "telephone": "+52-961-240-6013",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Plaza Cedros, Col. Arboledas",
+              "addressLocality": "Tuxtla Gutiérrez",
+              "addressRegion": "Chiapas",
+              "addressCountry": "MX"
+            }
+          },
+          {
+            "@type": ["LocalBusiness", "Optician"],
+            "name": "Ópticas Jarmar — Plaza Crystal",
+            "telephone": "+52-961-185-5475",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Plaza Crystal",
+              "addressLocality": "Tuxtla Gutiérrez",
+              "addressRegion": "Chiapas",
+              "addressCountry": "MX"
+            }
+          }
+        ],
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+52-961-185-5475",
+            "contactType": "customer service",
+            "areaServed": "MX",
+            "availableLanguage": "Spanish"
+          },
+          {
+            "@type": "ContactPoint",
+            "telephone": "+52-961-240-6013",
+            "contactType": "customer service",
+            "areaServed": "MX",
+            "availableLanguage": "Spanish"
+          }
+        ],
+        "sameAs": [
+          "https://www.facebook.com/share/1AGdJJmuMo/?mibextid=wwXIfr",
+          "https://www.instagram.com/opticasjarmarchiapas",
+          "https://wa.me/529611855475"
+        ]
       }
-    ],
-    "sameAs": [
-      "https://www.facebook.com/share/1AGdJJmuMo/?mibextid=wwXIfr",
-      "https://www.instagram.com/opticasjarmarchiapas"
     ]
   }
   </script>
