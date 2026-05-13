@@ -345,6 +345,18 @@
     .hero-orb-2 { width: 350px; height: 350px; background: #0D2B6B; bottom: -80px; left: -60px; animation-delay: -4s; }
     @keyframes float { 0%,100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-20px) scale(1.04); } }
 
+    /* Hexágonos decorativos */
+    .hex-bg {
+      position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 1;
+    }
+    .hex-bg svg { position: absolute; }
+    .hex-1  { top: 6%;  left: 3%;   opacity: 0.07; animation: float 10s ease-in-out infinite; }
+    .hex-2  { top: 20%; right: 8%;  opacity: 0.06; animation: float 13s ease-in-out infinite reverse; }
+    .hex-3  { top: 60%; left: 12%;  opacity: 0.05; animation: float 11s ease-in-out infinite 2s; }
+    .hex-4  { top: 75%; right: 5%;  opacity: 0.08; animation: float 9s ease-in-out infinite 1s; }
+    .hex-5  { top: 40%; left: 50%;  opacity: 0.04; animation: float 14s ease-in-out infinite 3s; }
+    .hex-6  { top: 10%; right: 35%; opacity: 0.05; animation: float 12s ease-in-out infinite 0.5s; }
+
     .hero-inner {
       position: relative;
       z-index: 2;
@@ -1141,6 +1153,15 @@
   <section class="hero" id="inicio" aria-label="Introducción">
     <div class="hero-orb hero-orb-1"></div>
     <div class="hero-orb hero-orb-2"></div>
+    <!-- Hexágonos decorativos -->
+    <div class="hex-bg" aria-hidden="true">
+      <svg class="hex-1" width="180" height="208" viewBox="0 0 180 208" fill="none"><polygon points="90,4 176,52 176,156 90,204 4,156 4,52" stroke="white" stroke-width="2" fill="none"/></svg>
+      <svg class="hex-2" width="260" height="300" viewBox="0 0 260 300" fill="none"><polygon points="130,6 254,75 254,225 130,294 6,225 6,75" stroke="white" stroke-width="2" fill="white" fill-opacity="0.03"/></svg>
+      <svg class="hex-3" width="120" height="138" viewBox="0 0 120 138" fill="none"><polygon points="60,3 117,34 117,104 60,135 3,104 3,34" stroke="white" stroke-width="1.5" fill="none"/></svg>
+      <svg class="hex-4" width="200" height="232" viewBox="0 0 200 232" fill="none"><polygon points="100,4 196,56 196,176 100,228 4,176 4,56" stroke="white" stroke-width="2" fill="white" fill-opacity="0.02"/></svg>
+      <svg class="hex-5" width="320" height="370" viewBox="0 0 320 370" fill="none"><polygon points="160,6 314,90 314,280 160,364 6,280 6,90" stroke="white" stroke-width="1.5" fill="none"/></svg>
+      <svg class="hex-6" width="90" height="104" viewBox="0 0 90 104" fill="none"><polygon points="45,3 87,26 87,78 45,101 3,78 3,26" stroke="white" stroke-width="1.5" fill="white" fill-opacity="0.06"/></svg>
+    </div>
     <div class="container hero-inner">
       <div class="hero-content">
         <div class="hero-badge reveal">
