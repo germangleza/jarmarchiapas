@@ -597,7 +597,7 @@
     .pilar {
       background: var(--blanco);
       border-radius: 24px;
-      padding: 40px 32px;
+      padding: 28px 28px;
       box-shadow: 0 4px 24px var(--sombra);
       position: relative;
       overflow: hidden;
@@ -605,13 +605,7 @@
       border: 1px solid rgba(26,91,181,0.08);
     }
     .pilar:hover { transform: translateY(-6px); box-shadow: 0 16px 48px var(--sombra-fuerte); }
-    .pilar::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 4px;
-      background: var(--gradiente-hero);
-    }
+    .pilar::before { display: none; }
     .pilar-num {
       font-family: var(--font-display);
       font-size: 4rem;
@@ -1309,7 +1303,6 @@
       <div class="pilares">
         <div class="pilar reveal delay-1">
           <div class="pilar-num">01</div>
-          <div class="pilar-icon">🏥</div>
           <h3>Clínica</h3>
           <p>Contamos con equipos de diagnóstico de alta precisión para identificar a tiempo condiciones oculares antes de que afecten tu calidad de vida.</p>
           <ul class="pilar-list">
@@ -1321,7 +1314,6 @@
         </div>
         <div class="pilar reveal delay-2">
           <div class="pilar-num">02</div>
-          <div class="pilar-icon">👓</div>
           <h3>Óptica</h3>
           <p>Todo tipo de soluciones visuales para toda la familia, desde lentes graduados hasta contactos especializados.</p>
           <ul class="pilar-list">
@@ -1333,7 +1325,6 @@
         </div>
         <div class="pilar reveal delay-3">
           <div class="pilar-num">03</div>
-          <div class="pilar-icon">💎</div>
           <h3>Boutique</h3>
           <p>Encuentra tu estilo con nuestra selección de armazones y diseños exclusivos, incluyendo nuestra línea propia Jarmar Eyewear.</p>
           <ul class="pilar-list">
