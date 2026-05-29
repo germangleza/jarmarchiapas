@@ -1,7 +1,7 @@
 # robots.txt — Ópticas Jarmar
-# https://jarmarchiapas.vercel.app/
+# https://chiapas.jarmar.com/
 
-# Motores de búsqueda tradicionales
+# ── Motores de búsqueda tradicionales ─────────────────────────────────────────
 User-agent: Googlebot
 Allow: /
 
@@ -20,11 +20,14 @@ Allow: /
 User-agent: YandexBot
 Allow: /
 
-# Crawlers de IA generativa
+# ── Crawlers de IA generativa ──────────────────────────────────────────────────
 User-agent: GPTBot
 Allow: /
 
 User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
 Allow: /
 
 User-agent: ClaudeBot
@@ -33,7 +36,28 @@ Allow: /
 User-agent: anthropic-ai
 Allow: /
 
+User-agent: Claude-Web
+Allow: /
+
 User-agent: PerplexityBot
+Allow: /
+
+User-agent: Gemini-Extended-Thinking
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+User-agent: Cohere-ai
+Allow: /
+
+User-agent: cohere-ai
 Allow: /
 
 User-agent: Omgilibot
@@ -42,11 +66,20 @@ Allow: /
 User-agent: YouBot
 Allow: /
 
-User-agent: cohere-ai
+User-agent: iaskspider
 Allow: /
 
-# Todos los demás
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# ── Todos los demás ────────────────────────────────────────────────────────────
 User-agent: *
 Allow: /
 
-Sitemap: https://jarmarchiapas.vercel.app/sitemap.xml
+# ── Archivos de IA legibles ────────────────────────────────────────────────────
+# llms.txt: https://chiapas.jarmar.com/llms.txt
+
+Sitemap: https://chiapas.jarmar.com/sitemap.xml

@@ -1,50 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <!-- Página principal -->
   <url>
-    <loc>https://jarmarchiapas.vercel.app/</loc>
-    <lastmod>2026-05-12</lastmod>
+    <loc>https://chiapas.jarmar.com/</loc>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://chiapas.jarmar.com/"/>
   </url>
 
   <!-- Sección: Servicios -->
   <url>
-    <loc>https://jarmarchiapas.vercel.app/#servicios</loc>
-    <lastmod>2026-05-12</lastmod>
+    <loc>https://chiapas.jarmar.com/#servicios</loc>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- Sección: Nosotros / Diferenciadores -->
+  <!-- Sección: Por qué elegirnos / Diferenciadores -->
   <url>
-    <loc>https://jarmarchiapas.vercel.app/#diferenciadores</loc>
-    <lastmod>2026-05-12</lastmod>
+    <loc>https://chiapas.jarmar.com/#diferenciadores</loc>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Sección: Sucursales -->
+  <!-- Sección: Sucursales / Contacto -->
   <url>
-    <loc>https://jarmarchiapas.vercel.app/#sucursales</loc>
-    <lastmod>2026-05-12</lastmod>
+    <loc>https://chiapas.jarmar.com/#sucursales</loc>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- Sección: Testimonios -->
   <url>
-    <loc>https://jarmarchiapas.vercel.app/#testimonios</loc>
-    <lastmod>2026-05-12</lastmod>
+    <loc>https://chiapas.jarmar.com/#testimonios</loc>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <!-- Sección: Preguntas Frecuentes -->
   <url>
-    <loc>https://jarmarchiapas.vercel.app/#faq</loc>
-    <lastmod>2026-05-12</lastmod>
+    <loc>https://chiapas.jarmar.com/#faq</loc>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
