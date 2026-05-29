@@ -640,14 +640,12 @@
     /* ===================== DIFERENCIADORES ===================== */
     .diferenciadores {
       padding: 100px 0;
-      background: var(--azul-oscuro);
+      background: var(--gradiente-hero);
       position: relative;
       overflow: hidden;
     }
     .diferenciadores::before {
-      content: '';
-      position: absolute; inset: 0;
-      background: url("data:image/svg+xml,%3Csvg width='135' height='78' viewBox='0 0 135 78' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='1.5' stroke-opacity='0.06'%3E%3Cpolygon points='113%2C39 90%2C0 45%2C0 23%2C39 45%2C78 90%2C78'/%3E%3Cpolygon points='45%2C0 23%2C-39 -23%2C-39 -45%2C0 -23%2C39 23%2C39'/%3E%3Cpolygon points='180%2C0 158%2C-39 113%2C-39 90%2C0 113%2C39 158%2C39'/%3E%3Cpolygon points='45%2C78 23%2C39 -23%2C39 -45%2C78 -23%2C117 23%2C117'/%3E%3Cpolygon points='180%2C78 158%2C39 113%2C39 90%2C78 113%2C117 158%2C117'/%3E%3C/g%3E%3C/svg%3E");
+      display: none;
     }
     .diferenciadores .container { position: relative; z-index: 2; }
     .diferenciadores .section-tag { background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.8); }
@@ -1184,17 +1182,17 @@
     </div>
     <div class="container hero-inner">
       <div class="hero-content">
-        <div class="hero-badge reveal">
+        <div class="hero-badge reveal-left">
           <span class="hero-badge-dot"></span>
           Clínica Óptica Boutique · Tuxtla Gutiérrez
         </div>
-        <h1 class="hero-headline reveal delay-1">
+        <h1 class="hero-headline reveal-left delay-1">
           60 años<br><em>viendo</em><br>por ti y tu familia.
         </h1>
-        <p class="hero-sub reveal delay-2">
+        <p class="hero-sub reveal-left delay-2">
           Somos la óptica de referencia en Tuxtla y Chiapas. Diagnóstico médico real, lentes que funcionan y estilo que te queda, todo en un solo lugar, con la experiencia que solo dan seis décadas.
         </p>
-        <div class="hero-actions reveal delay-3">
+        <div class="hero-actions reveal-left delay-3">
           <a href="https://wa.me/529611855475?text=Hola,%20me%20gustar%C3%ADa%20agendar%20mi%20estudio%20visual" target="_blank" class="btn-primary">
             Agenda tu cita
           </a>
@@ -1202,7 +1200,7 @@
             Ver servicios →
           </a>
         </div>
-        <div class="hero-stats reveal delay-4">
+        <div class="hero-stats reveal-left delay-4">
           <div class="hero-stat">
             <strong>+60</strong>
             <span>Años de experiencia</span>
@@ -1356,21 +1354,30 @@
 
   <!-- ===================== DIFERENCIADORES ===================== -->
   <section class="diferenciadores" id="diferenciadores" aria-label="Por qué elegirnos">
+    <!-- Hexágonos decorativos (mismo que hero) -->
+    <div class="hex-bg" aria-hidden="true">
+      <svg class="hex-1" width="208" height="180" viewBox="0 0 208 180" fill="none"><polygon points="204,90 156,4 52,4 4,90 52,176 156,176" stroke="white" stroke-width="2" fill="none"/></svg>
+      <svg class="hex-2" width="300" height="260" viewBox="0 0 300 260" fill="none"><polygon points="294,130 225,6 75,6 6,130 75,254 225,254" stroke="white" stroke-width="2" fill="white" fill-opacity="0.03"/></svg>
+      <svg class="hex-3" width="138" height="120" viewBox="0 0 138 120" fill="none"><polygon points="135,60 104,3 34,3 3,60 34,117 104,117" stroke="white" stroke-width="1.5" fill="none"/></svg>
+      <svg class="hex-4" width="232" height="200" viewBox="0 0 232 200" fill="none"><polygon points="228,100 174,4 58,4 4,100 58,196 174,196" stroke="white" stroke-width="2" fill="white" fill-opacity="0.02"/></svg>
+      <svg class="hex-5" width="370" height="320" viewBox="0 0 370 320" fill="none"><polygon points="364,160 277,6 92,6 6,160 92,314 277,314" stroke="white" stroke-width="1.5" fill="none"/></svg>
+      <svg class="hex-6" width="104" height="90" viewBox="0 0 104 90" fill="none"><polygon points="101,45 78,3 26,3 3,45 26,87 78,87" stroke="white" stroke-width="1.5" fill="white" fill-opacity="0.06"/></svg>
+    </div>
     <div class="container">
       <div class="dif-header reveal">
         <span class="section-tag">Por qué elegirnos</span>
         <h2 class="section-title">Por qué Chiapas elige Jarmar<br>desde hace 60 años</h2>
       </div>
       <div class="dif-grid">
-        <div class="dif-card reveal delay-1">
+        <div class="dif-card reveal">
           <h3>Diagnóstico médico real</h3>
           <p>No solo medimos tu graduación, detectamos glaucoma, retinopatía y más antes de que afecten tu visión.</p>
         </div>
-        <div class="dif-card reveal delay-2">
+        <div class="dif-card reveal" style="transition-delay:0.45s">
           <h3>Atención para toda la familia</h3>
           <p>Protocolos especializados para niños desde los 3 años, adultos mayores y pacientes con diabetes.</p>
         </div>
-        <div class="dif-card reveal delay-3">
+        <div class="dif-card reveal" style="transition-delay:0.9s">
           <h3>Estilo que es tuyo</h3>
           <p>Con Jarmar Eyewear encontrarás el armazón que no solo te hace ver mejor, te hace verte increíble.</p>
         </div>
@@ -1392,32 +1399,32 @@
         <p class="section-subtitle">Un solo lugar para cuidar la salud visual de toda tu familia.</p>
       </div>
       <div class="servicios-grid">
-        <div class="servicio-card reveal delay-1">
+        <div class="servicio-card reveal-left">
           <span class="servicio-icon">🔬</span>
           <h4>Estudio de la Vista</h4>
           <p>Examen visual completo con equipos de diagnóstico de alta precisión para adultos y niños.</p>
         </div>
-        <div class="servicio-card reveal delay-2">
+        <div class="servicio-card reveal-left" style="transition-delay:0.15s">
           <span class="servicio-icon">👓</span>
           <h4>Lentes Graduados</h4>
           <p>Amplia selección de armazones y lentes de la mejor calidad adaptados a tu graduación.</p>
         </div>
-        <div class="servicio-card reveal delay-3">
+        <div class="servicio-card reveal-left" style="transition-delay:0.3s">
           <span class="servicio-icon">💻</span>
           <h4>Lentes Luz Azul</h4>
           <p>Protege tus ojos del daño de pantallas con nuestros lentes de bloqueo de luz azul.</p>
         </div>
-        <div class="servicio-card reveal delay-1">
+        <div class="servicio-card reveal-left" style="transition-delay:0.45s">
           <span class="servicio-icon">☀️</span>
           <h4>Lentes de Sol</h4>
           <p>Protección UV y estilo en una sola pieza. Graduados o sin graduar, para cada ocasión.</p>
         </div>
-        <div class="servicio-card reveal delay-2">
+        <div class="servicio-card reveal-left" style="transition-delay:0.6s">
           <span class="servicio-icon">👁️</span>
           <h4>Lentes de Contacto</h4>
           <p>Lentes de contacto convencionales y especializados, incluyendo para córneas irregulares.</p>
         </div>
-        <div class="servicio-card reveal delay-3">
+        <div class="servicio-card reveal-left" style="transition-delay:0.75s">
           <span class="servicio-icon">🧒</span>
           <h4>Examen y Lentes Niños</h4>
           <p>Protocolo especial para pequeños desde los 3 años. Detección temprana para su desempeño escolar.</p>
@@ -1620,7 +1627,6 @@
       <svg class="hex-6" width="104" height="90" viewBox="0 0 104 90" fill="none"><polygon points="101,45 78,3 26,3 3,45 26,87 78,87" stroke="white" stroke-width="1.5" fill="white" fill-opacity="0.06"/></svg>
     </div>
     <div class="container">
-      <span class="section-tag reveal">Sin compromiso · Sin costo de consulta inicial</span>
       <h2 class="cta-title reveal delay-1">Tu próxima cita puede cambiar<br>cómo ves el mundo.</h2>
       <p class="cta-sub reveal delay-2">No esperes a que los síntomas empeoren. En Jarmar te atendemos con calidez, precisión y 60 años de experiencia respaldándote.</p>
       <div class="cta-actions reveal delay-3">
