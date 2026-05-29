@@ -266,6 +266,29 @@
     .delay-3 { transition-delay: 0.3s; }
     .delay-4 { transition-delay: 0.4s; }
 
+    /* Pilar cards: más stagger para que aparezcan uno a uno */
+    .pilares .pilar.delay-1 { transition-delay: 0s; }
+    .pilares .pilar.delay-2 { transition-delay: 0.45s; }
+    .pilares .pilar.delay-3 { transition-delay: 0.9s; }
+
+    /* Sucursal: borde animado giratorio */
+    @property --angle {
+      syntax: '<angle>';
+      initial-value: 0deg;
+      inherits: false;
+    }
+    @keyframes rotate-border { to { --angle: 360deg; } }
+    .sucursal-wrap {
+      border-radius: 26px;
+      background: conic-gradient(from var(--angle), transparent 72%, #3A8FE0 82%, #7EC8F5 88%, #3A8FE0 94%, transparent 100%);
+      padding: 3px;
+      animation: rotate-border 3s linear infinite;
+    }
+    .sucursal-wrap .sucursal-card {
+      border: none;
+      border-radius: 22px;
+    }
+
     /* ===================== NAVBAR ===================== */
     .navbar {
       position: fixed;
@@ -330,9 +353,7 @@
       overflow: hidden;
     }
     .hero::before {
-      content: '';
-      position: absolute; inset: 0;
-      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      display: none;
     }
     .hero-orb {
       position: absolute;
@@ -625,7 +646,7 @@
     .diferenciadores::before {
       content: '';
       position: absolute; inset: 0;
-      background: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M40 0L80 40L40 80L0 40Z'/%3E%3C/g%3E%3C/svg%3E");
+      background: url("data:image/svg+xml,%3Csvg width='60' height='52' viewBox='0 0 60 52' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='15%2C1 45%2C1 59%2C26 45%2C51 15%2C51 1%2C26' fill='none' stroke='%23ffffff' stroke-width='1' stroke-opacity='0.05'/%3E%3C/svg%3E");
     }
     .diferenciadores .container { position: relative; z-index: 2; }
     .diferenciadores .section-tag { background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.8); }
@@ -859,9 +880,7 @@
       text-align: center;
     }
     .cta-final::before {
-      content: '';
-      position: absolute; inset: 0;
-      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/svg%3E");
+      display: none;
     }
     .cta-orb {
       position: absolute;
@@ -1222,25 +1241,25 @@
   <!-- ===================== BARRA DE CONFIANZA ===================== -->
   <div class="trust-bar">
     <div class="container trust-bar-inner">
-      <div class="trust-item">
+      <div class="trust-item reveal-left delay-1">
         <div>
           <strong>+60 años</strong>
           <span>En Tuxtla Gutiérrez</span>
         </div>
       </div>
-      <div class="trust-item">
+      <div class="trust-item reveal-left delay-2">
         <div>
           <strong>Diagnóstico clínico</strong>
           <span>Alta precisión</span>
         </div>
       </div>
-      <div class="trust-item">
+      <div class="trust-item reveal-left delay-3">
         <div>
           <strong>Toda la familia</strong>
           <span>Niños y adultos</span>
         </div>
       </div>
-      <div class="trust-item">
+      <div class="trust-item reveal-left delay-4">
         <div>
           <strong>Jarmar Eyewear</strong>
           <span>Línea propia exclusiva</span>
@@ -1420,33 +1439,37 @@
         <p class="section-subtitle">Visítanos en la ubicación más cercana a ti. Atención personalizada en ambas sucursales.</p>
       </div>
       <div class="sucursales-grid">
-        <div class="sucursal-card reveal delay-1">
-          <span class="sucursal-icon">🏪</span>
-          <div class="sucursal-badge">Sucursal 1</div>
-          <h3>Plaza Cedros, Col. Arboledas</h3>
-          <p>Tuxtla Gutiérrez, Chiapas</p>
-          <a href="https://maps.app.goo.gl/g2ZZd4kXs5LiX5H57" target="_blank" class="sucursal-btn" style="margin-bottom:10px;">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            Ver en Google Maps
-          </a>
-          <a href="https://wa.me/529612406013?text=Hola,%20me%20gustar%C3%ADa%20agendar%20una%20cita%20en%20%C3%93pticas%20Jarmar%20Plaza%20Cedros" target="_blank" class="sucursal-btn" style="background:#25D366;">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.117.549 4.107 1.514 5.836L.057 23.215a.75.75 0 00.918.899l5.444-1.428A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
-            WhatsApp · 961 240 6013
-          </a>
+        <div class="sucursal-wrap reveal delay-1">
+          <div class="sucursal-card">
+            <span class="sucursal-icon">🏪</span>
+            <div class="sucursal-badge">Sucursal 1</div>
+            <h3>Plaza Cedros, Col. Arboledas</h3>
+            <p>Tuxtla Gutiérrez, Chiapas</p>
+            <a href="https://maps.app.goo.gl/g2ZZd4kXs5LiX5H57" target="_blank" class="sucursal-btn" style="margin-bottom:10px;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Ver en Google Maps
+            </a>
+            <a href="https://wa.me/529612406013?text=Hola,%20me%20gustar%C3%ADa%20agendar%20una%20cita%20en%20%C3%93pticas%20Jarmar%20Plaza%20Cedros" target="_blank" class="sucursal-btn" style="background:#25D366;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.117.549 4.107 1.514 5.836L.057 23.215a.75.75 0 00.918.899l5.444-1.428A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+              WhatsApp · 961 240 6013
+            </a>
+          </div>
         </div>
-        <div class="sucursal-card reveal delay-2">
-          <span class="sucursal-icon">🏪</span>
-          <div class="sucursal-badge">Sucursal 2</div>
-          <h3>Plaza Crystal</h3>
-          <p>Tuxtla Gutiérrez, Chiapas</p>
-          <a href="https://maps.app.goo.gl/3cwL8wvXXwQtokMz9" target="_blank" class="sucursal-btn" style="margin-bottom:10px;">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            Ver en Google Maps
-          </a>
-          <a href="https://wa.me/529611855475?text=Hola,%20me%20gustar%C3%ADa%20agendar%20una%20cita%20en%20%C3%93pticas%20Jarmar%20Plaza%20Crystal" target="_blank" class="sucursal-btn" style="background:#25D366;">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.117.549 4.107 1.514 5.836L.057 23.215a.75.75 0 00.918.899l5.444-1.428A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
-            WhatsApp · 961 185 5475
-          </a>
+        <div class="sucursal-wrap reveal delay-2">
+          <div class="sucursal-card">
+            <span class="sucursal-icon">🏪</span>
+            <div class="sucursal-badge">Sucursal 2</div>
+            <h3>Plaza Crystal</h3>
+            <p>Tuxtla Gutiérrez, Chiapas</p>
+            <a href="https://maps.app.goo.gl/3cwL8wvXXwQtokMz9" target="_blank" class="sucursal-btn" style="margin-bottom:10px;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Ver en Google Maps
+            </a>
+            <a href="https://wa.me/529611855475?text=Hola,%20me%20gustar%C3%ADa%20agendar%20una%20cita%20en%20%C3%93pticas%20Jarmar%20Plaza%20Crystal" target="_blank" class="sucursal-btn" style="background:#25D366;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.117.549 4.107 1.514 5.836L.057 23.215a.75.75 0 00.918.899l5.444-1.428A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+              WhatsApp · 961 185 5475
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -1588,6 +1611,15 @@
   <section class="cta-final" aria-label="Agenda tu cita">
     <div class="cta-orb cta-orb-1"></div>
     <div class="cta-orb cta-orb-2"></div>
+    <!-- Hexágonos decorativos -->
+    <div class="hex-bg" aria-hidden="true">
+      <svg class="hex-1" width="180" height="208" viewBox="0 0 180 208" fill="none"><polygon points="90,4 176,52 176,156 90,204 4,156 4,52" stroke="white" stroke-width="2" fill="none"/></svg>
+      <svg class="hex-2" width="260" height="300" viewBox="0 0 260 300" fill="none"><polygon points="130,6 254,75 254,225 130,294 6,225 6,75" stroke="white" stroke-width="2" fill="white" fill-opacity="0.03"/></svg>
+      <svg class="hex-3" width="120" height="138" viewBox="0 0 120 138" fill="none"><polygon points="60,3 117,34 117,104 60,135 3,104 3,34" stroke="white" stroke-width="1.5" fill="none"/></svg>
+      <svg class="hex-4" width="200" height="232" viewBox="0 0 200 232" fill="none"><polygon points="100,4 196,56 196,176 100,228 4,176 4,56" stroke="white" stroke-width="2" fill="white" fill-opacity="0.02"/></svg>
+      <svg class="hex-5" width="320" height="370" viewBox="0 0 320 370" fill="none"><polygon points="160,6 314,90 314,280 160,364 6,280 6,90" stroke="white" stroke-width="1.5" fill="none"/></svg>
+      <svg class="hex-6" width="90" height="104" viewBox="0 0 90 104" fill="none"><polygon points="45,3 87,26 87,78 45,101 3,78 3,26" stroke="white" stroke-width="1.5" fill="white" fill-opacity="0.06"/></svg>
+    </div>
     <div class="container">
       <span class="section-tag reveal">Sin compromiso · Sin costo de consulta inicial</span>
       <h2 class="cta-title reveal delay-1">Tu próxima cita puede cambiar<br>cómo ves el mundo.</h2>
