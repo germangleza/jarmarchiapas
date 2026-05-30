@@ -428,12 +428,13 @@
     .hero-inner {
       position: relative;
       z-index: 2;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
+      display: flex;
+      flex-direction: column;
       align-items: center;
+      text-align: center;
       padding: 120px 0 80px;
     }
+    .hero-img { display: none; }
     .hero-badge {
       display: inline-flex;
       align-items: center;
@@ -467,10 +468,12 @@
       color: rgba(255,255,255,0.82);
       line-height: 1.75;
       margin-bottom: 36px;
-      max-width: 520px;
+      max-width: 600px;
       padding: 0 8px;
+      margin-left: auto;
+      margin-right: auto;
     }
-    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
     .btn-primary {
       display: inline-flex;
       align-items: center;
@@ -1228,10 +1231,10 @@
           Clínica Óptica Boutique · Tuxtla Gutiérrez
         </div>
         <h1 class="hero-headline reveal-left delay-1">
-          60 años<br><em>viendo</em><br>por ti y tu familia.
+          Tu visión en las<br><em>mejores manos.</em>
         </h1>
         <p class="hero-sub reveal-left delay-2">
-          Somos la óptica de referencia en Tuxtla y Chiapas. Diagnóstico médico real, lentes que funcionan y estilo que te queda, todo en un solo lugar, con la experiencia que solo dan seis décadas.
+          Con 60 años de experiencia, somos la óptica de referencia en Tuxtla Gutiérrez. Diagnóstico médico real, lentes que funcionan y estilo que te queda, todo en un solo lugar.
         </p>
         <div class="hero-actions reveal-left delay-3">
           <a href="https://wa.me/529611855475?text=Hola,%20me%20gustar%C3%ADa%20agendar%20mi%20estudio%20visual" target="_blank" class="btn-primary">
