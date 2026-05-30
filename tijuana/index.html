@@ -679,6 +679,16 @@
       50% { box-shadow: 0 6px 24px rgba(37,211,102,0.45), 0 0 0 14px rgba(37,211,102,0.12); }
     }
 
+    /* Hexágonos decorativos */
+    .hex-bg { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 1; }
+    .hex-bg svg { position: absolute; }
+    .hex-1  { top: 6%;  left: 3%;   opacity: 0.07; animation: float 10s ease-in-out infinite; }
+    .hex-2  { top: 20%; right: 8%;  opacity: 0.06; animation: float 13s ease-in-out infinite reverse; }
+    .hex-3  { top: 60%; left: 12%;  opacity: 0.05; animation: float 11s ease-in-out infinite 2s; }
+    .hex-4  { top: 75%; right: 5%;  opacity: 0.08; animation: float 9s ease-in-out infinite 1s; }
+    .hex-5  { top: 40%; left: 50%;  opacity: 0.04; animation: float 14s ease-in-out infinite 3s; }
+    .hex-6  { top: 10%; right: 35%; opacity: 0.05; animation: float 12s ease-in-out infinite 0.5s; }
+
     /* ===================== RESPONSIVE ===================== */
     @media (max-width: 1024px) {
       .pilares, .dif-grid, .servicios-grid { grid-template-columns: repeat(2, 1fr); }
@@ -1179,13 +1189,20 @@
   </section>
 
   <!-- ═══ CTA FINAL ═══ -->
-  <section class="cta-final">
+  <section class="cta-final" aria-label="Agenda tu cita">
     <div class="cta-orb cta-orb-1"></div>
     <div class="cta-orb cta-orb-2"></div>
+    <div class="hex-bg" aria-hidden="true">
+      <svg class="hex-1" width="208" height="180" viewBox="0 0 208 180" fill="none"><polygon points="204,90 156,4 52,4 4,90 52,176 156,176" stroke="white" stroke-width="2" fill="none"/></svg>
+      <svg class="hex-2" width="300" height="260" viewBox="0 0 300 260" fill="none"><polygon points="294,130 225,6 75,6 6,130 75,254 225,254" stroke="white" stroke-width="2" fill="white" fill-opacity="0.03"/></svg>
+      <svg class="hex-3" width="138" height="120" viewBox="0 0 138 120" fill="none"><polygon points="135,60 104,3 34,3 3,60 34,117 104,117" stroke="white" stroke-width="1.5" fill="none"/></svg>
+      <svg class="hex-4" width="232" height="200" viewBox="0 0 232 200" fill="none"><polygon points="228,100 174,4 58,4 4,100 58,196 174,196" stroke="white" stroke-width="2" fill="white" fill-opacity="0.02"/></svg>
+      <svg class="hex-5" width="370" height="320" viewBox="0 0 370 320" fill="none"><polygon points="364,160 277,6 92,6 6,160 92,314 277,314" stroke="white" stroke-width="1.5" fill="none"/></svg>
+      <svg class="hex-6" width="104" height="90" viewBox="0 0 104 90" fill="none"><polygon points="101,45 78,3 26,3 3,45 26,87 78,87" stroke="white" stroke-width="1.5" fill="white" fill-opacity="0.06"/></svg>
+    </div>
     <div class="container">
-      <span class="section-tag reveal">Sin compromiso · Sin costo de consulta inicial</span>
       <h2 class="cta-title reveal delay-1">Tu próxima cita puede cambiar<br>cómo ves el mundo.</h2>
-      <p class="cta-sub reveal delay-2">No esperes a que los síntomas empeoren. En Jarmar Tijuana te atendemos con calidez, precisión y más de 60 años de experiencia respaldándote.</p>
+      <p class="cta-sub reveal delay-2">No esperes a que los síntomas empeoren. En Jarmar Tijuana te atendemos con calidez, precisión y 60 años de experiencia respaldándote.</p>
       <div class="cta-actions reveal delay-3">
         <a href="https://wa.me/526645791970?text=Hola,%20me%20gustar%C3%ADa%20agendar%20mi%20estudio%20visual%20en%20%C3%93pticas%20Jarmar%20Tijuana" target="_blank" class="btn-whatsapp">
           <svg viewBox="0 0 24 24" width="22" height="22" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.999 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.985-1.31A9.945 9.945 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z" fill-rule="evenodd" clip-rule="evenodd"/></svg>
