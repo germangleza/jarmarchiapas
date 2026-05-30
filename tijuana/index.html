@@ -139,16 +139,13 @@
     }
     .logo { display: flex; align-items: center; gap: 10px; }
     .logo-mark {
-      width: 42px; height: 42px;
-      background: var(--blanco);
+      width: 48px; height: 48px;
       border-radius: 10px;
       display: flex; align-items: center; justify-content: center;
-      font-family: var(--font-display);
-      font-size: 1.1rem; font-weight: 900;
-      color: var(--azul-oscuro);
-      letter-spacing: -1px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+      overflow: hidden;
+      flex-shrink: 0;
     }
+    .logo-mark img { width: 100%; height: 100%; object-fit: contain; }
     .logo-text { color: var(--blanco); }
     .logo-text strong { display: block; font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; line-height: 1; }
     .logo-text span { font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.8; }
@@ -191,10 +188,10 @@
 
     .hero-inner {
       position: relative; z-index: 2;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
+      display: flex;
+      flex-direction: column;
       align-items: center;
+      text-align: center;
       padding: 120px 0 80px;
     }
     .hero-badge {
@@ -227,7 +224,7 @@
       margin-bottom: 36px;
       max-width: 520px;
     }
-    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
     .btn-primary {
       display: inline-flex; align-items: center; gap: 10px;
       background: var(--blanco);
@@ -258,7 +255,7 @@
     }
     .hero-stat strong { display: block; font-family: var(--font-display); font-size: 2rem; font-weight: 900; color: var(--blanco); line-height: 1; }
     .hero-stat span { font-size: 0.78rem; color: rgba(255,255,255,0.65); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 4px; display: block; }
-    .hero-img { position: relative; display: flex; align-items: center; justify-content: center; }
+    .hero-img { display: none; }
     .hero-img-frame {
       position: relative; width: 100%; max-width: 500px;
       aspect-ratio: 4/5; border-radius: 28px; overflow: hidden;
@@ -741,7 +738,7 @@
   <nav class="navbar" id="navbar">
     <div class="container navbar-inner">
       <a href="#" class="logo">
-        <div class="logo-mark">JE</div>
+        <div class="logo-mark"><img src="../LogoS blanco.png" alt="Ópticas Jarmar" /></div>
         <div class="logo-text">
           <strong>Ópticas Jarmar</strong>
           <span>Clínica Óptica Boutique · Tijuana</span>
@@ -1229,7 +1226,7 @@
       <div class="footer-inner">
         <div class="footer-brand">
           <div class="logo">
-            <div class="logo-mark">JE</div>
+            <div class="logo-mark"><img src="../LogoS blanco.png" alt="Ópticas Jarmar" /></div>
             <div class="logo-text">
               <strong>Ópticas Jarmar</strong>
               <span>Clínica Óptica Boutique · Tijuana</span>
