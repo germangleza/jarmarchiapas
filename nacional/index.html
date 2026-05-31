@@ -501,15 +501,11 @@
     ═══════════════════════════════ */
     .concepto {
       padding: 110px 0;
-      background: var(--azul-oscuro);
+      background: var(--grad-hero);
       position: relative;
       overflow: hidden;
     }
-    .concepto::before {
-      content: '';
-      position: absolute; inset: 0;
-      background: radial-gradient(ellipse 70% 60% at 80% 50%, rgba(58,143,224,0.12) 0%, transparent 70%);
-    }
+    .concepto::before { display: none; }
     .concepto .container { position: relative; z-index: 2; }
     .concepto-inner {
       display: grid;
@@ -1118,6 +1114,14 @@
 
   <!-- ═══ CONCEPTO ═══ -->
   <section class="concepto" id="concepto">
+    <div class="hex-bg" aria-hidden="true">
+      <svg class="hex-1" width="208" height="180" viewBox="0 0 208 180" fill="none"><polygon points="204,90 156,4 52,4 4,90 52,176 156,176" stroke="white" stroke-width="2" fill="none"/></svg>
+      <svg class="hex-2" width="300" height="260" viewBox="0 0 300 260" fill="none"><polygon points="294,130 225,6 75,6 6,130 75,254 225,254" stroke="white" stroke-width="2" fill="white" fill-opacity="0.03"/></svg>
+      <svg class="hex-3" width="138" height="120" viewBox="0 0 138 120" fill="none"><polygon points="135,60 104,3 34,3 3,60 34,117 104,117" stroke="white" stroke-width="1.5" fill="none"/></svg>
+      <svg class="hex-4" width="232" height="200" viewBox="0 0 232 200" fill="none"><polygon points="228,100 174,4 58,4 4,100 58,196 174,196" stroke="white" stroke-width="2" fill="white" fill-opacity="0.02"/></svg>
+      <svg class="hex-5" width="370" height="320" viewBox="0 0 370 320" fill="none"><polygon points="364,160 277,6 92,6 6,160 92,314 277,314" stroke="white" stroke-width="1.5" fill="none"/></svg>
+      <svg class="hex-6" width="104" height="90" viewBox="0 0 104 90" fill="none"><polygon points="101,45 78,3 26,3 3,45 26,87 78,87" stroke="white" stroke-width="1.5" fill="white" fill-opacity="0.06"/></svg>
+    </div>
     <div class="container concepto-inner">
       <div class="concepto-left reveal-l">
         <span class="tag tag--dark">Quiénes somos</span>
@@ -1132,12 +1136,12 @@
             <div class="pilar-icon">01</div>
             <h3>Clínica</h3>
           </div>
-          <p>El 80% de la ceguera es evitable. Con nuestros equipos de diagnóstico de alta precisión, detectamos a tiempo factores de riesgo de glaucoma, retinopatía diabética y degeneración macular.</p>
+          <p>Contamos con equipos de diagnóstico de alta precisión para identificar a tiempo condiciones oculares antes de que afecten tu calidad de vida.</p>
           <ul class="pilar-list">
-            <li>Examen de fondo de ojo</li>
-            <li>Detección de glaucoma y presión ocular</li>
+            <li>Detección de glaucoma</li>
             <li>Retinopatía diabética</li>
             <li>Degeneración macular</li>
+            <li>Examen de fondo de ojo</li>
           </ul>
         </div>
         <div class="pilar reveal d2">
@@ -1145,12 +1149,12 @@
             <div class="pilar-icon">02</div>
             <h3>Óptica</h3>
           </div>
-          <p>Desde lo más sofisticado hasta lo más accesible. Brindamos las mejores alternativas para solucionar tu problema visual, mejorando tu calidad de vida.</p>
+          <p>Todo tipo de soluciones visuales para toda la familia, desde lentes graduados hasta contactos especializados.</p>
           <ul class="pilar-list">
-            <li>Lentes graduados de alta calidad</li>
-            <li>Filtro de luz azul para pantallas</li>
-            <li>Lentes de contacto convencionales y especializados</li>
-            <li>Atención especializada para niños</li>
+            <li>Lentes graduados</li>
+            <li>Filtro de luz azul</li>
+            <li>Lentes de contacto</li>
+            <li>Atención completa para niños</li>
           </ul>
         </div>
         <div class="pilar reveal d3">
@@ -1158,12 +1162,12 @@
             <div class="pilar-icon">03</div>
             <h3>Boutique</h3>
           </div>
-          <p>Elige entre las mejores marcas y agrega tu estilo favorito. Con nuestra línea exclusiva Jarmar Eyewear, te ayudamos a que te sientas y te veas increíble.</p>
+          <p>Encuentra tu estilo con nuestra selección de armazones y diseños exclusivos, incluyendo nuestra línea propia Jarmar Eyewear.</p>
           <ul class="pilar-list">
-            <li>Línea exclusiva Jarmar Eyewear</li>
-            <li>Selección curada de marcas internacionales</li>
+            <li>Línea Jarmar Eyewear</li>
+            <li>Selección curada de marcas</li>
             <li>Asesoría de estilo personalizada</li>
-            <li>Lentes de sol con protección UV</li>
+            <li>Lentes de sol</li>
           </ul>
         </div>
       </div>
