@@ -829,17 +829,22 @@
       flex-wrap: wrap; gap: 12px;
     }
     .footer-bottom p { font-size: 0.75rem; color: rgba(255,255,255,0.25); }
-    .footer-social { display: flex; gap: 10px; }
+    .footer-social { display: flex; gap: 20px; align-items: flex-start; }
+    .footer-social-group { display: flex; flex-direction: column; gap: 6px; }
+    .footer-social-label { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.3); }
+    .footer-social-icons { display: flex; gap: 8px; }
     .social-ico {
       width: 34px; height: 34px;
       background: rgba(255,255,255,0.06);
       border-radius: 8px;
       display: flex; align-items: center; justify-content: center;
-      font-size: 0.85rem;
       color: rgba(255,255,255,0.5);
       transition: var(--trans);
     }
+    .social-ico svg { width: 16px; height: 16px; fill: currentColor; }
     .social-ico:hover { background: var(--azul-medio); color: var(--blanco); }
+    .footer-link-row { display: flex; align-items: center; gap: 8px; }
+    .footer-link-row svg { width: 13px; height: 13px; fill: none; stroke: currentColor; stroke-width: 1.8; flex-shrink: 0; opacity: 0.5; }
 
     /* ═══════════════════════════════
        WHATSAPP FLOAT
@@ -1328,13 +1333,13 @@
         <div class="footer-col">
           <h5>Sucursales</h5>
           <ul>
-            <p class="footer-city">Chiapas</p>
-            <li><a href="https://maps.app.goo.gl/g2ZZd4kXs5LiX5H57" target="_blank">📍 Plaza Cedros, Arboledas</a></li>
-            <li><a href="https://maps.app.goo.gl/3cwL8wvXXwQtokMz9" target="_blank">📍 Plaza Crystal</a></li>
-            <li><a href="https://wa.me/529611855475" target="_blank">📲 961 185 5475</a></li>
-            <p class="footer-city">Tijuana</p>
-            <li><a href="#" target="_blank">📍 Zona Urbana Río Tijuana</a></li>
-            <li><a href="https://wa.me/526645791970" target="_blank">📲 664 579 1970</a></li>
+            <p class="footer-city">Chiapas · Tuxtla Gutiérrez</p>
+            <li><a href="https://maps.app.goo.gl/g2ZZd4kXs5LiX5H57" target="_blank" class="footer-link-row"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" stroke="none" fill="currentColor" style="opacity:.5"/></svg>Plaza Cedros, Arboledas</a></li>
+            <li><a href="https://maps.app.goo.gl/3cwL8wvXXwQtokMz9" target="_blank" class="footer-link-row"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" stroke="none" fill="currentColor" style="opacity:.5"/></svg>Plaza Crystal</a></li>
+            <li><a href="https://wa.me/529611855475" target="_blank" class="footer-link-row"><svg viewBox="0 0 24 24" stroke="currentColor" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92v2z"/></svg>961 185 5475</a></li>
+            <p class="footer-city">Tijuana · Baja California</p>
+            <li><a href="https://maps.app.goo.gl/LceH5fGnXovDsulrP" target="_blank" class="footer-link-row"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" stroke="none" fill="currentColor" style="opacity:.5"/></svg>Zona Urbana Río Tijuana</a></li>
+            <li><a href="https://wa.me/526645791970" target="_blank" class="footer-link-row"><svg viewBox="0 0 24 24" stroke="currentColor" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92v2z"/></svg>664 579 1970</a></li>
           </ul>
         </div>
       </div>
@@ -1342,10 +1347,28 @@
       <div class="footer-bottom">
         <p>© 2026 Ópticas Jarmar · Todos los derechos reservados · Powered by <a href="https://magueystudio.mx" target="_blank" style="color:rgba(255,255,255,0.4);">Maguey Studio</a></p>
         <div class="footer-social">
-          <a href="https://www.facebook.com/opticasjarmarchiapas" target="_blank" class="social-ico">📘</a>
-          <a href="https://www.instagram.com/opticasjarmarchiapas" target="_blank" class="social-ico">📸</a>
-          <a href="https://www.facebook.com/opticasjarmartijuana" target="_blank" class="social-ico">📘</a>
-          <a href="https://www.instagram.com/opticasjarmartijuana/" target="_blank" class="social-ico">📸</a>
+          <div class="footer-social-group">
+            <span class="footer-social-label">Chiapas</span>
+            <div class="footer-social-icons">
+              <a href="https://www.facebook.com/opticasjarmarchiapas" target="_blank" class="social-ico" aria-label="Facebook Jarmar Chiapas">
+                <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+              </a>
+              <a href="https://www.instagram.com/opticasjarmarchiapas" target="_blank" class="social-ico" aria-label="Instagram Jarmar Chiapas">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="footer-social-group">
+            <span class="footer-social-label">Tijuana</span>
+            <div class="footer-social-icons">
+              <a href="https://www.facebook.com/opticasjarmartijuana" target="_blank" class="social-ico" aria-label="Facebook Jarmar Tijuana">
+                <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+              </a>
+              <a href="https://www.instagram.com/opticasjarmartijuana/" target="_blank" class="social-ico" aria-label="Instagram Jarmar Tijuana">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
