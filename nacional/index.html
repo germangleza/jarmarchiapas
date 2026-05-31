@@ -174,13 +174,7 @@
     }
 
     /* Línea diagonal decorativa */
-    .hero-line {
-      position: absolute;
-      top: 0; right: 38%;
-      width: 1px;
-      height: 100%;
-      background: linear-gradient(180deg, transparent, rgba(58,143,224,0.3), transparent);
-    }
+    .hero-line { display: none; }
 
     /* Orbes de luz */
     .orb {
@@ -263,10 +257,28 @@
     .route-city span   { font-size: 0.65rem; color: rgba(255,255,255,0.45); text-transform: uppercase; letter-spacing: 0.12em; margin-top: 2px; }
     .route-line {
       flex: 1;
-      display: flex; align-items: center; gap: 4px;
+      position: relative;
+      height: 2px;
+      background: rgba(58,143,224,0.2);
+      border-radius: 2px;
+      overflow: visible;
     }
-    .route-line-bar { flex: 1; height: 1px; background: linear-gradient(90deg, rgba(58,143,224,0.4), rgba(58,143,224,0.8), rgba(58,143,224,0.4)); }
-    .route-dot { width: 6px; height: 6px; background: var(--azul-claro); border-radius: 50%; flex-shrink: 0; }
+    .route-traveler {
+      position: absolute;
+      top: 50%; transform: translateY(-50%);
+      width: 10px; height: 10px;
+      background: var(--azul-claro);
+      border-radius: 50%;
+      box-shadow: 0 0 8px rgba(58,143,224,0.7), 0 0 0 3px rgba(58,143,224,0.2);
+      animation: travel 2.8s ease-in-out infinite;
+    }
+    @keyframes travel {
+      0%   { left: 0%; opacity: 0; }
+      10%  { opacity: 1; }
+      50%  { left: calc(100% - 10px); }
+      90%  { opacity: 1; }
+      100% { left: 0%; opacity: 0; }
+    }
 
     .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
 
@@ -1000,11 +1012,7 @@
             <span>Tuxtla Gtz.</span>
           </div>
           <div class="route-line">
-            <div class="route-line-bar"></div>
-            <div class="route-dot"></div>
-            <div class="route-dot"></div>
-            <div class="route-dot"></div>
-            <div class="route-line-bar"></div>
+            <div class="route-traveler"></div>
           </div>
           <div class="route-city" style="text-align:right;">
             <strong>Tijuana</strong>
