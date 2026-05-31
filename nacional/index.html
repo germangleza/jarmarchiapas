@@ -127,14 +127,13 @@
     }
     .nav-logo { display: flex; align-items: center; gap: 12px; }
     .nav-logo-mark {
-      width: 40px; height: 40px;
-      background: var(--grad-azul);
+      width: 48px; height: 48px;
       border-radius: 10px;
       display: flex; align-items: center; justify-content: center;
-      font-family: var(--font-display);
-      font-size: 1rem; font-weight: 700;
-      color: var(--azul-oscuro);
+      overflow: hidden;
+      flex-shrink: 0;
     }
+    .nav-logo-mark img { width: 100%; height: 100%; object-fit: contain; }
     .nav-logo-text strong { display: block; font-family: var(--font-display); font-size: 1rem; font-weight: 600; color: var(--blanco); line-height:1; }
     .nav-logo-text span   { font-size: 0.62rem; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.55); }
     .nav-links { display: flex; align-items: center; gap: 30px; }
@@ -940,7 +939,7 @@
   <nav class="nav" id="nav">
     <div class="container nav-inner">
       <a href="#" class="nav-logo">
-        <div class="nav-logo-mark">JE</div>
+        <div class="nav-logo-mark"><img src="../LogoS blanco.png" alt="Ópticas Jarmar" /></div>
         <div class="nav-logo-text">
           <strong>Ópticas Jarmar</strong>
           <span>Clínica Óptica Boutique · México</span>
@@ -1319,7 +1318,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="nav-logo">
-            <div class="nav-logo-mark">JE</div>
+            <div class="nav-logo-mark"><img src="../LogoS blanco.png" alt="Ópticas Jarmar" /></div>
             <div class="nav-logo-text">
               <strong>Ópticas Jarmar</strong>
               <span>Clínica Óptica Boutique · México</span>
