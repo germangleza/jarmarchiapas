@@ -197,10 +197,10 @@
 
     .hero-inner {
       position: relative; z-index: 2;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
+      display: flex;
+      flex-direction: column;
       align-items: center;
+      text-align: center;
       padding: 130px 0 90px;
     }
 
@@ -267,7 +267,7 @@
     .route-line-bar { flex: 1; height: 1px; background: linear-gradient(90deg, rgba(58,143,224,0.4), rgba(58,143,224,0.8), rgba(58,143,224,0.4)); }
     .route-dot { width: 6px; height: 6px; background: var(--azul-claro); border-radius: 50%; flex-shrink: 0; }
 
-    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
 
     .btn-gold {
       display: inline-flex; align-items: center; gap: 10px;
@@ -307,7 +307,7 @@
     .hero-stat span   { font-size: 0.72rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 5px; display: block; }
 
     /* Hero visual lado derecho */
-    .hero-visual { position: relative; }
+    .hero-visual { display: none; }
     .hero-frame {
       position: relative;
       border-radius: 28px;
@@ -1280,10 +1280,10 @@
       <p class="section-sub reveal d2">Más de 60 años de experiencia nos respaldan. Elige tu ciudad y agenda tu cita hoy — sin costo de consulta inicial.</p>
       <div class="cta-actions reveal d3">
         <a href="https://chiapas.jarmar.com/" target="_blank" class="btn-gold">
-          🌿 Soy de Chiapas
+          Soy de Chiapas
         </a>
         <a href="https://wa.me/526645791970?text=Hola,%20me%20gustar%C3%ADa%20agendar%20una%20cita%20en%20Jarmar%20Tijuana" target="_blank" class="btn-outline-azul">
-          🌊 Soy de Tijuana
+          Soy de Tijuana
         </a>
       </div>
     </div>
