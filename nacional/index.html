@@ -885,6 +885,17 @@
       50%{ box-shadow: 0 6px 24px rgba(37,211,102,0.45), 0 0 0 14px rgba(37,211,102,0.1); }
     }
 
+    /* ═══ HEX-BG ═══ */
+    .hex-bg { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 1; }
+    .hex-bg svg { position: absolute; }
+    .hex-1  { top: 6%;  left: 3%;   opacity: 0.07; animation: float 10s ease-in-out infinite; }
+    .hex-2  { top: 20%; right: 8%;  opacity: 0.06; animation: float 13s ease-in-out infinite reverse; }
+    .hex-3  { top: 60%; left: 12%;  opacity: 0.05; animation: float 11s ease-in-out infinite 2s; }
+    .hex-4  { top: 75%; right: 5%;  opacity: 0.08; animation: float 9s ease-in-out infinite 1s; }
+    .hex-5  { top: 40%; left: 50%;  opacity: 0.04; animation: float 14s ease-in-out infinite 3s; }
+    .hex-6  { top: 10%; right: 35%; opacity: 0.05; animation: float 12s ease-in-out infinite 0.5s; }
+    @keyframes float { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-18px);} }
+
     /* ═══════════════════════════════
        RESPONSIVE
     ═══════════════════════════════ */
@@ -953,6 +964,14 @@
   <section class="hero">
     <div class="orb orb-1"></div>
     <div class="orb orb-2"></div>
+    <div class="hex-bg" aria-hidden="true">
+      <svg class="hex-1" width="208" height="180" viewBox="0 0 208 180" fill="none"><polygon points="204,90 156,4 52,4 4,90 52,176 156,176" stroke="white" stroke-width="2" fill="none"/></svg>
+      <svg class="hex-2" width="300" height="260" viewBox="0 0 300 260" fill="none"><polygon points="294,130 225,6 75,6 6,130 75,254 225,254" stroke="white" stroke-width="2" fill="white" fill-opacity="0.03"/></svg>
+      <svg class="hex-3" width="138" height="120" viewBox="0 0 138 120" fill="none"><polygon points="135,60 104,3 34,3 3,60 34,117 104,117" stroke="white" stroke-width="1.5" fill="none"/></svg>
+      <svg class="hex-4" width="232" height="200" viewBox="0 0 232 200" fill="none"><polygon points="228,100 174,4 58,4 4,100 58,196 174,196" stroke="white" stroke-width="2" fill="white" fill-opacity="0.02"/></svg>
+      <svg class="hex-5" width="370" height="320" viewBox="0 0 370 320" fill="none"><polygon points="364,160 277,6 92,6 6,160 92,314 277,314" stroke="white" stroke-width="1.5" fill="none"/></svg>
+      <svg class="hex-6" width="104" height="90" viewBox="0 0 104 90" fill="none"><polygon points="101,45 78,3 26,3 3,45 26,87 78,87" stroke="white" stroke-width="1.5" fill="white" fill-opacity="0.06"/></svg>
+    </div>
     <div class="orb orb-3"></div>
     <div class="hero-line"></div>
 
@@ -961,7 +980,7 @@
       <div>
         <div class="hero-country reveal">
           <span class="hero-country-dot"></span>
-          <span>México · De frontera a frontera</span>
+          <span>De frontera a frontera</span>
         </div>
 
         <h1 class="hero-headline reveal d1">
