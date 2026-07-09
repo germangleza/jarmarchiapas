@@ -8,13 +8,11 @@ interface Props {
 }
 const { title, description = site.description } = Astro.props;
 
-// Construir URL de Google Fonts a partir de la marca del cliente
-const fams = [site.brand.fontDisplay, site.brand.fontBody, site.brand.fontMono]
+const fams = [site.brand.fontDisplay, site.brand.fontBody]
   .map((f) => f.replace(/ /g, "+") + ":wght@400;600;700")
   .join("&family=");
 const fontsHref = `https://fonts.googleapis.com/css2?family=${fams}&display=swap`;
 
-// Variables de marca inyectadas como :root inline
 const brandVars = `
   --bg:${site.brand.bg};
   --surface:${site.brand.surface};
@@ -24,7 +22,6 @@ const brandVars = `
   --accent-text:${site.brand.accentText};
   --font-display:"${site.brand.fontDisplay}",serif;
   --font-body:"${site.brand.fontBody}",system-ui,sans-serif;
-  --font-mono:"${site.brand.fontMono}",monospace;
 `;
 ---
 
@@ -33,45 +30,73 @@ const brandVars = `
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="/LogoXS color.png" />
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={new URL(Astro.url.pathname, site.url)} />
-
-    <!-- Fuentes de la marca -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin
-    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href={fontsHref} />
-
-    <!-- Open Graph básico -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={new URL(Astro.url.pathname, site.url)} />
-
     <style set:html={`:root{${brandVars}}`}></style>
     <slot name="head" />
   </head>
   <body>
-    <header class="site-header">
-      <div class="wrap">
-        <a class="brand" href="/">{site.name}</a>
-        <nav class="nav"><a href="/blog">Blog</a></nav>
+
+    <!-- ═══ NAVBAR ═══ -->
+    <nav class="site-nav" id="nav">
+      <div class="nav-container">
+        <a href="/" class="nav-logo">
+          <img src="/Logo BlancoEsp.png" alt="Ópticas Jarmar" />
+        </a>
+        <div class="nav-links" id="navLinks">
+          <a href="/">Inicio</a>
+          <a href="/chiapas/">Chiapas</a>
+          <a href="/tijuana/">Tijuana</a>
+          <a href="/blog/">Blog</a>
+          <a href="https://wa.me/529611855475" target="_blank" class="nav-cta">Agendar cita</a>
+        </div>
+        <button class="nav-burger" id="burger" aria-label="Menú">
+          <span></span><span></span><span></span>
+        </button>
       </div>
-    </header>
+    </nav>
 
     <main>
       <slot />
     </main>
 
+    <!-- ═══ FOOTER ═══ -->
     <footer class="site-footer">
-      <div class="wrap">
-        <span>© {new Date().getFullYear()} {site.org.legalName}</span>
-        <span>Blog gestionado por Maguey Studio</span>
+      <div class="footer-container">
+        <div class="footer-brand">
+          <img src="/Logo BlancoEsp.png" alt="Ópticas Jarmar" style="height:36px; width:auto; opacity:0.85;" />
+          <p>{site.description}</p>
+        </div>
+        <div class="footer-links">
+          <a href="/chiapas/">Chiapas</a>
+          <a href="/tijuana/">Tijuana</a>
+          <a href="/blog/">Blog</a>
+          <a href="/sitemap.xml">Sitemap</a>
+        </div>
+        <p class="footer-copy">© {new Date().getFullYear()} {site.org.legalName} · Todos los derechos reservados</p>
       </div>
     </footer>
+
+    <script>
+      const nav = document.getElementById('nav');
+      window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60));
+      nav.classList.add('scrolled');
+      document.getElementById('burger').addEventListener('click', () => {
+        document.getElementById('navLinks').classList.toggle('open');
+      });
+      document.querySelectorAll('#navLinks a').forEach(a =>
+        a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'))
+      );
+    </script>
+
   </body>
 </html>

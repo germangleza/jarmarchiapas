@@ -16,13 +16,13 @@ const fmt = (d) =>
 ---
 
 <BaseLayout title={`Blog — ${site.name}`}>
-  <section class="wrap" style="padding-block:56px 24px">
-    <p class="eyebrow">Blog</p>
-    <h1>Ideas y guías</h1>
-    <p style="color:var(--muted);max-width:52ch">{site.description}</p>
-  </section>
+  <div class="blog-hero">
+    <span class="eyebrow">Blog</span>
+    <h1>Salud visual, consejos<br />y novedades Jarmar</h1>
+    <p>{site.description}</p>
+  </div>
 
-  <section class="wrap" style="padding-bottom:64px">
+  <section class="wrap">
     <ul class="post-list">
       {
         posts.map((post) => (
@@ -37,7 +37,7 @@ const fmt = (d) =>
       }
       {
         posts.length === 0 && (
-          <li style="color:var(--muted);padding:24px 0">
+          <li style="color:var(--muted);padding:40px 0">
             Aún no hay artículos publicados.
           </li>
         )
