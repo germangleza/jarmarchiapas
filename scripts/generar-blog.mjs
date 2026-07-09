@@ -28,7 +28,7 @@ const publish = args.includes("--publish");
 const modelIdx = args.indexOf("--model");
 const model = modelIdx !== -1 ? args[modelIdx + 1] : "claude-sonnet-5";
 const topic = args
-  .filter((a, i) => !a.startsWith("--") && i !== modelIdx + 1)
+  .filter((a, i) => !a.startsWith("--") && (modelIdx === -1 || i !== modelIdx + 1))
   .join(" ")
   .trim();
 
