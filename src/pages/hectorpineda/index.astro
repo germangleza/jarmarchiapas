@@ -80,6 +80,7 @@
     .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(58,143,224,0.4) !important; }
     .nav-burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
     .nav-burger span { width: 24px; height: 2px; background: var(--blanco); border-radius: 2px; transition: var(--trans); }
+    .nav-close { display: none; }
     @media (max-width: 768px) {
       .nav-links { display: none; }
       .nav-burger { display: flex; }
@@ -92,7 +93,6 @@
         gap: 32px; z-index: 999;
       }
       .nav-links.open a { font-size: 1.2rem; color: #fff; }
-      .nav-close { display: none; }
       .nav-links.open .nav-close {
         display: flex; align-items: center; justify-content: center;
         position: absolute; top: 24px; right: 24px;
