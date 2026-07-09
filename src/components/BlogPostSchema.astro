@@ -1,0 +1,50 @@
+---
+import { site } from "../../site.config.mjs";
+
+interface Props {
+  title: string;
+  description: string;
+  pubDate: Date;
+  updatedDate?: Date;
+  author: string;
+  image?: string;
+  url: string;
+}
+const { title, description, pubDate, updatedDate, author, image, url } =
+  Astro.props;
+
+// Schema BlogPosting: lo que hace que ChatGPT / Perplexity
+// entiendan quién publica, cuándo y de qué trata.
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  headline: title,
+  description,
+  datePublished: pubDate.toISOString(),
+  dateModified: (updatedDate ?? pubDate).toISOString(),
+  author: {
+    "@type": "Organization",
+    name: author,
+  },
+  publisher: {
+    "@type": site.org.type,
+    name: site.org.legalName,
+    logo: {
+      "@type": "ImageObject",
+      url: new URL(site.org.logo, site.url).toString(),
+    },
+    ...(site.org.sameAs?.length ? { sameAs: site.org.sameAs } : {}),
+  },
+  ...(image ? { image: new URL(image, site.url).toString() } : {}),
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": url,
+  },
+  inLanguage: site.lang,
+};
+---
+
+<script
+  type="application/ld+json"
+  set:html={JSON.stringify(schema)}
+/>
