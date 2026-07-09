@@ -53,6 +53,7 @@ const brandVars = `
           <img src="/Logo BlancoEsp.png" alt="Ópticas Jarmar" />
         </a>
         <div class="nav-links" id="navLinks">
+          <button class="nav-close" id="navClose" aria-label="Cerrar menú">✕</button>
           <a href="/">Inicio</a>
           <a href="/chiapas/">Chiapas</a>
           <a href="/tijuana/">Tijuana</a>
@@ -90,12 +91,10 @@ const brandVars = `
       const nav = document.getElementById('nav');
       window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60));
       nav.classList.add('scrolled');
-      document.getElementById('burger').addEventListener('click', () => {
-        document.getElementById('navLinks').classList.toggle('open');
-      });
-      document.querySelectorAll('#navLinks a').forEach(a =>
-        a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'))
-      );
+      const navLinks = document.getElementById('navLinks');
+      document.getElementById('burger').addEventListener('click', () => navLinks.classList.toggle('open'));
+      document.getElementById('navClose').addEventListener('click', () => navLinks.classList.remove('open'));
+      document.querySelectorAll('#navLinks a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
     </script>
 
   </body>

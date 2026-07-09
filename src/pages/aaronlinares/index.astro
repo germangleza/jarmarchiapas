@@ -91,7 +91,16 @@
         align-items: center; justify-content: center;
         gap: 32px; z-index: 999;
       }
-      .nav-links.open a { font-size: 1.2rem; }
+      .nav-links.open a { font-size: 1.2rem; color: #fff; }
+      .nav-close { display: none; }
+      .nav-links.open .nav-close {
+        display: flex; align-items: center; justify-content: center;
+        position: absolute; top: 24px; right: 24px;
+        background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
+        color: #fff; width: 44px; height: 44px; border-radius: 50%;
+        font-size: 1.4rem; cursor: pointer; transition: background 0.2s;
+      }
+      .nav-links.open .nav-close:hover { background: rgba(255,255,255,0.2); }
     }
 
     /* ─── HEADER ─── */
@@ -354,6 +363,7 @@
         <img src="/Logo BlancoEsp.png" alt="Ópticas Jarmar" style="height:44px; width:auto; object-fit:contain;" />
       </a>
       <div class="nav-links" id="navLinks">
+        <button class="nav-close" id="navClose" aria-label="Cerrar menú">✕</button>
         <a href="/">Inicio</a>
         <a href="/chiapas/">Chiapas</a>
         <a href="/tijuana/">Tijuana</a>
@@ -475,8 +485,10 @@
     const nav = document.getElementById('nav');
     window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60));
     nav.classList.add('scrolled');
-    document.getElementById('burger').addEventListener('click', () => document.getElementById('navLinks').classList.toggle('open'));
-    document.querySelectorAll('#navLinks a').forEach(a => a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open')));
+    const navLinks = document.getElementById('navLinks');
+    document.getElementById('burger').addEventListener('click', () => navLinks.classList.toggle('open'));
+    document.getElementById('navClose').addEventListener('click', () => navLinks.classList.remove('open'));
+    document.querySelectorAll('#navLinks a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
   </script>
 </body>
 </html>

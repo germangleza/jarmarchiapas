@@ -1293,6 +1293,7 @@
         <img src="/Logo BlancoEsp.png" alt="Ópticas Jarmar" style="height:44px; width:auto; object-fit:contain;" />
       </a>
       <div class="nav-links" id="navLinks">
+        <button class="nav-close" id="navClose" aria-label="Cerrar menú">✕</button>
         <a href="#servicios">Servicios</a>
         <a href="#diferenciadores">Nosotros</a>
         <a href="#testimonios">Testimonios</a>
@@ -1895,14 +1896,10 @@
     });
 
     // Mobile menu
-    document.getElementById('burger').addEventListener('click', () => {
-      document.getElementById('navLinks').classList.toggle('open');
-    });
-    document.querySelectorAll('#navLinks a').forEach(link => {
-      link.addEventListener('click', () => {
-        document.getElementById('navLinks').classList.remove('open');
-      });
-    });
+    const navLinks = document.getElementById('navLinks');
+    document.getElementById('burger').addEventListener('click', () => navLinks.classList.toggle('open'));
+    document.getElementById('navClose').addEventListener('click', () => navLinks.classList.remove('open'));
+    document.querySelectorAll('#navLinks a').forEach(link => link.addEventListener('click', () => navLinks.classList.remove('open')));
 
     // FAQ accordion
     function toggleFaq(item) {
