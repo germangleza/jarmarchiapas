@@ -1,0 +1,15 @@
+{
+  "name": "maguey-blog-template",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Plantilla de blog GEO-optimizado para clientes de Maguey Studio",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "blog": "node scripts/generar-blog.mjs"
+  },
+  "dependencies": {
+    "astro": "^5.1.0"
+  }
+}

@@ -1,0 +1,77 @@
+---
+import { site } from "../../site.config.mjs";
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  description?: string;
+}
+const { title, description = site.description } = Astro.props;
+
+// Construir URL de Google Fonts a partir de la marca del cliente
+const fams = [site.brand.fontDisplay, site.brand.fontBody, site.brand.fontMono]
+  .map((f) => f.replace(/ /g, "+") + ":wght@400;600;700")
+  .join("&family=");
+const fontsHref = `https://fonts.googleapis.com/css2?family=${fams}&display=swap`;
+
+// Variables de marca inyectadas como :root inline
+const brandVars = `
+  --bg:${site.brand.bg};
+  --surface:${site.brand.surface};
+  --text:${site.brand.text};
+  --muted:${site.brand.muted};
+  --accent:${site.brand.accent};
+  --accent-text:${site.brand.accentText};
+  --font-display:"${site.brand.fontDisplay}",serif;
+  --font-body:"${site.brand.fontBody}",system-ui,sans-serif;
+  --font-mono:"${site.brand.fontMono}",monospace;
+`;
+---
+
+<!doctype html>
+<html lang={site.lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={new URL(Astro.url.pathname, site.url)} />
+
+    <!-- Fuentes de la marca -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link rel="stylesheet" href={fontsHref} />
+
+    <!-- Open Graph básico -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={new URL(Astro.url.pathname, site.url)} />
+
+    <style set:html={`:root{${brandVars}}`}></style>
+    <slot name="head" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="/">{site.name}</a>
+        <nav class="nav"><a href="/blog">Blog</a></nav>
+      </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <span>© {new Date().getFullYear()} {site.org.legalName}</span>
+        <span>Blog gestionado por Maguey Studio</span>
+      </div>
+    </footer>
+  </body>
+</html>

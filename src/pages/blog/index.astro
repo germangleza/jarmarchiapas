@@ -1,0 +1,47 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { site } from "../../../site.config.mjs";
+import { getCollection } from "astro:content";
+
+const posts = (await getCollection("blog", ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+
+const fmt = (d) =>
+  new Intl.DateTimeFormat(site.lang, {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+  }).format(d);
+---
+
+<BaseLayout title={`Blog — ${site.name}`}>
+  <section class="wrap" style="padding-block:56px 24px">
+    <p class="eyebrow">Blog</p>
+    <h1>Ideas y guías</h1>
+    <p style="color:var(--muted);max-width:52ch">{site.description}</p>
+  </section>
+
+  <section class="wrap" style="padding-bottom:64px">
+    <ul class="post-list">
+      {
+        posts.map((post) => (
+          <li class="post-item">
+            <a href={`/blog/${post.id}/`}>
+              <span class="post-meta">{fmt(post.data.pubDate)}</span>
+              <h2>{post.data.title}</h2>
+              <p>{post.data.description}</p>
+            </a>
+          </li>
+        ))
+      }
+      {
+        posts.length === 0 && (
+          <li style="color:var(--muted);padding:24px 0">
+            Aún no hay artículos publicados.
+          </li>
+        )
+      }
+    </ul>
+  </section>
+</BaseLayout>

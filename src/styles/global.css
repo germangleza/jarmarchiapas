@@ -1,0 +1,223 @@
+/* Variables reales llegan inyectadas desde site.config vía BaseLayout.
+   Aquí solo definimos fallbacks y el sistema visual. */
+:root {
+  --bg: #0d1b12;
+  --surface: #12241a;
+  --text: #e8f0ea;
+  --muted: #8fa896;
+  --accent: #2fbf71;
+  --accent-text: #04150a;
+  --font-display: "Fraunces", serif;
+  --font-body: "DM Sans", system-ui, sans-serif;
+  --font-mono: "Space Mono", monospace;
+
+  --maxw: 720px;
+  --radius: 14px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* --- Header --- */
+.site-header {
+  border-bottom: 1px solid color-mix(in srgb, var(--text) 10%, transparent);
+}
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 20px;
+}
+.brand {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+.nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+.nav a:hover {
+  color: var(--accent);
+}
+
+/* --- Tipografía de contenido --- */
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin: 0 0 0.4em;
+}
+h2 {
+  font-size: 1.6rem;
+  margin: 2em 0 0.6em;
+}
+h3 {
+  font-size: 1.25rem;
+  margin: 1.6em 0 0.5em;
+}
+a {
+  color: var(--accent);
+}
+
+/* --- Listado de blog --- */
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 4px;
+}
+.post-item {
+  border-bottom: 1px solid color-mix(in srgb, var(--text) 8%, transparent);
+}
+.post-item a {
+  display: block;
+  padding: 22px 0;
+  text-decoration: none;
+  color: var(--text);
+  transition: padding-left 0.18s ease;
+}
+.post-item a:hover {
+  padding-left: 8px;
+}
+.post-item h2 {
+  margin: 0 0 6px;
+  font-size: 1.35rem;
+  color: var(--text);
+}
+.post-item:hover h2 {
+  color: var(--accent);
+}
+.post-meta {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.post-item p {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+/* --- Post individual --- */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin-bottom: 14px;
+}
+.article {
+  padding-block: 48px 80px;
+}
+.article-body {
+  font-size: 1.08rem;
+}
+.article-body p {
+  margin: 1.1em 0;
+}
+.article-body ul,
+.article-body ol {
+  padding-left: 1.3em;
+}
+.article-body li {
+  margin: 0.4em 0;
+}
+.article-body blockquote {
+  border-left: 3px solid var(--accent);
+  margin: 1.4em 0;
+  padding: 4px 0 4px 20px;
+  color: var(--muted);
+  font-style: italic;
+}
+.article-body code {
+  font-family: var(--font-mono);
+  background: var(--surface);
+  padding: 2px 6px;
+  border-radius: 5px;
+  font-size: 0.9em;
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 40px;
+}
+.tag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--muted);
+  border: 1px solid color-mix(in srgb, var(--text) 15%, transparent);
+  border-radius: 999px;
+  padding: 4px 12px;
+}
+
+/* --- Footer --- */
+.site-footer {
+  border-top: 1px solid color-mix(in srgb, var(--text) 10%, transparent);
+  padding-block: 32px;
+  margin-top: 40px;
+}
+.site-footer .wrap {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--muted);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.back-link {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--muted);
+  text-decoration: none;
+}
+.back-link:hover {
+  color: var(--accent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}

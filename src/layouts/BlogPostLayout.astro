@@ -1,0 +1,56 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import BlogPostSchema from "../components/BlogPostSchema.astro";
+import { site } from "../../site.config.mjs";
+
+const { post } = Astro.props;
+const { data } = post;
+const author = data.author ?? site.defaultAuthor;
+const url = new URL(`/blog/${post.id}/`, site.url).toString();
+
+const fmt = (d) =>
+  new Intl.DateTimeFormat(site.lang, {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  }).format(d);
+---
+
+<BaseLayout title={`${data.title} — ${site.name}`} description={data.description}>
+  <BlogPostSchema
+    slot="head"
+    title={data.title}
+    description={data.description}
+    pubDate={data.pubDate}
+    updatedDate={data.updatedDate}
+    author={author}
+    image={data.image}
+    url={url}
+  />
+
+  <article class="article">
+    <div class="wrap">
+      <a class="back-link" href="/blog">← Todos los artículos</a>
+      <p class="eyebrow" style="margin-top:20px">Artículo</p>
+      <h1>{data.title}</h1>
+      <p class="post-meta">
+        {fmt(data.pubDate)} · {author}
+        {data.updatedDate ? ` · Actualizado ${fmt(data.updatedDate)}` : ""}
+      </p>
+
+      <div class="article-body">
+        <slot />
+      </div>
+
+      {
+        data.tags.length > 0 && (
+          <div class="tags">
+            {data.tags.map((t) => (
+              <span class="tag">#{t}</span>
+            ))}
+          </div>
+        )
+      }
+    </div>
+  </article>
+</BaseLayout>
