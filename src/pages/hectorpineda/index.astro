@@ -44,10 +44,60 @@
     img { max-width: 100%; display: block; }
     a { text-decoration: none; color: inherit; }
 
+    /* ─── NAVBAR ─── */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 900; padding: 18px 0; transition: var(--trans);
+    }
+    .nav.scrolled {
+      background: rgba(7,26,62,0.96);
+      backdrop-filter: blur(16px);
+      padding: 12px 0;
+      box-shadow: 0 4px 30px rgba(7,26,62,0.3);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .nav-logo { display: flex; align-items: center; gap: 12px; }
+    .nav-logo-mark {
+      width: 48px; height: 48px; border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      overflow: hidden; flex-shrink: 0;
+    }
+    .nav-logo-mark img { width: 100%; height: 100%; object-fit: contain; }
+    .nav-logo-text strong { display: block; font-family: var(--font-display); font-size: 1rem; font-weight: 600; color: var(--blanco); line-height: 1; }
+    .nav-logo-text span { font-size: 0.62rem; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.55); }
+    .nav-links { display: flex; align-items: center; gap: 30px; }
+    .nav-links a { font-size: 0.85rem; font-weight: 500; color: rgba(255,255,255,0.75); transition: color .3s; text-decoration: none; }
+    .nav-links a:hover { color: var(--blanco); }
+    .nav-cta {
+      background: var(--grad-azul) !important;
+      color: var(--blanco) !important;
+      padding: 10px 22px; border-radius: 100px;
+      font-weight: 700 !important; font-size: 0.82rem !important;
+      transition: var(--trans) !important;
+      box-shadow: 0 4px 16px rgba(58,143,224,0.3);
+    }
+    .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(58,143,224,0.4) !important; }
+    .nav-burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+    .nav-burger span { width: 24px; height: 2px; background: var(--blanco); border-radius: 2px; transition: var(--trans); }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-burger { display: flex; }
+      .nav-links.open {
+        display: flex; flex-direction: column;
+        position: fixed; inset: 0;
+        background: rgba(7,26,62,0.98);
+        backdrop-filter: blur(12px);
+        align-items: center; justify-content: center;
+        gap: 32px; z-index: 999;
+      }
+      .nav-links.open a { font-size: 1.2rem; }
+    }
+
     /* ─── HEADER ─── */
     .header {
       background: var(--grad-hero);
-      padding: 60px 28px 80px;
+      padding: 100px 28px 80px;
       text-align: center;
       position: relative;
       overflow: hidden;
@@ -298,6 +348,28 @@
 </head>
 <body>
 
+  <nav class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="/" class="nav-logo">
+        <div class="nav-logo-mark"><img src="/LogoS blanco.png" alt="Ópticas Jarmar" /></div>
+        <div class="nav-logo-text">
+          <strong>Ópticas Jarmar</strong>
+          <span>Clínica Óptica Boutique · México</span>
+        </div>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="/">Inicio</a>
+        <a href="/chiapas/">Chiapas</a>
+        <a href="/tijuana/">Tijuana</a>
+        <a href="/blog/">Blog</a>
+        <a href="https://wa.me/528713492518" target="_blank" class="nav-cta">Agendar cita</a>
+      </div>
+      <div class="nav-burger" id="burger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
   <!-- ═══ HEADER ═══ -->
   <header class="header">
     <div class="hex-bg">
@@ -307,10 +379,6 @@
     </div>
 
     <div style="position:relative; z-index:1;">
-      <div class="header-brand">
-        <img src="/Logo BlancoEsp.png" alt="Ópticas Jarmar" style="width:auto; height:52px; object-fit:contain;" />
-        <a href="/blog" class="header-brand-blog">Blog</a>
-      </div>
 
       <!-- Foto circular -->
       <div class="avatar-wrap">
@@ -434,6 +502,12 @@
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); obs.unobserve(e.target); } });
     }, { threshold: 0.15 });
     document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60));
+    nav.classList.add('scrolled');
+    function toggleMenu() { document.getElementById('navLinks').classList.toggle('open'); }
+    document.querySelectorAll('#navLinks a').forEach(a => a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open')));
   </script>
 </body>
 </html>
