@@ -965,7 +965,7 @@
         <a href="/blog">Blog</a>
         <a href="#ciudades" class="nav-cta">Elige tu ciudad</a>
       </div>
-      <div class="nav-burger" id="burger" onclick="toggleMenu()">
+      <div class="nav-burger" id="burger">
         <span></span><span></span><span></span>
       </div>
     </div>
@@ -1413,9 +1413,9 @@
     nav.classList.add('scrolled'); // Siempre visible con fondo
 
     // Menu mobile
-    function toggleMenu() {
+    document.getElementById('burger').addEventListener('click', () => {
       document.getElementById('navLinks').classList.toggle('open');
-    }
+    });
     document.querySelectorAll('#navLinks a').forEach(a => {
       a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
     });

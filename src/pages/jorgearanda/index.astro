@@ -360,7 +360,7 @@
         <a href="/blog/">Blog</a>
         <a href="https://wa.me/529616554225" target="_blank" class="nav-cta">Agendar cita</a>
       </div>
-      <div class="nav-burger" id="burger" onclick="toggleMenu()">
+      <div class="nav-burger" id="burger">
         <span></span><span></span><span></span>
       </div>
     </div>
@@ -529,7 +529,7 @@
     const nav = document.getElementById('nav');
     window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60));
     nav.classList.add('scrolled');
-    function toggleMenu() { document.getElementById('navLinks').classList.toggle('open'); }
+    document.getElementById('burger').addEventListener('click', () => document.getElementById('navLinks').classList.toggle('open'));
     document.querySelectorAll('#navLinks a').forEach(a => a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open')));
   </script>
 </body>

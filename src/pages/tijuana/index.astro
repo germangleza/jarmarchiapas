@@ -753,7 +753,7 @@
         <a href="/blog">Blog</a>
         <a href="https://wa.me/526645791970?text=Hola,%20me%20gustar%C3%ADa%20agendar%20mi%20estudio%20visual" target="_blank" class="nav-cta">Agendar cita</a>
       </div>
-      <div class="nav-burger" id="burger" onclick="toggleMenu()">
+      <div class="nav-burger" id="burger">
         <span></span><span></span><span></span>
       </div>
     </div>
@@ -1288,9 +1288,9 @@
     });
 
     // Mobile menu
-    function toggleMenu() {
+    document.getElementById('burger').addEventListener('click', () => {
       document.getElementById('navLinks').classList.toggle('open');
-    }
+    });
     document.querySelectorAll('#navLinks a').forEach(link => {
       link.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
     });
