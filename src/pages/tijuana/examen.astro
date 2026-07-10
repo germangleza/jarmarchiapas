@@ -272,14 +272,37 @@
 
     /* ── TESTIMONIOS ── */
     .testi { background: var(--azul-med); }
-    .testi-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
-    .testi-card {
-      background: rgba(255,255,255,0.07); border-radius: var(--radius); padding: 24px 20px;
-      border: 1px solid rgba(255,255,255,0.1);
+    .carousel-wrap { position: relative; overflow: hidden; }
+    .carousel-track {
+      display: flex; gap: 20px;
+      transition: transform 0.45s cubic-bezier(0.4,0,0.2,1);
     }
-    .testi-stars { color: #F6AD55; font-size: 0.9rem; margin-bottom: 10px; }
-    .testi-quote { color: rgba(255,255,255,0.85); font-size: 0.93rem; line-height: 1.55; margin-bottom: 12px; font-style: italic; }
-    .testi-name { color: var(--acento); font-size: 0.8rem; font-weight: 600; }
+    .testi-card {
+      background: rgba(255,255,255,0.07); border-radius: var(--radius); padding: 28px 24px;
+      border: 1px solid rgba(255,255,255,0.1);
+      min-width: calc(100% - 0px); flex-shrink: 0;
+    }
+    .testi-stars { color: #F6AD55; font-size: 1rem; margin-bottom: 12px; }
+    .testi-quote { color: rgba(255,255,255,0.88); font-size: 1rem; line-height: 1.65; margin-bottom: 16px; font-style: italic; }
+    .testi-name { color: var(--acento); font-size: 0.85rem; font-weight: 600; }
+    .carousel-controls {
+      display: flex; align-items: center; justify-content: center;
+      gap: 16px; margin-top: 28px;
+    }
+    .carousel-btn {
+      background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
+      color: #fff; width: 40px; height: 40px; border-radius: 50%;
+      font-size: 1.1rem; cursor: pointer; display: flex; align-items: center; justify-content: center;
+      transition: background 0.2s;
+    }
+    .carousel-btn:hover { background: rgba(255,255,255,0.2); }
+    .carousel-dots { display: flex; gap: 8px; }
+    .carousel-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: rgba(255,255,255,0.3); border: none; cursor: pointer;
+      padding: 0; transition: background 0.2s;
+    }
+    .carousel-dot.active { background: var(--acento); }
 
     /* ── UBICACIÓN ── */
     .ubicacion { background: var(--crema); }
@@ -340,7 +363,6 @@
       .hero .wrap { grid-template-columns: 1fr; gap: 32px; }
       .pain-grid { grid-template-columns: 1fr; }
       .porq-grid { grid-template-columns: 1fr; }
-      .testi-grid { grid-template-columns: 1fr; }
       .ubicacion-inner { grid-template-columns: 1fr; }
       .trust-strip .wrap { gap: 8px; }
       .trust-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); padding: 10px; }
@@ -508,22 +530,34 @@
         <span class="section-eyebrow" style="color:var(--acento)">Pacientes</span>
         <h2 class="section-title white">Lo que dicen nuestros pacientes</h2>
       </div>
-      <div class="testi-grid">
-        <div class="testi-card">
-          <div class="testi-stars">★★★★★</div>
-          <p class="testi-quote">"El mejor lugar. La doctora te explica y resuelve todas tus dudas."</p>
-          <span class="testi-name">— Alejandra B.</span>
+      <div class="carousel-wrap">
+        <div class="carousel-track" id="testiTrack">
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-quote">"La mejor óptica de la ciudad. Servicios profesionales y personalizados. Un lugar donde te explican detalladamente lo que necesitas y no intentan venderte cosas innecesarias. Soy paciente desde hace más de 4 años."</p>
+            <span class="testi-name">— Santiago C.</span>
+          </div>
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-quote">"Servicio de primera y trato personalizado. No es como las demás ópticas porque se siente un ambiente familiar donde el cliente es primero. De seguro regresamos."</p>
+            <span class="testi-name">— Luis H.</span>
+          </div>
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-quote">"Me gustó mucho nuestra experiencia. Yo tengo años usando lentes y me han hecho muchos exámenes de vista, pero sinceramente en esta ocasión me encantó cómo nos explicaron tan detalladamente."</p>
+            <span class="testi-name">— Sayra A.</span>
+          </div>
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-quote">"Estoy encantada con mi experiencia en Ópticas Jarmar. Desde el primer momento me atendieron con muchísima amabilidad y paciencia. Me ayudaron a encontrar los lentes ideales para mí, sin presión y con muy buenas sugerencias."</p>
+            <span class="testi-name">— María A.</span>
+          </div>
         </div>
-        <div class="testi-card">
-          <div class="testi-stars">★★★★★</div>
-          <p class="testi-quote">"Me hicieron un estudio muy completo. Los lentes quedaron perfectos."</p>
-          <span class="testi-name">— Laura M.</span>
-        </div>
-        <div class="testi-card">
-          <div class="testi-stars">★★★★★</div>
-          <p class="testi-quote">"Pasé años sin lograr usar lentes. Solo lo conseguí en Jarmar."</p>
-          <span class="testi-name">— Bladimir S.</span>
-        </div>
+      </div>
+      <div class="carousel-controls">
+        <button class="carousel-btn" id="testiPrev" aria-label="Anterior">‹</button>
+        <div class="carousel-dots" id="testiDots"></div>
+        <button class="carousel-btn" id="testiNext" aria-label="Siguiente">›</button>
       </div>
     </div>
   </section>
@@ -622,6 +656,41 @@
   <a href="https://wa.me/526645791970?text=Hola%2C+quiero+agendar+un+examen+de+la+vista+en+%C3%93pticas+Jarmar+Tijuana." target="_blank" class="wa-fab wa-link" aria-label="Contactar por WhatsApp">
     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.852L0 24l6.336-1.508A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.37l-.36-.214-3.732.888.932-3.641-.235-.374A9.818 9.818 0 1112 21.818z"/></svg>
   </a>
+
+  <script>
+    // ── CARRUSEL TESTIMONIOS ──
+    const track = document.getElementById('testiTrack');
+    const cards = track ? track.querySelectorAll('.testi-card') : [];
+    const dotsContainer = document.getElementById('testiDots');
+    let current = 0;
+
+    if (cards.length && dotsContainer) {
+      cards.forEach((_, i) => {
+        const dot = document.createElement('button');
+        dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+        dot.setAttribute('aria-label', `Testimonio ${i + 1}`);
+        dot.addEventListener('click', () => goTo(i));
+        dotsContainer.appendChild(dot);
+      });
+
+      function goTo(index) {
+        current = (index + cards.length) % cards.length;
+        track.style.transform = `translateX(calc(-${current * 100}% - ${current * 20}px))`;
+        dotsContainer.querySelectorAll('.carousel-dot').forEach((d, i) => {
+          d.classList.toggle('active', i === current);
+        });
+      }
+
+      document.getElementById('testiPrev').addEventListener('click', () => goTo(current - 1));
+      document.getElementById('testiNext').addEventListener('click', () => goTo(current + 1));
+
+      let autoplay = setInterval(() => goTo(current + 1), 5000);
+      track.closest('.carousel-wrap').addEventListener('mouseenter', () => clearInterval(autoplay));
+      track.closest('.carousel-wrap').addEventListener('mouseleave', () => {
+        autoplay = setInterval(() => goTo(current + 1), 5000);
+      });
+    }
+  </script>
 
   <script>
     // ── FORMULARIO → WHATSAPP ──
