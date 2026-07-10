@@ -65,12 +65,6 @@
       box-shadow: 0 2px 16px rgba(7,26,62,0.3);
       overflow: hidden;
     }
-    .lp-header .hex-bg { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 0; }
-    .lp-header .hex-bg svg { position: absolute; }
-    .lp-header .hex-1 { top: -20%; left: 2%;   opacity: 0.07; animation: float 10s ease-in-out infinite; }
-    .lp-header .hex-2 { top: -60%; right: 6%;  opacity: 0.05; animation: float 13s ease-in-out infinite reverse; }
-    .lp-header .hex-3 { top: -10%; left: 40%;  opacity: 0.04; animation: float 11s ease-in-out infinite 2s; }
-    .lp-header .hex-4 { top: -30%; right: 25%; opacity: 0.06; animation: float 9s ease-in-out infinite 1s; }
     .lp-header .wrap { position: relative; z-index: 1; }
     .lp-header .wrap {
       display: flex; align-items: center; justify-content: space-between;
@@ -126,10 +120,19 @@
 
     /* ── HERO ── */
     .hero {
+      position: relative;
       background: var(--grad);
       padding: 56px 0 64px;
     }
-    .hero .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+    .hero .hex-bg { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 0; }
+    .hero .hex-bg svg { position: absolute; }
+    .hero .hex-1  { top: 6%;  left: 3%;   opacity: 0.07; animation: float 10s ease-in-out infinite; }
+    .hero .hex-2  { top: 20%; right: 8%;  opacity: 0.06; animation: float 13s ease-in-out infinite reverse; }
+    .hero .hex-3  { top: 60%; left: 12%;  opacity: 0.05; animation: float 11s ease-in-out infinite 2s; }
+    .hero .hex-4  { top: 75%; right: 5%;  opacity: 0.08; animation: float 9s ease-in-out infinite 1s; }
+    .hero .hex-5  { top: 40%; left: 50%;  opacity: 0.04; animation: float 14s ease-in-out infinite 3s; }
+    .hero .hex-6  { top: 10%; right: 35%; opacity: 0.05; animation: float 12s ease-in-out infinite 0.5s; }
+    .hero .wrap { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
     .hero-eyebrow {
       display: inline-block;
       font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em;
@@ -376,12 +379,6 @@
 
   <!-- ═══ HEADER MÍNIMO ═══ -->
   <header class="lp-header">
-    <div class="hex-bg" aria-hidden="true">
-      <svg class="hex-1" width="208" height="180" viewBox="0 0 208 180" fill="none"><polygon points="204,90 156,4 52,4 4,90 52,176 156,176" stroke="white" stroke-width="2" fill="none"/></svg>
-      <svg class="hex-2" width="300" height="260" viewBox="0 0 300 260" fill="none"><polygon points="294,130 225,6 75,6 6,130 75,254 225,254" stroke="white" stroke-width="2" fill="white" fill-opacity="0.03"/></svg>
-      <svg class="hex-3" width="138" height="120" viewBox="0 0 138 120" fill="none"><polygon points="135,60 104,3 34,3 3,60 34,117 104,117" stroke="white" stroke-width="1.5" fill="none"/></svg>
-      <svg class="hex-4" width="232" height="200" viewBox="0 0 232 200" fill="none"><polygon points="228,100 174,4 58,4 4,100 58,196 174,196" stroke="white" stroke-width="2" fill="white" fill-opacity="0.02"/></svg>
-    </div>
     <div class="wrap">
       <a href="/">
         <img src="/Logo BlancoEsp.png" alt="Ópticas Jarmar" />
@@ -398,6 +395,14 @@
 
   <!-- ═══ HERO + FORMULARIO ═══ -->
   <section class="hero">
+    <div class="hex-bg" aria-hidden="true">
+      <svg class="hex-1" width="208" height="180" viewBox="0 0 208 180" fill="none"><polygon points="204,90 156,4 52,4 4,90 52,176 156,176" stroke="white" stroke-width="2" fill="none"/></svg>
+      <svg class="hex-2" width="300" height="260" viewBox="0 0 300 260" fill="none"><polygon points="294,130 225,6 75,6 6,130 75,254 225,254" stroke="white" stroke-width="2" fill="white" fill-opacity="0.03"/></svg>
+      <svg class="hex-3" width="138" height="120" viewBox="0 0 138 120" fill="none"><polygon points="135,60 104,3 34,3 3,60 34,117 104,117" stroke="white" stroke-width="1.5" fill="none"/></svg>
+      <svg class="hex-4" width="232" height="200" viewBox="0 0 232 200" fill="none"><polygon points="228,100 174,4 58,4 4,100 58,196 174,196" stroke="white" stroke-width="2" fill="white" fill-opacity="0.02"/></svg>
+      <svg class="hex-5" width="370" height="320" viewBox="0 0 370 320" fill="none"><polygon points="364,160 277,6 92,6 6,160 92,314 277,314" stroke="white" stroke-width="1.5" fill="none"/></svg>
+      <svg class="hex-6" width="104" height="90" viewBox="0 0 104 90" fill="none"><polygon points="101,45 78,3 26,3 3,45 26,87 78,87" stroke="white" stroke-width="1.5" fill="white" fill-opacity="0.06"/></svg>
+    </div>
     <div class="wrap">
       <div class="hero-copy">
         <span class="hero-eyebrow">Óptica en Zona Río · Tijuana</span>
