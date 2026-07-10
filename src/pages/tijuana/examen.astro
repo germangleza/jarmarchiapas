@@ -230,15 +230,25 @@
     }
 
     /* ── POR QUÉ JARMAR ── */
-    .porq { background: var(--crema); }
+    .porq {
+      position: relative;
+      background: url('/IMG-1929.JPG') center/cover no-repeat;
+    }
+    .porq::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: rgba(7, 26, 62, 0.72);
+    }
+    .porq .wrap { position: relative; z-index: 1; }
+    .porq .section-eyebrow { color: rgba(255,255,255,0.75); }
+    .porq .section-title { color: #fff; }
     .porq-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
     .porq-card {
-      background: #fff; border-radius: var(--radius); padding: 28px 22px;
-      border: 1.5px solid #E2EAF4; text-align: center;
-      box-shadow: var(--shadow);
+      background: rgba(255,255,255,0.12); border-radius: var(--radius); padding: 28px 22px;
+      border: 1.5px solid rgba(255,255,255,0.2); text-align: center;
+      backdrop-filter: blur(8px);
     }
-    .porq-emoji { font-size: 2rem; margin-bottom: 12px; }
-    .porq-card p { font-size: 0.95rem; font-weight: 500; color: var(--azul); }
+    .porq-card p { font-size: 0.95rem; font-weight: 500; color: #fff; }
 
     /* ── TESTIMONIOS ── */
     .testi { background: var(--azul-med); }
