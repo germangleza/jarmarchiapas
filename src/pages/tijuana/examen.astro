@@ -63,7 +63,15 @@
       padding: 16px 0;
       position: sticky; top: 0; z-index: 100;
       box-shadow: 0 2px 16px rgba(7,26,62,0.3);
+      overflow: hidden;
     }
+    .lp-header .hex-bg { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 0; }
+    .lp-header .hex-bg svg { position: absolute; }
+    .lp-header .hex-1 { top: -20%; left: 2%;   opacity: 0.07; animation: float 10s ease-in-out infinite; }
+    .lp-header .hex-2 { top: -60%; right: 6%;  opacity: 0.05; animation: float 13s ease-in-out infinite reverse; }
+    .lp-header .hex-3 { top: -10%; left: 40%;  opacity: 0.04; animation: float 11s ease-in-out infinite 2s; }
+    .lp-header .hex-4 { top: -30%; right: 25%; opacity: 0.06; animation: float 9s ease-in-out infinite 1s; }
+    .lp-header .wrap { position: relative; z-index: 1; }
     .lp-header .wrap {
       display: flex; align-items: center; justify-content: space-between;
     }
@@ -346,6 +354,12 @@
 
   <!-- ═══ HEADER MÍNIMO ═══ -->
   <header class="lp-header">
+    <div class="hex-bg" aria-hidden="true">
+      <svg class="hex-1" width="208" height="180" viewBox="0 0 208 180" fill="none"><polygon points="204,90 156,4 52,4 4,90 52,176 156,176" stroke="white" stroke-width="2" fill="none"/></svg>
+      <svg class="hex-2" width="300" height="260" viewBox="0 0 300 260" fill="none"><polygon points="294,130 225,6 75,6 6,130 75,254 225,254" stroke="white" stroke-width="2" fill="white" fill-opacity="0.03"/></svg>
+      <svg class="hex-3" width="138" height="120" viewBox="0 0 138 120" fill="none"><polygon points="135,60 104,3 34,3 3,60 34,117 104,117" stroke="white" stroke-width="1.5" fill="none"/></svg>
+      <svg class="hex-4" width="232" height="200" viewBox="0 0 232 200" fill="none"><polygon points="228,100 174,4 58,4 4,100 58,196 174,196" stroke="white" stroke-width="2" fill="white" fill-opacity="0.02"/></svg>
+    </div>
     <div class="wrap">
       <a href="/">
         <img src="/Logo BlancoEsp.png" alt="Ópticas Jarmar" />
