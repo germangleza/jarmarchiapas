@@ -274,13 +274,13 @@
     .testi { background: var(--azul-med); }
     .carousel-wrap { position: relative; overflow: hidden; }
     .carousel-track {
-      display: flex; gap: 20px;
+      display: flex;
       transition: transform 0.45s cubic-bezier(0.4,0,0.2,1);
     }
     .testi-card {
       background: rgba(255,255,255,0.07); border-radius: var(--radius); padding: 28px 24px;
       border: 1px solid rgba(255,255,255,0.1);
-      min-width: calc(100% - 0px); flex-shrink: 0;
+      min-width: 100%; flex-shrink: 0;
     }
     .testi-stars { color: #F6AD55; font-size: 1rem; margin-bottom: 12px; }
     .testi-quote { color: rgba(255,255,255,0.88); font-size: 1rem; line-height: 1.65; margin-bottom: 16px; font-style: italic; }
@@ -675,7 +675,7 @@
 
       function goTo(index) {
         current = (index + cards.length) % cards.length;
-        track.style.transform = `translateX(calc(-${current * 100}% - ${current * 20}px))`;
+        track.style.transform = `translateX(-${current * 100}%)`;
         dotsContainer.querySelectorAll('.carousel-dot').forEach((d, i) => {
           d.classList.toggle('active', i === current);
         });
