@@ -205,13 +205,25 @@
     .text-center { text-align: center; }
 
     /* ── DOLORES ── */
-    .pain { background: var(--crema); }
+    .pain {
+      position: relative;
+      background: url('/DSC_6260.jpg') center/cover no-repeat;
+    }
+    .pain::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: rgba(7, 26, 62, 0.70);
+    }
+    .pain .wrap { position: relative; z-index: 1; }
+    .pain .section-eyebrow { color: rgba(255,255,255,0.75); }
+    .pain .section-title { color: #fff; }
     .pain-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; margin-bottom: 40px; }
     .pain-card {
-      background: #fff; border-radius: var(--radius); padding: 20px 22px;
-      border: 1.5px solid #E2EAF4;
-      font-size: 0.95rem; font-weight: 500; color: var(--azul);
+      background: rgba(255,255,255,0.12); border-radius: var(--radius); padding: 20px 22px;
+      border: 1.5px solid rgba(255,255,255,0.2);
+      font-size: 0.95rem; font-weight: 500; color: #fff;
       display: flex; align-items: center; gap: 12px;
+      backdrop-filter: blur(8px);
     }
     .pain-icon { font-size: 1.4rem; flex-shrink: 0; }
 
