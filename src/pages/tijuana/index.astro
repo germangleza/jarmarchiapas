@@ -314,39 +314,32 @@
     .trust-item span { font-size: 0.75rem; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.1em; }
 
     /* ===================== PROBLEMA ===================== */
-    .problema { padding: 100px 0; background: var(--blanco); }
+    .problema {
+      position: relative;
+      padding: 100px 0;
+      background: url('/ATENCION.jpg') center/cover no-repeat;
+    }
+    .problema::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: rgba(7, 26, 62, 0.70);
+    }
+    .problema .container { position: relative; z-index: 1; }
+    .problema .section-tag { color: rgba(255,255,255,0.75); }
+    .problema .section-title { color: #fff; }
+    .problema .section-title span { color: #7EC8F5; }
+    .problema .section-subtitle { color: rgba(255,255,255,0.72); }
     .problema-inner {
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 80px; align-items: center;
+      display: flex; flex-direction: column; align-items: center; text-align: center;
     }
-    .problema-img-wrap { position: relative; }
-    .problema-img-frame { border-radius: 24px; overflow: hidden; aspect-ratio: 1/1; box-shadow: 0 20px 60px var(--sombra); }
-    .problema-img-frame img { width: 100%; height: 100%; object-fit: cover; }
-    .img-placeholder {
-      width: 100%; height: 100%;
-      background: var(--gris-suave);
-      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;
-      color: var(--gris-claro); font-size: 0.82rem; text-align: center; padding: 20px; min-height: 320px;
+    .pain-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; margin: 32px 0 40px; width: 100%; }
+    .pain-card {
+      background: rgba(255,255,255,0.12); border-radius: 14px; padding: 20px 22px;
+      border: 1.5px solid rgba(255,255,255,0.2);
+      font-size: 0.95rem; font-weight: 500; color: #fff;
+      backdrop-filter: blur(8px);
     }
-    .problema-accent {
-      position: absolute; bottom: -20px; right: -20px;
-      width: 120px; height: 120px;
-      background: var(--azul-medio);
-      border-radius: 20px; opacity: 0.15; z-index: -1;
-    }
-    .pain-list { margin-top: 28px; display: flex; flex-direction: column; gap: 14px; }
-    .pain-item {
-      display: flex; align-items: flex-start; gap: 14px;
-      background: var(--blanco-hueso);
-      border-radius: var(--radius-sm);
-      padding: 14px 16px;
-      border-left: 3px solid var(--azul-claro);
-      transition: var(--transition);
-    }
-    .pain-item:hover { background: var(--gris-suave); transform: translateX(4px); }
-    .pain-icon { font-size: 1.2rem; margin-top: 1px; flex-shrink: 0; }
-    .pain-item strong { display: block; font-size: 0.92rem; font-weight: 700; color: var(--azul-oscuro); margin-bottom: 4px; }
-    .pain-item p { font-size: 0.92rem; color: var(--gris-texto); line-height: 1.5; }
+    @media (max-width: 640px) { .pain-grid { grid-template-columns: 1fr; } }
 
     /* ===================== SOLUCIÓN ===================== */
     .solucion { padding: 100px 0; background: var(--gradiente-suave); }
@@ -830,31 +823,15 @@
   <!-- ═══ PROBLEMA ═══ -->
   <section class="problema" id="problema">
     <div class="container problema-inner">
-      <div class="problema-img-wrap reveal-left">
-        <div class="problema-img-frame">
-          <img src="/IMAGEN 1.jpg" alt="Consulta Jarmar Tijuana" />
-        </div>
-        <div class="problema-accent"></div>
+      <span class="section-tag">¿Te identificas?</span>
+      <h2 class="section-title">¿Cuándo revisaste tu vista <span>por última vez?</span></h2>
+      <div class="pain-grid">
+        <div class="pain-card">Dolores de cabeza frente a la pantalla</div>
+        <div class="pain-card">Lentes que nunca te quedaron</div>
+        <div class="pain-card">Diabetes o glaucoma sin revisar este año</div>
+        <div class="pain-card">Quieres conocer el estado de tus ojos</div>
       </div>
-      <div class="reveal-right">
-        <span class="section-tag">¿Te identificas?</span>
-        <h2 class="section-title">¿Cuándo fue la última vez que revisaste <span>tu vista?</span></h2>
-        <p class="section-subtitle" style="margin-top:16px;">Muchas condiciones oculares avanzan sin síntomas visibles y esperar no es opción cuando se trata de tu visión.</p>
-        <div class="pain-list">
-          <div class="pain-item reveal-left">
-            <div><strong>Para profesionales frente a pantalla</strong><p>Dolores de cabeza frecuentes o cansancio visual al final del día.</p></div>
-          </div>
-          <div class="pain-item reveal-left delay-1">
-            <div><strong>Para padres preocupados</strong><p>Tu hijo se distrae en clase o se queja de que no ve bien el pizarrón.</p></div>
-          </div>
-          <div class="pain-item reveal-left delay-2">
-            <div><strong>Para quienes no encontraron la solución</strong><p>Compraste lentes en otro lugar y nunca te quedaron bien, o te los hicieron mal.</p></div>
-          </div>
-          <div class="pain-item reveal-left delay-3">
-            <div><strong>Para pacientes con condiciones crónicas</strong><p>Tienes diabetes o historial familiar de glaucoma y no has hecho una revisión este año.</p></div>
-          </div>
-        </div>
-      </div>
+      <a href="https://wa.me/526645791970?text=Hola%2C+quiero+agendar+un+examen+de+la+vista+en+%C3%93pticas+Jarmar+Tijuana." target="_blank" class="btn-primary">Agendar mi examen →</a>
     </div>
   </section>
 
