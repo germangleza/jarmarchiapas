@@ -1,0 +1,334 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Examen de la Vista para Niños en Tuxtla Gutiérrez | Ópticas Jarmar Chiapas"
+  description="Examen visual infantil en Tuxtla Gutiérrez desde los 3 años. Protocolo especial para niños, detección temprana para su desempeño escolar. Ópticas Jarmar Chiapas."
+>
+  <style>
+    :root {
+      --bg: #071A3E;
+      --surface: #0D2B6B;
+      --accent: #3A8FE0;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--bg) 0%, var(--surface) 100%);
+      color: #fff;
+      padding: 100px 20px 80px;
+      text-align: center;
+    }
+    .hero-tag {
+      display: inline-block;
+      background: rgba(58,143,224,0.2);
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      border-radius: 100px;
+      padding: 6px 18px;
+      font-size: 0.85rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    .hero h1 span { color: var(--accent); }
+    .hero p {
+      font-size: 1.15rem;
+      opacity: 0.85;
+      max-width: 620px;
+      margin: 0 auto 36px;
+      line-height: 1.7;
+    }
+    .btn-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: #fff;
+      padding: 14px 32px;
+      border-radius: 100px;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    .btn-cta:hover { opacity: 0.9; transform: translateY(-2px); }
+
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+
+    .section { padding: 72px 20px; }
+    .section:nth-child(even) { background: #f7f9fc; }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      font-weight: 700;
+      color: var(--bg);
+      margin-bottom: 16px;
+    }
+    .section-title span { color: var(--accent); }
+    .section-sub {
+      color: #4a5568;
+      line-height: 1.7;
+      font-size: 1.05rem;
+      margin-bottom: 36px;
+    }
+
+    /* POR QUÉ */
+    .razones {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .razon {
+      background: #fff;
+      border-radius: 18px;
+      border: 1.5px solid rgba(58,143,224,0.2);
+      padding: 28px 24px;
+      text-align: center;
+    }
+    .razon-icon { font-size: 2.4rem; margin-bottom: 14px; display: block; }
+    .razon h4 {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--bg);
+      margin-bottom: 10px;
+    }
+    .razon p { color: #4a5568; font-size: 0.97rem; line-height: 1.65; }
+
+    /* SEÑALES DE ALERTA */
+    .alertas {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    .alerta {
+      background: var(--surface);
+      color: #fff;
+      border-radius: 14px;
+      padding: 20px 18px;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+    .alerta-icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 2px; }
+    .alerta p { font-size: 0.95rem; opacity: 0.9; line-height: 1.5; }
+
+    /* EXAMEN PEDIÁTRICO */
+    .examen-list {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+    }
+    .examen-list li {
+      background: #fff;
+      border: 1.5px solid rgba(58,143,224,0.25);
+      border-radius: 14px;
+      padding: 18px 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 1rem;
+      color: #2d3748;
+      line-height: 1.5;
+    }
+    .examen-list li::before {
+      content: "✓";
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* EDADES BOX */
+    .edades-box {
+      background: linear-gradient(135deg, var(--bg) 0%, var(--surface) 100%);
+      border-radius: 24px;
+      color: #fff;
+      padding: 40px;
+      text-align: center;
+    }
+    .edades-box h3 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .edades-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+    .edad-chip {
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 100px;
+      padding: 8px 20px;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .cta-section {
+      background: linear-gradient(135deg, var(--bg) 0%, var(--surface) 100%);
+      color: #fff;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .cta-section h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .cta-section p { font-size: 1.1rem; opacity: 0.85; margin-bottom: 36px; max-width: 560px; margin-left: auto; margin-right: auto; }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      padding: 28px;
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+    .back-link:hover { text-decoration: underline; }
+  </style>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <span class="hero-tag">Visión infantil · Tuxtla Gutiérrez</span>
+      <h1>Examen de la Vista<br>para <span>Niños</span> en Tuxtla Gutiérrez</h1>
+      <p>La visión es la base del aprendizaje. Detectamos problemas visuales en niños desde los 3 años con un protocolo diseñado especialmente para ellos.</p>
+      <a href="https://wa.me/529611855475?text=Hola%2C+quiero+informaci%C3%B3n+sobre+Examen+de+la+Vista+para+Ni%C3%B1os+en+%C3%93pticas+Jarmar+Tuxtla." target="_blank" class="btn-cta">
+        Agendar examen →
+      </a>
+    </div>
+  </section>
+
+  <!-- POR QUÉ -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">¿Por qué revisar la vista<br><span>de los niños</span>?</h2>
+      <p class="section-sub">El 80% del aprendizaje escolar llega por la vista. Un niño con problemas visuales sin detectar puede ser etiquetado erróneamente con dificultades de aprendizaje.</p>
+      <div class="razones">
+        <div class="razon">
+          <span class="razon-icon">📚</span>
+          <h4>Rendimiento escolar</h4>
+          <p>La miopía, hipermetropía o astigmatismo no detectados pueden afectar la lectura, escritura y atención en clase.</p>
+        </div>
+        <div class="razon">
+          <span class="razon-icon">🧠</span>
+          <h4>Desarrollo temprano</h4>
+          <p>La visión se desarrolla hasta los 8 años. Detectar problemas antes de esa edad permite una corrección más efectiva.</p>
+        </div>
+        <div class="razon">
+          <span class="razon-icon">👁️</span>
+          <h4>Ojo vago (ambliopía)</h4>
+          <p>Si no se detecta y trata a tiempo, el ojo vago puede causar pérdida permanente de visión en ese ojo.</p>
+        </div>
+        <div class="razon">
+          <span class="razon-icon">🎯</span>
+          <h4>Los niños no se quejan</h4>
+          <p>Los niños no saben que ven mal porque creen que todos ven igual. Solo un examen puede detectarlo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÑALES DE ALERTA -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title"><span>Señales de alerta</span> en tu hijo</h2>
+      <p class="section-sub">Si notas alguna de estas señales en tu hijo, es momento de agendar un examen visual.</p>
+      <div class="alertas">
+        <div class="alerta">
+          <span class="alerta-icon">👀</span>
+          <p>Se acerca mucho a la pantalla o al libro</p>
+        </div>
+        <div class="alerta">
+          <span class="alerta-icon">😖</span>
+          <p>Frunce el ceño o guiña los ojos para ver</p>
+        </div>
+        <div class="alerta">
+          <span class="alerta-icon">📺</span>
+          <p>Se sienta muy cerca del televisor</p>
+        </div>
+        <div class="alerta">
+          <span class="alerta-icon">✏️</span>
+          <p>Dificultad para copiar del pizarrón</p>
+        </div>
+        <div class="alerta">
+          <span class="alerta-icon">😫</span>
+          <p>Se cansa rápido al leer o le duele la cabeza</p>
+        </div>
+        <div class="alerta">
+          <span class="alerta-icon">↔️</span>
+          <p>Un ojo desviado o que "se va" hacia los lados</p>
+        </div>
+        <div class="alerta">
+          <span class="alerta-icon">📉</span>
+          <p>Bajo rendimiento escolar sin causa aparente</p>
+        </div>
+        <div class="alerta">
+          <span class="alerta-icon">🏃</span>
+          <p>Torpeza o dificultad para actividades deportivas</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXAMEN PEDIÁTRICO -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">¿Qué incluye el examen <span>pediátrico</span>?</h2>
+      <p class="section-sub">Nuestro protocolo especial para niños es amigable, no invasivo y completo. Usamos herramientas diseñadas para que la revisión sea una experiencia positiva.</p>
+      <ul class="examen-list">
+        <li>Agudeza visual adaptada a la edad del niño</li>
+        <li>Refracción objetiva sin necesidad de respuesta verbal</li>
+        <li>Evaluación de visión binocular y estereopsis</li>
+        <li>Detección de ojo vago (ambliopía) y estrabismo</li>
+        <li>Salud de córnea, cristalino y retina</li>
+        <li>Evaluación de motilidad ocular</li>
+        <li>Tonometría (sin contacto para niños pequeños)</li>
+        <li>Orientación y explicación completa a los padres</li>
+      </ul>
+
+      <div style="margin-top: 40px;">
+        <div class="edades-box">
+          <h3>¿A qué edad llevar a mi hijo?</h3>
+          <div class="edades-row">
+            <span class="edad-chip">3-4 años: Primera revisión</span>
+            <span class="edad-chip">5-6 años: Antes de entrar a la escuela</span>
+            <span class="edad-chip">7-12 años: Revisión anual</span>
+            <span class="edad-chip">Adolescentes: Cada año o al cambiar de año escolar</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Dale a tu hijo el regalo de ver bien</h2>
+      <p>Agenda el examen visual de tu hijo en Ópticas Jarmar Tuxtla Gutiérrez, Chiapas. Protocolo especializado para niños, en un ambiente tranquilo y amigable.</p>
+      <a href="https://wa.me/529611855475?text=Hola%2C+quiero+informaci%C3%B3n+sobre+Examen+de+la+Vista+para+Ni%C3%B1os+en+%C3%93pticas+Jarmar+Tuxtla." target="_blank" class="btn-cta">
+        Agendar por WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <a href="/chiapas/" class="back-link">← Volver a Chiapas</a>
+</BaseLayout>
