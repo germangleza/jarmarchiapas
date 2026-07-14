@@ -476,6 +476,19 @@
       margin-right: auto;
     }
     .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+    .hero-review {
+      display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 24px;
+    }
+    .review-avatars { display: flex; }
+    .review-avatars img {
+      width: 36px; height: 36px; border-radius: 50%;
+      border: 2px solid #fff; object-fit: cover;
+      margin-left: -10px;
+    }
+    .review-avatars img:first-child { margin-left: 0; }
+    .review-text { display: flex; flex-direction: column; gap: 2px; }
+    .review-stars { color: #F6AD55; font-size: 0.9rem; letter-spacing: 1px; }
+    .review-label { color: rgba(255,255,255,0.75); font-size: 0.8rem; font-weight: 500; }
     .btn-primary {
       display: inline-flex;
       align-items: center;
@@ -1346,6 +1359,18 @@
           <a href="#servicios" class="btn-secondary">
             Ver servicios →
           </a>
+        </div>
+        <div class="hero-review reveal-left delay-3">
+          <div class="review-avatars">
+            <img src="https://cdn.sceneai.art/Only%20man%20image/0ccd6017-25fc-493b-abdf-321915dde101.jpg" alt="Paciente" />
+            <img src="https://cdn.sceneai.art/Only%20man%20image/7e1339ef-7a01-4979-93c8-21d97af291ee.webp" alt="Paciente" />
+            <img src="https://cdn.sceneai.art/Image%20for%20any%20section/2d8032d8-c1cd-4827-84db-0aeba1109c1b.jpg" alt="Paciente" />
+            <img src="https://cdn.sceneai.art/Image%20for%20any%20section/470b31f2-d1b5-4730-96a2-aca680204172.jpg" alt="Paciente" />
+          </div>
+          <div class="review-text">
+            <span class="review-stars">★★★★★</span>
+            <span class="review-label">Basado en +700 calificaciones</span>
+          </div>
         </div>
         <div class="hero-stats reveal-left delay-4">
           <div class="hero-stat">
