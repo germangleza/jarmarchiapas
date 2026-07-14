@@ -256,6 +256,19 @@
       transition: var(--transition);
     }
     .btn-secondary:hover { border-color: rgba(255,255,255,0.7); background: rgba(255,255,255,0.08); }
+    .hero-review {
+      display: flex; align-items: center; gap: 12px; margin-top: 24px;
+    }
+    .review-avatars { display: flex; }
+    .review-avatars img {
+      width: 36px; height: 36px; border-radius: 50%;
+      border: 2px solid #fff; object-fit: cover;
+      margin-left: -10px;
+    }
+    .review-avatars img:first-child { margin-left: 0; }
+    .review-text { display: flex; flex-direction: column; gap: 2px; }
+    .review-stars { color: #F6AD55; font-size: 0.9rem; letter-spacing: 1px; }
+    .review-label { color: rgba(255,255,255,0.75); font-size: 0.8rem; font-weight: 500; }
     .hero-stats {
       display: flex; gap: 32px;
       margin-top: 48px;
@@ -466,6 +479,10 @@
     .servicios-header .section-subtitle { margin: 16px auto 0; }
     .servicios-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
     .servicio-card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
       background: var(--blanco);
       border-radius: 20px;
       padding: 32px 24px;
@@ -770,7 +787,7 @@
           Tu visión en las<br><em>mejores manos.</em>
         </h1>
         <p class="hero-sub reveal delay-2">
-          Somos la Clínica Óptica Boutique de referencia en Tijuana. Diagnóstico de alta precisión, lentes que funcionan y estilo que te queda, todo en un solo lugar.
+          Somos óptica de referencia en Tijuana. Diagnóstico profesional y personalizado para recomendarte la mejor solución visual para ti, con más de 60 años de experiencia.
         </p>
         <div class="hero-actions reveal delay-3">
           <a href="https://wa.me/526645791970?text=Hola,%20me%20gustar%C3%ADa%20agendar%20mi%20estudio%20visual%20en%20%C3%93pticas%20Jarmar%20Tijuana" target="_blank" class="btn-primary">
@@ -779,6 +796,18 @@
           <a href="#servicios" class="btn-secondary">
             Ver servicios →
           </a>
+        </div>
+        <div class="hero-review reveal delay-3">
+          <div class="review-avatars">
+            <img src="https://cdn.sceneai.art/Only%20man%20image/0ccd6017-25fc-493b-abdf-321915dde101.jpg" alt="Paciente" />
+            <img src="https://cdn.sceneai.art/Only%20man%20image/7e1339ef-7a01-4979-93c8-21d97af291ee.webp" alt="Paciente" />
+            <img src="https://cdn.sceneai.art/Image%20for%20any%20section/2d8032d8-c1cd-4827-84db-0aeba1109c1b.jpg" alt="Paciente" />
+            <img src="https://cdn.sceneai.art/Image%20for%20any%20section/470b31f2-d1b5-4730-96a2-aca680204172.jpg" alt="Paciente" />
+          </div>
+          <div class="review-text">
+            <span class="review-stars">★★★★★</span>
+            <span class="review-label">Basado en +180 calificaciones</span>
+          </div>
         </div>
       </div>
       <div class="hero-img">
@@ -927,36 +956,36 @@
         <p class="section-subtitle">Un solo lugar para cuidar la salud visual de toda tu familia en Tijuana.</p>
       </div>
       <div class="servicios-grid">
-        <div class="servicio-card reveal delay-1">
+        <a href="/tijuana/estudio-de-la-vista" class="servicio-card reveal delay-1">
           <span class="servicio-icon">🔬</span>
           <h4>Estudio de la Vista</h4>
           <p>Examen visual completo con equipos de diagnóstico de alta precisión para adultos y niños.</p>
-        </div>
-        <div class="servicio-card reveal delay-2">
+        </a>
+        <a href="/tijuana/lentes-graduados" class="servicio-card reveal delay-2">
           <span class="servicio-icon">👓</span>
           <h4>Lentes Graduados</h4>
           <p>Amplia selección de armazones y lentes de la mejor calidad adaptados a tu graduación.</p>
-        </div>
-        <div class="servicio-card reveal delay-3">
+        </a>
+        <a href="/tijuana/lentes-luz-azul" class="servicio-card reveal delay-3">
           <span class="servicio-icon">💻</span>
           <h4>Lentes Luz Azul</h4>
           <p>Protege tus ojos del daño de pantallas con nuestros lentes de bloqueo de luz azul.</p>
-        </div>
-        <div class="servicio-card reveal delay-1">
+        </a>
+        <a href="/tijuana/lentes-de-sol" class="servicio-card reveal delay-1">
           <span class="servicio-icon">☀️</span>
           <h4>Lentes de Sol</h4>
           <p>Protección UV y estilo en una sola pieza. Graduados o sin graduar, para cada ocasión.</p>
-        </div>
-        <div class="servicio-card reveal delay-2">
+        </a>
+        <a href="/tijuana/lentes-esclerales" class="servicio-card reveal delay-2">
           <span class="servicio-icon">👁️</span>
           <h4>Lentes Esclerales</h4>
           <p>Especialistas en lentes esclerales para queratocono, trasplante corneal y casos complejos.</p>
-        </div>
-        <div class="servicio-card reveal delay-3">
+        </a>
+        <a href="/tijuana/examen-ninos" class="servicio-card reveal delay-3">
           <span class="servicio-icon">🧒</span>
           <h4>Examen y Lentes Niños</h4>
           <p>Protocolo especial para pequeños desde los 3 años. Detección temprana para su desempeño escolar.</p>
-        </div>
+        </a>
       </div>
       <div class="servicio-cta reveal">
         <a href="https://wa.me/526645791970?text=Hola,%20quisiera%20informaci%C3%B3n%20sobre%20sus%20servicios%20en%20Tijuana" target="_blank" class="btn-outline">
