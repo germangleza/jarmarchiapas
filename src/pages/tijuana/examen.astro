@@ -299,39 +299,134 @@
     }
     .porq-card p { font-size: 0.95rem; font-weight: 500; color: #fff; }
 
-    /* ── TESTIMONIOS ── */
-    .testi { background: var(--azul-med); }
-    .carousel-wrap { position: relative; overflow: hidden; width: 100%; }
-    .carousel-track {
-      display: flex; width: 100%;
-      transition: transform 0.45s cubic-bezier(0.4,0,0.2,1);
+    /* ── TESTIMONIOS / PACIENTES ── */
+    .pacientes {
+      --p-fondo:   var(--crema, #F4F8FF);
+      --p-tarjeta: #FFFFFF;
+      --p-tinta:   var(--azul, #071A3E);
+      --p-tinta-2: #5A6273;
+      --p-linea:   #E3E6EB;
+      --p-acento:  var(--acento, #3A8FE0);
+      background: var(--p-fondo);
+      padding: clamp(56px, 9vw, 104px) 0;
     }
-    .testi-card {
-      background: rgba(255,255,255,0.07); border-radius: var(--radius); padding: 28px 24px;
-      border: 1px solid rgba(255,255,255,0.1);
-      flex: 0 0 100%; width: 100%; box-sizing: border-box;
+    .pacientes__wrap { max-width: 1120px; margin-inline: auto; padding-inline: 20px; }
+
+    .pacientes__head { margin-bottom: clamp(32px, 5vw, 56px); max-width: 44ch; }
+    .rating { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+    .rating__num   { font-size: 1.25rem; font-weight: 700; color: var(--p-tinta); font-variant-numeric: tabular-nums; }
+    .rating__stars { color: #F6AD55; letter-spacing: .08em; font-size: .95rem; }
+    .rating__src   { display: inline-flex; align-items: center; gap: 5px; font-size: .75rem; color: var(--p-tinta-2); text-transform: uppercase; letter-spacing: .08em; }
+    .pacientes__head h2 {
+      font-family: var(--font-d);
+      font-size: clamp(1.6rem, 3.4vw, 2.4rem);
+      line-height: 1.15; letter-spacing: -.02em;
+      color: var(--p-tinta); margin: 0 0 8px;
     }
-    .testi-stars { color: #F6AD55; font-size: 1rem; margin-bottom: 12px; }
-    .testi-quote { color: rgba(255,255,255,0.88); font-size: 1rem; line-height: 1.65; margin-bottom: 16px; font-style: italic; }
-    .testi-name { color: var(--acento); font-size: 0.85rem; font-weight: 600; }
-    .carousel-controls {
-      display: flex; align-items: center; justify-content: center;
-      gap: 16px; margin-top: 28px;
+    .pacientes__sub { color: var(--p-tinta-2); font-size: 1rem; margin: 0; }
+
+    .rese-lista {
+      list-style: none; margin: 0; padding: 0;
+      display: grid; gap: 16px;
+      grid-template-columns: repeat(2, 1fr);
     }
-    .carousel-btn {
-      background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
-      color: #fff; width: 40px; height: 40px; border-radius: 50%;
-      font-size: 1.1rem; cursor: pointer; display: flex; align-items: center; justify-content: center;
-      transition: background 0.2s;
+    @media (max-width: 760px) {
+      .rese-lista {
+        grid-auto-flow: column;
+        grid-auto-columns: 82%;
+        grid-template-columns: none;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-padding-inline: 20px;
+        margin-inline: -20px;
+        padding-inline: 20px;
+        padding-bottom: 8px;
+        scrollbar-width: none;
+        overscroll-behavior-x: contain;
+      }
+      .rese-lista::-webkit-scrollbar { display: none; }
+      .rese { scroll-snap-align: start; }
     }
-    .carousel-btn:hover { background: rgba(255,255,255,0.2); }
-    .carousel-dots { display: flex; gap: 8px; }
-    .carousel-dot {
-      width: 8px; height: 8px; border-radius: 50%;
-      background: rgba(255,255,255,0.3); border: none; cursor: pointer;
-      padding: 0; transition: background 0.2s;
+
+    .rese__card {
+      height: 100%; margin: 0;
+      display: flex; flex-direction: column; gap: 14px;
+      background: var(--p-tarjeta);
+      border: 1px solid var(--p-linea);
+      border-radius: 6px;
+      padding: clamp(22px, 3vw, 30px);
+      transition: border-color 220ms cubic-bezier(.4,0,.2,1), transform 220ms cubic-bezier(.4,0,.2,1);
     }
-    .carousel-dot.active { background: var(--acento); }
+    @media (hover: hover) {
+      .rese:hover .rese__card { border-color: var(--p-tinta); transform: translateY(-2px); }
+    }
+
+    .rese__hook {
+      font-size: clamp(1.1rem, 2vw, 1.4rem);
+      line-height: 1.3; font-weight: 600; letter-spacing: -.015em;
+      color: var(--p-tinta); margin: 0;
+    }
+    .rese__hook::before { content: "\201C"; color: var(--p-acento); margin-right: 2px; }
+
+    .rese__full {
+      font-size: .9375rem; line-height: 1.6;
+      color: var(--p-tinta-2); margin: 0; flex: 1;
+    }
+
+    .rese__pie {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: center; gap: 4px 10px;
+      padding-top: 14px;
+      border-top: 1px solid var(--p-linea);
+    }
+    .rese__mono {
+      grid-row: span 2;
+      width: 34px; height: 34px;
+      display: grid; place-items: center;
+      border-radius: 50%;
+      background: rgba(58,143,224,0.14);
+      color: var(--p-tinta);
+      font-weight: 700; font-size: .8125rem;
+    }
+    .rese__quien { font-style: normal; font-weight: 600; font-size: .875rem; color: var(--p-tinta); }
+    .rese__fuente {
+      display: inline-flex; align-items: center; gap: 5px;
+      font-size: .75rem; color: var(--p-tinta-2);
+    }
+
+    .rese__ver-todas {
+      display: inline-flex; align-items: center; gap: 8px;
+      margin-top: 28px;
+      font-size: .9375rem; font-weight: 600;
+      color: var(--p-tinta);
+      text-decoration: none;
+      border-bottom: 1px solid var(--p-linea);
+      padding-bottom: 3px;
+      transition: border-color 200ms cubic-bezier(.4,0,.2,1);
+    }
+    .rese__ver-todas:hover { border-color: var(--p-acento); }
+    .rese__ver-todas .arrow { transition: transform 200ms cubic-bezier(.4,0,.2,1); display: inline-block; }
+    .rese__ver-todas:hover .arrow { transform: translateX(4px); }
+
+    .pacientes a:focus-visible,
+    .rese-lista:focus-visible { outline: 2px solid var(--p-acento); outline-offset: 3px; border-radius: 4px; }
+
+    /* ── REVEAL: de borroso a claro ── */
+    .reveal {
+      opacity: 0; filter: blur(5px); transform: translateY(14px);
+      transition:
+        opacity   600ms cubic-bezier(.22,1,.36,1),
+        filter    600ms cubic-bezier(.22,1,.36,1),
+        transform 600ms cubic-bezier(.22,1,.36,1);
+      transition-delay: calc(var(--i, 0) * 90ms);
+    }
+    .reveal.is-in { opacity: 1; filter: blur(0); transform: none; }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; filter: none; transform: none; transition: none; }
+      .rese-lista { scroll-behavior: auto; }
+      .rese__card, .rese__ver-todas .arrow { transition: none; }
+    }
 
     /* ── UBICACIÓN ── */
     .ubicacion { background: var(--crema); }
@@ -400,6 +495,16 @@
   </style>
 </head>
 <body>
+
+  <!-- SVG symbol reutilizable: logo Google -->
+  <svg hidden aria-hidden="true" focusable="false">
+    <symbol id="g-logo" viewBox="0 0 24 24">
+      <path fill="#4285F4" d="M22.6 12.2c0-.7-.1-1.4-.2-2H12v4h6c-.3 1.4-1.1 2.6-2.3 3.4v2.8h3.7c2.2-2 3.4-5 3.4-8.2z"/>
+      <path fill="#34A853" d="M12 23c3.1 0 5.7-1 7.6-2.8l-3.7-2.8c-1 .7-2.3 1.1-3.9 1.1-3 0-5.5-2-6.4-4.7H1.8v2.9C3.7 20.5 7.6 23 12 23z"/>
+      <path fill="#FBBC05" d="M5.6 13.8c-.2-.7-.4-1.4-.4-2.3s.1-1.6.4-2.3V6.3H1.8C1 7.9.5 9.7.5 11.5s.5 3.6 1.3 5.2l3.8-2.9z"/>
+      <path fill="#EA4335" d="M12 4.5c1.7 0 3.2.6 4.4 1.7l3.3-3.3C17.7 1 15.1 0 12 0 7.6 0 3.7 2.5 1.8 6.3l3.8 2.9C6.5 6.5 9 4.5 12 4.5z"/>
+    </symbol>
+  </svg>
 
   <!-- ═══ HEADER MÍNIMO ═══ -->
   <header class="lp-header">
@@ -518,42 +623,94 @@
     </div>
   </section>
 
-  <!-- ═══ TESTIMONIOS ═══ -->
-  <section class="testi" id="opiniones">
-    <div class="wrap">
-      <div class="text-center">
-        <span class="section-eyebrow" style="color:var(--acento)">Pacientes</span>
-        <h2 class="section-title white">Lo que dicen nuestros pacientes</h2>
-      </div>
-      <div class="carousel-wrap">
-        <div class="carousel-track" id="testiTrack">
-          <div class="testi-card">
-            <div class="testi-stars">★★★★★</div>
-            <p class="testi-quote">"La mejor óptica de la ciudad. Servicios profesionales y personalizados. Un lugar donde te explican detalladamente lo que necesitas y no intentan venderte cosas innecesarias. Soy paciente desde hace más de 4 años."</p>
-            <span class="testi-name">— Santiago C.</span>
-          </div>
-          <div class="testi-card">
-            <div class="testi-stars">★★★★★</div>
-            <p class="testi-quote">"Servicio de primera y trato personalizado. No es como las demás ópticas porque se siente un ambiente familiar donde el cliente es primero. De seguro regresamos."</p>
-            <span class="testi-name">— Luis H.</span>
-          </div>
-          <div class="testi-card">
-            <div class="testi-stars">★★★★★</div>
-            <p class="testi-quote">"Me gustó mucho nuestra experiencia. Yo tengo años usando lentes y me han hecho muchos exámenes de vista, pero sinceramente en esta ocasión me encantó cómo nos explicaron tan detalladamente."</p>
-            <span class="testi-name">— Sayra A.</span>
-          </div>
-          <div class="testi-card">
-            <div class="testi-stars">★★★★★</div>
-            <p class="testi-quote">"Estoy encantada con mi experiencia en Ópticas Jarmar. Desde el primer momento me atendieron con muchísima amabilidad y paciencia. Me ayudaron a encontrar los lentes ideales para mí, sin presión y con muy buenas sugerencias."</p>
-            <span class="testi-name">— María A.</span>
-          </div>
+  <!-- ═══ PACIENTES ═══ -->
+  <section class="pacientes" id="opiniones" aria-labelledby="pacientes-titulo">
+    <div class="pacientes__wrap">
+
+      <header class="pacientes__head reveal" style="--i:0">
+        <div class="rating">
+          <span class="rating__num">4.9</span>
+          <span class="rating__stars" aria-hidden="true">★★★★★</span>
+          <span class="rating__src">
+            <svg width="14" height="14" aria-hidden="true"><use href="#g-logo"/></svg>
+            Google
+          </span>
         </div>
-      </div>
-      <div class="carousel-controls">
-        <button class="carousel-btn" id="testiPrev" aria-label="Anterior">‹</button>
-        <div class="carousel-dots" id="testiDots"></div>
-        <button class="carousel-btn" id="testiNext" aria-label="Siguiente">›</button>
-      </div>
+        <h2 id="pacientes-titulo">4.9 de 5 en más de 180 reseñas de&nbsp;Google</h2>
+        <p class="pacientes__sub">Estas son cuatro, sin editar.</p>
+      </header>
+
+      <ul class="rese-lista" role="list" tabindex="0" aria-label="Reseñas de pacientes">
+
+        <li class="rese reveal" style="--i:1">
+          <blockquote class="rese__card">
+            <p class="rese__hook">No intentan venderte cosas innecesarias.</p>
+            <p class="rese__full">La mejor óptica de la ciudad. Servicios profesionales y personalizados. Un lugar donde te explican detalladamente lo que necesitas. Soy paciente desde hace más de 4 años.</p>
+            <footer class="rese__pie">
+              <span class="rese__mono" aria-hidden="true">S</span>
+              <cite class="rese__quien">Santiago C.</cite>
+              <span class="rese__fuente">
+                <svg width="12" height="12" aria-hidden="true"><use href="#g-logo"/></svg>
+                Reseña en Google
+              </span>
+            </footer>
+          </blockquote>
+        </li>
+
+        <li class="rese reveal" style="--i:2">
+          <blockquote class="rese__card">
+            <p class="rese__hook">Se siente un ambiente familiar.</p>
+            <p class="rese__full">Servicio de primera y trato personalizado. No es como las demás ópticas porque el cliente es primero. De seguro regresamos.</p>
+            <footer class="rese__pie">
+              <span class="rese__mono" aria-hidden="true">L</span>
+              <cite class="rese__quien">Luis H.</cite>
+              <span class="rese__fuente">
+                <svg width="12" height="12" aria-hidden="true"><use href="#g-logo"/></svg>
+                Reseña en Google
+              </span>
+            </footer>
+          </blockquote>
+        </li>
+
+        <li class="rese reveal" style="--i:3">
+          <blockquote class="rese__card">
+            <p class="rese__hook">Me encantó cómo nos explicaron tan detalladamente.</p>
+            <p class="rese__full">Yo tengo años usando lentes y me han hecho muchos exámenes de vista, pero sinceramente en esta ocasión me encantó la experiencia.</p>
+            <footer class="rese__pie">
+              <span class="rese__mono" aria-hidden="true">S</span>
+              <cite class="rese__quien">Sayra A.</cite>
+              <span class="rese__fuente">
+                <svg width="12" height="12" aria-hidden="true"><use href="#g-logo"/></svg>
+                Reseña en Google
+              </span>
+            </footer>
+          </blockquote>
+        </li>
+
+        <li class="rese reveal" style="--i:4">
+          <blockquote class="rese__card">
+            <p class="rese__hook">Sin presión y con muy buenas sugerencias.</p>
+            <p class="rese__full">Desde el primer momento me atendieron con muchísima amabilidad y paciencia. Me ayudaron a encontrar los lentes ideales para mí.</p>
+            <footer class="rese__pie">
+              <span class="rese__mono" aria-hidden="true">M</span>
+              <cite class="rese__quien">María A.</cite>
+              <span class="rese__fuente">
+                <svg width="12" height="12" aria-hidden="true"><use href="#g-logo"/></svg>
+                Reseña en Google
+              </span>
+            </footer>
+          </blockquote>
+        </li>
+
+      </ul>
+
+      <a class="rese__ver-todas"
+         href="https://maps.app.goo.gl/nyrjM9WuBSQv3qb97"
+         target="_blank" rel="noopener">
+        Ver las 180 reseñas en Google
+        <span class="arrow" aria-hidden="true">→</span>
+      </a>
+
     </div>
   </section>
 
@@ -660,38 +817,22 @@
   </a>
 
   <script>
-    // ── CARRUSEL TESTIMONIOS ──
-    const track = document.getElementById('testiTrack');
-    const cards = track ? track.querySelectorAll('.testi-card') : [];
-    const dotsContainer = document.getElementById('testiDots');
-    let current = 0;
-
-    if (cards.length && dotsContainer) {
-      cards.forEach((_, i) => {
-        const dot = document.createElement('button');
-        dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
-        dot.setAttribute('aria-label', `Testimonio ${i + 1}`);
-        dot.addEventListener('click', () => goTo(i));
-        dotsContainer.appendChild(dot);
-      });
-
-      function goTo(index) {
-        current = (index + cards.length) % cards.length;
-        track.style.transform = `translateX(-${current * 100}%)`;
-        dotsContainer.querySelectorAll('.carousel-dot').forEach((d, i) => {
-          d.classList.toggle('active', i === current);
-        });
+    // ── REVEAL: de borroso a claro ──
+    (() => {
+      const items = document.querySelectorAll('.pacientes .reveal');
+      if (!('IntersectionObserver' in window)) {
+        items.forEach(el => el.classList.add('is-in'));
+        return;
       }
-
-      document.getElementById('testiPrev').addEventListener('click', () => goTo(current - 1));
-      document.getElementById('testiNext').addEventListener('click', () => goTo(current + 1));
-
-      let autoplay = setInterval(() => goTo(current + 1), 5000);
-      track.closest('.carousel-wrap').addEventListener('mouseenter', () => clearInterval(autoplay));
-      track.closest('.carousel-wrap').addEventListener('mouseleave', () => {
-        autoplay = setInterval(() => goTo(current + 1), 5000);
-      });
-    }
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (!e.isIntersecting) return;
+          e.target.classList.add('is-in');
+          io.unobserve(e.target);
+        });
+      }, { threshold: 0.2, rootMargin: '0px 0px -10% 0px' });
+      items.forEach(el => io.observe(el));
+    })();
   </script>
 
   <script>
