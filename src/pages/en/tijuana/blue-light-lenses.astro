@@ -1,0 +1,146 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Blue Light Blocking Glasses in Tijuana | Ópticas Jarmar Zona Río"
+  description="Protect your eyes from screen damage with blue light blocking lenses in Tijuana. Ópticas Jarmar Zona Río."
+>
+  <style>
+    :root { --bg: #071A3E; --surface: #0D2B6B; --accent: #3A8FE0; }
+
+    .hero { background: linear-gradient(135deg, var(--bg) 0%, var(--surface) 100%); color: #fff; padding: 100px 20px 80px; text-align: center; }
+    .hero-tag { display: inline-block; background: rgba(58,143,224,0.2); border: 1px solid var(--accent); color: var(--accent); border-radius: 100px; padding: 6px 18px; font-size: 0.85rem; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 24px; }
+    .hero h1 { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 700; line-height: 1.2; margin-bottom: 20px; }
+    .hero h1 span { color: var(--accent); }
+    .hero p { font-size: 1.15rem; opacity: 0.85; max-width: 620px; margin: 0 auto 36px; line-height: 1.7; }
+    .btn-cta { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: #fff; padding: 14px 32px; border-radius: 100px; font-weight: 700; font-size: 1rem; text-decoration: none; transition: opacity 0.2s, transform 0.2s; }
+    .btn-cta:hover { opacity: 0.9; transform: translateY(-2px); }
+
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    .section { padding: 72px 20px; }
+    .section:nth-child(even) { background: #f7f9fc; }
+    .section-title { font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 700; color: var(--bg); margin-bottom: 16px; }
+    .section-title span { color: var(--accent); }
+    .section-sub { color: #4a5568; line-height: 1.7; font-size: 1.05rem; margin-bottom: 36px; }
+
+    .info-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+    .info-box { background: #fff; border-left: 4px solid var(--accent); border-radius: 0 14px 14px 0; padding: 24px 22px; }
+    .info-box h4 { font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--bg); margin-bottom: 8px; }
+    .info-box p { color: #4a5568; font-size: 0.97rem; line-height: 1.65; }
+
+    .sintomas { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
+    .sintoma { background: var(--surface); color: #fff; border-radius: 14px; padding: 20px 18px; text-align: center; }
+    .sintoma-icon { font-size: 1.8rem; margin-bottom: 10px; display: block; }
+    .sintoma p { font-size: 0.93rem; line-height: 1.5; opacity: 0.9; }
+
+    .beneficios { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+    .beneficio { background: #fff; border: 1.5px solid rgba(58,143,224,0.25); border-radius: 18px; padding: 28px 24px; display: flex; gap: 16px; align-items: flex-start; }
+    .beneficio-num { background: var(--accent); color: #fff; border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; flex-shrink: 0; }
+    .beneficio h4 { font-family: var(--font-display); font-weight: 700; color: var(--bg); margin-bottom: 6px; font-size: 1rem; }
+    .beneficio p { color: #4a5568; font-size: 0.95rem; line-height: 1.6; }
+
+    .cta-section { background: linear-gradient(135deg, var(--bg) 0%, var(--surface) 100%); color: #fff; text-align: center; padding: 80px 20px; }
+    .cta-section h2 { font-family: var(--font-display); font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 700; margin-bottom: 16px; }
+    .cta-section p { font-size: 1.1rem; opacity: 0.85; margin-bottom: 36px; max-width: 560px; margin-left: auto; margin-right: auto; }
+
+    .back-link { display: block; text-align: center; padding: 28px; color: var(--accent); text-decoration: none; font-size: 0.95rem; font-weight: 600; }
+    .back-link:hover { text-decoration: underline; }
+  </style>
+
+  <section class="hero">
+    <div class="container">
+      <span class="hero-tag">Digital protection · Tijuana</span>
+      <h1>Blue Light<br><span>Blocking Glasses</span> in Tijuana</h1>
+      <p>If you spend hours in front of screens, your eyes feel it. Protect them with blue light blocking lenses available at Ópticas Jarmar Tijuana.</p>
+      <a href="https://wa.me/526645791970?text=Hello%2C+I%27d+like+information+about+blue+light+lenses+at+%C3%93pticas+Jarmar+Tijuana." target="_blank" class="btn-cta">
+        Learn more →
+      </a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">What is <span>blue light</span>?</h2>
+      <p class="section-sub">Blue light is a part of the visible light spectrum with short wavelengths and high energy. It is emitted primarily by digital screens, LED, and fluorescent lighting.</p>
+      <div class="info-grid">
+        <div class="info-box">
+          <h4>Digital screens</h4>
+          <p>Smartphones, laptops, tablets, and monitors emit high levels of blue light that penetrate all the way to the retina.</p>
+        </div>
+        <div class="info-box">
+          <h4>Prolonged exposure</h4>
+          <p>Remote work has increased screen time to 8–10+ hours a day for many people.</p>
+        </div>
+        <div class="info-box">
+          <h4>Impact on sleep</h4>
+          <p>Blue light suppresses melatonin and disrupts the circadian rhythm, making it harder to fall asleep after evening screen use.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title"><span>Symptoms</span> you might be experiencing</h2>
+      <p class="section-sub">If you experience any of these, blue light blocking lenses may be the solution you need.</p>
+      <div class="sintomas">
+        <div class="sintoma"><span class="sintoma-icon">😫</span><p>Eye fatigue after screen use</p></div>
+        <div class="sintoma"><span class="sintoma-icon">🤕</span><p>Frequent headaches</p></div>
+        <div class="sintoma"><span class="sintoma-icon">👁️</span><p>Dry or irritated eyes</p></div>
+        <div class="sintoma"><span class="sintoma-icon">😴</span><p>Difficulty falling asleep</p></div>
+        <div class="sintoma"><span class="sintoma-icon">🔆</span><p>Light sensitivity</p></div>
+        <div class="sintoma"><span class="sintoma-icon">🌫️</span><p>Blurry vision at end of day</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Benefits of <span>blue light filter</span></h2>
+      <p class="section-sub">Our blue light treatment lenses provide real protection with proven benefits for your visual health.</p>
+      <div class="beneficios">
+        <div class="beneficio">
+          <div class="beneficio-num">1</div>
+          <div>
+            <h4>Reduces digital eye strain</h4>
+            <p>Decreases visual fatigue during prolonged screen use, so you can work in more comfort.</p>
+          </div>
+        </div>
+        <div class="beneficio">
+          <div class="beneficio-num">2</div>
+          <div>
+            <h4>Improves sleep quality</h4>
+            <p>By blocking blue light from screens at night, your body can produce melatonin naturally.</p>
+          </div>
+        </div>
+        <div class="beneficio">
+          <div class="beneficio-num">3</div>
+          <div>
+            <h4>Long-term protection</h4>
+            <p>Reduces cumulative exposure that may contribute to retinal damage over time.</p>
+          </div>
+        </div>
+        <div class="beneficio">
+          <div class="beneficio-num">4</div>
+          <div>
+            <h4>Compatible with your prescription</h4>
+            <p>The blue light filter can be added to any type of prescription lens without affecting visual clarity.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2>Protect your eyes starting today</h2>
+      <p>Visit Ópticas Jarmar in Tijuana Zona Río and we'll help you find the best blue light lens option for your lifestyle.</p>
+      <a href="https://wa.me/526645791970?text=Hello%2C+I%27d+like+information+about+blue+light+lenses+at+%C3%93pticas+Jarmar+Tijuana." target="_blank" class="btn-cta">
+        Book via WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <a href="/en/tijuana/" class="back-link">← Back to Tijuana</a>
+</BaseLayout>
