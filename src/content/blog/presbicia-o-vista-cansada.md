@@ -21,7 +21,7 @@ El resultado: la visión de lejos puede seguir igual de nítida, pero la de cerc
 
 La presbicia suele hacerse notar entre los **40 y 45 años**, aunque puede adelantarse o retrasarse ligeramente dependiendo de cada persona. Lo que sí es predecible es que progresa: lo que hoy es leve incomodidad al leer letra pequeña puede convertirse en dificultad generalizada para la visión cercana en unos años.
 
-También es importante saber que la presbicia puede coexistir con otras condiciones previas. Una persona miope puede notar que se queda sin lentes para leer sin sus gafas — o que con ellas no ve bien de cerca. Una persona hipermétrope puede desarrollar presbicia antes y de forma más pronunciada.
+También es importante saber que la presbicia puede coexistir con otras condiciones previas. Una persona miope puede notar que se queda sin lentes para leer sin sus gafas — o que con ellas no ve bien de cerca. Si a esto se suma [visión borrosa de lejos](/blog/vision-borrosa-de-lejos/) sin diagnóstico previo, una evaluación completa es el camino más claro para entender qué está pasando. Una persona hipermétrope puede desarrollar presbicia antes y de forma más pronunciada.
 
 ---
 
@@ -51,7 +51,7 @@ El ojo sano enfoca a distintas distancias gracias a un proceso llamado **acomoda
 
 Con el tiempo, el cristalino se vuelve más rígido y denso. El músculo ciliar puede seguir funcionando bien, pero ya no tiene suficiente material flexible con qué trabajar. El rango de enfoque se reduce, y la visión cercana es la primera que se resiente porque exige el mayor grado de acomodación.
 
-No hay forma de revertir este proceso con ejercicios, vitaminas o hábitos visuales. La presbicia es estructural, no funcional. Lo que sí existe son soluciones ópticas efectivas para compensarla.
+No hay forma de revertir este proceso con ejercicios, vitaminas o hábitos visuales — este es uno de los [mitos más repetidos sobre los ojos](/blog/mitos-de-los-ojos/). La presbicia es estructural, no funcional. Lo que sí existe son soluciones ópticas efectivas para compensarla.
 
 ---
 
@@ -61,7 +61,7 @@ Aquí es donde muchas personas se sienten perdidas. Hay varias opciones, y la me
 
 ### Lentes de lectura (monofocales para cerca)
 
-Son lentes con una sola zona de corrección enfocada en la visión cercana. Son la solución más sencilla y económica para quien no tiene otra condición visual previa (ni miopía ni hipermetropía significativas).
+Son [lentes graduados](/tijuana/lentes-graduados) con una sola zona de corrección enfocada en la visión cercana. Son la solución más sencilla y económica para quien no tiene otra condición visual previa (ni miopía ni hipermetropía significativas).
 
 **Ventaja:** sencillos y de adaptación inmediata.  
 **Limitación:** no sirven para ver de lejos — tienes que quitártelos para conducir o ver la televisión.
@@ -77,7 +77,7 @@ Tienen dos zonas de visión separadas por una línea visible: la parte superior 
 
 Son la evolución de los bifocales. En lugar de dos zonas separadas por una línea, tienen una transición gradual y continua desde la visión lejana (parte superior) hasta la visión cercana (parte inferior), con una zona intermedia en el medio que cubre la distancia de la pantalla del ordenador.
 
-No tienen línea visible, lo que los hace más discretos y estéticamente más naturales. Son hoy la opción más recomendada para la mayoría de pacientes con presbicia.
+No tienen línea visible, lo que los hace más discretos y estéticamente más naturales. Son hoy la opción más recomendada para la mayoría de pacientes con presbicia. La elección del [armazón adecuado](/blog/como-elegir-armazones-segun-tu-rostro/) también importa aquí: los progresivos necesitan una montura con suficiente altura de aro para que las tres zonas de visión quepan correctamente.
 
 **Ventaja:** cubren las tres distancias (lejos, intermedio y cerca) en un solo lente, sin línea visible.  
 **Limitación:** requieren un período de adaptación de días a semanas, y deben fabricarse con medidas precisas adaptadas a cada persona. Una montura mal elegida o unas medidas incorrectas pueden hacer que la adaptación sea difícil o fallida.
@@ -101,16 +101,16 @@ La mayoría de los ópticos hoy recomiendan **lentes progresivos** como primera 
 
 Los bifocales siguen siendo una alternativa válida para pacientes que no logran adaptarse a los progresivos, o para quienes su actividad principal requiere alternar solo entre dos distancias muy definidas.
 
-La clave está en una evaluación individualizada. No hay una respuesta universal; hay una respuesta correcta para cada persona.
+La clave está en una [evaluación individualizada](/tijuana/estudio-de-la-vista). No hay una respuesta universal; hay una respuesta correcta para cada persona.
 
 ---
 
 ## Por qué la adaptación a los progresivos falla (y cómo evitarlo)
 
-Los lentes progresivos tienen fama de ser difíciles. La realidad es que la mayoría de los problemas de adaptación tienen causas identificables:
+Los [lentes progresivos](/tijuana/lentes-graduados) tienen fama de ser difíciles. La realidad es que la mayoría de los problemas de adaptación tienen causas identificables:
 
 - **Medidas de fabricación incorrectas:** la altura del centro óptico y la distancia interpupilar deben medirse con precisión milimétrica en la montura que el paciente va a usar. Un error aquí hace que las zonas de visión no queden donde deben.
-- **Montura inadecuada:** los progresivos necesitan una montura con suficiente altura de aro para que quepan correctamente las tres zonas. Monturas muy pequeñas o muy estrechas reducen el área útil de visión.
+- **Montura inadecuada:** los progresivos necesitan una montura con suficiente altura de aro para que quepan correctamente las tres zonas. Monturas muy pequeñas o muy estrechas reducen el área útil de visión. Aquí puede ayudarte saber [cómo elegir armazones](/blog/como-elegir-armazones-segun-tu-rostro/) antes de decidir.
 - **Graduación incorrecta:** si la prescripción no es exacta, la adaptación se complica aunque el lente esté bien fabricado.
 - **Expectativas mal gestionadas:** los progresivos requieren aprender a mover un poco la cabeza en lugar de solo los ojos para encontrar la zona correcta. Es un hábito que se adquiere rápido, pero hay que saber que existe.
 
@@ -122,12 +122,12 @@ Con las medidas correctas, la montura adecuada y la graduación precisa, la gran
 
 Si notas cualquiera de los síntomas descritos — alejas los textos para leer, tienes dolores de cabeza frecuentes al final del día, o sientes que tus lentes actuales ya no te funcionan bien de cerca — es momento de una evaluación.
 
-La presbicia es progresiva: ignorarla no la detiene, solo hace que el esfuerzo visual diario sea mayor del necesario. Y como puede coexistir con miopía, hipermetropía, astigmatismo o cambios en la salud ocular, un examen completo es siempre más informativo que autocorregirse con lentes de lectura comprados sin prescripción.
+La presbicia es progresiva: ignorarla no la detiene, solo hace que el esfuerzo visual diario sea mayor del necesario. Y como puede coexistir con miopía, hipermetropía, astigmatismo o cambios en la salud ocular, un [examen completo](/tijuana/estudio-de-la-vista) es siempre más informativo que autocorregirse con lentes de lectura comprados sin prescripción.
 
 ---
 
 ## Soluciones para la vista cansada en Ópticas Jarmar
 
-En **Ópticas Jarmar** evaluamos tu visión de forma completa y te asesoramos sobre la opción de corrección más adecuada para tu caso — ya sea lentes monofocales, bifocales, progresivos u ocupacionales. Contamos con clínicas en Chiapas (Plaza Cedros y Plaza Crystal) y Tijuana (Zona Urbana Río).
+En **Ópticas Jarmar** evaluamos tu visión de forma completa y te asesoramos sobre la opción de corrección más adecuada para tu caso — ya sea lentes monofocales, bifocales, progresivos u ocupacionales. Contamos con clínicas en [Chiapas](/chiapas/lentes-graduados) (Plaza Cedros y Plaza Crystal) y [Tijuana](/tijuana/lentes-graduados) (Zona Urbana Río).
 
 Si llevas tiempo adaptando inconscientemente la distancia a la que lees, agenda una evaluación. Hay soluciones cómodas y efectivas — solo hay que encontrar la que mejor se ajusta a ti.

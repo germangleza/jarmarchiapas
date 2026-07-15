@@ -25,10 +25,10 @@ El resultado: visión nítida y comodidad durante todo el día, incluso en ojos 
 
 ## ¿Para quién están indicados?
 
-Los lentes esclerales son la primera opción cuando los métodos convencionales no son suficientes. Están especialmente indicados para personas con:
+Los [lentes esclerales](/tijuana/lentes-esclerales) son la primera opción cuando los métodos convencionales no son suficientes. Están especialmente indicados para personas con:
 
 ### Queratocono
-Condición en la que la córnea adelgaza y adopta una forma cónica. Los lentes esclerales "saltan" la irregularidad de la córnea y crean una superficie óptica nueva, mejorando dramáticamente la visión.
+Condición en la que la córnea adelgaza y adopta una forma cónica. Los lentes esclerales "saltan" la irregularidad de la córnea y crean una superficie óptica nueva, mejorando dramáticamente la visión. Si tienes [visión borrosa que no corrige bien con lentes convencionales](/blog/vision-borrosa-de-lejos/), el queratocono es una posibilidad que merece descartarse.
 
 ### Córnea irregular post-cirugía
 Tras cirugías refractivas (LASIK, PRK) o trasplantes de córnea, la superficie puede quedar irregular. Los esclerales corrigen esas imperfecciones que los lentes blandos no pueden compensar.
@@ -46,7 +46,7 @@ Personas que no toleran los lentes de contacto convencionales por la sensación 
 
 La adaptación a lentes esclerales es un proceso personalizado que requiere varios pasos:
 
-1. **Examen de contactología especializada** — Se evalúa la topografía corneal, la salud ocular y la refracción.
+1. **[Examen de contactología especializada](/tijuana/estudio-de-la-vista)** — Se evalúa la topografía corneal, la salud ocular y la refracción.
 2. **Prueba de lentes diagnósticos** — Se selecciona el diámetro y la curvatura base adecuados para tu ojo.
 3. **Ajuste fino** — Se realizan modificaciones hasta lograr el apoyo correcto, la cámara de solución salina ideal y la refracción exacta.
 4. **Entrenamiento en manejo** — Se enseña a colocar, retirar y cuidar las lentes correctamente.
@@ -59,6 +59,6 @@ Contrario a lo que podría pensarse por su tamaño, los lentes esclerales son mu
 
 ## ¿Dónde puedo adaptarme lentes esclerales en México?
 
-En **Ópticas Jarmar** contamos con el servicio de contactología especializada en nuestras sucursales de Chiapas (Plaza Cedros y Plaza Crystal) y Tijuana (Zona Urbana Río). Nuestros optometristas tienen experiencia en adaptación de lentes esclerales para queratocono, ojo seco severo y córneas irregulares.
+En **Ópticas Jarmar** contamos con el servicio de contactología especializada en nuestras sucursales de [Chiapas](/chiapas/lentes-esclerales) (Plaza Cedros y Plaza Crystal) y [Tijuana](/tijuana/lentes-esclerales) (Zona Urbana Río). Nuestros optometristas tienen experiencia en adaptación de lentes esclerales para queratocono, ojo seco severo y córneas irregulares.
 
-Si crees que puedes ser candidato o ya tienes un diagnóstico previo, te recomendamos agendar una consulta de contactología especializada para evaluar tu caso de forma personalizada.
+Si crees que puedes ser candidato o ya tienes un diagnóstico previo, te recomendamos agendar una [consulta de contactología especializada](/tijuana/lentes-esclerales) para evaluar tu caso de forma personalizada.

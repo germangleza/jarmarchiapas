@@ -21,29 +21,29 @@ Hay creencias sobre la salud visual que se repiten de generación en generación
 
 ## Mito 3: Usar lentes graduados empeora la vista
 
-**Falso.** Los lentes no hacen que los ojos se "acostumbren mal" ni aceleran la miopía. Lo que ocurre es que, al ver mejor con lentes, notas más la diferencia cuando no los usas. Los cambios en la graduación son progresión natural de la condición, no consecuencia de usar los lentes correctos.
+**Falso.** Los [lentes graduados](/tijuana/lentes-graduados) no hacen que los ojos se "acostumbren mal" ni aceleran la miopía. Lo que ocurre es que, al ver mejor con lentes, notas más la diferencia cuando no los usas. Los cambios en la graduación son progresión natural de la condición, no consecuencia de usar los lentes correctos.
 
 ## Mito 4: Sentarse muy cerca de la TV arruina los ojos
 
-**Falso.** No hay evidencia de que ver televisión de cerca cause daño ocular permanente. Los niños suelen acercarse a la pantalla porque tienen mayor capacidad de enfocar a distancias cortas, o porque simplemente no ven bien de lejos — lo cual sí merece revisión con un optometrista.
+**Falso.** No hay evidencia de que ver televisión de cerca cause daño ocular permanente. Los niños suelen acercarse a la pantalla porque tienen mayor capacidad de enfocar a distancias cortas, o porque simplemente no ven bien de lejos — lo cual sí merece revisión con un optometrista. Si tu hijo se sienta muy cerca o frunce el ceño para ver, te recomendamos agendar un [examen visual infantil](/tijuana/examen-ninos).
 
 ## Mito 5: Los ojos se pueden entrenar para no necesitar lentes
 
-**Depende.** Ciertos ejercicios pueden ayudar con fatiga visual o problemas de convergencia, pero no corrigen la miopía, hipermetropía o astigmatismo. Estas condiciones tienen causas estructurales — la forma del ojo o la curvatura de la córnea — que los ejercicios no modifican.
+**Depende.** Ciertos ejercicios pueden ayudar con fatiga visual o problemas de convergencia, pero no corrigen la miopía, hipermetropía o astigmatismo. Estas condiciones tienen causas estructurales — la forma del ojo o la curvatura de la córnea — que los ejercicios no modifican. En casos de córnea irregular, por ejemplo, la solución puede estar en opciones como los [lentes esclerales](/tijuana/lentes-esclerales), no en ejercicios.
 
 ## Mito 6: Si ves bien, no necesitas revisión ocular
 
-**Falso, y es uno de los más peligrosos.** Condiciones como el glaucoma o la degeneración macular temprana no producen síntomas visibles hasta que el daño es significativo. Un examen de la vista periódico permite detectarlas antes de que afecten la calidad de vida. La recomendación general es una revisión cada 1 o 2 años, incluso sin síntomas.
+**Falso, y es uno de los más peligrosos.** Condiciones como el glaucoma o la degeneración macular temprana no producen síntomas visibles hasta que el daño es significativo. Un [examen de la vista](/tijuana/estudio-de-la-vista) periódico permite detectarlas antes de que afecten la calidad de vida. La recomendación general es una revisión cada 1 o 2 años, incluso sin síntomas.
 
 ## Mito 7: Los ojos cafés tienen mejor vista que los ojos claros
 
-**Falso.** El color del iris no tiene ninguna relación con la agudeza visual. Lo que sí es cierto es que los ojos claros tienen menos pigmento y pueden ser más sensibles a la luz intensa, lo que hace recomendable usar lentes de sol con protección UV — algo que aplica para todos, independientemente del color de ojos.
+**Falso.** El color del iris no tiene ninguna relación con la agudeza visual. Lo que sí es cierto es que los ojos claros tienen menos pigmento y pueden ser más sensibles a la luz intensa, lo que hace recomendable usar [lentes de sol](/tijuana/lentes-de-sol) con protección UV — algo que aplica para todos, independientemente del color de ojos.
 
 ## ¿Cuándo sí debes preocuparte?
 
 Estos síntomas sí requieren revisión pronto, no en algún momento:
 
-- Visión borrosa repentina en uno o ambos ojos
+- [Visión borrosa repentina](/blog/vision-borrosa-de-lejos/) en uno o ambos ojos
 - Destellos de luz o manchas flotantes que aparecen de golpe
 - Dolor ocular persistente
 - Visión doble
@@ -51,4 +51,4 @@ Estos síntomas sí requieren revisión pronto, no en algún momento:
 
 ## Una revisión a tiempo marca la diferencia
 
-En **Ópticas Jarmar** realizamos exámenes de la vista completos en nuestras clínicas de Chiapas (Plaza Cedros y Plaza Crystal) y Tijuana (Zona Urbana Río). Si tienes dudas sobre tu salud visual o llevas más de un año sin revisión, te recomendamos agendar una consulta — muchas condiciones se tratan mejor cuando se detectan temprano.
+En **Ópticas Jarmar** realizamos [exámenes de la vista](/tijuana/estudio-de-la-vista) completos en nuestras clínicas de [Chiapas](/chiapas/estudio-de-la-vista) (Plaza Cedros y Plaza Crystal) y [Tijuana](/tijuana/estudio-de-la-vista) (Zona Urbana Río). Si tienes dudas sobre tu salud visual o llevas más de un año sin revisión, te recomendamos agendar una consulta — muchas condiciones se tratan mejor cuando se detectan temprano.

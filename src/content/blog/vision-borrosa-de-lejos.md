@@ -27,7 +27,7 @@ Es una condición muy prevalente: afecta a cerca del 30 % de la población mundi
 - Te acercas a pantallas o a la televisión sin darte cuenta
 - Tienes dificultad para leer letreros o reconocer caras a distancia
 
-La miopía se corrige con lentes graduados de potencia negativa (cóncavos), lentes de contacto, o en algunos casos mediante cirugía refractiva. Una vez diagnosticada, la solución es sencilla — el problema está en no saberlo.
+La miopía se corrige con [lentes graduados](/tijuana/lentes-graduados) de potencia negativa (cóncavos), lentes de contacto, o en algunos casos mediante cirugía refractiva. Una vez diagnosticada, la solución es sencilla — el problema está en no saberlo.
 
 ---
 
@@ -35,9 +35,9 @@ La miopía se corrige con lentes graduados de potencia negativa (cóncavos), len
 
 Si ya usas lentes y notas que tu visión lejana ha vuelto a volverse borrosa, la explicación más probable es que tu **graduación cambió**. La miopía —sobre todo en adolescentes y adultos jóvenes— puede progresar con el tiempo, y la prescripción que funcionaba hace dos años puede ya no ser suficiente.
 
-Esto no significa que los lentes dañen la vista. El cambio es parte de la progresión natural de la condición, independientemente de si usas corrección o no.
+Esto no significa que los lentes dañen la vista — ese es uno de los [mitos más comunes sobre los ojos](/blog/mitos-de-los-ojos/). El cambio es parte de la progresión natural de la condición, independientemente de si usas corrección o no.
 
-**¿Cuánto tiempo sin revisarte la graduación?** Si llevas más de un año con los mismos lentes y notas que algo ha cambiado, es momento de una nueva evaluación. No hay que esperar a ver muy mal para ajustar la prescripción.
+**¿Cuánto tiempo sin revisarte la graduación?** Si llevas más de un año con los mismos lentes y notas que algo ha cambiado, es momento de una nueva [evaluación visual](/tijuana/estudio-de-la-vista). No hay que esperar a ver muy mal para ajustar la prescripción.
 
 ---
 
@@ -47,7 +47,7 @@ El **astigmatismo** es una irregularidad en la curvatura de la córnea o el cris
 
 Es muy común tenerlo combinado con miopía. Y es igualmente común tenerlo sin saberlo: el astigmatismo leve puede pasar desapercibido durante años porque el cerebro aprende a "compensar", aunque con mayor esfuerzo visual.
 
-Si usas lentes solo para miopía pero el astigmatismo no fue corregido (o no fue corregido correctamente), puedes seguir viendo borroso incluso con gafas puestas.
+Si usas [lentes graduados](/tijuana/lentes-graduados) solo para miopía pero el astigmatismo no fue corregido (o no fue corregido correctamente), puedes seguir viendo borroso incluso con gafas puestas.
 
 ---
 
@@ -66,13 +66,13 @@ Este no es un daño permanente, pero sí es una señal de que el sistema visual 
 Aunque la miopía y el astigmatismo explican la mayoría de los casos de visión borrosa a distancia, no son las únicas posibilidades:
 
 **Córnea irregular o queratocono**
-El queratocono es una condición en la que la córnea adopta una forma cónica progresiva. Produce visión borrosa y distorsionada que no siempre se corrige bien con lentes convencionales. Se diagnostica con topografía corneal.
+El queratocono es una condición en la que la córnea adopta una forma cónica progresiva. Produce visión borrosa y distorsionada que no siempre se corrige bien con lentes convencionales. Se diagnostica con topografía corneal. En estos casos, los [lentes esclerales](/tijuana/lentes-esclerales) suelen ser la solución más efectiva — si quieres entender cómo funcionan, puedes leer [qué son los lentes esclerales y para quién son](/blog/lentes-esclerales-que-son-y-para-quien-son/).
 
 **Catarata incipiente**
 Las cataratas no solo afectan a personas mayores. Una opacificación temprana del cristalino puede producir visión borrosa, deslumbramiento o halos alrededor de las luces, primero notada a distancia. Si tienes más de 45 años y la borrosa aparece de forma progresiva, merece evaluación.
 
 **Problemas de presión ocular o retina**
-Aunque menos comunes como causa de borroso simple, algunas condiciones como el glaucoma o problemas retinianos pueden afectar la calidad visual. Por eso un examen completo no se limita a medir la graduación: también evalúa la salud del ojo en su conjunto.
+Aunque menos comunes como causa de borroso simple, algunas condiciones como el glaucoma o problemas retinianos pueden afectar la calidad visual. Por eso un [examen completo](/tijuana/estudio-de-la-vista) no se limita a medir la graduación: también evalúa la salud del ojo en su conjunto.
 
 **Fluctuaciones por condiciones sistémicas**
 La diabetes, la hipertensión o ciertos medicamentos pueden causar cambios temporales en la visión. Si la borrosa aparece de forma súbita o varía mucho entre mañana y noche, conviene mencionarlo al médico.
@@ -93,9 +93,15 @@ Estos síntomas pueden indicar condiciones que requieren atención médica inmed
 
 ---
 
+## Un caso especial: los niños
+
+Los niños casi nunca se quejan de ver borroso porque no saben que lo que ven no es normal. Se acercan al pizarrón, entrecierran los ojos o se sientan muy cerca de la pantalla sin que nadie lo asocie a un problema visual. Si tu hijo muestra alguna de estas señales, un [examen visual infantil](/tijuana/examen-ninos) puede detectar a tiempo una miopía que, sin corrección, puede afectar su rendimiento escolar.
+
+---
+
 ## ¿Qué hacer si ves borroso de lejos?
 
-El primer paso siempre es el mismo: **un examen de la vista completo**. No hay forma de saber con certeza si la causa es miopía, astigmatismo, cambio de graduación u otra condición sin una evaluación clínica que incluya:
+El primer paso siempre es el mismo: **un [examen de la vista](/tijuana/estudio-de-la-vista) completo**. No hay forma de saber con certeza si la causa es miopía, astigmatismo, cambio de graduación u otra condición sin una evaluación clínica que incluya:
 
 - Medición de agudeza visual
 - Refracción objetiva y subjetiva
@@ -108,6 +114,6 @@ Muchas personas postergan la revisión porque "tampoco es para tanto" o porque p
 
 ## Una evaluación resuelve la duda
 
-En **Ópticas Jarmar** realizamos exámenes de la vista completos con equipamiento de diagnóstico actualizado en nuestras clínicas de Chiapas (Plaza Cedros y Plaza Crystal) y Tijuana (Zona Urbana Río). Si llevas tiempo notando que ves borroso de lejos —ya sea con lentes o sin ellos— te invitamos a agendar una evaluación.
+En **Ópticas Jarmar** realizamos exámenes de la vista completos con equipamiento de diagnóstico actualizado en nuestras clínicas de [Chiapas](/chiapas/estudio-de-la-vista) (Plaza Cedros y Plaza Crystal) y [Tijuana](/tijuana/estudio-de-la-vista) (Zona Urbana Río). Si llevas tiempo notando que ves borroso de lejos —ya sea con lentes o sin ellos— te invitamos a agendar una evaluación.
 
 La mayoría de las causas de visión borrosa a distancia tienen solución. El primer paso es saber exactamente a qué nos enfrentamos.
