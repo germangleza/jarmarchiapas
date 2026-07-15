@@ -1,18 +1,30 @@
 ---
 ---
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" href="/LogoXS color.png" />
   <link rel="apple-touch-icon" href="/LogoXS color.png" />
-  <title>Ópticas Jarmar Tijuana | Clínica Óptica Boutique</title>
-  <meta name="description" content="60 años cuidando tu salud visual en Tijuana. Diagnóstico de precisión, lentes graduados, lentes esclerales, luz azul y nuestra línea Jarmar Eyewear. Agenda hoy." />
-  <meta name="keywords" content="óptica tijuana, lentes graduados tijuana, estudio visual tijuana, lentes de contacto tijuana, lentes esclerales tijuana, óptica zona río tijuana" />
+  <title>Ópticas Jarmar Tijuana | Boutique Eye Care Clinic</title>
+  <meta name="description" content="60 years caring for your vision in Tijuana. Precise diagnostics, prescription glasses, scleral lenses, blue light protection and our Jarmar Eyewear line. Book today." />
+  <meta name="keywords" content="eye doctor tijuana, optometrist tijuana, glasses tijuana, contact lenses tijuana, scleral lenses tijuana, eye exam tijuana, vision care tijuana" />
+  <link rel="alternate" hreflang="es" href="https://jarmarchiapas.com/tijuana/" />
+  <link rel="alternate" hreflang="en" href="https://jarmarchiapas.com/en/tijuana/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17977352986"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17977352986');
+  </script>
+
   <style>
     /* ===================== VARIABLES ===================== */
     :root {
@@ -48,7 +60,7 @@
     img { max-width: 100%; display: block; }
     a { text-decoration: none; color: inherit; }
 
-    /* ===================== UTILIDADES ===================== */
+    /* ===================== UTILITIES ===================== */
     .container { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
     .section-tag {
       display: inline-block;
@@ -94,12 +106,10 @@
     .delay-3 { transition-delay: 0.3s; }
     .delay-4 { transition-delay: 0.4s; }
 
-    /* Pilar stagger */
     .pilares .pilar.delay-1 { transition-delay: 0s; }
     .pilares .pilar.delay-2 { transition-delay: 0.45s; }
     .pilares .pilar.delay-3 { transition-delay: 0.9s; }
 
-    /* Sucursal: borde animado giratorio */
     @property --angle {
       syntax: '<angle>';
       initial-value: 0deg;
@@ -122,7 +132,6 @@
     }
 
     /* ===================== NAVBAR ===================== */
-    .navbar.scrolled { background: rgba(13,43,107,0.97); }
     .navbar {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -167,8 +176,19 @@
       box-shadow: 0 2px 12px rgba(0,0,0,0.15);
     }
     .nav-cta:hover { background: var(--blanco-hueso); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(0,0,0,0.2) !important; }
+    .nav-lang {
+      display: flex; align-items: center; gap: 4px;
+      font-size: 0.8rem; font-weight: 600;
+      color: rgba(255,255,255,0.6);
+      padding: 6px 10px;
+      border-radius: 100px;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+    .nav-lang .active { color: #fff; }
+    .nav-lang span.sep { opacity: 0.4; margin: 0 2px; }
     .nav-burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
     .nav-burger span { width: 24px; height: 2px; background: var(--blanco); border-radius: 2px; transition: var(--transition); }
+    .nav-close { display: none; background: none; border: none; color: white; font-size: 1.4rem; cursor: pointer; position: absolute; top: 24px; right: 24px; }
 
     /* ===================== HERO ===================== */
     .hero {
@@ -183,18 +203,6 @@
       position: absolute; inset: 0;
       background: linear-gradient(120deg, rgba(7,26,62,0.90) 0%, rgba(13,43,107,0.75) 55%, rgba(26,91,181,0.50) 100%);
     }
-    .hero-orb {
-      display: none;
-      position: absolute;
-      border-radius: 50%;
-      filter: blur(80px);
-      opacity: 0.25;
-      animation: float 8s ease-in-out infinite;
-    }
-    .hero-orb-1 { width: 500px; height: 500px; background: #3A8FE0; top: -100px; right: -80px; }
-    .hero-orb-2 { width: 350px; height: 350px; background: #0D2B6B; bottom: -80px; left: -60px; animation-delay: -4s; }
-    @keyframes float { 0%,100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-20px) scale(1.04); } }
-
     .hero-inner {
       position: relative; z-index: 2;
       display: flex;
@@ -270,43 +278,8 @@
     .review-text { display: flex; flex-direction: column; gap: 2px; }
     .review-stars { color: #F6AD55; font-size: 0.9rem; letter-spacing: 1px; }
     .review-label { color: rgba(255,255,255,0.75); font-size: 0.8rem; font-weight: 500; }
-    .hero-stats {
-      display: flex; gap: 32px;
-      margin-top: 48px;
-      padding-top: 36px;
-      border-top: 1px solid rgba(255,255,255,0.15);
-    }
-    .hero-stat strong { display: block; font-family: var(--font-display); font-size: 2rem; font-weight: 900; color: var(--blanco); line-height: 1; }
-    .hero-stat span { font-size: 0.78rem; color: rgba(255,255,255,0.65); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 4px; display: block; }
-    .hero-img { display: none; }
-    .hero-img-frame {
-      position: relative; width: 100%; max-width: 500px;
-      aspect-ratio: 4/5; border-radius: 28px; overflow: hidden;
-      box-shadow: 0 32px 80px rgba(0,0,0,0.35);
-    }
-    .hero-img-frame img { width: 100%; height: 100%; object-fit: cover; }
-    .hero-img-placeholder {
-      width: 100%; height: 100%;
-      background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.04) 100%);
-      border: 2px dashed rgba(255,255,255,0.25);
-      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px;
-      color: rgba(255,255,255,0.5); font-size: 0.85rem; text-align: center; padding: 20px;
-    }
-    .hero-card {
-      position: absolute;
-      background: rgba(255,255,255,0.95);
-      backdrop-filter: blur(12px);
-      border-radius: var(--radius);
-      padding: 16px 20px;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.18);
-    }
-    .hero-card-1 { bottom: 32px; left: -24px; }
-    .hero-card-2 { top: 32px; right: -24px; }
-    .hero-card p { font-size: 0.78rem; color: var(--gris-texto); margin-top: 2px; }
-    .hero-card strong { font-size: 0.9rem; color: var(--azul-oscuro); }
-    .stars { color: #F59E0B; font-size: 0.75rem; letter-spacing: 1px; }
 
-    /* ===================== CONFIANZA BAR ===================== */
+    /* ===================== TRUST BAR ===================== */
     .trust-bar { background: var(--azul-oscuro); padding: 28px 0; }
     .trust-bar-inner {
       display: flex; align-items: center; justify-content: center;
@@ -323,11 +296,10 @@
       color: var(--blanco);
     }
     .trust-item:last-child { border-right: none; }
-    .trust-icon { font-size: 1.4rem; }
     .trust-item strong { display: block; font-size: 1.1rem; font-family: var(--font-display); }
     .trust-item span { font-size: 0.75rem; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.1em; }
 
-    /* ===================== PROBLEMA ===================== */
+    /* ===================== PROBLEM ===================== */
     .problema {
       position: relative;
       padding: 100px 0;
@@ -342,7 +314,6 @@
     .problema .section-tag { color: rgba(255,255,255,0.75); }
     .problema .section-title { color: #fff; }
     .problema .section-title span { color: #7EC8F5; }
-    .problema .section-subtitle { color: rgba(255,255,255,0.72); }
     .problema-inner {
       display: flex; flex-direction: column; align-items: center; text-align: center;
     }
@@ -355,7 +326,7 @@
     }
     @media (max-width: 640px) { .pain-grid { grid-template-columns: 1fr; } }
 
-    /* ===================== SOLUCIÓN ===================== */
+    /* ===================== SOLUTION ===================== */
     .solucion { padding: 100px 0; background: var(--gradiente-suave); }
     .solucion-header { text-align: center; margin-bottom: 60px; }
     .solucion-header .section-subtitle { margin: 16px auto 0; }
@@ -377,21 +348,13 @@
       color: var(--azul-medio); opacity: 0.08;
       position: absolute; top: 16px; right: 20px; line-height: 1;
     }
-    .pilar-icon {
-      width: 56px; height: 56px;
-      background: linear-gradient(135deg, var(--azul-oscuro), var(--azul-medio));
-      border-radius: 14px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.5rem; margin-bottom: 20px;
-      box-shadow: 0 4px 16px rgba(26,91,181,0.3);
-    }
     .pilar h3 { font-family: var(--font-display); font-size: 1.35rem; font-weight: 700; margin-bottom: 12px; color: var(--azul-oscuro); }
     .pilar p { font-size: 0.92rem; color: var(--gris-texto); line-height: 1.7; }
     .pilar-list { margin-top: 16px; display: flex; flex-direction: column; gap: 8px; }
     .pilar-list li { font-size: 0.92rem; color: var(--gris-texto); display: flex; align-items: center; gap: 8px; list-style: none; }
     .pilar-list li::before { content: '✓'; color: var(--azul-medio); font-weight: 700; font-size: 0.8rem; flex-shrink: 0; }
 
-    /* ===================== DIFERENCIADORES ===================== */
+    /* ===================== DIFFERENTIATORS ===================== */
     .diferenciadores {
       padding: 100px 0;
       background: var(--gradiente-hero);
@@ -419,23 +382,14 @@
       opacity: 0; transition: var(--transition);
     }
     .dif-card:hover::after { opacity: 1; }
-    .dif-icon { font-size: 2.4rem; margin-bottom: 20px; display: block; }
     .dif-card h3 { font-family: var(--font-display); font-size: 1.25rem; color: var(--blanco); margin-bottom: 12px; }
     .dif-card p { font-size: 0.9rem; color: rgba(255,255,255,1); line-height: 1.7; }
 
-    /* ===================== ESTRELLA — ESCLERALES ===================== */
-    .estrella {
-      padding: 100px 0; background: var(--blanco);
-    }
-    .estrella-inner {
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 80px; align-items: center;
-    }
+    /* ===================== STAR PRODUCT ===================== */
+    .estrella { padding: 100px 0; background: var(--blanco); }
+    .estrella-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
     .estrella-img-wrap { position: relative; }
-    .estrella-img-frame {
-      border-radius: 24px; overflow: hidden;
-      aspect-ratio: 1/1; box-shadow: 0 20px 60px var(--sombra);
-    }
+    .estrella-img-frame { border-radius: 24px; overflow: hidden; aspect-ratio: 1/1; box-shadow: 0 20px 60px var(--sombra); }
     .estrella-img-frame img { width:100%; height:100%; object-fit:cover; }
     .estrella-badge-float {
       position: absolute; top: 24px; left: 24px;
@@ -462,7 +416,6 @@
       transition: var(--transition);
     }
     .estrella-item:hover { background: var(--gris-suave); transform: translateX(4px); }
-    .estrella-item-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 1px; }
     .estrella-item p { font-size: 0.9rem; color: var(--gris-texto); line-height: 1.6; }
     .btn-azul {
       display: inline-flex; align-items: center; gap: 10px;
@@ -472,23 +425,17 @@
       transition: var(--transition);
       box-shadow: 0 4px 20px var(--sombra-fuerte);
     }
-    .btn-azul:hover { background: var(--azul-medio); transform: translateY(-2px); box-shadow: 0 8px 28px var(--sombra-fuerte); }
+    .btn-azul:hover { background: var(--azul-medio); transform: translateY(-2px); }
 
-    /* ===================== SERVICIOS ===================== */
+    /* ===================== SERVICES ===================== */
     .servicios { padding: 100px 0; background: #EBF4FF; }
     .servicios-header { text-align: center; margin-bottom: 60px; }
     .servicios-header .section-subtitle { margin: 16px auto 0; }
     .servicios-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
     .servicio-card {
-      display: block;
-      text-decoration: none;
-      color: inherit;
-      cursor: pointer;
-      background: var(--blanco);
-      border-radius: 20px;
-      padding: 32px 24px;
-      text-align: center;
-      transition: var(--transition);
+      display: block; text-decoration: none; color: inherit; cursor: pointer;
+      background: var(--blanco); border-radius: 20px; padding: 32px 24px;
+      text-align: center; transition: var(--transition);
       border: 1.5px solid rgba(26,91,181,0.25);
     }
     .servicio-card:hover { box-shadow: 0 12px 40px var(--sombra); transform: translateY(-4px); border-color: rgba(26,91,181,0.5); }
@@ -505,7 +452,7 @@
     }
     .btn-outline:hover { background: var(--azul-medio); color: var(--blanco); }
 
-    /* ===================== SUCURSAL ===================== */
+    /* ===================== LOCATION ===================== */
     .sucursal { padding: 100px 0; background: var(--blanco); }
     .sucursal-header { text-align: center; margin-bottom: 60px; }
     .sucursal-header .section-subtitle { margin: 16px auto 0; }
@@ -516,23 +463,12 @@
       box-shadow: 0 20px 60px var(--sombra-fuerte);
       position: relative;
     }
-    .sucursal-card::before {
-      content: ''; position: absolute; top: 0; left: 0; right: 0;
-      height: 4px; background: var(--gradiente-hero);
-    }
+    .sucursal-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--gradiente-hero); }
     .sucursal-body { padding: 48px; }
-    .sucursal-name {
-      font-family: var(--font-display); font-size: 2rem; font-weight: 700;
-      color: var(--blanco); margin-bottom: 32px; line-height: 1.2;
-    }
+    .sucursal-name { font-family: var(--font-display); font-size: 2rem; font-weight: 700; color: var(--blanco); margin-bottom: 32px; line-height: 1.2; }
     .sucursal-name span { display: block; font-size: 1rem; font-weight: 400; color: rgba(255,255,255,0.5); font-family: var(--font-body); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.12em; }
     .sucursal-info { display: flex; flex-direction: column; gap: 16px; margin-bottom: 36px; }
-    .sucursal-dato {
-      display: flex; align-items: flex-start; gap: 14px;
-      background: rgba(255,255,255,0.06);
-      border-radius: var(--radius-sm); padding: 14px 18px;
-    }
-    .sucursal-dato-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 1px; }
+    .sucursal-dato { display: flex; align-items: flex-start; gap: 14px; background: rgba(255,255,255,0.06); border-radius: var(--radius-sm); padding: 14px 18px; }
     .sucursal-dato div strong { display: block; font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.4); margin-bottom: 3px; }
     .sucursal-dato div p { font-size: 0.9rem; color: rgba(255,255,255,0.85); line-height: 1.5; }
     .sucursal-actions { display: flex; gap: 14px; flex-wrap: wrap; }
@@ -545,42 +481,22 @@
     }
     .btn-maps:hover { background: rgba(255,255,255,0.18); }
 
-    /* ===================== PRUEBA SOCIAL ===================== */
+    /* ===================== SOCIAL PROOF ===================== */
     .prueba-social { padding: 100px 0; background: var(--gradiente-suave); }
     .ps-header { text-align: center; margin-bottom: 60px; }
     .ps-header .section-subtitle { margin: 16px auto 0; }
     .stats-bar { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-bottom: 64px; }
-    .stat-card {
-      background: var(--blanco); border-radius: 20px; padding: 28px 20px;
-      text-align: center; box-shadow: 0 4px 20px var(--sombra);
-      border: 1px solid rgba(26,91,181,0.06); transition: var(--transition);
-    }
+    .stat-card { background: var(--blanco); border-radius: 20px; padding: 28px 20px; text-align: center; box-shadow: 0 4px 20px var(--sombra); border: 1px solid rgba(26,91,181,0.06); transition: var(--transition); }
     .stat-card:hover { transform: translateY(-4px); box-shadow: 0 12px 36px var(--sombra-fuerte); }
     .stat-num { font-family: var(--font-display); font-size: 2.4rem; font-weight: 900; color: var(--azul-medio); line-height: 1; }
     .stat-label { font-size: 0.78rem; color: var(--gris-claro); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 6px; }
     .testimonios { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-    .testimonio {
-      background: var(--blanco); border-radius: 20px; padding: 28px 24px;
-      box-shadow: 0 4px 20px var(--sombra);
-      position: relative; transition: var(--transition);
-      border: 1px solid rgba(26,91,181,0.06);
-    }
+    .testimonio { background: var(--blanco); border-radius: 20px; padding: 28px 24px; box-shadow: 0 4px 20px var(--sombra); position: relative; transition: var(--transition); border: 1px solid rgba(26,91,181,0.06); }
     .testimonio:hover { transform: translateY(-4px); box-shadow: 0 12px 36px var(--sombra-fuerte); }
-    .testimonio::before {
-      content: '"'; font-family: var(--font-display); font-size: 4rem;
-      color: var(--azul-medio); opacity: 0.15;
-      position: absolute; top: 12px; left: 20px; line-height: 1;
-    }
+    .testimonio::before { content: '"'; font-family: var(--font-display); font-size: 4rem; color: var(--azul-medio); opacity: 0.15; position: absolute; top: 12px; left: 20px; line-height: 1; }
     .testimonio p { font-size: 0.92rem; color: var(--gris-texto); line-height: 1.7; margin-bottom: 20px; position: relative; z-index: 1; padding-top: 20px; }
     .testimonio-autor { display: flex; align-items: center; gap: 12px; }
-    .autor-avatar {
-      width: 44px; height: 44px;
-      background: linear-gradient(135deg, var(--azul-oscuro), var(--azul-claro));
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      font-family: var(--font-display); font-size: 0.95rem; font-weight: 700;
-      color: var(--blanco); flex-shrink: 0;
-    }
+    .autor-avatar { width: 44px; height: 44px; background: linear-gradient(135deg, var(--azul-oscuro), var(--azul-claro)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 0.95rem; font-weight: 700; color: var(--blanco); flex-shrink: 0; }
     .autor-info strong { font-size: 0.88rem; color: var(--azul-oscuro); display: block; }
     .autor-info span { font-size: 0.78rem; color: var(--gris-claro); }
 
@@ -589,33 +505,17 @@
     .faq-inner { display: grid; grid-template-columns: 1fr 1.6fr; gap: 80px; align-items: start; }
     .faq-left { position: sticky; top: 100px; }
     .faq-left .section-subtitle { margin-top: 16px; }
-    .faq-cta-box {
-      margin-top: 36px; background: var(--gradiente-hero);
-      border-radius: 20px; padding: 28px 24px; color: var(--blanco);
-    }
+    .faq-cta-box { margin-top: 36px; background: var(--gradiente-hero); border-radius: 20px; padding: 28px 24px; color: var(--blanco); }
     .faq-cta-box p { font-size: 0.9rem; opacity: 0.85; margin-bottom: 16px; line-height: 1.6; }
-    .btn-white {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: var(--blanco); color: var(--azul-oscuro);
-      padding: 12px 22px; border-radius: 100px;
-      font-weight: 700; font-size: 0.88rem; transition: var(--transition);
-    }
+    .btn-white { display: inline-flex; align-items: center; gap: 8px; background: var(--blanco); color: var(--azul-oscuro); padding: 12px 22px; border-radius: 100px; font-weight: 700; font-size: 0.88rem; transition: var(--transition); }
     .btn-white:hover { background: #EEF5FF; transform: translateY(-1px); }
     .faq-list { display: flex; flex-direction: column; gap: 16px; }
     .faq-item { border: 1px solid var(--gris-suave); border-radius: var(--radius); overflow: hidden; transition: var(--transition); }
     .faq-item.open { border-color: rgba(26,91,181,0.2); box-shadow: 0 4px 20px var(--sombra); }
-    .faq-q {
-      display: flex; align-items: center; justify-content: space-between; gap: 16px;
-      padding: 22px 24px; cursor: pointer; user-select: none;
-      background: var(--blanco); transition: var(--transition);
-    }
+    .faq-q { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 22px 24px; cursor: pointer; user-select: none; background: var(--blanco); transition: var(--transition); }
     .faq-q:hover { background: var(--blanco-hueso); }
     .faq-q h4 { font-size: 0.95rem; font-weight: 600; color: var(--azul-oscuro); line-height: 1.4; }
-    .faq-arrow {
-      width: 28px; height: 28px; background: var(--gris-suave);
-      border-radius: 50%; display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0; transition: var(--transition);
-    }
+    .faq-arrow { width: 28px; height: 28px; background: var(--gris-suave); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: var(--transition); }
     .faq-item.open .faq-arrow { background: var(--azul-medio); transform: rotate(180deg); }
     .faq-item.open .faq-arrow svg path { stroke: white; }
     .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
@@ -623,41 +523,23 @@
     .faq-a-inner { padding: 0 24px 24px; }
     .faq-a-inner p { font-size: 0.9rem; color: var(--gris-texto); line-height: 1.75; }
 
-    /* ===================== CTA FINAL ===================== */
-    .cta-final {
-      padding: 100px 0;
-      background: var(--gradiente-hero);
-      position: relative; overflow: hidden; text-align: center;
-    }
+    /* ===================== FINAL CTA ===================== */
+    .cta-final { padding: 100px 0; background: var(--gradiente-hero); position: relative; overflow: hidden; text-align: center; }
     .cta-final::before { display: none; }
     .cta-orb { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.2; }
     .cta-orb-1 { width: 400px; height: 400px; background: #7EC8F5; top: -100px; left: -80px; }
     .cta-orb-2 { width: 300px; height: 300px; background: #0D2B6B; bottom: -80px; right: -60px; }
     .cta-final .container { position: relative; z-index: 2; }
-    .cta-final .section-tag { background: rgba(255,255,255,0.15); color: rgba(255,255,255,0.85); }
-    .cta-title {
-      font-family: var(--font-display); font-size: clamp(2rem, 4.5vw, 3.2rem);
-      font-weight: 900; color: var(--blanco); margin: 16px 0; line-height: 1.15;
-    }
+    .cta-title { font-family: var(--font-display); font-size: clamp(2rem, 4.5vw, 3.2rem); font-weight: 900; color: var(--blanco); margin: 16px 0; line-height: 1.15; }
     .cta-sub { font-size: 1.05rem; color: rgba(255,255,255,0.78); max-width: 560px; margin: 0 auto 40px; line-height: 1.7; }
     .cta-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-    .btn-whatsapp {
-      display: inline-flex; align-items: center; gap: 12px;
-      background: #25D366; color: var(--blanco);
-      padding: 18px 36px; border-radius: 100px;
-      font-weight: 700; font-size: 1rem;
-      transition: var(--transition);
-      box-shadow: 0 4px 24px rgba(37,211,102,0.4);
-    }
+    .btn-whatsapp { display: inline-flex; align-items: center; gap: 12px; background: #25D366; color: var(--blanco); padding: 18px 36px; border-radius: 100px; font-weight: 700; font-size: 1rem; transition: var(--transition); box-shadow: 0 4px 24px rgba(37,211,102,0.4); }
     .btn-whatsapp:hover { background: #1db954; transform: translateY(-2px); box-shadow: 0 8px 32px rgba(37,211,102,0.5); }
     .cta-nota { margin-top: 20px; font-size: 0.8rem; color: rgba(255,255,255,0.5); }
 
     /* ===================== FOOTER ===================== */
     footer { background: #07193E; padding: 60px 0 28px; }
-    .footer-inner {
-      display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 48px;
-      padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,0.08); margin-bottom: 28px;
-    }
+    .footer-inner { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 48px; padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,0.08); margin-bottom: 28px; }
     .footer-brand .logo { margin-bottom: 16px; }
     .footer-brand p { font-size: 0.85rem; color: rgba(255,255,255,0.5); line-height: 1.7; }
     .footer-col h5 { color: var(--blanco); font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 16px; }
@@ -667,36 +549,21 @@
     .footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
     .footer-bottom p { font-size: 0.78rem; color: rgba(255,255,255,0.3); }
     .footer-social { display: flex; gap: 10px; }
-    .social-btn {
-      width: 36px; height: 36px; background: rgba(255,255,255,0.08);
-      border-radius: 8px; display: flex; align-items: center; justify-content: center;
-      font-size: 0.9rem; color: rgba(255,255,255,0.6); transition: var(--transition);
-    }
+    .social-btn { width: 36px; height: 36px; background: rgba(255,255,255,0.08); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; color: rgba(255,255,255,0.6); transition: var(--transition); }
     .social-btn:hover { background: var(--azul-medio); color: var(--blanco); }
 
-    /* ===================== WHATSAPP FLOTANTE ===================== */
+    /* ===================== FLOATING WHATSAPP ===================== */
     .wa-float { position: fixed; bottom: 28px; right: 28px; z-index: 999; display: flex; align-items: center; gap: 12px; }
-    .wa-label {
-      background: var(--azul-oscuro); color: var(--blanco);
-      font-size: 0.8rem; font-weight: 600; padding: 10px 16px;
-      border-radius: 100px; white-space: nowrap;
-      box-shadow: 0 4px 16px var(--sombra-fuerte);
-      opacity: 0; transform: translateX(10px); transition: var(--transition); pointer-events: none;
-    }
+    .wa-label { background: var(--azul-oscuro); color: var(--blanco); font-size: 0.8rem; font-weight: 600; padding: 10px 16px; border-radius: 100px; white-space: nowrap; box-shadow: 0 4px 16px var(--sombra-fuerte); opacity: 0; transform: translateX(10px); transition: var(--transition); pointer-events: none; }
     .wa-float:hover .wa-label { opacity: 1; transform: translateX(0); }
-    .wa-btn {
-      width: 62px; height: 62px; background: #25D366; border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 6px 24px rgba(37,211,102,0.45); transition: var(--transition);
-      animation: wa-pulse 3s ease-in-out infinite; flex-shrink: 0;
-    }
-    .wa-btn:hover { transform: scale(1.08); box-shadow: 0 10px 32px rgba(37,211,102,0.6); }
+    .wa-btn { width: 62px; height: 62px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 24px rgba(37,211,102,0.45); transition: var(--transition); animation: wa-pulse 3s ease-in-out infinite; flex-shrink: 0; }
+    .wa-btn:hover { transform: scale(1.08); }
     @keyframes wa-pulse {
       0%,100% { box-shadow: 0 6px 24px rgba(37,211,102,0.45); }
       50% { box-shadow: 0 6px 24px rgba(37,211,102,0.45), 0 0 0 14px rgba(37,211,102,0.12); }
     }
 
-    /* Hexágonos decorativos */
+    /* Hex decorations */
     .hex-bg { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 1; }
     .hex-bg svg { position: absolute; }
     .hex-1  { top: 6%;  left: 3%;   opacity: 0.07; animation: float 10s ease-in-out infinite; }
@@ -705,6 +572,7 @@
     .hex-4  { top: 75%; right: 5%;  opacity: 0.08; animation: float 9s ease-in-out infinite 1s; }
     .hex-5  { top: 40%; left: 50%;  opacity: 0.04; animation: float 14s ease-in-out infinite 3s; }
     .hex-6  { top: 10%; right: 35%; opacity: 0.05; animation: float 12s ease-in-out infinite 0.5s; }
+    @keyframes float { 0%,100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-20px) scale(1.04); } }
 
     /* ===================== RESPONSIVE ===================== */
     @media (max-width: 1024px) {
@@ -720,17 +588,11 @@
       .nav-links.open {
         display: flex; flex-direction: column;
         position: fixed; top: 0; left: 0; right: 0; bottom: 0; width: 100vw; height: 100dvh;
-        background: rgba(13,43,107,0.98);
-        backdrop-filter: blur(12px);
-        align-items: center; justify-content: center;
-        gap: 32px; z-index: 999;
+        background: rgba(13,43,107,0.98); backdrop-filter: blur(12px);
+        align-items: center; justify-content: center; gap: 32px; z-index: 999;
       }
       .nav-links.open a { font-size: 1.3rem; }
-      .hero-inner { grid-template-columns: 1fr; gap: 40px; padding: 100px 0 60px; }
-      .hero-img { display: none; }
-      .hero-stats { flex-wrap: wrap; gap: 20px; }
-      .problema-inner { grid-template-columns: 1fr; gap: 40px; }
-      .problema-img-wrap { display: none; }
+      .nav-close { display: block; }
       .pilares, .dif-grid, .servicios-grid { grid-template-columns: 1fr; }
       .stats-bar { grid-template-columns: repeat(2, 1fr); }
       .testimonios { grid-template-columns: 1fr; }
@@ -740,7 +602,6 @@
       .trust-bar-inner { flex-direction: column; }
       .trust-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); width: 100%; justify-content: center; }
       .trust-item:last-child { border-bottom: none; }
-      .hero-card { display: none; }
       .sucursal-body { padding: 32px 24px; }
       .sucursal-actions { flex-direction: column; }
       .estrella-years { right: 0; }
@@ -761,19 +622,18 @@
         <img src="/Logo BlancoEsp.png" alt="Ópticas Jarmar" style="height:44px; width:auto; object-fit:contain;" />
       </a>
       <div class="nav-links" id="navLinks">
-        <button class="nav-close" id="navClose" aria-label="Cerrar menú">✕</button>
-        <a href="#servicios">Servicios</a>
-        <a href="#esclerales">Esclerales</a>
-        <a href="#diferenciadores">Nosotros</a>
-        <a href="#testimonios">Testimonios</a>
-        <a href="#sucursal">Ubicación</a>
-        <a href="/blog">Blog</a>
-        <div class="nav-lang" style="display:flex;align-items:center;gap:4px;font-size:0.8rem;font-weight:600;color:rgba(255,255,255,0.6);padding:6px 10px;border-radius:100px;border:1px solid rgba(255,255,255,0.2);">
-          <span style="color:#fff;">ES</span>
-          <span style="opacity:0.4;margin:0 2px;">|</span>
-          <a href="/en/tijuana/" style="color:rgba(255,255,255,0.6);font-size:0.8rem;font-weight:600;">EN</a>
+        <button class="nav-close" id="navClose" aria-label="Close menu">✕</button>
+        <a href="#services">Services</a>
+        <a href="#sclerals">Sclerals</a>
+        <a href="#about">About</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#location">Location</a>
+        <div class="nav-lang">
+          <a href="/tijuana/" style="color:rgba(255,255,255,0.6);font-size:0.8rem;font-weight:600;">ES</a>
+          <span class="sep">|</span>
+          <span class="active">EN</span>
         </div>
-        <a href="https://wa.me/526645791970?text=Hola,%20me%20gustar%C3%ADa%20agendar%20mi%20estudio%20visual" target="_blank" class="nav-cta">Agendar cita</a>
+        <a href="https://wa.me/526645791970?text=Hello%2C%20I%27d%20like%20to%20schedule%20an%20eye%20exam%20at%20%C3%93pticas%20Jarmar%20Tijuana." target="_blank" class="nav-cta">Book appointment</a>
       </div>
       <div class="nav-burger" id="burger">
         <span></span><span></span><span></span>
@@ -782,142 +642,114 @@
   </nav>
 
   <!-- ═══ HERO ═══ -->
-  <section class="hero" id="inicio">
+  <section class="hero" id="home">
     <div class="container hero-inner">
-      <div class="hero-content">
-        <div class="hero-badge reveal">
-          <span class="hero-badge-dot"></span>
-          Clínica Óptica Boutique · Tijuana, B.C.
-        </div>
-        <h1 class="hero-headline reveal delay-1">
-          Tu visión en las<br><em>mejores manos.</em>
-        </h1>
-        <p class="hero-sub reveal delay-2">
-          Somos óptica de referencia en Tijuana. Diagnóstico profesional y personalizado para recomendarte la mejor solución visual para ti, con más de 60 años de experiencia.
-        </p>
-        <div class="hero-actions reveal delay-3">
-          <a href="https://wa.me/526645791970?text=Hola,%20me%20gustar%C3%ADa%20agendar%20mi%20estudio%20visual%20en%20%C3%93pticas%20Jarmar%20Tijuana" target="_blank" class="btn-primary">
-            Agenda tu examen gratis
-          </a>
-          <a href="#servicios" class="btn-secondary">
-            Ver servicios →
-          </a>
-        </div>
-        <div class="hero-review reveal delay-3">
-          <div class="review-avatars">
-            <img src="https://cdn.sceneai.art/Only%20man%20image/0ccd6017-25fc-493b-abdf-321915dde101.jpg" alt="Paciente" />
-            <img src="https://cdn.sceneai.art/Only%20man%20image/7e1339ef-7a01-4979-93c8-21d97af291ee.webp" alt="Paciente" />
-            <img src="https://cdn.sceneai.art/Image%20for%20any%20section/2d8032d8-c1cd-4827-84db-0aeba1109c1b.jpg" alt="Paciente" />
-            <img src="https://cdn.sceneai.art/Image%20for%20any%20section/470b31f2-d1b5-4730-96a2-aca680204172.jpg" alt="Paciente" />
-          </div>
-          <div class="review-text">
-            <span class="review-stars">★★★★★</span>
-            <span class="review-label">Basado en +180 calificaciones</span>
-          </div>
-        </div>
+      <div class="hero-badge reveal">
+        <span class="hero-badge-dot"></span>
+        Boutique Eye Care Clinic · Tijuana, B.C.
       </div>
-      <div class="hero-img">
-        <div class="hero-img-frame">
-          <!-- <img src="tu-foto-hero-tijuana.jpg" alt="Ópticas Jarmar Tijuana" /> -->
-          <div class="hero-img-placeholder">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-            <p>Foto principal<br>Tijuana</p>
-          </div>
+      <h1 class="hero-headline reveal delay-1">
+        Your vision in the<br><em>best hands.</em>
+      </h1>
+      <p class="hero-sub reveal delay-2">
+        Tijuana's leading eye care clinic. Professional and personalized diagnosis to find the best visual solution for you — backed by over 60 years of experience. We welcome American patients.
+      </p>
+      <div class="hero-actions reveal delay-3">
+        <a href="https://wa.me/526645791970?text=Hello%2C%20I%27d%20like%20to%20schedule%20an%20eye%20exam%20at%20%C3%93pticas%20Jarmar%20Tijuana." target="_blank" class="btn-primary">
+          Schedule your free exam
+        </a>
+        <a href="#services" class="btn-secondary">
+          Our services →
+        </a>
+      </div>
+      <div class="hero-review reveal delay-3">
+        <div class="review-avatars">
+          <img src="https://cdn.sceneai.art/Only%20man%20image/0ccd6017-25fc-493b-abdf-321915dde101.jpg" alt="Patient" />
+          <img src="https://cdn.sceneai.art/Only%20man%20image/7e1339ef-7a01-4979-93c8-21d97af291ee.webp" alt="Patient" />
+          <img src="https://cdn.sceneai.art/Image%20for%20any%20section/2d8032d8-c1cd-4827-84db-0aeba1109c1b.jpg" alt="Patient" />
+          <img src="https://cdn.sceneai.art/Image%20for%20any%20section/470b31f2-d1b5-4730-96a2-aca680204172.jpg" alt="Patient" />
         </div>
-        <div class="hero-card hero-card-1">
-          <div class="stars">★★★★★</div>
-          <strong>4.9 / 5.0</strong>
-          <p>Calificación en Google</p>
-        </div>
-        <div class="hero-card hero-card-2">
-          <strong>Clínica certificada</strong>
-          <p>Lentes esclerales<br>especializados</p>
+        <div class="review-text">
+          <span class="review-stars">★★★★★</span>
+          <span class="review-label">Based on +180 reviews</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ═══ BARRA DE CONFIANZA ═══ -->
+  <!-- ═══ TRUST BAR ═══ -->
   <div class="trust-bar">
     <div class="container trust-bar-inner">
-      <div class="trust-item">
-        <div><strong>+60 años</strong><span>Desde 1966</span></div>
-      </div>
-      <div class="trust-item">
-        <div><strong>Diagnóstico clínico</strong><span>Alta precisión</span></div>
-      </div>
-      <div class="trust-item">
-        <div><strong>Lentes esclerales</strong><span>Especialistas en Tijuana</span></div>
-      </div>
-      <div class="trust-item">
-        <div><strong>Jarmar Eyewear</strong><span>Línea propia exclusiva</span></div>
-      </div>
+      <div class="trust-item"><div><strong>60+ Years</strong><span>Since 1966</span></div></div>
+      <div class="trust-item"><div><strong>Clinical Diagnosis</strong><span>High precision</span></div></div>
+      <div class="trust-item"><div><strong>Scleral Lenses</strong><span>Tijuana specialists</span></div></div>
+      <div class="trust-item"><div><strong>Jarmar Eyewear</strong><span>Our exclusive line</span></div></div>
     </div>
   </div>
 
-  <!-- ═══ PROBLEMA ═══ -->
+  <!-- ═══ PROBLEM ═══ -->
   <section class="problema" id="problema">
     <div class="container problema-inner">
-      <span class="section-tag">¿Te identificas?</span>
-      <h2 class="section-title">¿Cuándo revisaste tu vista <span>por última vez?</span></h2>
+      <span class="section-tag">Do you relate?</span>
+      <h2 class="section-title">When did you last <span>check your eyes?</span></h2>
       <div class="pain-grid">
-        <div class="pain-card">Dolores de cabeza frente a la pantalla</div>
-        <div class="pain-card">Lentes que nunca te quedaron</div>
-        <div class="pain-card">Diabetes o glaucoma sin revisar este año</div>
-        <div class="pain-card">Quieres conocer el estado de tus ojos</div>
+        <div class="pain-card">Headaches when working on screens</div>
+        <div class="pain-card">Glasses that never felt quite right</div>
+        <div class="pain-card">Diabetes or glaucoma not checked this year</div>
+        <div class="pain-card">You want to know the true state of your eyes</div>
       </div>
-      <a href="https://wa.me/526645791970?text=Hola%2C+quiero+agendar+un+examen+de+la+vista+en+%C3%93pticas+Jarmar+Tijuana." target="_blank" class="btn-primary">Agendar mi examen →</a>
+      <a href="https://wa.me/526645791970?text=Hello%2C%20I%27d%20like%20to%20schedule%20an%20eye%20exam%20at%20%C3%93pticas%20Jarmar%20Tijuana." target="_blank" class="btn-primary">Book my eye exam →</a>
     </div>
   </section>
 
-  <!-- ═══ SOLUCIÓN ═══ -->
+  <!-- ═══ SOLUTION ═══ -->
   <section class="solucion" id="solucion">
     <div class="container">
       <div class="solucion-header reveal">
-        <span class="section-tag">La solución completa</span>
-        <h2 class="section-title">En Jarmar cuidamos tus ojos <span>y los de tu familia.</span></h2>
-        <p class="section-subtitle">Somos el único lugar en Tijuana donde clínica, óptica y boutique conviven en una sola experiencia.</p>
+        <span class="section-tag">The complete solution</span>
+        <h2 class="section-title">At Jarmar we care for your eyes <span>and your family's.</span></h2>
+        <p class="section-subtitle">The only place in Tijuana where clinic, optical, and boutique come together in one experience.</p>
       </div>
       <div class="pilares">
         <div class="pilar reveal delay-1">
           <div class="pilar-num">01</div>
-          <h3>Clínica</h3>
-          <p>Contamos con equipos de diagnóstico de alta precisión para identificar a tiempo condiciones oculares antes de que afecten tu calidad de vida.</p>
+          <h3>Clinic</h3>
+          <p>High-precision diagnostic equipment to detect eye conditions early — before they impact your quality of life.</p>
           <ul class="pilar-list">
-            <li>Detección de glaucoma</li>
-            <li>Retinopatía diabética</li>
-            <li>Degeneración macular</li>
-            <li>Examen de fondo de ojo</li>
+            <li>Glaucoma detection</li>
+            <li>Diabetic retinopathy</li>
+            <li>Macular degeneration</li>
+            <li>Fundus eye exam</li>
           </ul>
         </div>
         <div class="pilar reveal delay-2">
           <div class="pilar-num">02</div>
-          <h3>Óptica</h3>
-          <p>Todo tipo de soluciones visuales para toda la familia, desde lentes graduados hasta contactos especializados.</p>
+          <h3>Optical</h3>
+          <p>Complete vision solutions for the whole family, from prescription glasses to specialized contact lenses.</p>
           <ul class="pilar-list">
-            <li>Lentes graduados</li>
-            <li>Filtro de luz azul</li>
-            <li>Lentes de contacto</li>
-            <li>Atención completa para niños</li>
+            <li>Prescription glasses</li>
+            <li>Blue light filter lenses</li>
+            <li>Contact lenses</li>
+            <li>Children's eye care</li>
           </ul>
         </div>
         <div class="pilar reveal delay-3">
           <div class="pilar-num">03</div>
           <h3>Boutique</h3>
-          <p>Encuentra tu estilo con nuestra selección de armazones y diseños exclusivos, incluyendo nuestra línea propia Jarmar Eyewear.</p>
+          <p>Find your style with our curated frame selection and exclusive designs, including our own Jarmar Eyewear line.</p>
           <ul class="pilar-list">
-            <li>Línea Jarmar Eyewear</li>
-            <li>Selección curada de marcas</li>
-            <li>Asesoría de estilo personalizada</li>
-            <li>Lentes de sol</li>
+            <li>Jarmar Eyewear line</li>
+            <li>Curated brand selection</li>
+            <li>Personalized style advice</li>
+            <li>Sunglasses</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ═══ DIFERENCIADORES ═══ -->
-  <section class="diferenciadores" id="diferenciadores">
+  <!-- ═══ DIFFERENTIATORS ═══ -->
+  <section class="diferenciadores" id="about">
     <div class="hex-bg" aria-hidden="true">
       <svg class="hex-1" width="208" height="180" viewBox="0 0 208 180" fill="none"><polygon points="204,90 156,4 52,4 4,90 52,176 156,176" stroke="white" stroke-width="2" fill="none"/></svg>
       <svg class="hex-2" width="300" height="260" viewBox="0 0 300 260" fill="none"><polygon points="294,130 225,6 75,6 6,130 75,254 225,254" stroke="white" stroke-width="2" fill="white" fill-opacity="0.03"/></svg>
@@ -928,148 +760,148 @@
     </div>
     <div class="container">
       <div class="dif-header reveal">
-        <span class="section-tag">Por qué elegirnos</span>
-        <h2 class="section-title">Por qué Tijuana elige Jarmar</h2>
+        <span class="section-tag">Why choose us</span>
+        <h2 class="section-title">Why Tijuana patients choose Jarmar</h2>
       </div>
       <div class="dif-grid">
         <div class="dif-card reveal" style="transition-delay:0s">
-          <h3>Diagnóstico médico real</h3>
-          <p>No solo medimos tu graduación, detectamos glaucoma, retinopatía y más antes de que afecten tu visión.</p>
+          <h3>Real medical diagnosis</h3>
+          <p>We don't just measure your prescription — we screen for glaucoma, retinopathy, and more before they impact your vision.</p>
         </div>
         <div class="dif-card reveal" style="transition-delay:0.45s">
-          <h3>Atención para toda la familia</h3>
-          <p>Protocolos especializados para niños desde los 3 años, adultos mayores y pacientes con diabetes.</p>
+          <h3>Care for the whole family</h3>
+          <p>Specialized protocols for children from age 3, seniors, and patients with diabetes. Everyone is welcome.</p>
         </div>
         <div class="dif-card reveal" style="transition-delay:0.9s">
-          <h3>Estilo que es tuyo</h3>
-          <p>Con Jarmar Eyewear encontrarás el armazón que no solo te hace ver mejor, te hace verte increíble.</p>
+          <h3>Style that's yours</h3>
+          <p>With Jarmar Eyewear you'll find the frame that doesn't just make you see better — it makes you look incredible.</p>
         </div>
       </div>
       <div class="servicio-cta reveal" style="margin-top:48px;">
-        <a href="https://wa.me/526645791970?text=Hola,%20me%20gustar%C3%ADa%20agendar%20mi%20estudio%20visual%20en%20%C3%93pticas%20Jarmar%20Tijuana" target="_blank" class="btn-white" style="display:inline-flex;align-items:center;gap:8px;background:var(--blanco);color:var(--azul-oscuro);padding:14px 28px;border-radius:100px;font-weight:600;font-size:0.92rem;transition:var(--transition);box-shadow:0 4px 16px rgba(0,0,0,0.2);">
-          Agenda tu cita
+        <a href="https://wa.me/526645791970?text=Hello%2C%20I%27d%20like%20to%20schedule%20an%20eye%20exam%20at%20%C3%93pticas%20Jarmar%20Tijuana." target="_blank" class="btn-white" style="display:inline-flex;align-items:center;gap:8px;background:var(--blanco);color:var(--azul-oscuro);padding:14px 28px;border-radius:100px;font-weight:600;font-size:0.92rem;transition:var(--transition);box-shadow:0 4px 16px rgba(0,0,0,0.2);">
+          Book your appointment
         </a>
       </div>
     </div>
   </section>
 
-  <!-- ═══ SERVICIOS ═══ -->
-  <section class="servicios" id="servicios">
+  <!-- ═══ SERVICES ═══ -->
+  <section class="servicios" id="services">
     <div class="container">
       <div class="servicios-header reveal">
-        <span class="section-tag">Todo lo que necesitas</span>
-        <h2 class="section-title">Nuestros <span>servicios</span></h2>
-        <p class="section-subtitle">Un solo lugar para cuidar la salud visual de toda tu familia en Tijuana.</p>
+        <span class="section-tag">Everything you need</span>
+        <h2 class="section-title">Our <span>services</span></h2>
+        <p class="section-subtitle">One place for your entire family's eye health in Tijuana.</p>
       </div>
       <div class="servicios-grid">
         <a href="/tijuana/estudio-de-la-vista" class="servicio-card reveal delay-1">
           <span class="servicio-icon">🔬</span>
-          <h4>Estudio de la Vista</h4>
-          <p>Examen visual completo con equipos de diagnóstico de alta precisión para adultos y niños.</p>
+          <h4>Comprehensive Eye Exam</h4>
+          <p>Full visual study with high-precision diagnostic equipment for adults and children.</p>
         </a>
         <a href="/tijuana/lentes-graduados" class="servicio-card reveal delay-2">
           <span class="servicio-icon">👓</span>
-          <h4>Lentes Graduados</h4>
-          <p>Amplia selección de armazones y lentes de la mejor calidad adaptados a tu graduación.</p>
+          <h4>Prescription Glasses</h4>
+          <p>Wide selection of frames and premium lenses tailored to your prescription.</p>
         </a>
         <a href="/tijuana/lentes-luz-azul" class="servicio-card reveal delay-3">
           <span class="servicio-icon">💻</span>
-          <h4>Lentes Luz Azul</h4>
-          <p>Protege tus ojos del daño de pantallas con nuestros lentes de bloqueo de luz azul.</p>
+          <h4>Blue Light Lenses</h4>
+          <p>Protect your eyes from screen damage with our blue light blocking lenses.</p>
         </a>
         <a href="/tijuana/lentes-de-sol" class="servicio-card reveal delay-1">
           <span class="servicio-icon">☀️</span>
-          <h4>Lentes de Sol</h4>
-          <p>Protección UV y estilo en una sola pieza. Graduados o sin graduar, para cada ocasión.</p>
+          <h4>Sunglasses</h4>
+          <p>UV protection and style in one piece. Prescription or non-prescription, for every occasion.</p>
         </a>
         <a href="/tijuana/lentes-esclerales" class="servicio-card reveal delay-2">
           <span class="servicio-icon">👁️</span>
-          <h4>Lentes Esclerales</h4>
-          <p>Especialistas en lentes esclerales para queratocono, trasplante corneal y casos complejos.</p>
+          <h4>Scleral Lenses</h4>
+          <p>Specialists in scleral lenses for keratoconus, corneal transplant, and complex cases.</p>
         </a>
         <a href="/tijuana/examen-ninos" class="servicio-card reveal delay-3">
           <span class="servicio-icon">🧒</span>
-          <h4>Examen y Lentes Niños</h4>
-          <p>Protocolo especial para pequeños desde los 3 años. Detección temprana para su desempeño escolar.</p>
+          <h4>Children's Eye Exam</h4>
+          <p>Special protocol for kids from age 3. Early detection for better school performance.</p>
         </a>
       </div>
       <div class="servicio-cta reveal">
-        <a href="https://wa.me/526645791970?text=Hola,%20quisiera%20informaci%C3%B3n%20sobre%20sus%20servicios%20en%20Tijuana" target="_blank" class="btn-outline">
-          Agenda tu cita
+        <a href="https://wa.me/526645791970?text=Hello%2C%20I%27d%20like%20information%20about%20your%20services%20in%20Tijuana." target="_blank" class="btn-outline">
+          Book your appointment
         </a>
       </div>
     </div>
   </section>
 
-  <!-- ═══ PRODUCTO ESTRELLA — ESCLERALES ═══ -->
-  <section class="estrella" id="esclerales">
+  <!-- ═══ STAR PRODUCT — SCLERALS ═══ -->
+  <section class="estrella" id="sclerals">
     <div class="container estrella-inner">
       <div class="estrella-img-wrap reveal-left">
         <div class="estrella-img-frame">
-          <img src="/eslcerales1.jpg" alt="Lentes Esclerales Jarmar Tijuana" />
+          <img src="/eslcerales1.jpg" alt="Scleral Lenses Jarmar Tijuana" />
         </div>
-        <div class="estrella-badge-float">Producto estrella</div>
+        <div class="estrella-badge-float">Featured service</div>
         <div class="estrella-years">
           <strong>+10</strong>
-          <span>Años de especialidad</span>
+          <span>Years of specialty</span>
         </div>
       </div>
       <div class="reveal-right">
-        <span class="section-tag">Tecnología de vanguardia</span>
-        <h2 class="section-title">Lentes Esclerales:<br><span>cambiamos vidas.</span></h2>
-        <p class="section-subtitle" style="margin-top:16px;">Llevamos más de 7 años siendo líderes en lentes de contacto esclerales en México. Una solución para quienes pensaron que no tenían solución.</p>
+        <span class="section-tag">Advanced technology</span>
+        <h2 class="section-title">Scleral Lenses:<br><span>we change lives.</span></h2>
+        <p class="section-subtitle" style="margin-top:16px;">We have been leaders in scleral contact lenses in Mexico for over 7 years — a solution for those who thought there was no solution.</p>
         <div class="estrella-list">
           <div class="estrella-item">
-            <p><strong>Queratocono avanzado</strong> — Para casos donde los lentes convencionales ya no funcionan.</p>
+            <p><strong>Advanced keratoconus</strong> — For cases where conventional lenses no longer work.</p>
           </div>
           <div class="estrella-item">
-            <p><strong>Trasplante corneal</strong> — Recuperación visual óptima post-trasplante con ajuste de precisión.</p>
+            <p><strong>Corneal transplant</strong> — Optimal visual recovery post-transplant with precision fitting.</p>
           </div>
           <div class="estrella-item">
-            <p><strong>Post-operados insatisfechos</strong> — Tanto con láser como con bisturí. Recuperamos tu visión.</p>
+            <p><strong>Unsatisfied post-surgery patients</strong> — Whether laser or blade. We restore your vision.</p>
           </div>
           <div class="estrella-item">
-            <p><strong>Ojo seco severo</strong> — Los lentes esclerales crean un reservorio de solución salina que alivia el síndrome de ojo seco.</p>
+            <p><strong>Severe dry eye</strong> — Scleral lenses create a saline reservoir that relieves chronic dry eye syndrome.</p>
           </div>
         </div>
-        <a href="https://wa.me/526645791970?text=Hola,%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20lentes%20esclerales%20en%20Jarmar%20Tijuana" target="_blank" class="btn-azul">
-          Consultar sobre esclerales
+        <a href="https://wa.me/526645791970?text=Hello%2C%20I%27d%20like%20information%20about%20scleral%20lenses%20at%20Jarmar%20Tijuana." target="_blank" class="btn-azul">
+          Ask about scleral lenses
         </a>
       </div>
     </div>
   </section>
 
-  <!-- ═══ SUCURSAL ═══ -->
-  <section class="sucursal" id="sucursal">
+  <!-- ═══ LOCATION ═══ -->
+  <section class="sucursal" id="location">
     <div class="container">
       <div class="sucursal-header reveal">
-        <span class="section-tag">Encuéntranos</span>
-        <h2 class="section-title">Nuestra <span>sucursal</span> en Tijuana</h2>
-        <p class="section-subtitle">Visítanos en Zona Río — el corazón comercial de Tijuana.</p>
+        <span class="section-tag">Find us</span>
+        <h2 class="section-title">Our <span>clinic</span> in Tijuana</h2>
+        <p class="section-subtitle">Visit us in Zona Río — the heart of Tijuana's commercial district, minutes from the US border.</p>
       </div>
       <div class="sucursal-wrap reveal delay-1">
       <div class="sucursal-card">
         <div class="sucursal-body">
           <div class="sucursal-name">
-            <span>Sucursal Tijuana</span>
+            <span>Tijuana Location</span>
             Zona Urbana Río
           </div>
           <div class="sucursal-info">
             <div class="sucursal-dato">
               <div>
-                <strong>Dirección</strong>
+                <strong>Address</strong>
                 <p>David Alfaro Siqueiros #2795 local 101<br>Zona Urbana Río Tijuana, B.C.</p>
               </div>
             </div>
             <div class="sucursal-dato">
               <div>
-                <strong>Horarios</strong>
-                <p>Lunes a Viernes: 10:00 am – 6:00 pm<br>Sábado: 10:00 am – 3:00 pm</p>
+                <strong>Hours</strong>
+                <p>Monday – Friday: 10:00 am – 6:00 pm<br>Saturday: 10:00 am – 3:00 pm</p>
               </div>
             </div>
             <div class="sucursal-dato">
               <div>
-                <strong>Teléfono / WhatsApp</strong>
+                <strong>Phone / WhatsApp</strong>
                 <p>(664) 579 1970</p>
               </div>
             </div>
@@ -1077,10 +909,10 @@
           <div class="sucursal-actions">
             <a href="https://share.google/LceH5fGnXovDsulrP" target="_blank" class="btn-primary" style="background:var(--blanco);color:var(--azul-oscuro);">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              Ver en Google Maps
+              View on Google Maps
             </a>
-            <a href="https://wa.me/526645791970?text=Hola,%20me%20gustar%C3%ADa%20agendar%20una%20cita%20en%20Jarmar%20Tijuana" target="_blank" class="btn-maps">
-              Agendar por WhatsApp
+            <a href="https://wa.me/526645791970?text=Hello%2C%20I%27d%20like%20to%20book%20an%20appointment%20at%20Jarmar%20Tijuana." target="_blank" class="btn-maps">
+              Book via WhatsApp
             </a>
           </div>
         </div>
@@ -1089,48 +921,48 @@
     </div>
   </section>
 
-  <!-- ═══ PRUEBA SOCIAL ═══ -->
-  <section class="prueba-social" id="testimonios">
+  <!-- ═══ SOCIAL PROOF ═══ -->
+  <section class="prueba-social" id="reviews">
     <div class="container">
       <div class="ps-header reveal">
-        <span class="section-tag">Lo que dicen nuestros pacientes</span>
-        <h2 class="section-title">Lo que dicen quienes<br><span>ya ven mejor</span></h2>
-        <p class="section-subtitle">Reseñas reales de pacientes de Tijuana que cambiaron su vida con Jarmar.</p>
+        <span class="section-tag">What our patients say</span>
+        <h2 class="section-title">Stories from those who<br><span>see better now</span></h2>
+        <p class="section-subtitle">Real reviews from patients who transformed their lives with Jarmar.</p>
       </div>
       <div class="stats-bar">
-        <div class="stat-card reveal delay-1"><div class="stat-num">+60</div><div class="stat-label">Años desde 1966</div></div>
-        <div class="stat-card reveal delay-2"><div class="stat-num">★ 4.9</div><div class="stat-label">Calificación Google</div></div>
-        <div class="stat-card reveal delay-3"><div class="stat-num">+10</div><div class="stat-label">Años en esclerales</div></div>
-        <div class="stat-card reveal delay-4"><div class="stat-num">100%</div><div class="stat-label">Garantía de adaptación</div></div>
+        <div class="stat-card reveal delay-1"><div class="stat-num">+60</div><div class="stat-label">Years since 1966</div></div>
+        <div class="stat-card reveal delay-2"><div class="stat-num">★ 4.9</div><div class="stat-label">Google rating</div></div>
+        <div class="stat-card reveal delay-3"><div class="stat-num">+10</div><div class="stat-label">Years in sclerals</div></div>
+        <div class="stat-card reveal delay-4"><div class="stat-num">100%</div><div class="stat-label">Adaptation guarantee</div></div>
       </div>
       <div class="testimonios">
         <div class="testimonio reveal delay-1">
-          <p>Tuve un accidente hace 32 años y he pasado todo ese tiempo intentando usar lentes de todo tipo. Solo lo pude lograr con el lente escleral de Ópticas Jarmar. Estoy motivado, feliz y agradecido.</p>
+          <p>I had an accident 32 years ago and spent all that time trying different types of lenses. I was only able to succeed with the scleral lens from Ópticas Jarmar. I am motivated, happy and grateful.</p>
           <div class="testimonio-autor">
             <div class="autor-avatar">BS</div>
             <div class="autor-info">
               <strong>Bladimir Santos B.</strong>
-              <span>Paciente · Lentes Esclerales</span>
+              <span>Patient · Scleral Lenses</span>
             </div>
           </div>
         </div>
         <div class="testimonio reveal delay-2">
-          <p>Un concepto totalmente diferente al resto de las ópticas en Tijuana. Muchísimos armazones, el trato es excelente y la Dra. te explica y resuelve tus dudas amablemente. Sin duda el mejor lugar.</p>
+          <p>A totally different concept from any other optical store in Tijuana. Huge frame selection, excellent service, and the doctor explains everything patiently. Absolutely the best place.</p>
           <div class="testimonio-autor">
             <div class="autor-avatar">AB</div>
             <div class="autor-info">
               <strong>Alejandra Barrera</strong>
-              <span>Cliente · Tijuana</span>
+              <span>Client · Tijuana</span>
             </div>
           </div>
         </div>
         <div class="testimonio reveal delay-3">
-          <p>Excelente atención, me hicieron mi estudio visual muy completo. Los lentes de contacto que me recomendaron son perfectos. Ya llevo años viniendo y siempre salgo satisfecha.</p>
+          <p>Excellent care — my eye exam was very thorough. The contact lenses they recommended are perfect. I've been coming here for years and always leave satisfied.</p>
           <div class="testimonio-autor">
             <div class="autor-avatar">LM</div>
             <div class="autor-info">
               <strong>Laura M.</strong>
-              <span>Cliente frecuente · Tijuana</span>
+              <span>Returning patient · Tijuana</span>
             </div>
           </div>
         </div>
@@ -1142,59 +974,68 @@
   <section class="faq" id="faq">
     <div class="container faq-inner">
       <div class="faq-left reveal-left">
-        <span class="section-tag">Preguntas frecuentes</span>
-        <h2 class="section-title">¿Tienes <span>dudas?</span></h2>
-        <p class="section-subtitle">Respondemos las preguntas más comunes antes de tu primera visita a nuestra sucursal en Tijuana.</p>
+        <span class="section-tag">FAQ</span>
+        <h2 class="section-title">Have <span>questions?</span></h2>
+        <p class="section-subtitle">We answer the most common questions before your first visit to our Tijuana clinic.</p>
         <div class="faq-cta-box">
-          <p>¿No encontraste tu respuesta? Escríbenos por WhatsApp y te respondemos de inmediato.</p>
-          <a href="https://wa.me/526645791970?text=Hola,%20tengo%20una%20pregunta%20sobre%20sus%20servicios%20en%20Tijuana" target="_blank" class="btn-white">
-            Escríbenos ahora
+          <p>Didn't find your answer? Message us on WhatsApp and we'll reply right away.</p>
+          <a href="https://wa.me/526645791970?text=Hello%2C%20I%20have%20a%20question%20about%20your%20services%20in%20Tijuana." target="_blank" class="btn-white">
+            Message us now
           </a>
         </div>
       </div>
       <div class="faq-list reveal-right">
         <div class="faq-item" onclick="toggleFaq(this)">
           <div class="faq-q">
-            <h4>¿Cuánto tiempo dura el estudio de la vista?</h4>
+            <h4>How long does a comprehensive eye exam take?</h4>
             <div class="faq-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#0D2B6B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           </div>
           <div class="faq-a"><div class="faq-a-inner">
-            <p>El examen completo dura entre 30 y 45 minutos. Incluye revisión de agudeza visual, presión ocular y fondo de ojo si es necesario. Te pedimos que llegues sin prisa — tu salud visual merece tiempo.</p>
+            <p>The full exam takes 30 to 45 minutes. It includes visual acuity, intraocular pressure, and fundus examination when needed. We ask that you come without rushing — your eye health deserves the time.</p>
           </div></div>
         </div>
         <div class="faq-item" onclick="toggleFaq(this)">
           <div class="faq-q">
-            <h4>¿Qué son los lentes esclerales y para quién son?</h4>
+            <h4>What are scleral lenses and who are they for?</h4>
             <div class="faq-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#0D2B6B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           </div>
           <div class="faq-a"><div class="faq-a-inner">
-            <p>Los lentes esclerales son lentes de contacto de gran diámetro que se apoyan sobre la esclera (la parte blanca del ojo), creando un reservorio de solución salina frente a la córnea. Son ideales para personas con queratocono, post-trasplante corneal, post-operados insatisfechos o síndrome de ojo seco severo. Llevamos más de 7 años especializándonos en su adaptación.</p>
+            <p>Scleral lenses are large-diameter contact lenses that rest on the sclera (the white of the eye), creating a saline reservoir in front of the cornea. Ideal for keratoconus, post-corneal transplant, unsatisfied post-surgery patients, or severe dry eye syndrome. We have specialized in fitting them for over 7 years.</p>
           </div></div>
         </div>
         <div class="faq-item" onclick="toggleFaq(this)">
           <div class="faq-q">
-            <h4>¿Los lentes de luz azul realmente funcionan?</h4>
+            <h4>Do blue light glasses really work?</h4>
             <div class="faq-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#0D2B6B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           </div>
           <div class="faq-a"><div class="faq-a-inner">
-            <p>Sí, cuando están bien indicados y bien graduados. Si trabajas más de 4 horas frente a pantallas o tienes dificultad para dormir, los lentes de bloqueo de luz azul pueden reducir significativamente la fatiga visual. Te asesoramos sin compromiso.</p>
+            <p>Yes, when properly indicated and with the right prescription. If you spend more than 4 hours a day on screens or have trouble sleeping, blue light blocking lenses can significantly reduce eye strain. We'll advise you with no pressure or commitment.</p>
           </div></div>
         </div>
         <div class="faq-item" onclick="toggleFaq(this)">
           <div class="faq-q">
-            <h4>¿Atienden a niños desde qué edad?</h4>
+            <h4>From what age do you see children?</h4>
             <div class="faq-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#0D2B6B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           </div>
           <div class="faq-a"><div class="faq-a-inner">
-            <p>Atendemos niños desde los 3 años con protocolos especiales para que la experiencia sea tranquila y sin estrés. Detectar problemas visuales a tiempo puede cambiar el desempeño escolar de tu hijo.</p>
+            <p>We see children from age 3, with special protocols to make the experience calm and stress-free. Early detection of visual problems can transform your child's academic performance.</p>
+          </div></div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">
+            <h4>Do you accept US patients? Is English spoken?</h4>
+            <div class="faq-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#0D2B6B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </div>
+          <div class="faq-a"><div class="faq-a-inner">
+            <p>Absolutely. We welcome patients from San Diego, Chula Vista, and all of Southern California. Our team is bilingual and our clinic is located in Zona Río, just minutes from the US border. Many of our scleral lens patients travel from the US because of our specialty and competitive prices.</p>
           </div></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ═══ CTA FINAL ═══ -->
-  <section class="cta-final" aria-label="Agenda tu cita">
+  <!-- ═══ FINAL CTA ═══ -->
+  <section class="cta-final" aria-label="Book your appointment">
     <div class="cta-orb cta-orb-1"></div>
     <div class="cta-orb cta-orb-2"></div>
     <div class="hex-bg" aria-hidden="true">
@@ -1206,18 +1047,18 @@
       <svg class="hex-6" width="104" height="90" viewBox="0 0 104 90" fill="none"><polygon points="101,45 78,3 26,3 3,45 26,87 78,87" stroke="white" stroke-width="1.5" fill="white" fill-opacity="0.06"/></svg>
     </div>
     <div class="container">
-      <h2 class="cta-title reveal delay-1">Tu próxima cita puede cambiar<br>cómo ves el mundo.</h2>
-      <p class="cta-sub reveal delay-2">No esperes a que los síntomas empeoren. En Jarmar Tijuana te atendemos con calidez, precisión y 60 años de experiencia respaldándote.</p>
+      <h2 class="cta-title reveal delay-1">Your next appointment could change<br>the way you see the world.</h2>
+      <p class="cta-sub reveal delay-2">Don't wait for symptoms to worsen. At Jarmar Tijuana we treat every patient with warmth, precision, and 60 years of expertise behind us.</p>
       <div class="cta-actions reveal delay-3">
-        <a href="https://wa.me/526645791970?text=Hola,%20me%20gustar%C3%ADa%20agendar%20mi%20estudio%20visual%20en%20%C3%93pticas%20Jarmar%20Tijuana" target="_blank" class="btn-whatsapp">
+        <a href="https://wa.me/526645791970?text=Hello%2C%20I%27d%20like%20to%20schedule%20an%20eye%20exam%20at%20%C3%93pticas%20Jarmar%20Tijuana." target="_blank" class="btn-whatsapp">
           <svg viewBox="0 0 24 24" width="22" height="22" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.999 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.985-1.31A9.945 9.945 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z" fill-rule="evenodd" clip-rule="evenodd"/></svg>
-          Agenda por WhatsApp ahora
+          Book via WhatsApp now
         </a>
-        <a href="#sucursal" class="btn-secondary" style="border-color:rgba(255,255,255,0.4);">
-          Ver ubicación →
+        <a href="#location" class="btn-secondary" style="border-color:rgba(255,255,255,0.4);">
+          View location →
         </a>
       </div>
-      <p class="cta-nota reveal delay-4">David Alfaro Siqueiros #2795 local 101 · Zona Río Tijuana · Lun–Vie 10am–6pm · Sáb 10am–3pm</p>
+      <p class="cta-nota reveal delay-4">David Alfaro Siqueiros #2795 local 101 · Zona Río Tijuana · Mon–Fri 10am–6pm · Sat 10am–3pm</p>
     </div>
   </section>
 
@@ -1230,33 +1071,33 @@
             <div class="logo-mark"><img src="/LogoS blanco.png" alt="Ópticas Jarmar" /></div>
             <div class="logo-text">
               <strong>Ópticas Jarmar</strong>
-              <span>Clínica Óptica Boutique · Tijuana</span>
+              <span>Boutique Eye Care Clinic · Tijuana</span>
             </div>
           </div>
-          <p>Más de 60 años cuidando la salud visual de México desde 1966. Previniendo, conservando y mejorando tu visión en Tijuana.</p>
+          <p>Over 60 years caring for Mexico's visual health since 1966. Preventing, preserving, and improving your vision in Tijuana.</p>
         </div>
         <div class="footer-col">
-          <h5>Servicios</h5>
+          <h5>Services</h5>
           <ul>
-            <li><a href="#servicios">Estudio de la vista</a></li>
-            <li><a href="#esclerales">Lentes esclerales</a></li>
-            <li><a href="#servicios">Lentes graduados</a></li>
-            <li><a href="#servicios">Lentes de contacto</a></li>
-            <li><a href="#servicios">Luz azul</a></li>
+            <li><a href="#services">Eye exam</a></li>
+            <li><a href="#sclerals">Scleral lenses</a></li>
+            <li><a href="#services">Prescription glasses</a></li>
+            <li><a href="#services">Contact lenses</a></li>
+            <li><a href="#services">Blue light lenses</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h5>Empresa</h5>
+          <h5>Company</h5>
           <ul>
-            <li><a href="#diferenciadores">Quiénes somos</a></li>
-            <li><a href="#testimonios">Testimonios</a></li>
-            <li><a href="#faq">Preguntas frecuentes</a></li>
+            <li><a href="#about">Who we are</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="/tijuana/">Español</a></li>
             <li><a href="https://jarmar.com/" target="_blank">Jarmar México</a></li>
-            <li><a href="https://chiapas.jarmar.com/" target="_blank">Jarmar Chiapas</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h5>Contacto</h5>
+          <h5>Contact</h5>
           <ul>
             <li><a href="https://wa.me/526645791970" target="_blank">(664) 579 1970</a></li>
             <li><a href="https://share.google/LceH5fGnXovDsulrP" target="_blank">Zona Río Tijuana</a></li>
@@ -1266,7 +1107,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2026 Ópticas Jarmar Tijuana · Todos los derechos reservados · <a href="https://jarmar.com/" target="_blank" style="color:rgba(255,255,255,0.3);">jarmar.com</a></p>
+        <p>© 2026 Ópticas Jarmar Tijuana · All rights reserved · <a href="https://jarmar.com/" target="_blank" style="color:rgba(255,255,255,0.3);">jarmar.com</a></p>
         <div class="footer-social">
           <a href="https://www.facebook.com/opticasjarmartijuana/" target="_blank" class="social-btn">FB</a>
           <a href="https://www.instagram.com/opticasjarmartijuana/" target="_blank" class="social-btn">IG</a>
@@ -1276,10 +1117,10 @@
     </div>
   </footer>
 
-  <!-- ═══ WHATSAPP FLOTANTE ═══ -->
+  <!-- ═══ FLOATING WHATSAPP ═══ -->
   <div class="wa-float">
-    <div class="wa-label">¡Agenda tu cita aquí!</div>
-    <a href="https://wa.me/526645791970?text=Hola,%20me%20gustar%C3%ADa%20agendar%20mi%20estudio%20visual%20en%20%C3%93pticas%20Jarmar%20Tijuana" target="_blank" class="wa-btn" aria-label="WhatsApp Jarmar Tijuana">
+    <div class="wa-label">Book your appointment!</div>
+    <a href="https://wa.me/526645791970?text=Hello%2C%20I%27d%20like%20to%20schedule%20an%20eye%20exam%20at%20%C3%93pticas%20Jarmar%20Tijuana." target="_blank" class="wa-btn" aria-label="WhatsApp Jarmar Tijuana">
       <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
         <path d="M11.999 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.985-1.31A9.945 9.945 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/>
@@ -1289,26 +1130,23 @@
 
   <!-- ═══ JAVASCRIPT ═══ -->
   <script>
-    // Navbar scroll
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
       navbar.classList.toggle('scrolled', window.scrollY > 60);
     });
+    navbar.classList.add('scrolled');
 
-    // Mobile menu
     const navLinks = document.getElementById('navLinks');
     document.getElementById('burger').addEventListener('click', () => navLinks.classList.toggle('open'));
     document.getElementById('navClose').addEventListener('click', () => navLinks.classList.remove('open'));
     document.querySelectorAll('#navLinks a').forEach(link => link.addEventListener('click', () => navLinks.classList.remove('open')));
 
-    // FAQ accordion
     function toggleFaq(item) {
       const isOpen = item.classList.contains('open');
       document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
       if (!isOpen) item.classList.add('open');
     }
 
-    // Scroll reveal
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -1319,7 +1157,6 @@
     }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
     document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => observer.observe(el));
 
-    // Hero immediate reveal
     document.querySelectorAll('.hero .reveal').forEach(el => {
       setTimeout(() => el.classList.add('visible'), 100);
     });
