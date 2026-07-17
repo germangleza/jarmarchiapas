@@ -117,6 +117,19 @@ const brandVars = `
       document.getElementById('burger').addEventListener('click', () => navLinks.classList.toggle('open'));
       document.getElementById('navClose').addEventListener('click', () => navLinks.classList.remove('open'));
       document.querySelectorAll('#navLinks a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+      // Google Ads conversion: fire on every WhatsApp CTA click
+      document.querySelectorAll('a[href*="wa.me"]').forEach(function(el) {
+        el.addEventListener('click', function() {
+          if (typeof gtag === 'function') {
+            gtag('event', 'conversion', {
+              send_to: 'AW-17977352986/zRKPCO6GotIcEJrGovxC',
+              value: 1.0,
+              currency: 'MXN'
+            });
+          }
+        });
+      });
     </script>
 
   </body>
