@@ -5,7 +5,56 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 <BaseLayout
   title="Queratocono en Tuxtla Gutiérrez | Diagnóstico y Rehabilitación Visual | Ópticas Jarmar Chiapas"
   description="¿Qué es el queratocono? Síntomas, cómo se detecta con topografía corneal, etapas y opciones de manejo en Tuxtla Gutiérrez, Chiapas. Ópticas Jarmar, especialistas en córnea irregular."
+  ogImage="https://jarmar.com/LogoXS%20color.png"
 >
+  <Fragment slot="head">
+    <script type="application/ld+json">{JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué es el queratocono?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El queratocono es una condición ocular progresiva en la que la córnea adelgaza y adopta una forma cónica en lugar de esférica. Esto distorsiona la visión y hace que sea difícil corregirla con gafas convencionales. Se detecta con topografía corneal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo se diagnostica el queratocono en Tuxtla Gutiérrez?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El diagnóstico se realiza con una topografía corneal, que mapea la forma exacta de la córnea. Ópticas Jarmar en Tuxtla Gutiérrez (Plaza Cedros y Plaza Crystal) cuenta con este equipo. La topografía detecta queratocono incluso en etapas tempranas sin síntomas evidentes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿El queratocono tiene cura?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No existe una cura definitiva, pero hay dos estrategias: frenar la progresión con crosslinking corneal, y mejorar la visión con lentes esclerales o lentes rígidos. El crosslinking detiene el avance pero no revierte el daño. Los lentes esclerales recuperan la visión de forma muy efectiva."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Los lentes esclerales sirven para el queratocono?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Los lentes esclerales son la opción más efectiva para mejorar la visión en queratocono moderado y avanzado. Al crear una cámara de solución salina sobre la córnea irregular, neutralizan las distorsiones del cono y logran agudezas visuales que los lentes convencionales no alcanzan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Dónde atienden queratocono en Tuxtla Gutiérrez?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ópticas Jarmar tiene dos sucursales en Tuxtla Gutiérrez: Plaza Cedros (Col. Arboledas, WhatsApp: +52 961 240 6013) y Plaza Crystal (WhatsApp: +52 961 185 5475). Cuentan con topografía corneal y más de 10 años de experiencia en rehabilitación visual mediante lentes esclerales para queratocono."
+          }
+        }
+      ]
+    })}</script>
+  </Fragment>
   <style>
     :root { --bg: #071A3E; --surface: #0D2B6B; --accent: #3A8FE0; }
 

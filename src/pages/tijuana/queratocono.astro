@@ -5,7 +5,60 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 <BaseLayout
   title="Queratocono en Tijuana | Diagnóstico y Rehabilitación Visual | Ópticas Jarmar"
   description="¿Qué es el queratocono? Síntomas, cómo se detecta con topografía corneal, etapas y opciones de manejo en Tijuana. Ópticas Jarmar, especialistas en córnea irregular."
+  ogImage="https://jarmar.com/LogoXS%20color.png"
+  alternates={[
+    { hreflang: "es", href: "https://jarmar.com/tijuana/queratocono/" },
+    { hreflang: "en", href: "https://jarmar.com/en/tijuana/keratoconus/" }
+  ]}
 >
+  <Fragment slot="head">
+    <script type="application/ld+json">{JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué es el queratocono?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El queratocono es una condición ocular progresiva en la que la córnea adelgaza y adopta una forma cónica en lugar de esférica. Esto distorsiona la visión y hace que sea difícil corregirla con gafas convencionales. Se detecta con topografía corneal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo se diagnostica el queratocono?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El diagnóstico se realiza principalmente con una topografía corneal, que mapea la forma exacta de la córnea. La topografía puede detectar queratocono en etapas muy tempranas, cuando todavía no hay síntomas evidentes. También se usa la paquimetría para medir el grosor corneal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿El queratocono tiene cura?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No existe una cura definitiva, pero hay dos estrategias complementarias: frenar la progresión (crosslinking corneal) y mejorar la visión (lentes esclerales, lentes rígidos, en casos avanzados trasplante de córnea). El crosslinking detiene el avance de la enfermedad pero no revierte el daño existente."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Los lentes esclerales sirven para el queratocono?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Los lentes esclerales son la opción más efectiva para mejorar la visión en queratocono moderado y avanzado. Al saltar la córnea irregular y crear una cámara de solución salina, eliminan las distorsiones visuales que produce el cono. No frenan la progresión, pero recuperan la visión de forma muy efectiva."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Dónde diagnostican y tratan el queratocono en Tijuana?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ópticas Jarmar en Zona Urbana Río, Tijuana, cuenta con topografía corneal y más de 10 años de experiencia en rehabilitación visual para queratocono mediante lentes esclerales. El Optometrista Director Jorge Aranda Tello es especialista en este tipo de casos. WhatsApp: +52 664 579 1970."
+          }
+        }
+      ]
+    })}</script>
+  </Fragment>
   <style>
     :root { --bg: #071A3E; --surface: #0D2B6B; --accent: #3A8FE0; }
 
