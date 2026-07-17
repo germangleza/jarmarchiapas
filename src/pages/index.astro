@@ -3,6 +3,14 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=AW-17977352986"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17977352986');
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" href="/LogoXS color.png" />
@@ -1488,6 +1496,19 @@
     // Hero revela inmediato
     document.querySelectorAll('.hero .reveal, .hero .reveal-r').forEach((el, i) => {
       setTimeout(() => el.classList.add('on'), i * 120);
+    });
+
+    // Google Ads conversion: fire on every WhatsApp CTA click
+    document.querySelectorAll('a[href*="wa.me"]').forEach(function(el) {
+      el.addEventListener('click', function() {
+        if (typeof gtag === 'function') {
+          gtag('event', 'conversion', {
+            send_to: 'AW-17977352986/zRKPCO6GotIcEJrGovxC',
+            value: 1.0,
+            currency: 'MXN'
+          });
+        }
+      });
     });
   </script>
 </body>
