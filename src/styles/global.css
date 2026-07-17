@@ -33,6 +33,17 @@ body {
 img { max-width: 100%; display: block; }
 a { color: var(--accent); text-decoration: none; }
 
+/* ── Section baseline ── */
+/* body bg is dark navy; .section elements must be explicitly white so they
+   don't inherit the body color when nth-child(even) doesn't apply to them.
+   Sections that intentionally want dark backgrounds override via their own class. */
+.section { background: #fff; }
+
+/* ── Hero text on dark background ── */
+/* Force h1 and spans fully white so accent-colored spans are readable on dark hero gradients */
+.hero h1, .hero h1 span { color: #fff; }
+.hero p { color: rgba(255,255,255,0.92); }
+
 /* ═══ NAVBAR ═══ */
 .site-nav {
   position: fixed; top: 0; left: 0; right: 0;
