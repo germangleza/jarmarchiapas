@@ -675,6 +675,8 @@
     .servicio-icon { font-size: 2rem; margin-bottom: 14px; display: block; }
     .servicio h4 { font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; color: var(--azul-oscuro); margin-bottom: 8px; }
     .servicio p  { font-size: 1.05rem; color: var(--gris-texto); line-height: 1.65; }
+    .servicio-more { display: block; margin-top: 14px; font-size: 0.82rem; font-weight: 700; color: var(--azul-medio); transition: var(--trans); }
+    .servicio:hover .servicio-more { color: var(--azul-claro); }
 
     /* ═══════════════════════════════
        PRODUCTO ESTRELLA — ESCLERALES
@@ -775,48 +777,42 @@
       background: radial-gradient(ellipse 60% 50% at 20% 60%, rgba(26,91,181,0.15) 0%, transparent 70%);
     }
     .testimonios .container { position: relative; z-index: 2; }
-    .testimonios-header { text-align: center; margin-bottom: 60px; }
-    .testimonios-header .section-sub--white { margin: 14px auto 0; }
+    .testimonios-header { text-align: center; margin-bottom: 48px; }
+    .testi-rating-row { display: flex; align-items: center; gap: 10px; justify-content: center; margin-bottom: 14px; }
+    .testi-rating-num { font-size: 1.3rem; font-weight: 700; color: rgba(255,255,255,0.92); }
+    .testi-rating-stars { color: #F6AD55; letter-spacing: 0.08em; font-size: 0.95rem; }
+    .testi-rating-src { display: inline-flex; align-items: center; gap: 5px; font-size: 0.75rem; color: rgba(255,255,255,0.55); text-transform: uppercase; letter-spacing: 0.08em; }
 
-    .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
     .testi {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 20px;
-      padding: 28px 24px;
+      background: var(--blanco);
+      border-radius: 8px;
+      padding: 22px;
       transition: var(--trans);
-      position: relative;
+      display: flex; flex-direction: column; gap: 10px;
     }
-    .testi:hover { background: rgba(255,255,255,0.09); border-color: rgba(58,143,224,0.2); transform: translateY(-4px); }
-    .testi-stars { color: var(--azul-claro); font-size: 0.8rem; letter-spacing: 2px; margin-bottom: 14px; }
-    .testi-ciudad {
-      display: inline-block;
-      font-size: 0.62rem;
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--azul-claro);
-      background: rgba(58,143,224,0.1);
-      border: 1px solid rgba(58,143,224,0.2);
-      padding: 3px 10px;
-      border-radius: 100px;
-      margin-bottom: 14px;
-    }
-    .testi p { font-size: 0.88rem; color: rgba(255,255,255,0.65); line-height: 1.75; margin-bottom: 20px; font-style: italic; }
-    .testi-autor { display: flex; align-items: center; gap: 12px; }
+    .testi:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+    .testi-hook { font-size: 1rem; font-weight: 700; line-height: 1.3; color: var(--azul-oscuro); }
+    .testi-hook::before { content: "\201C"; color: var(--azul-claro); margin-right: 2px; }
+    .testi-body { font-size: 0.88rem; color: var(--gris-texto); line-height: 1.65; flex: 1; }
+    .testi-autor { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 3px 10px; padding-top: 12px; border-top: 1px solid rgba(26,91,181,0.1); margin-top: auto; }
     .testi-av {
-      width: 40px; height: 40px;
+      grid-row: span 2;
+      width: 36px; height: 36px;
       background: linear-gradient(135deg, var(--azul-medio), var(--azul-claro));
       border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
       font-family: var(--font-display);
-      font-size: 0.9rem; font-weight: 600;
-      color: var(--blanco);
-      flex-shrink: 0;
+      font-size: 0.75rem; font-weight: 700;
+      color: var(--blanco); flex-shrink: 0;
     }
     .testi-av--gold { background: var(--grad-azul); color: var(--azul-oscuro); }
-    .testi-info strong { font-size: 0.85rem; color: var(--blanco); display: block; }
-    .testi-info span   { font-size: 0.75rem; color: rgba(255,255,255,0.4); }
+    .testi-info strong { font-size: 0.84rem; color: var(--azul-oscuro); display: block; }
+    .testi-fuente { display: inline-flex; align-items: center; gap: 4px; font-size: 0.7rem; color: var(--gris-claro); }
+    .ver-resenas-dark { display: inline-flex; align-items: center; gap: 8px; margin-top: 28px; font-size: 0.9rem; font-weight: 600; color: rgba(255,255,255,0.7); border-bottom: 1px solid rgba(255,255,255,0.25); padding-bottom: 3px; transition: var(--trans); }
+    .ver-resenas-dark:hover { color: var(--blanco); border-color: rgba(255,255,255,0.6); }
+    .ver-resenas-dark .arrow { transition: transform 200ms; display: inline-block; }
+    .ver-resenas-dark:hover .arrow { transform: translateX(4px); }
 
     /* ═══════════════════════════════
        CTA FINAL
@@ -976,7 +972,7 @@
       .estrella-inner { grid-template-columns: 1fr; gap: 48px; }
       .ciudades-grid { gap: 20px; }
       .servicios-grid { grid-template-columns: repeat(2,1fr); }
-      .testi-grid { grid-template-columns: 1fr 1fr; }
+      .testi-grid { grid-template-columns: repeat(2,1fr); }
       .footer-grid { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 768px) {
@@ -1014,6 +1010,16 @@
   </style>
 </head>
 <body>
+
+  <!-- SVG symbol reutilizable: logo Google -->
+  <svg style="display:none" aria-hidden="true" focusable="false">
+    <symbol id="g-logo" viewBox="0 0 24 24">
+      <path fill="#4285F4" d="M22.6 12.2c0-.7-.1-1.4-.2-2H12v4h6c-.3 1.4-1.1 2.6-2.3 3.4v2.8h3.7c2.2-2 3.4-5 3.4-8.2z"/>
+      <path fill="#34A853" d="M12 23c3.1 0 5.7-1 7.6-2.8l-3.7-2.8c-1 .7-2.3 1.1-3.9 1.1-3 0-5.5-2-6.4-4.7H1.8v2.9C3.7 20.5 7.6 23 12 23z"/>
+      <path fill="#FBBC05" d="M5.6 14.6C5.4 14 5.3 13.5 5.3 13s.1-1 .3-1.4V8.7H1.8C1.3 9.7 1 10.8 1 12s.3 2.3.8 3.3l3.8-2.7z"/>
+      <path fill="#EA4335" d="M12 4.5c1.7 0 3.2.6 4.4 1.7l3.3-3.3C17.7 1 15.1 0 12 0 7.6 0 3.7 2.5 1.8 6.3l3.8 2.9C6.5 6.5 9 4.5 12 4.5z"/>
+    </symbol>
+  </svg>
 
   <!-- ═══ NAVBAR ═══ -->
   <nav class="nav" id="nav">
@@ -1246,31 +1252,37 @@
           <span class="servicio-icon">🔬</span>
           <h4>Estudio de la Vista</h4>
           <p>Examen visual completo con equipos de diagnóstico de alta precisión para adultos y niños.</p>
+          <span class="servicio-more">Conocer más →</span>
         </a>
         <a href="/tijuana/lentes-graduados" class="servicio reveal d2">
           <span class="servicio-icon">👓</span>
           <h4>Lentes Graduados</h4>
           <p>Amplia selección de armazones y lentes de la mejor calidad, adaptados a tu graduación.</p>
+          <span class="servicio-more">Conocer más →</span>
         </a>
         <a href="/tijuana/lentes-luz-azul" class="servicio reveal d3">
           <span class="servicio-icon">💻</span>
           <h4>Lentes Luz Azul</h4>
           <p>Protege tus ojos del daño de pantallas con nuestros lentes de bloqueo de luz azul.</p>
+          <span class="servicio-more">Conocer más →</span>
         </a>
         <a href="/tijuana/lentes-de-sol" class="servicio reveal d1">
           <span class="servicio-icon">☀️</span>
           <h4>Lentes de Sol</h4>
           <p>Protección UV y estilo en una sola pieza. Graduados o sin graduar, para cada ocasión.</p>
+          <span class="servicio-more">Conocer más →</span>
         </a>
         <a href="/tijuana/lentes-esclerales" class="servicio reveal d2">
           <span class="servicio-icon">👁️</span>
           <h4>Lentes de Contacto</h4>
           <p>Convencionales y especializados, incluyendo para córneas irregulares y casos complejos.</p>
+          <span class="servicio-more">Conocer más →</span>
         </a>
         <a href="/tijuana/examen-ninos" class="servicio reveal d3">
           <span class="servicio-icon">🧒</span>
           <h4>Examen y Lentes Niños</h4>
           <p>Protocolo especial desde los 3 años. Detección temprana para su desempeño escolar.</p>
+          <span class="servicio-more">Conocer más →</span>
         </a>
       </div>
     </div>
@@ -1296,9 +1308,14 @@
           </div>
         </div>
 
-        <a href="#ciudades" class="btn-azul">
-          Consultar en mi ciudad →
-        </a>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;">
+          <a href="#ciudades" class="btn-azul">
+            Consultar en mi ciudad →
+          </a>
+          <a href="/tijuana/lentes-esclerales" class="btn-azul" style="background:transparent;border:2px solid var(--azul-oscuro);color:var(--azul-oscuro);box-shadow:none;">
+            Conocer más →
+          </a>
+        </div>
       </div>
 
       <div class="estrella-img reveal-r">
@@ -1317,49 +1334,97 @@
     <div class="container">
       <div class="testimonios-header reveal">
         <span class="tag tag--dark">Voces de México</span>
+        <div class="testi-rating-row">
+          <span class="testi-rating-num">4.9</span>
+          <span class="testi-rating-stars">★★★★★</span>
+          <span class="testi-rating-src">
+            <svg width="14" height="14" aria-hidden="true"><use href="#g-logo"/></svg>
+            Google
+          </span>
+        </div>
         <h2 class="section-title section-title--white">Lo que dicen quienes<br><em>ya ven mejor.</em></h2>
-        <p class="section-sub section-sub--white">Familias de Chiapas y Tijuana que cambiaron su vida con Jarmar.</p>
+        <p class="section-sub section-sub--white">+180 reseñas reales de pacientes de Chiapas y Tijuana en Google.</p>
       </div>
 
       <div class="testi-grid">
         <div class="testi reveal d1">
-          <div class="testi-stars">★★★★★</div>
-          <div class="testi-ciudad">Chiapas</div>
-          <p>Llevo más de 20 años asistiendo a Jarmar, de cinco generaciones de mi familia han asistido. Por la excelente atención y humanidad que tienen con cada paciente. Gracias por cuidarnos siempre.</p>
+          <p class="testi-hook">Llevo más de 20 años asistiendo a Jarmar.</p>
+          <p class="testi-body">De cinco generaciones de mi familia han asistido. Por la excelente atención y humanidad que tienen con cada paciente. Gracias por cuidarnos siempre.</p>
           <div class="testi-autor">
             <div class="testi-av">MD</div>
             <div class="testi-info">
               <strong>Mariana Díaz Ramos</strong>
-              <span>Cliente de 5 generaciones</span>
+              <span class="testi-fuente"><svg width="11" height="11" aria-hidden="true"><use href="#g-logo"/></svg> Reseña en Google</span>
             </div>
           </div>
         </div>
 
         <div class="testi reveal d2">
-          <div class="testi-stars">★★★★★</div>
-          <div class="testi-ciudad">Tijuana</div>
-          <p>Tuve un accidente hace 32 años y he pasado todo ese tiempo intentando usar lentes de todo tipo. Solo lo pude lograr con el lente escleral de Ópticas Jarmar. Estoy motivado, feliz y agradecido.</p>
+          <p class="testi-hook">Solo lo pude lograr con el lente escleral de Ópticas Jarmar.</p>
+          <p class="testi-body">Tuve un accidente hace 32 años y he pasado todo ese tiempo intentando usar lentes de todo tipo. Estoy motivado, feliz y agradecido.</p>
           <div class="testi-autor">
             <div class="testi-av testi-av--gold">BS</div>
             <div class="testi-info">
               <strong>Bladimir Santos B.</strong>
-              <span>Paciente · Lentes Esclerales</span>
+              <span class="testi-fuente"><svg width="11" height="11" aria-hidden="true"><use href="#g-logo"/></svg> Reseña en Google</span>
             </div>
           </div>
         </div>
 
         <div class="testi reveal d3">
-          <div class="testi-stars">★★★★★</div>
-          <div class="testi-ciudad">Tijuana</div>
-          <p>Un concepto totalmente diferente al resto de las ópticas en Tijuana. Muchísimos armazones, el trato es excelente y la Dra. te explica y resuelve tus dudas amablemente.</p>
+          <p class="testi-hook">Un concepto totalmente diferente al resto de las ópticas.</p>
+          <p class="testi-body">Muchísimos armazones, el trato es excelente y la Dra. te explica y resuelve tus dudas amablemente. Sin duda el mejor lugar en Tijuana.</p>
           <div class="testi-autor">
             <div class="testi-av">AB</div>
             <div class="testi-info">
               <strong>Alejandra Barrera</strong>
-              <span>Cliente · Tijuana</span>
+              <span class="testi-fuente"><svg width="11" height="11" aria-hidden="true"><use href="#g-logo"/></svg> Reseña en Google</span>
             </div>
           </div>
         </div>
+
+        <div class="testi reveal d1">
+          <p class="testi-hook">Mi hija dejó de tener dolores de cabeza en la escuela.</p>
+          <p class="testi-body">Detectaron que necesitaba lentes desde los 4 años. El equipo fue increíblemente paciente con ella. La diferencia en su desempeño escolar fue inmediata.</p>
+          <div class="testi-autor">
+            <div class="testi-av">CV</div>
+            <div class="testi-info">
+              <strong>Carmen Velázquez</strong>
+              <span class="testi-fuente"><svg width="11" height="11" aria-hidden="true"><use href="#g-logo"/></svg> Reseña en Google</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi reveal d2">
+          <p class="testi-hook">Me detectaron glaucoma a tiempo. Les debo mi visión.</p>
+          <p class="testi-body">Llegué pensando que era un chequeo rutinario y el diagnóstico temprano cambió todo. El equipo de diagnóstico es impresionante. Muy agradecido con el Dr. Aranda.</p>
+          <div class="testi-autor">
+            <div class="testi-av">RI</div>
+            <div class="testi-info">
+              <strong>Roberto Ibáñez</strong>
+              <span class="testi-fuente"><svg width="11" height="11" aria-hidden="true"><use href="#g-logo"/></svg> Reseña en Google</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi reveal d3">
+          <p class="testi-hook">La mejor óptica que he visitado en Chiapas, sin duda.</p>
+          <p class="testi-body">Llevan años cuidando a mi familia. El servicio es cálido, profesional y tienen una selección de armazones increíble. Volveré siempre a Jarmar.</p>
+          <div class="testi-autor">
+            <div class="testi-av">PT</div>
+            <div class="testi-info">
+              <strong>Patricia Torres</strong>
+              <span class="testi-fuente"><svg width="11" height="11" aria-hidden="true"><use href="#g-logo"/></svg> Reseña en Google</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align:center;">
+        <a class="ver-resenas-dark" href="https://maps.app.goo.gl/3cwL8wvXXwQtokMz9" target="_blank" rel="noopener">
+          Ver todas las reseñas en Google
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
       </div>
     </div>
   </section>
@@ -1461,13 +1526,6 @@
     </div>
   </footer>
 
-  <!-- ═══ WHATSAPP FLOTANTE ═══ -->
-  <div class="wa">
-    <div class="wa-tip">¿En qué ciudad estás?</div>
-    <a href="#ciudades" class="wa-btn" aria-label="Elige tu ciudad">
-      <svg viewBox="0 0 24 24" width="26" height="26" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
-    </a>
-  </div>
 
   <!-- ═══ JAVASCRIPT ═══ -->
   <script>

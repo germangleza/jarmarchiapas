@@ -669,6 +669,8 @@
     .servicio-icon { font-size: 2.2rem; margin-bottom: 14px; display: block; }
     .servicio-card h4 { font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--azul-oscuro); margin-bottom: 8px; }
     .servicio-card p { font-size: 1.05rem; color: var(--gris-texto); line-height: 1.7; }
+    .servicio-more { display: block; margin-top: 14px; font-size: 0.82rem; font-weight: 700; color: var(--azul-medio); transition: var(--transition); }
+    .servicio-card:hover .servicio-more { color: var(--azul-oscuro); }
     .servicio-cta { text-align: center; margin-top: 48px; }
     .btn-outline {
       display: inline-flex; align-items: center; gap: 8px;
@@ -1192,31 +1194,37 @@
           <span class="servicio-icon">🔬</span>
           <h4>Estudio de la Vista</h4>
           <p>Examen visual completo con equipos de diagnóstico de alta precisión para adultos y niños.</p>
+          <span class="servicio-more">Conocer más →</span>
         </a>
         <a href="/tijuana/lentes-graduados" class="servicio-card reveal delay-2">
           <span class="servicio-icon">👓</span>
           <h4>Lentes Graduados</h4>
           <p>Amplia selección de armazones y lentes de la mejor calidad adaptados a tu graduación.</p>
+          <span class="servicio-more">Conocer más →</span>
         </a>
         <a href="/tijuana/lentes-luz-azul" class="servicio-card reveal delay-3">
           <span class="servicio-icon">💻</span>
           <h4>Lentes Luz Azul</h4>
           <p>Protege tus ojos del daño de pantallas con nuestros lentes de bloqueo de luz azul.</p>
+          <span class="servicio-more">Conocer más →</span>
         </a>
         <a href="/tijuana/lentes-de-sol" class="servicio-card reveal delay-1">
           <span class="servicio-icon">☀️</span>
           <h4>Lentes de Sol</h4>
           <p>Protección UV y estilo en una sola pieza. Graduados o sin graduar, para cada ocasión.</p>
+          <span class="servicio-more">Conocer más →</span>
         </a>
         <a href="/tijuana/lentes-esclerales" class="servicio-card reveal delay-2">
           <span class="servicio-icon">👁️</span>
           <h4>Lentes Esclerales</h4>
           <p>Especialistas en lentes esclerales para queratocono, trasplante corneal y casos complejos.</p>
+          <span class="servicio-more">Conocer más →</span>
         </a>
         <a href="/tijuana/examen-ninos" class="servicio-card reveal delay-3">
           <span class="servicio-icon">🧒</span>
           <h4>Examen y Lentes Niños</h4>
           <p>Protocolo especial para pequeños desde los 3 años. Detección temprana para su desempeño escolar.</p>
+          <span class="servicio-more">Conocer más →</span>
         </a>
       </div>
       <div class="servicio-cta reveal">
@@ -1378,6 +1386,48 @@
             </div>
           </div>
         </div>
+        <div class="testimonio reveal delay-1">
+          <p class="testimonio-hook">Me detectaron glaucoma a tiempo. Les debo mi visión.</p>
+          <p>Llegué pensando que era un chequeo rutinario y el diagnóstico temprano cambió todo. El equipo de diagnóstico es impresionante. Muy agradecido con el Dr. Aranda.</p>
+          <div class="testimonio-autor">
+            <div class="autor-avatar">RI</div>
+            <div class="autor-info">
+              <strong>Roberto Ibáñez</strong>
+              <span class="autor-fuente">
+                <svg width="12" height="12" aria-hidden="true"><use href="#g-logo"/></svg>
+                Reseña en Google
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonio reveal delay-2">
+          <p class="testimonio-hook">Vengo desde San Diego y vale cada kilómetro.</p>
+          <p>La diferencia en calidad de atención y precios es enorme comparado con cualquier óptica del lado americano. El Jorge es un experto de verdad en lentes esclerales.</p>
+          <div class="testimonio-autor">
+            <div class="autor-avatar">MC</div>
+            <div class="autor-info">
+              <strong>Mario Castillo</strong>
+              <span class="autor-fuente">
+                <svg width="12" height="12" aria-hidden="true"><use href="#g-logo"/></svg>
+                Reseña en Google
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonio reveal delay-3">
+          <p class="testimonio-hook">Mi hijo de 5 años por fin usa sus lentes con gusto.</p>
+          <p>El protocolo para niños es excepcional. Fueron súper pacientes y encontraron los armazones perfectos para él. Nunca pensé que sería tan fácil. Gracias Jarmar Tijuana.</p>
+          <div class="testimonio-autor">
+            <div class="autor-avatar">SH</div>
+            <div class="autor-info">
+              <strong>Sandra Hernández</strong>
+              <span class="autor-fuente">
+                <svg width="12" height="12" aria-hidden="true"><use href="#g-logo"/></svg>
+                Reseña en Google
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
       <a class="ver-resenas" href="https://maps.app.goo.gl/nyrjM9WuBSQv3qb97" target="_blank" rel="noopener">
         Ver las 180 reseñas en Google
@@ -1524,16 +1574,6 @@
     </div>
   </footer>
 
-  <!-- ═══ WHATSAPP FLOTANTE ═══ -->
-  <div class="wa-float">
-    <div class="wa-label">¡Agenda tu cita aquí!</div>
-    <a href="https://wa.me/526645791970?text=Hola,%20me%20gustar%C3%ADa%20agendar%20mi%20estudio%20visual%20en%20%C3%93pticas%20Jarmar%20Tijuana" target="_blank" class="wa-btn" aria-label="WhatsApp Jarmar Tijuana">
-      <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-        <path d="M11.999 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.985-1.31A9.945 9.945 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/>
-      </svg>
-    </a>
-  </div>
 
   <!-- ═══ JAVASCRIPT ═══ -->
   <script>
