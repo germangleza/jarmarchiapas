@@ -1,0 +1,315 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Queratocono en Tuxtla Gutiérrez | Diagnóstico y Rehabilitación Visual | Ópticas Jarmar Chiapas"
+  description="¿Qué es el queratocono? Síntomas, cómo se detecta con topografía corneal, etapas y opciones de manejo en Tuxtla Gutiérrez, Chiapas. Ópticas Jarmar, especialistas en córnea irregular."
+>
+  <style>
+    :root { --bg: #071A3E; --surface: #0D2B6B; --accent: #3A8FE0; }
+
+    .hero { background: linear-gradient(135deg, var(--bg) 0%, var(--surface) 100%); color: #fff; padding: 100px 20px 80px; text-align: center; }
+    .hero-tag { display: inline-block; background: rgba(58,143,224,0.2); border: 1px solid var(--accent); color: var(--accent); border-radius: 100px; padding: 6px 18px; font-size: 0.85rem; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 24px; }
+    .hero h1 { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 700; line-height: 1.2; margin-bottom: 20px; }
+    .hero h1 span { color: var(--accent); }
+    .hero p { font-size: 1.15rem; opacity: 0.85; max-width: 640px; margin: 0 auto 36px; line-height: 1.7; }
+    .btn-cta { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: #fff; padding: 14px 32px; border-radius: 100px; font-weight: 700; font-size: 1rem; text-decoration: none; transition: opacity 0.2s, transform 0.2s; }
+    .btn-cta:hover { opacity: 0.9; transform: translateY(-2px); }
+    .btn-ghost { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: #fff; padding: 13px 28px; border-radius: 100px; font-weight: 600; font-size: 1rem; text-decoration: none; border: 2px solid rgba(255,255,255,0.4); transition: border-color 0.2s; margin-left: 12px; }
+    .btn-ghost:hover { border-color: #fff; }
+
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    .container-narrow { max-width: 720px; margin: 0 auto; padding: 0 20px; }
+    .section { padding: 72px 20px; }
+    .section:nth-child(even) { background: #f7f9fc; }
+    .section-title { font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 700; color: var(--bg); margin-bottom: 16px; }
+    .section-title span { color: var(--accent); }
+    .section-sub { color: #4a5568; line-height: 1.7; font-size: 1.05rem; margin-bottom: 36px; }
+    .prose { color: #4a5568; line-height: 1.8; font-size: 1.05rem; }
+    .prose p { margin-bottom: 18px; }
+    .prose h3 { font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; color: var(--bg); margin: 32px 0 12px; }
+    .prose a { color: var(--accent); font-weight: 600; text-decoration: none; }
+    .prose a:hover { text-decoration: underline; }
+    .prose ul { margin: 0 0 18px 20px; }
+    .prose li { margin-bottom: 8px; }
+    .prose strong { color: var(--bg); }
+
+    .sintomas-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; margin-top: 32px; }
+    .sintoma { background: #fff; border-radius: 12px; border: 1.5px solid rgba(58,143,224,0.2); padding: 20px; display: flex; gap: 14px; align-items: flex-start; }
+    .sintoma-icon { font-size: 1.5rem; flex-shrink: 0; }
+    .sintoma h4 { font-family: var(--font-display); font-weight: 700; color: var(--bg); font-size: 0.95rem; margin-bottom: 4px; }
+    .sintoma p { color: #4a5568; font-size: 0.88rem; line-height: 1.55; margin: 0; }
+
+    .etapas { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    @media (max-width: 640px) { .etapas { grid-template-columns: repeat(2, 1fr); } }
+    .etapa { background: #fff; border-radius: 12px; padding: 20px 16px; text-align: center; border-top: 4px solid; }
+    .etapa-1 { border-color: #68D391; }
+    .etapa-2 { border-color: #F6AD55; }
+    .etapa-3 { border-color: #FC8181; }
+    .etapa-4 { border-color: #FC5C5C; }
+    .etapa-num { font-family: var(--font-display); font-size: 1.6rem; font-weight: 900; color: var(--bg); display: block; }
+    .etapa-nombre { font-weight: 700; font-size: 0.85rem; color: var(--bg); display: block; margin-bottom: 6px; }
+    .etapa p { font-size: 0.8rem; color: #4a5568; line-height: 1.5; margin: 0; }
+
+    .comparar { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    @media (max-width: 560px) { .comparar { grid-template-columns: 1fr; } }
+    .comparar-card { border-radius: 16px; padding: 28px 24px; }
+    .comparar-card.frenar { background: var(--surface); color: #fff; }
+    .comparar-card.mejorar { background: var(--accent); color: #fff; }
+    .comparar-card h3 { font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; margin-bottom: 12px; }
+    .comparar-card p { font-size: 0.97rem; line-height: 1.65; opacity: 0.92; margin-bottom: 12px; }
+    .comparar-card p:last-child { margin-bottom: 0; }
+    .comparar-card .label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; opacity: 0.7; margin-bottom: 6px; display: block; }
+
+    .opciones { display: flex; flex-direction: column; gap: 16px; }
+    .opcion { background: #fff; border-radius: 12px; border: 1.5px solid rgba(58,143,224,0.18); padding: 24px; display: grid; grid-template-columns: auto 1fr; gap: 16px; align-items: start; }
+    .opcion-num { background: var(--surface); color: var(--accent); border-radius: 8px; padding: 8px 12px; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; }
+    .opcion h4 { font-family: var(--font-display); font-weight: 700; color: var(--bg); margin-bottom: 6px; }
+    .opcion p { color: #4a5568; font-size: 0.95rem; line-height: 1.65; margin: 0; }
+    .opcion-nota { display: inline-block; background: rgba(58,143,224,0.1); color: var(--accent); border-radius: 100px; padding: 3px 10px; font-size: 0.75rem; font-weight: 600; margin-top: 8px; }
+
+    .cta-esclerales { background: linear-gradient(135deg, var(--bg) 0%, var(--surface) 100%); border-radius: 20px; padding: 48px 40px; color: #fff; text-align: center; }
+    .cta-esclerales h2 { font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; margin-bottom: 16px; }
+    .cta-esclerales p { font-size: 1.05rem; opacity: 0.9; margin-bottom: 32px; max-width: 520px; margin-left: auto; margin-right: auto; }
+    .btn-group { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+
+    .cta-final { background: linear-gradient(135deg, var(--bg) 0%, var(--surface) 100%); color: #fff; text-align: center; padding: 80px 20px; }
+    .cta-final h2 { font-family: var(--font-display); font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 700; margin-bottom: 16px; }
+    .cta-final p { font-size: 1.1rem; opacity: 0.85; margin-bottom: 36px; max-width: 560px; margin-left: auto; margin-right: auto; }
+
+    .alerta { background: #FFF3CD; border-left: 4px solid #F6AD55; border-radius: 4px; padding: 16px 20px; margin: 24px 0; }
+    .alerta p { color: #744210; font-size: 0.95rem; line-height: 1.6; margin: 0; }
+    .alerta strong { color: #744210; }
+
+    .back-link { display: block; text-align: center; padding: 28px; color: var(--accent); text-decoration: none; font-size: 0.95rem; font-weight: 600; }
+    .back-link:hover { text-decoration: underline; }
+  </style>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <span class="hero-tag">Especialidad · Tuxtla Gutiérrez, Chiapas</span>
+      <h1><span>Queratocono</span>:<br>lo que necesitas saber</h1>
+      <p>Qué es, cómo se detecta, sus síntomas y las opciones disponibles para manejarlo. Información clara para pacientes en Chiapas que buscan respuestas.</p>
+      <a href="https://wa.me/529611855475?text=Hola%2C+quiero+una+valoraci%C3%B3n+para+queratocono+en+%C3%93pticas+Jarmar+Tuxtla." target="_blank" class="btn-cta">
+        Agendar valoración →
+      </a>
+      <a href="/chiapas/lentes-esclerales" class="btn-ghost">Ver lentes esclerales</a>
+    </div>
+  </section>
+
+  <!-- QUÉ ES -->
+  <section class="section">
+    <div class="container-narrow">
+      <h2 class="section-title">¿Qué es el <span>queratocono</span>?</h2>
+      <div class="prose">
+        <p>El queratocono es una condición ocular progresiva en la que la córnea — la capa transparente que cubre la parte delantera del ojo — adelgaza gradualmente y adopta una forma cónica en lugar de su curvatura normal esférica.</p>
+        <p>Esta deformación provoca que la luz que entra al ojo se doble de forma irregular, causando visión borrosa y distorsionada que no siempre se puede corregir bien con gafas convencionales.</p>
+        <p>El queratocono suele aparecer en la adolescencia o la juventud temprana y puede progresar durante años antes de estabilizarse. En la mayoría de los casos afecta ambos ojos, aunque no siempre al mismo ritmo.</p>
+        <p>Su causa exacta no está completamente comprendida, pero se asocia a factores genéticos, frotarse los ojos con frecuencia y algunas condiciones sistémicas como alergias.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SÍNTOMAS -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title"><span>Síntomas</span> del queratocono</h2>
+      <p class="section-sub">Los síntomas varían según la etapa. En fases iniciales pueden pasar desapercibidos o confundirse con miopía o astigmatismo común.</p>
+      <div class="sintomas-grid">
+        <div class="sintoma">
+          <span class="sintoma-icon">🌫️</span>
+          <div>
+            <h4>Visión borrosa o distorsionada</h4>
+            <p>Las líneas rectas se ven onduladas; la visión no mejora completamente con gafas.</p>
+          </div>
+        </div>
+        <div class="sintoma">
+          <span class="sintoma-icon">💡</span>
+          <div>
+            <h4>Halos y destellos</h4>
+            <p>Especialmente en la noche, alrededor de las luces. Las luces de los coches pueden ser difíciles de tolerar.</p>
+          </div>
+        </div>
+        <div class="sintoma">
+          <span class="sintoma-icon">👓</span>
+          <div>
+            <h4>Cambios frecuentes de graduación</h4>
+            <p>La prescripción de gafas cambia con frecuencia, a veces cada pocos meses.</p>
+          </div>
+        </div>
+        <div class="sintoma">
+          <span class="sintoma-icon">👥</span>
+          <div>
+            <h4>Visión doble o fantasmas</h4>
+            <p>Se ven imágenes dobles o "sombras" al mirar objetos, incluso con un solo ojo.</p>
+          </div>
+        </div>
+        <div class="sintoma">
+          <span class="sintoma-icon">🌙</span>
+          <div>
+            <h4>Dificultad para conducir de noche</h4>
+            <p>Las luces se dispersan y producen glare excesivo que dificulta la conducción nocturna.</p>
+          </div>
+        </div>
+        <div class="sintoma">
+          <span class="sintoma-icon">😣</span>
+          <div>
+            <h4>Irritación ocular</h4>
+            <p>Sensación de cuerpo extraño, picazón o necesidad de frotarse los ojos constantemente.</p>
+          </div>
+        </div>
+      </div>
+      <div class="alerta" style="margin-top:32px">
+        <p><strong>Importante:</strong> estos síntomas no son exclusivos del queratocono. Solo un examen con topografía corneal puede confirmar o descartar el diagnóstico. Si reconoces varios de estos síntomas, agenda una valoración en Tuxtla Gutiérrez.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CÓMO SE DETECTA -->
+  <section class="section">
+    <div class="container-narrow">
+      <h2 class="section-title">¿Cómo se <span>detecta</span>?</h2>
+      <div class="prose">
+        <h3>Topografía corneal: el mapa de tu córnea</h3>
+        <p>La herramienta principal para diagnosticar el queratocono es la <strong>topografía corneal</strong>. Este estudio no invasivo crea un mapa de color detallado de la superficie de la córnea, mostrando su curvatura en cada punto con precisión de micras.</p>
+        <p>En una córnea normal, el mapa es simétrico y suave. En el queratocono, aparece una zona de mayor curvatura — más cálida en el mapa de colores — que indica el adelgazamiento y la protrusión característica.</p>
+        <p>La topografía también permite:</p>
+        <ul>
+          <li>Detectar el queratocono en etapas muy tempranas, incluso antes de que los síntomas sean claros</li>
+          <li>Medir la progresión comparando estudios anteriores</li>
+          <li>Diseñar los parámetros exactos de los lentes esclerales</li>
+          <li>Guiar decisiones sobre crosslinking o trasplante corneal</li>
+        </ul>
+        <p>Un examen visual estándar y la refracción con gafas de prueba <strong>no son suficientes</strong> para diagnosticar queratocono. Se necesita topografía corneal. En Ópticas Jarmar realizamos este estudio como parte de nuestra evaluación especializada. <a href="/blog/que-es-topografia-corneal/">Aprende más sobre la topografía corneal →</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ETAPAS -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Etapas del <span>queratocono</span></h2>
+      <p class="section-sub">La clasificación Amsler-Krumeich divide el queratocono en 4 grados según la curvatura, el grosor corneal y la visión corregida.</p>
+      <div class="etapas">
+        <div class="etapa etapa-1">
+          <span class="etapa-num">I</span>
+          <span class="etapa-nombre">Leve</span>
+          <p>La visión todavía puede corregirse bien con gafas o lentes blandos. Los cambios en la topografía son sutiles.</p>
+        </div>
+        <div class="etapa etapa-2">
+          <span class="etapa-num">II</span>
+          <span class="etapa-nombre">Moderado</span>
+          <p>La corrección con gafas ya es insuficiente. Se empieza a necesitar lentes de contacto especializados.</p>
+        </div>
+        <div class="etapa etapa-3">
+          <span class="etapa-num">III</span>
+          <span class="etapa-nombre">Avanzado</span>
+          <p>La córnea está significativamente deformada. Los lentes esclerales son la principal opción de rehabilitación visual.</p>
+        </div>
+        <div class="etapa etapa-4">
+          <span class="etapa-num">IV</span>
+          <span class="etapa-nombre">Muy avanzado</span>
+          <p>Córnea muy adelgazada y opacificada. Puede requerir trasplante corneal para recuperar visión funcional.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FRENAR vs MEJORAR -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Dos objetivos distintos: <span>frenar vs mejorar</span></h2>
+      <p class="section-sub">Es importante entender que el manejo del queratocono tiene dos objetivos que pueden ser complementarios pero son distintos.</p>
+      <div class="comparar">
+        <div class="comparar-card frenar">
+          <span class="label">Objetivo 1</span>
+          <h3>Frenar la progresión</h3>
+          <p>El queratocono puede seguir avanzando durante años. El procedimiento diseñado para detener su progresión es el <strong>crosslinking corneal</strong> (CXL), que utiliza luz UV y riboflavina para endurecer el tejido corneal.</p>
+          <p>El crosslinking no mejora la visión — su función es estabilizar la córnea para evitar que el queratocono avance. Está indicado principalmente en etapas progresivas.</p>
+          <p>Este procedimiento es realizado por oftalmólogos especializados en córnea. Podemos orientarte con el especialista adecuado.</p>
+        </div>
+        <div class="comparar-card mejorar">
+          <span class="label">Objetivo 2</span>
+          <h3>Mejorar la visión</h3>
+          <p>Una vez que la córnea es irregular, los <strong>lentes esclerales</strong> u otras opciones de contactología especializada permiten crear una nueva superficie óptica que compensa la deformación.</p>
+          <p>Los lentes esclerales no frenan el queratocono, pero pueden ofrecer una visión notablemente mejor — incluso en etapas avanzadas donde las gafas y los lentes convencionales ya no funcionan.</p>
+          <p>Esta es nuestra especialidad en Ópticas Jarmar Chiapas: la rehabilitación visual del queratocono con lentes especializados.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPCIONES -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Opciones de <span>manejo</span></h2>
+      <p class="section-sub">El manejo depende de la etapa del queratocono, la velocidad de progresión y las necesidades visuales del paciente.</p>
+      <div class="opciones">
+        <div class="opcion">
+          <span class="opcion-num">1</span>
+          <div>
+            <h4>Gafas</h4>
+            <p>Funcionan en etapas iniciales cuando la córnea aún tiene una curvatura relativamente regular. A medida que el queratocono avanza, las gafas dejan de corregir suficientemente la visión distorsionada.</p>
+          </div>
+        </div>
+        <div class="opcion">
+          <span class="opcion-num">2</span>
+          <div>
+            <h4>Lentes de contacto rígidos gas-permeables (RGP)</h4>
+            <p>Ofrecen mejor corrección que las gafas en etapas moderadas. Sin embargo, al apoyarse sobre la córnea, pueden ser incómodos en queratoconos avanzados o irregulares.</p>
+          </div>
+        </div>
+        <div class="opcion">
+          <span class="opcion-num">3</span>
+          <div>
+            <h4>Lentes esclerales</h4>
+            <p>La opción de elección en queratocono moderado y avanzado. Al apoyarse sobre la esclerótica y no en la córnea, son más cómodos y ofrecen excelente corrección visual.</p>
+            <span class="opcion-nota">Nuestra especialidad en Chiapas</span>
+          </div>
+        </div>
+        <div class="opcion">
+          <span class="opcion-num">4</span>
+          <div>
+            <h4>Crosslinking corneal (CXL)</h4>
+            <p>Procedimiento quirúrgico para frenar la progresión del queratocono. No mejora la visión pero evita que avance. Realizado por oftalmólogos especializados.</p>
+          </div>
+        </div>
+        <div class="opcion">
+          <span class="opcion-num">5</span>
+          <div>
+            <h4>Trasplante corneal (queratoplastia)</h4>
+            <p>Se considera cuando el queratocono es muy avanzado o la córnea está muy adelgazada. Después del trasplante, los lentes esclerales suelen ser necesarios para optimizar la visión.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA ESCLERALES -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-esclerales">
+        <h2>Rehabilitación visual con lentes esclerales en Tuxtla Gutiérrez</h2>
+        <p>Si ya tienes diagnóstico de queratocono o sospechas que puedes tenerlo, podemos evaluarte y determinar si los lentes esclerales son la solución para tu caso.</p>
+        <div class="btn-group">
+          <a href="/chiapas/lentes-esclerales" class="btn-cta">Ver lentes esclerales →</a>
+          <a href="https://wa.me/529611855475?text=Hola%2C+quiero+una+valoraci%C3%B3n+para+queratocono+en+%C3%93pticas+Jarmar+Tuxtla." target="_blank" class="btn-ghost">Agendar valoración</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-final">
+    <div class="container">
+      <h2>Agenda tu valoración en Tuxtla Gutiérrez</h2>
+      <p>Evaluamos tu córnea con topografía de precisión. Plaza Cedros y Plaza Crystal, Tuxtla Gutiérrez.</p>
+      <a href="https://wa.me/529611855475?text=Hola%2C+quiero+una+valoraci%C3%B3n+para+queratocono+en+%C3%93pticas+Jarmar+Tuxtla." target="_blank" class="btn-cta">
+        Agendar por WhatsApp →
+      </a>
+    </div>
+  </section>
+
+  <a href="/chiapas/lentes-esclerales" class="back-link">← Lentes esclerales en Chiapas</a>
+</BaseLayout>

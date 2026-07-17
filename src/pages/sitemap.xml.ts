@@ -15,6 +15,7 @@ export const GET: APIRoute = async () => {
     { loc: `${site.url}/chiapas/lentes-de-sol`, priority: "0.8" },
     { loc: `${site.url}/chiapas/lentes-luz-azul`, priority: "0.8" },
     { loc: `${site.url}/chiapas/lentes-esclerales`, priority: "0.8" },
+    { loc: `${site.url}/chiapas/queratocono`, priority: "0.8" },
     { loc: `${site.url}/chiapas/examen-ninos`, priority: "0.8" },
     // Tijuana — servicios
     { loc: `${site.url}/tijuana/estudio-de-la-vista`, priority: "0.8" },
@@ -22,6 +23,7 @@ export const GET: APIRoute = async () => {
     { loc: `${site.url}/tijuana/lentes-de-sol`, priority: "0.8" },
     { loc: `${site.url}/tijuana/lentes-luz-azul`, priority: "0.8" },
     { loc: `${site.url}/tijuana/lentes-esclerales`, priority: "0.8" },
+    { loc: `${site.url}/tijuana/queratocono`, priority: "0.8" },
     { loc: `${site.url}/tijuana/examen-ninos`, priority: "0.8" },
     // Tijuana EN — home + servicios
     { loc: `${site.url}/en/tijuana/`, priority: "0.8" },
