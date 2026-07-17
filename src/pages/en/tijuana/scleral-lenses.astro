@@ -11,6 +11,63 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
     { hreflang: "x-default", href: "https://jarmar.com/tijuana/lentes-esclerales/" }
   ]}
 >
+  <Fragment slot="head">
+    <script type="application/ld+json">{JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What are scleral contact lenses?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Scleral lenses are large-diameter rigid gas-permeable contact lenses that vault completely over the cornea and rest on the sclera (the white of the eye). This creates a fluid reservoir between the lens and the cornea, providing crisp vision and continuous hydration even for severely irregular or damaged corneas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who needs scleral lenses?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Scleral lenses are indicated for patients with keratoconus, post-corneal transplant, post-LASIK complications, severe dry eye syndrome, pellucid marginal degeneration, and other conditions that cause corneal irregularity. They are the lens of choice when soft or conventional rigid lenses fail to provide adequate vision or comfort."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does a scleral lens fitting take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The full fitting process at Ópticas Jarmar Tijuana typically involves 2–3 visits. The initial evaluation and trial fitting takes about 90 minutes. After the custom lens is ordered (1–2 weeks), a delivery visit confirms fit and acuity. A follow-up visit is scheduled 2–4 weeks later to fine-tune the fit."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you serve patients from San Diego and the United States?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Ópticas Jarmar Zona Río in Tijuana is located less than 30 minutes from the San Ysidro border crossing. We regularly fit patients from San Diego, Los Angeles, and across the US who seek specialized scleral lens care at a fraction of the cost compared to US providers. Our team speaks English fluently."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long do scleral lenses last?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "With proper care, scleral lenses typically last 1 to 3 years. Their lifespan depends on how well they are cleaned and stored, and whether the patient's corneal prescription remains stable. We provide complete care and maintenance instructions at fitting."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where can I get scleral lenses fitted in Tijuana?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ópticas Jarmar Zona Río is the leading scleral lens specialty center in Tijuana. Located at David Alfaro Siqueiros #2795 local 101, Zona Río, Tijuana. Opt. Jorge Aranda Tello leads the scleral lens program with over 10 years of exclusive specialty in keratoconus and irregular corneas. Contact: +52 664 579 1970."
+          }
+        }
+      ]
+    })}</script>
+  </Fragment>
+
   <style>
     :root { --bg: #071A3E; --surface: #0D2B6B; --accent: #3A8FE0; }
 
@@ -32,8 +89,8 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
     .que-son-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
     @media (max-width: 640px) { .que-son-inner { grid-template-columns: 1fr; } }
     .que-son-texto p { color: #4a5568; line-height: 1.75; font-size: 1.05rem; margin-bottom: 16px; }
-    .stat-row { display: flex; gap: 20px; margin-top: 8px; }
-    .stat { background: var(--surface); color: #fff; border-radius: 16px; padding: 20px; text-align: center; flex: 1; }
+    .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .stat { background: var(--surface); color: #fff; border-radius: 16px; padding: 20px; text-align: center; }
     .stat strong { display: block; font-family: var(--font-display); font-size: 2rem; font-weight: 700; color: var(--accent); }
     .stat span { font-size: 0.85rem; opacity: 0.85; line-height: 1.4; }
 
@@ -57,6 +114,26 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
     .testimonio p { font-size: 0.97rem; line-height: 1.7; opacity: 0.9; margin-bottom: 16px; font-style: italic; }
     .testimonio-autor { font-weight: 700; font-size: 0.9rem; color: var(--accent); }
 
+    /* FAQ Accordion */
+    .faq-list { display: flex; flex-direction: column; gap: 12px; }
+    .faq-item { background: #fff; border: 1.5px solid rgba(58,143,224,0.2); border-radius: 16px; overflow: hidden; }
+    .faq-question { width: 100%; background: none; border: none; padding: 22px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; cursor: pointer; text-align: left; font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--bg); }
+    .faq-question:hover { background: rgba(58,143,224,0.04); }
+    .faq-icon { flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: rgba(58,143,224,0.12); color: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; font-weight: 700; transition: transform 0.25s; }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; }
+    .faq-item.open .faq-answer { max-height: 300px; }
+    .faq-answer p { padding: 0 24px 22px; color: #4a5568; font-size: 1rem; line-height: 1.75; margin: 0; }
+
+    /* GEO block */
+    .geo-block { background: linear-gradient(135deg, var(--bg) 0%, var(--surface) 100%); border-radius: 24px; color: #fff; padding: 44px 40px; }
+    @media (max-width: 600px) { .geo-block { padding: 32px 24px; } }
+    .geo-block h2 { font-family: var(--font-display); font-size: clamp(1.3rem, 3vw, 1.9rem); font-weight: 700; margin-bottom: 20px; }
+    .geo-block p { font-size: 1.05rem; opacity: 0.9; line-height: 1.8; margin-bottom: 16px; }
+    .geo-block p:last-of-type { margin-bottom: 28px; }
+    .geo-data { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 32px; }
+    .geo-chip { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25); border-radius: 100px; padding: 7px 18px; font-size: 0.9rem; font-weight: 600; }
+
     .cta-section { background: linear-gradient(135deg, var(--bg) 0%, var(--surface) 100%); color: #fff; text-align: center; padding: 80px 20px; }
     .cta-section h2 { font-family: var(--font-display); font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 700; margin-bottom: 16px; }
     .cta-section p { font-size: 1.1rem; opacity: 0.85; margin-bottom: 36px; max-width: 560px; margin-left: auto; margin-right: auto; }
@@ -69,7 +146,7 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
     <div class="container">
       <span class="hero-tag">Specialty · Tijuana</span>
       <h1><span>Scleral Lenses</span><br>in Tijuana</h1>
-      <p>Over 10 years as leaders in scleral contact lenses in Mexico. A solution for those who thought there was no solution.</p>
+      <p>Over 10 years as leaders in scleral contact lenses in Mexico. A real solution for keratoconus, corneal transplant, severe dry eye, and irregular corneas.</p>
       <a href="https://wa.me/526645791970?text=Hello%2C+I%27d+like+information+about+scleral+lenses+at+%C3%93pticas+Jarmar+Tijuana." target="_blank" class="btn-cta">
         Evaluate my case →
       </a>
@@ -81,12 +158,12 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
       <h2 class="section-title">What are <span>scleral lenses</span>?</h2>
       <div class="que-son-inner">
         <div class="que-son-texto">
-          <p>Scleral lenses are large-diameter contact lenses that rest on the sclera (the white of the eye), without touching the cornea. This creates a saline reservoir between the lens and the cornea.</p>
-          <p>Unlike conventional contact lenses, sclerals are ideal for irregular or damaged corneas where soft or standard rigid lenses don't work.</p>
-          <p>The result is crisp, comfortable vision even in the most complex cases.</p>
+          <p>Scleral lenses are large-diameter rigid gas-permeable contact lenses that vault completely over the cornea and rest on the sclera (the white of the eye). This design creates a fluid reservoir between the lens and the cornea.</p>
+          <p>Unlike conventional contact lenses, sclerals are ideal for irregular or damaged corneas where soft or standard rigid lenses fail to provide adequate vision or comfort.</p>
+          <p>The result is crisp, stable, comfortable vision even in the most complex cases — including advanced keratoconus, post-transplant corneas, and severe dry eye.</p>
         </div>
         <div>
-          <div class="stat-row">
+          <div class="stats-grid">
             <div class="stat">
               <strong>+10</strong>
               <span>years of specialty</span>
@@ -94,6 +171,14 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
             <div class="stat">
               <strong>98%</strong>
               <span>fitting success rate</span>
+            </div>
+            <div class="stat">
+              <strong>&lt;30</strong>
+              <span>min from San Diego border</span>
+            </div>
+            <div class="stat">
+              <strong>EN</strong>
+              <span>English-speaking team</span>
             </div>
           </div>
         </div>
@@ -109,22 +194,32 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
         <div class="condicion">
           <span class="condicion-icon">🔺</span>
           <h4>Keratoconus</h4>
-          <p>Progressive cone-shaped corneal deformation that prevents clear vision with conventional lenses.</p>
+          <p>Progressive cone-shaped corneal deformation that prevents clear vision with conventional lenses. Scleral lenses vault over the cone and deliver sharp vision regardless of severity.</p>
         </div>
         <div class="condicion">
           <span class="condicion-icon">🔬</span>
           <h4>Corneal transplant</h4>
-          <p>Optimal visual recovery post-transplant by compensating for graft irregularity for maximum acuity.</p>
+          <p>Optimal visual recovery post-transplant by compensating for graft irregularity. Many patients achieve 20/20 vision that they couldn't reach with glasses.</p>
         </div>
         <div class="condicion">
           <span class="condicion-icon">⚡</span>
           <h4>Post-refractive surgery</h4>
-          <p>For patients unsatisfied with LASIK or blade surgery results. We restore your vision.</p>
+          <p>For patients unsatisfied with LASIK, PRK, or radial keratotomy results. Scleral lenses neutralize the irregular corneal surface left behind.</p>
         </div>
         <div class="condicion">
           <span class="condicion-icon">💧</span>
           <h4>Severe dry eye</h4>
-          <p>The saline reservoir in scleral lenses keeps the cornea hydrated throughout wear.</p>
+          <p>The saline reservoir in scleral lenses bathes the corneal surface throughout the day — providing relief that eye drops alone cannot maintain.</p>
+        </div>
+        <div class="condicion">
+          <span class="condicion-icon">🌐</span>
+          <h4>Pellucid marginal degeneration</h4>
+          <p>A variant of corneal ectasia affecting the lower corneal periphery. Scleral lenses are often the only optical option for functional vision.</p>
+        </div>
+        <div class="condicion">
+          <span class="condicion-icon">👁️</span>
+          <h4>Other irregular corneas</h4>
+          <p>Trauma, chemical burns, Steven-Johnson syndrome, aniridia, and other causes of corneal irregularity benefit from scleral lens correction.</p>
         </div>
       </div>
     </div>
@@ -133,34 +228,34 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
   <section class="section">
     <div class="container">
       <h2 class="section-title">The fitting <span>process</span></h2>
-      <p class="section-sub">Scleral lens fitting is a personalized process performed with high-precision corneal topography equipment.</p>
+      <p class="section-sub">Scleral lens fitting is a personalized process performed with high-precision corneal topography equipment. Every lens is custom-made to your cornea.</p>
       <div class="proceso">
         <div class="paso">
           <div class="paso-num">1</div>
           <div>
             <h4>Initial evaluation</h4>
-            <p>We review your medical history, corneal topography, refraction, and ocular health to determine if you are a candidate for scleral lenses.</p>
+            <p>We review your medical history, corneal topography, refraction, and ocular health to determine if you are a candidate for scleral lenses. This first visit takes approximately 90 minutes.</p>
           </div>
         </div>
         <div class="paso">
           <div class="paso-num">2</div>
           <div>
             <h4>Trial fitting</h4>
-            <p>We select the appropriate trial lens and evaluate the fit, corneal clearance, and visual acuity achieved.</p>
+            <p>We select the appropriate trial lens and evaluate the fit, corneal clearance, and visual acuity achieved. Adjustments are made until the optimal diagnostic lens is found.</p>
           </div>
         </div>
         <div class="paso">
           <div class="paso-num">3</div>
           <div>
-            <h4>Custom order</h4>
-            <p>We order your lens with the exact parameters measured in consultation to ensure the best possible fit.</p>
+            <h4>Custom lens order</h4>
+            <p>We order your lens with the exact parameters measured in consultation. Manufacturing takes 1–2 weeks. Every lens is custom-made to your unique corneal topography.</p>
           </div>
         </div>
         <div class="paso">
           <div class="paso-num">4</div>
           <div>
             <h4>Training & follow-up</h4>
-            <p>We teach you the correct insertion technique and schedule follow-up visits to optimize your adaptation.</p>
+            <p>We teach you the correct insertion and removal technique, care routine, and saline solution filling. Follow-up visits at 2 and 4 weeks optimize your adaptation and final vision.</p>
           </div>
         </div>
       </div>
@@ -190,6 +285,89 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
     </div>
   </section>
 
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Frequently asked <span>questions</span></h2>
+      <p class="section-sub">Answers to the most common questions about scleral lenses at Ópticas Jarmar Tijuana.</p>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            What are scleral contact lenses?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <p>Scleral lenses are large-diameter rigid gas-permeable contact lenses that vault completely over the cornea and rest on the sclera. They create a fluid reservoir that keeps the corneal surface hydrated and neutralizes any surface irregularity, delivering crisp vision even in the most complex cases.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Who needs scleral lenses?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <p>Scleral lenses are indicated for patients with keratoconus, post-corneal transplant, post-LASIK complications, severe dry eye syndrome, pellucid marginal degeneration, and other conditions that cause corneal irregularity. They are the lens of choice when soft or conventional rigid lenses fail to provide adequate vision or comfort.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            How long does the fitting process take?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <p>The full process involves 2–3 visits. The initial evaluation and trial fitting takes about 90 minutes. After the custom lens is manufactured (1–2 weeks), a delivery visit confirms fit and acuity. A follow-up at 2–4 weeks finalizes any adjustments. For patients traveling from San Diego or the US, we work to coordinate visits efficiently.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Do you serve patients from San Diego and the United States?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <p>Yes. Ópticas Jarmar Zona Río is located less than 30 minutes from the San Ysidro border crossing. We regularly fit patients from San Diego, Los Angeles, and across the US who seek specialized scleral lens care. Our team speaks English fluently, and scleral lens fitting in Tijuana is typically a fraction of the cost compared to US providers.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            How long do scleral lenses last?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <p>With proper care and cleaning, scleral lenses typically last 1 to 3 years. Their lifespan depends on how well they are maintained and whether your corneal prescription remains stable. We provide complete care instructions and a cleaning kit at the time of fitting.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Can I wear scleral lenses if I've had LASIK or another refractive surgery?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <p>Yes. In fact, post-refractive surgery patients are among the most common candidates for scleral lenses. If you are unhappy with your LASIK, PRK, or radial keratotomy results, scleral lenses can neutralize the corneal irregularity and restore the clear vision you were hoping to achieve with surgery.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="geo-block">
+        <h2>Scleral lens specialists in Tijuana serving San Diego and the US border</h2>
+        <p>Ópticas Jarmar Zona Río is the leading scleral contact lens specialty center in Tijuana, Baja California. The scleral lens program is directed by Opt. Jorge Aranda Tello, an optometrist with over 10 years of exclusive dedication to scleral lenses, keratoconus, and irregular corneas.</p>
+        <p>The clinic is located at David Alfaro Siqueiros #2795 local 101, Zona Río, Tijuana — less than 30 minutes from the San Ysidro border crossing. The team speaks English and regularly serves patients traveling from San Diego, Orange County, Los Angeles, and other parts of the United States who seek expert scleral lens fitting at accessible costs.</p>
+        <p>Contact us at +52 664 579 1970 via call or WhatsApp to schedule an evaluation and determine if scleral lenses are right for your condition.</p>
+        <div class="geo-data">
+          <span class="geo-chip">📍 Zona Río, Tijuana, B.C.</span>
+          <span class="geo-chip">📞 +52 664 579 1970</span>
+          <span class="geo-chip">🇺🇸 English-speaking team</span>
+          <span class="geo-chip">🗺 &lt;30 min from San Diego</span>
+        </div>
+        <a href="https://wa.me/526645791970?text=Hello%2C+I%27d+like+to+schedule+a+scleral+lens+evaluation+at+%C3%93pticas+Jarmar+Tijuana." target="_blank" class="btn-cta">
+          Schedule evaluation →
+        </a>
+      </div>
+    </div>
+  </section>
+
   <section class="cta-section">
     <div class="container">
       <h2>Do you think you're a candidate for scleral lenses?</h2>
@@ -201,4 +379,21 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
   </section>
 
   <a href="/en/tijuana/" class="back-link">← Back to Tijuana</a>
+
+  <script>
+    document.querySelectorAll(".faq-question").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const item = btn.closest(".faq-item");
+        const isOpen = item.classList.contains("open");
+        document.querySelectorAll(".faq-item.open").forEach(el => {
+          el.classList.remove("open");
+          el.querySelector(".faq-question").setAttribute("aria-expanded", "false");
+        });
+        if (!isOpen) {
+          item.classList.add("open");
+          btn.setAttribute("aria-expanded", "true");
+        }
+      });
+    });
+  </script>
 </BaseLayout>
