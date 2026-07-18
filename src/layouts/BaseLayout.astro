@@ -9,7 +9,7 @@ interface Props {
   alternates?: Array<{ hreflang: string; href: string }>;
 }
 const { title, description = site.description, ogImage, alternates } = Astro.props;
-const resolvedOgImage = ogImage ?? `${site.url}/LogoXS%20color.png`;
+const resolvedOgImage = ogImage ?? `${site.url}/favicon.png`;
 
 const fams = [site.brand.fontDisplay, site.brand.fontBody]
   .map((f) => f.replace(/ /g, "+") + ":wght@400;600;700")
@@ -41,7 +41,9 @@ const brandVars = `
     </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/png" href="/LogoXS color.png" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={new URL(Astro.url.pathname, site.url)} />
