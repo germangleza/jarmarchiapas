@@ -405,12 +405,16 @@
     .hero {
       position: relative;
       min-height: 100vh;
-      background: var(--gradiente-hero);
+      background: url('/PLAZACRYSTAL.PNG') center/cover no-repeat;
       display: flex; align-items: center;
       overflow: hidden;
     }
     .hero::before {
-      display: none;
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, rgba(7,26,62,0.90) 0%, rgba(13,43,107,0.75) 55%, rgba(26,91,181,0.50) 100%);
+      z-index: 0;
     }
     .hero-orb {
       position: absolute;
@@ -1624,7 +1628,7 @@
           <p>Protección UV y estilo en una sola pieza. Graduados o sin graduar, para cada ocasión.</p>
           <span class="servicio-more">Conocer más →</span>
         </a>
-        <a href="/chiapas/lentes-esclerales" class="servicio-card reveal-left" style="transition-delay:0.6s">
+        <a href="/chiapas/lentes-de-contacto" class="servicio-card reveal-left" style="transition-delay:0.6s">
           <span class="servicio-icon">👁️</span>
           <h4>Lentes de Contacto</h4>
           <p>Lentes de contacto convencionales y especializados, incluyendo para córneas irregulares.</p>

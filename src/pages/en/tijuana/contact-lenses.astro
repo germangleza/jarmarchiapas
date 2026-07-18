@@ -1,0 +1,328 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Contact Lenses in Tijuana | Jarmar Optics Zona Río"
+  description="Conventional and specialty contact lenses in Tijuana. Expert fitting, premium brands, and full follow-up care. Jarmar Optics Zona Río."
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" is:inline>{JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What types of contact lenses do you carry at Jarmar Optics Tijuana?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We carry daily disposables, bi-weekly and monthly soft lenses, toric lenses for astigmatism, multifocal lenses for presbyopia, colored lenses, and scleral lenses for complex cases such as keratoconus or corneal transplants."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you perform contact lens fittings in Tijuana?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Our fitting process includes a complete eye exam, corneal measurements, a trial fitting, and a follow-up visit to confirm comfort and visual quality."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I wear contact lenses if I have astigmatism?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Toric contact lenses are designed specifically to correct astigmatism. For irregular astigmatism or complex corneal conditions, scleral lenses provide the best visual outcome."
+          }
+        }
+      ]
+    })}</script>
+  </Fragment>
+
+  <style>
+    :root {
+      --bg: #071A3E;
+      --surface: #0D2B6B;
+      --accent: #3A8FE0;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--bg) 0%, var(--surface) 100%);
+      color: #fff;
+      padding: 100px 20px 80px;
+      text-align: center;
+    }
+    .hero-tag {
+      display: inline-block;
+      background: rgba(58,143,224,0.2);
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      border-radius: 100px;
+      padding: 6px 18px;
+      font-size: 0.85rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    .hero h1 span { color: var(--accent); }
+    .hero p {
+      font-size: 1.15rem;
+      opacity: 0.85;
+      max-width: 600px;
+      margin: 0 auto 36px;
+      line-height: 1.7;
+    }
+    .btn-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: #fff;
+      padding: 14px 32px;
+      border-radius: 100px;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    .btn-cta:hover { opacity: 0.9; transform: translateY(-2px); }
+
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+
+    .section { padding: 72px 20px; }
+    .section:nth-child(even) { background: #f7f9fc; }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      font-weight: 700;
+      color: var(--bg);
+      margin-bottom: 16px;
+    }
+    .section-title span { color: var(--accent); }
+    .section-sub {
+      color: #4a5568;
+      line-height: 1.7;
+      font-size: 1.05rem;
+      margin-bottom: 36px;
+    }
+
+    .tipos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 20px;
+    }
+    .tipo-card {
+      background: #fff;
+      border: 1.5px solid rgba(58,143,224,0.25);
+      border-radius: 18px;
+      padding: 28px 24px;
+    }
+    .tipo-card h4 {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--bg);
+      margin-bottom: 10px;
+    }
+    .tipo-card p { color: #4a5568; font-size: 0.97rem; line-height: 1.65; }
+    .tipo-icon { font-size: 2rem; margin-bottom: 14px; display: block; }
+
+    .pasos {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .paso {
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 16px;
+      align-items: start;
+      background: #fff;
+      border-radius: 16px;
+      padding: 24px;
+      border: 1.5px solid rgba(58,143,224,0.15);
+    }
+    .paso-num {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #fff;
+      font-size: 1.2rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .paso h4 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      color: var(--bg);
+      margin-bottom: 6px;
+    }
+    .paso p { color: #4a5568; font-size: 0.95rem; line-height: 1.65; }
+
+    .especial-box {
+      background: linear-gradient(135deg, var(--bg) 0%, var(--surface) 100%);
+      color: #fff;
+      border-radius: 24px;
+      padding: 44px 40px;
+      text-align: center;
+    }
+    .especial-box h3 {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .especial-box p { font-size: 1.05rem; opacity: 0.85; line-height: 1.7; max-width: 600px; margin: 0 auto 28px; }
+
+    .cta-section {
+      background: linear-gradient(135deg, var(--bg) 0%, var(--surface) 100%);
+      color: #fff;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .cta-section h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .cta-section p { font-size: 1.1rem; opacity: 0.85; margin-bottom: 36px; max-width: 560px; margin-left: auto; margin-right: auto; }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      padding: 28px;
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+    .back-link:hover { text-decoration: underline; }
+  </style>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <span class="hero-tag">Optics · Tijuana</span>
+      <h1>Contact Lenses<br>in <span>Tijuana</span></h1>
+      <p>Expert contact lens fittings for every prescription and lifestyle. From daily disposables to specialty scleral lenses for complex cases.</p>
+      <a href="https://wa.me/526645791970?text=Hello%2C+I+want+information+about+Contact+Lenses+at+Jarmar+Optics+Tijuana." target="_blank" class="btn-cta">
+        Ask about options →
+      </a>
+    </div>
+  </section>
+
+  <!-- TYPES -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Types of <span>contact lenses</span></h2>
+      <p class="section-sub">We carry the full range of contact lenses to match every prescription, lifestyle, and eye condition.</p>
+      <div class="tipos-grid">
+        <div class="tipo-card">
+          <span class="tipo-icon">☀️</span>
+          <h4>Daily Disposables</h4>
+          <p>The most hygienic and convenient option. A fresh lens every day — no cleaning solutions needed.</p>
+        </div>
+        <div class="tipo-card">
+          <span class="tipo-icon">📅</span>
+          <h4>Bi-weekly & Monthly</h4>
+          <p>Longer-lasting with proper care. Ideal for frequent wearers who prefer long-term economy.</p>
+        </div>
+        <div class="tipo-card">
+          <span class="tipo-icon">🎯</span>
+          <h4>Toric</h4>
+          <p>Designed specifically to correct astigmatism. Advanced stabilization for crisp, clear vision all day long.</p>
+        </div>
+        <div class="tipo-card">
+          <span class="tipo-icon">🔭</span>
+          <h4>Multifocal</h4>
+          <p>Clear vision at all distances in a single lens — the contact lens solution for presbyopia.</p>
+        </div>
+        <div class="tipo-card">
+          <span class="tipo-icon">🌈</span>
+          <h4>Colored</h4>
+          <p>Change or enhance your eye color safely. Available with or without a prescription.</p>
+        </div>
+        <div class="tipo-card">
+          <span class="tipo-icon">👁️</span>
+          <h4>Scleral</h4>
+          <p>For keratoconus and irregular corneas. The best option when conventional lenses fall short.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FITTING PROCESS -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">The fitting <span>process</span></h2>
+      <p class="section-sub">A proper fitting is the foundation of comfortable, healthy contact lens wear for years to come.</p>
+      <div class="pasos">
+        <div class="paso">
+          <div class="paso-num">1</div>
+          <div>
+            <h4>Complete eye exam</h4>
+            <p>We assess your visual acuity, refraction, and eye health to determine the right prescription and lens type for you.</p>
+          </div>
+        </div>
+        <div class="paso">
+          <div class="paso-num">2</div>
+          <div>
+            <h4>Corneal measurements</h4>
+            <p>We take precise measurements of your cornea to select the lens with the ideal base curve and diameter for your eye.</p>
+          </div>
+        </div>
+        <div class="paso">
+          <div class="paso-num">3</div>
+          <div>
+            <h4>Trial fitting</h4>
+            <p>We place the selected lens, evaluate fit and vision quality, and teach you how to insert, remove, and care for your lenses.</p>
+          </div>
+        </div>
+        <div class="paso">
+          <div class="paso-num">4</div>
+          <div>
+            <h4>Follow-up visit</h4>
+            <p>We schedule a check-up to confirm optimal fit and make sure your corneal health remains excellent.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCLERAL SPECIALTY -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Specialists in <span>complex cases</span></h2>
+      <div class="especial-box">
+        <h3>Scleral lenses for keratoconus & irregular corneas</h3>
+        <p>When conventional lenses can't give you the vision you need, scleral lenses are the answer. Jarmar Optics Tijuana is a leading referral center for scleral lens fitting with the latest technology available.</p>
+        <a href="/en/tijuana/scleral-lenses" class="btn-cta">Learn more about scleral lenses →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Schedule your fitting in Tijuana</h2>
+      <p>Visit us at Jarmar Optics Zona Río or message us on WhatsApp for personalized advice.</p>
+      <a href="https://wa.me/526645791970?text=Hello%2C+I+want+information+about+Contact+Lenses+at+Jarmar+Optics+Tijuana." target="_blank" class="btn-cta">
+        Book via WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <a href="/en/tijuana/" class="back-link">← Back to Tijuana</a>
+</BaseLayout>
