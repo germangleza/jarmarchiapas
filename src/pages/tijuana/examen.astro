@@ -29,6 +29,22 @@
     gtag('config', 'AW-17977352986');
   </script>
 
+  <!-- Conversión Google Ads: gtag_report_conversion -->
+  <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-17977352986/UrX7CK_h3dIcEJrGovxC',
+          'event_callback': callback
+      });
+      return false;
+    }
+  </script>
+
   <style>
     :root {
       --azul:      #071A3E;
