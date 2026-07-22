@@ -47,16 +47,19 @@ export const GET: APIRoute = async () => {
     loc: `${site.url}/blog/${p.id}/`,
     priority: "0.7",
     lastmod: (p.data.updatedDate ?? p.data.pubDate).toISOString().split("T")[0],
+    image: `${site.url}${p.data.image ?? `/blog/${p.id}.jpg`}`,
   }));
 
   const allUrls = [...staticUrls, ...blogUrls];
 
   const body = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 ${allUrls
     .map(
       (u) =>
-        `  <url><loc>${u.loc}</loc><lastmod>${u.lastmod}</lastmod><priority>${u.priority}</priority></url>`
+        `  <url><loc>${u.loc}</loc><lastmod>${u.lastmod}</lastmod><priority>${u.priority}</priority>${
+          u.image ? `<image:image><image:loc>${u.image}</image:loc></image:image>` : ""
+        }</url>`
     )
     .join("\n")}
 </urlset>`;

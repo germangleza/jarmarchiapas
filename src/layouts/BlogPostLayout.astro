@@ -13,6 +13,7 @@ const url = new URL(`/blog/${post.id}/`, site.url).toString();
 // (útil si la subes en .png o .webp). El espacio queda reservado aunque la
 // foto todavía no exista (ver .post-hero--empty en global.css).
 const heroImage = data.image ?? `/blog/${post.id}.jpg`;
+const heroImageUrl = new URL(heroImage, site.url).toString();
 
 const fmt = (d) =>
   new Intl.DateTimeFormat(site.lang, {
@@ -22,7 +23,12 @@ const fmt = (d) =>
   }).format(d);
 ---
 
-<BaseLayout title={`${data.title} — ${site.name}`} description={data.description}>
+<BaseLayout
+  title={`${data.title} — ${site.name}`}
+  description={data.description}
+  ogImage={heroImageUrl}
+  ogType="article"
+>
   <BlogPostSchema
     slot="head"
     title={data.title}
@@ -30,7 +36,7 @@ const fmt = (d) =>
     pubDate={data.pubDate}
     updatedDate={data.updatedDate}
     author={author}
-    image={data.image}
+    image={heroImageUrl}
     url={url}
   />
 
