@@ -4,6 +4,7 @@ description: "A partir de los 40, alejar el celular para leer se vuelve costumbr
 pubDate: 2026-07-15
 author: "Equipo Ópticas Jarmar"
 tags: ["presbicia", "vista cansada", "lentes progresivos", "lentes bifocales", "salud visual", "optometría"]
+image: "/blog/presbicia-o-vista-cansada.webp"
 draft: false
 ---
 

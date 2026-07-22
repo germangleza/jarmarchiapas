@@ -4,6 +4,7 @@ description: "Si ves borroso a distancia, la causa más común es la miopía, pe
 pubDate: 2026-07-15
 author: "Equipo Ópticas Jarmar"
 tags: ["visión borrosa de lejos", "miopía", "salud visual", "examen de la vista", "graduación", "optometría"]
+image: "/blog/vision-borrosa-de-lejos.webp"
 draft: false
 ---
 
