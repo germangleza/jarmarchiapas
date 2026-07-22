@@ -156,15 +156,15 @@ main {
 .post-item {
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
-.post-item a {
+.post-item {
   display: grid;
   grid-template-columns: 220px 1fr;
   gap: 24px;
   align-items: center;
   padding: 28px 0;
-  text-decoration: none; color: var(--text);
 }
 .post-item-text { min-width: 0; }
+.post-thumb-link { display: block; }
 /* Miniatura con la misma relación de aspecto 16:9 que el hero */
 .post-thumb {
   margin: 0;
@@ -178,19 +178,25 @@ main {
   object-fit: cover; display: block;
   transition: transform 0.3s ease;
 }
-.post-item a:hover .post-thumb img { transform: scale(1.04); }
+.post-item:hover .post-thumb img { transform: scale(1.04); }
 .post-thumb--empty { background: var(--grad); }
 .post-item h2 {
   font-family: var(--font-display);
   margin: 6px 0 8px; font-size: 1.35rem;
-  color: #fff; font-weight: 600;
-  transition: color 0.2s;
+  font-weight: 600;
 }
-.post-item:hover h2 { color: var(--accent); }
+/* El título es su propio enlace y queda seleccionable (se puede copiar) */
+.post-title-link {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s;
+  -webkit-user-drag: none;
+}
+.post-item:hover .post-title-link { color: var(--accent); }
 .post-item p { margin: 0; color: var(--muted); font-size: 0.97rem; }
 
 @media (max-width: 620px) {
-  .post-item a { grid-template-columns: 1fr; gap: 14px; }
+  .post-item { grid-template-columns: 1fr; gap: 14px; }
 }
 
 /* ═══ POST INDIVIDUAL ═══ */

@@ -27,7 +27,12 @@ const fmt = (d) =>
       {
         posts.map((post) => (
           <li class="post-item">
-            <a href={`/blog/${post.id}/`}>
+            <a
+              class="post-thumb-link"
+              href={`/blog/${post.id}/`}
+              tabindex="-1"
+              aria-hidden="true"
+            >
               <figure class="post-thumb">
                 <img
                   src={post.data.image ?? `/blog/${post.id}.jpg`}
@@ -38,12 +43,16 @@ const fmt = (d) =>
                   onerror="this.closest('.post-thumb').classList.add('post-thumb--empty'); this.remove();"
                 />
               </figure>
-              <div class="post-item-text">
-                <span class="post-meta">{fmt(post.data.pubDate)}</span>
-                <h2>{post.data.title}</h2>
-                <p>{post.data.description}</p>
-              </div>
             </a>
+            <div class="post-item-text">
+              <span class="post-meta">{fmt(post.data.pubDate)}</span>
+              <h2>
+                <a class="post-title-link" href={`/blog/${post.id}/`}>
+                  {post.data.title}
+                </a>
+              </h2>
+              <p>{post.data.description}</p>
+            </div>
           </li>
         ))
       }
