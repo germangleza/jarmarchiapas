@@ -4,6 +4,7 @@ description: "La topografía corneal es el estudio que mapea la forma exacta de 
 pubDate: 2026-07-17
 author: "Ópticas Jarmar"
 tags: ["topografía corneal", "queratocono", "lentes esclerales", "diagnóstico", "salud visual", "examen de la vista"]
+image: "/blog/que-es-topografia-corneal.webp"
 draft: false
 ---
 
