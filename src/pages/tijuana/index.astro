@@ -969,77 +969,6 @@
       .btn-primary, .btn-secondary { justify-content: center; }
     }
 
-    /* ===================== HISTORIA ===================== */
-    .historia {
-      padding: 100px 0;
-      background: var(--blanco);
-      scroll-margin-top: 80px;
-    }
-    .historia-header { max-width: 760px; margin-bottom: 56px; }
-    .historia-intro {
-      color: var(--gris-texto);
-      line-height: 1.75;
-      font-size: 1.02rem;
-      margin-top: 18px;
-    }
-    .historia-timeline { position: relative; max-width: 800px; }
-    .historia-timeline::before {
-      content: '';
-      position: absolute;
-      left: 7px; top: 8px; bottom: 8px;
-      width: 2px;
-      background: rgba(26,91,181,0.2);
-    }
-    .historia-item { position: relative; padding: 0 0 44px 44px; }
-    .historia-item:last-child { padding-bottom: 0; }
-    .historia-item::before {
-      content: '';
-      position: absolute;
-      left: 1px; top: 7px;
-      width: 14px; height: 14px;
-      border-radius: 50%;
-      background: var(--azul-medio);
-      box-shadow: 0 0 0 4px rgba(26,91,181,0.15);
-    }
-    .historia-year {
-      display: inline-block;
-      font-family: var(--font-display);
-      font-size: 1.35rem;
-      font-weight: 700;
-      color: var(--azul-medio);
-      margin-bottom: 4px;
-    }
-    .historia-item h3 {
-      font-family: var(--font-body);
-      font-size: 1.02rem;
-      font-weight: 700;
-      color: var(--azul-oscuro);
-      margin-bottom: 8px;
-    }
-    .historia-item p {
-      color: var(--gris-texto);
-      line-height: 1.75;
-      font-size: 0.97rem;
-    }
-    .historia-item p + p { margin-top: 10px; }
-    .historia-cierre {
-      max-width: 800px;
-      margin-top: 56px;
-      background: linear-gradient(135deg, #071A3E 0%, #0D2B6B 60%, #1A5BB5 100%);
-      border-radius: 20px;
-      padding: 40px 44px;
-    }
-    .historia-cierre p {
-      color: rgba(255,255,255,0.92);
-      line-height: 1.8;
-      font-size: 1.05rem;
-    }
-    .historia-cierre strong { color: #fff; }
-    @media (max-width: 640px) {
-      .historia { padding: 72px 0; }
-      .historia-item { padding-left: 34px; }
-      .historia-cierre { padding: 30px 24px; }
-    }
   </style>
 </head>
 <body>
@@ -1065,7 +994,7 @@
         <a href="#servicios">Servicios</a>
         <a href="#esclerales">Esclerales</a>
         <a href="#diferenciadores">Nosotros</a>
-        <a href="#historia">Historia</a>
+        <a href="/historia/">Historia</a>
         <a href="#testimonios">Testimonios</a>
         <a href="#sucursal">Ubicación</a>
         <a href="/blog">Blog</a>
@@ -1254,64 +1183,6 @@
       </div>
     </div>
   </section>
-
-  <!-- ===================== NUESTRA HISTORIA ===================== -->
-  <section class="historia" id="historia" aria-label="Nuestra historia">
-    <div class="container">
-      <div class="historia-header reveal">
-        <span class="section-tag">Nuestra historia</span>
-        <h2 class="section-title">60 años cuidando la visión de México, <span>de frontera a frontera</span></h2>
-      </div>
-      <div class="historia-timeline">
-        <div class="historia-item reveal">
-          <span class="historia-year">1966</span>
-          <h3>El primer local</h3>
-          <p>Todo empezó con una pareja y una idea sencilla: que ver bien es parte de vivir bien. En 1966, Jorge Aranda Marín y Rosalinda Tello Marín abrieron una óptica en el centro de Tuxtla Gutiérrez. No tenían más que su oficio, su nombre y las ganas de cuidar a su gente. Con los años, aquel local se convertiría en la óptica más longeva de Chiapas.</p>
-          <p>Década tras década, las familias chiapanecas volvieron. Traían a sus hijos y, más tarde, a sus nietos. Esa confianza permitió que Jarmar creciera más allá del centro de Tuxtla y abriera sucursales en distintos puntos del estado, e incluso fuera de él. El apellido dejó de ser solo un apellido y se volvió un lugar al que la gente sabía que podía llegar.</p>
-        </div>
-        <div class="historia-item reveal">
-          <span class="historia-year">1995</span>
-          <h3>Llega la segunda generación</h3>
-          <p>Jorge Aranda Tello, hijo de los fundadores, se sumó al negocio después de estudiar optometría en la Universidad Autónoma de Aguascalientes y tomó las riendas del área de optometría. Con él, Jarmar profundizó su vocación clínica y empezó a ser lo que hoy es: una clínica donde el diagnóstico va primero.</p>
-        </div>
-        <div class="historia-item reveal">
-          <span class="historia-year">1999</span>
-          <h3>Plaza Crystal y la familia al frente</h3>
-          <p>Rosalinda Aranda Tello, la hija mayor, se incorporó para dirigir el área administrativa. Con ella, los hijos de los fundadores quedaron al frente, cada uno en lo suyo. En esos años abrió sus puertas la sucursal de Plaza Crystal, que sigue atendiendo a Tuxtla hasta el día de hoy.</p>
-        </div>
-        <div class="historia-item reveal">
-          <span class="historia-year">2017</span>
-          <h3>La tercera generación</h3>
-          <p>Germán González Aranda, nieto mayor e hijo de Rosalinda, entró a la empresa con un encargo claro: llevar a Jarmar más lejos.</p>
-        </div>
-        <div class="historia-item reveal">
-          <span class="historia-year">2020</span>
-          <h3>Jarmar cruza el país</h3>
-          <p>Ese impulso cruzó el país. En enero de 2020, Jarmar abrió una sucursal en Tijuana y unió los dos extremos de México, del sur profundo de Chiapas a la frontera norte. La visión era grande: atender al turismo médico y llevar la fuerza clínica de Jarmar a Baja California.</p>
-        </div>
-        <div class="historia-item reveal">
-          <span class="historia-year">2021</span>
-          <h3>Tijuana toma fuerza</h3>
-          <p>Diana González Aranda, segunda nieta e hija de Rosalinda, tomó la operación y la administración de la sucursal de Tijuana, junto con los esfuerzos de mercadotecnia de la marca.</p>
-        </div>
-        <div class="historia-item reveal">
-          <span class="historia-year">2022</span>
-          <h3>Nace Jarmar Eyewear</h3>
-          <p>Nació Jarmar Eyewear, la línea de armazones de la casa. Hoy es la marca que más eligen quienes nos visitan, y la prueba de que un apellido chiapaneco también puede vestir la mirada de sus pacientes.</p>
-          <p>Ese mismo año, Jarmar reforzó su casa en Chiapas con la apertura de la sucursal de Arboledas, en Tuxtla. La tercera generación se integró al negocio y la marca crecía en sus dos extremos a la vez.</p>
-        </div>
-        <div class="historia-item reveal">
-          <span class="historia-year">2026</span>
-          <h3>La siguiente etapa</h3>
-          <p>Alejandro Aranda Tello se sumó a la empresa como asesor estratégico y financiero, aportando su experiencia para acompañar a Jarmar en su siguiente etapa de crecimiento.</p>
-        </div>
-      </div>
-      <div class="historia-cierre reveal">
-        <p>Sesenta años después, Jarmar sigue siendo lo que fue aquel primer local de 1966: <strong>un lugar donde una familia cuida la vista de otras familias</strong>. Somos la única Clínica Óptica Boutique de México, líderes en lentes esclerales que le devuelven la visión a quienes la creían perdida. Seguimos aquí por lo mismo de siempre: <strong>para que México vea mejor, de frontera a frontera</strong>.</p>
-      </div>
-    </div>
-  </section>
-
 
   <!-- ═══ SERVICIOS ═══ -->
   <section class="servicios" id="servicios">

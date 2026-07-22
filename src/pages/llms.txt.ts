@@ -16,6 +16,7 @@ export const GET: APIRoute = async () => {
 - [Inicio](${site.url}/): Hub nacional de Ópticas Jarmar — Clínica Óptica Boutique con presencia en Chiapas y Tijuana.
 - [Chiapas — Tuxtla Gutiérrez](${site.url}/chiapas/): Sucursales Plaza Cedros y Plaza Crystal. Diagnóstico médico, lentes graduados, Jarmar Eyewear, lentes esclerales.
 - [Tijuana — Baja California](${site.url}/tijuana/): Sucursal Zona Urbana Río. Clínica Óptica Boutique de referencia en Tijuana.
+- [Nuestra Historia](${site.url}/historia/): 60 años de historia, de Tuxtla Gutiérrez (1966) a Tijuana. Tres generaciones cuidando la visión de México.
 
 ## Optometristas
 

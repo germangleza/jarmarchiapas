@@ -1,0 +1,215 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Our Story | Jarmar Optics · 60 Years"
+  description="60 years caring for Mexico's vision, border to border. The story of Jarmar Optics: three generations of a Chiapas family, from Tuxtla Gutiérrez to Tijuana."
+>
+  <style>
+    :root {
+      --bg: #071A3E;
+      --surface: #0D2B6B;
+      --accent: #3A8FE0;
+      --azul-medio: #1A5BB5;
+      --gris-texto: #4A5568;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--bg) 0%, var(--surface) 100%);
+      color: #fff;
+      padding: 100px 20px 80px;
+      text-align: center;
+    }
+    .hero-tag {
+      display: inline-block;
+      background: rgba(58,143,224,0.2);
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      border-radius: 100px;
+      padding: 6px 18px;
+      font-size: 0.85rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    .hero h1 span { color: var(--accent); }
+    .hero p {
+      font-size: 1.15rem;
+      opacity: 0.85;
+      max-width: 640px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    .container { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+
+    .historia-section { background: #fff; padding: 80px 20px; }
+
+    .historia-timeline { position: relative; }
+    .historia-timeline::before {
+      content: '';
+      position: absolute;
+      left: 7px; top: 8px; bottom: 8px;
+      width: 2px;
+      background: rgba(26,91,181,0.2);
+    }
+    .historia-item { position: relative; padding: 0 0 44px 44px; }
+    .historia-item:last-child { padding-bottom: 0; }
+    .historia-item::before {
+      content: '';
+      position: absolute;
+      left: 1px; top: 7px;
+      width: 14px; height: 14px;
+      border-radius: 50%;
+      background: var(--azul-medio);
+      box-shadow: 0 0 0 4px rgba(26,91,181,0.15);
+    }
+    .historia-year {
+      display: inline-block;
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--azul-medio);
+      margin-bottom: 4px;
+    }
+    .historia-item h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--bg);
+      margin-bottom: 8px;
+    }
+    .historia-item p {
+      color: var(--gris-texto);
+      line-height: 1.75;
+      font-size: 0.98rem;
+    }
+    .historia-item p + p { margin-top: 10px; }
+
+    .historia-cierre {
+      margin-top: 56px;
+      background: linear-gradient(135deg, #071A3E 0%, #0D2B6B 60%, #1A5BB5 100%);
+      border-radius: 20px;
+      padding: 40px 44px;
+    }
+    .historia-cierre p {
+      color: rgba(255,255,255,0.92);
+      line-height: 1.8;
+      font-size: 1.05rem;
+    }
+    .historia-cierre strong { color: #fff; }
+
+    .cta-section {
+      background: linear-gradient(135deg, var(--bg) 0%, var(--surface) 100%);
+      color: #fff;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .cta-section h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .cta-section p { font-size: 1.1rem; opacity: 0.85; margin-bottom: 36px; max-width: 560px; margin-left: auto; margin-right: auto; }
+    .btn-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: #fff;
+      padding: 14px 32px;
+      border-radius: 100px;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    .btn-cta:hover { opacity: 0.9; transform: translateY(-2px); }
+
+    @media (max-width: 640px) {
+      .historia-section { padding: 60px 20px; }
+      .historia-item { padding-left: 34px; }
+      .historia-cierre { padding: 30px 24px; }
+    }
+  </style>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <span class="hero-tag">Our story · Since 1966</span>
+      <h1>60 years caring for Mexico's vision,<br><span>border to border</span></h1>
+      <p>It all began with a couple and a simple idea: seeing well is part of living well.</p>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section class="historia-section">
+    <div class="container">
+      <div class="historia-timeline">
+        <div class="historia-item">
+          <span class="historia-year">1966</span>
+          <h3>The first shop</h3>
+          <p>In 1966, Jorge Aranda Marín and Rosalinda Tello Marín opened an optical shop in downtown Tuxtla Gutiérrez. They had nothing but their trade, their name, and the drive to care for their community. Over the years, that shop would become the longest-standing optical practice in Chiapas.</p>
+          <p>Decade after decade, families kept coming back. They brought their children and, later, their grandchildren. That trust allowed Jarmar to grow beyond downtown Tuxtla and open locations across the state — and even beyond it. The family name stopped being just a name and became a place people knew they could turn to.</p>
+        </div>
+        <div class="historia-item">
+          <span class="historia-year">1995</span>
+          <h3>The second generation arrives</h3>
+          <p>Jorge Aranda Tello, son of the founders, joined the business after studying optometry at the Universidad Autónoma de Aguascalientes and took charge of the optometry practice. With him, Jarmar deepened its clinical vocation and began becoming what it is today: a clinic where diagnosis comes first.</p>
+        </div>
+        <div class="historia-item">
+          <span class="historia-year">1999</span>
+          <h3>Plaza Crystal and the family at the helm</h3>
+          <p>Rosalinda Aranda Tello, the eldest daughter, joined to lead the administrative side. With her, the founders' children were at the helm, each in their own field. In those years the Plaza Crystal location opened its doors — still serving Tuxtla to this day.</p>
+        </div>
+        <div class="historia-item">
+          <span class="historia-year">2017</span>
+          <h3>The third generation</h3>
+          <p>Germán González Aranda, eldest grandson and Rosalinda's son, joined the company with a clear mission: to take Jarmar further.</p>
+        </div>
+        <div class="historia-item">
+          <span class="historia-year">2020</span>
+          <h3>Jarmar crosses the country</h3>
+          <p>That drive crossed the country. In January 2020, Jarmar opened a location in Tijuana, joining Mexico's two ends — from the deep south of Chiapas to the northern border. The vision was big: serving medical tourism and bringing Jarmar's clinical strength to Baja California.</p>
+        </div>
+        <div class="historia-item">
+          <span class="historia-year">2021</span>
+          <h3>Tijuana gains strength</h3>
+          <p>Diana González Aranda, second grandchild and Rosalinda's daughter, took over the operation and administration of the Tijuana location, along with the brand's marketing efforts.</p>
+        </div>
+        <div class="historia-item">
+          <span class="historia-year">2022</span>
+          <h3>Jarmar Eyewear is born</h3>
+          <p>Jarmar Eyewear was born — the house line of frames. Today it is the brand our patients choose most, and proof that a family name from Chiapas can also dress the way you look.</p>
+          <p>That same year, Jarmar strengthened its home in Chiapas with the opening of the Arboledas location in Tuxtla. The third generation had joined the business, and the brand was growing at both ends at once.</p>
+        </div>
+        <div class="historia-item">
+          <span class="historia-year">2026</span>
+          <h3>The next stage</h3>
+          <p>Alejandro Aranda Tello joined the company as a strategic and financial advisor, bringing his experience to guide Jarmar through its next stage of growth.</p>
+        </div>
+      </div>
+
+      <div class="historia-cierre">
+        <p>Sixty years later, Jarmar remains what that first shop was in 1966: <strong>a place where one family cares for the eyesight of other families</strong>. We are Mexico's only Clínica Óptica Boutique, leaders in scleral lenses that restore vision to those who thought it was lost. We are still here for the same reason as always: <strong>so Mexico can see better, border to border</strong>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Be part of this story</h2>
+      <p>Visit us at Jarmar Optics Tijuana — Zona Río, minutes from the border.</p>
+      <a href="/en/tijuana/" class="btn-cta">Jarmar Tijuana →</a>
+    </div>
+  </section>
+</BaseLayout>
