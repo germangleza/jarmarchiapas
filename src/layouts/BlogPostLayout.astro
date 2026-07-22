@@ -8,6 +8,12 @@ const { data } = post;
 const author = data.author ?? site.defaultAuthor;
 const url = new URL(`/blog/${post.id}/`, site.url).toString();
 
+// Imagen del post. Convención: sube la foto a /public/blog/<slug>.jpg y se
+// vincula sola. Se puede sobreescribir con el campo `image` del frontmatter
+// (útil si la subes en .png o .webp). El espacio queda reservado aunque la
+// foto todavía no exista (ver .post-hero--empty en global.css).
+const heroImage = data.image ?? `/blog/${post.id}.jpg`;
+
 const fmt = (d) =>
   new Intl.DateTimeFormat(site.lang, {
     day: "numeric",
@@ -37,6 +43,17 @@ const fmt = (d) =>
         {fmt(data.pubDate)} · {author}
         {data.updatedDate ? ` · Actualizado ${fmt(data.updatedDate)}` : ""}
       </p>
+
+      <figure class="post-hero">
+        <img
+          src={heroImage}
+          alt={data.title}
+          width="1600"
+          height="900"
+          loading="eager"
+          onerror="this.closest('.post-hero').classList.add('post-hero--empty'); this.remove();"
+        />
+      </figure>
 
       <div class="article-body">
         <slot />

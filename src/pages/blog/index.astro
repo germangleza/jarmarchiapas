@@ -28,9 +28,21 @@ const fmt = (d) =>
         posts.map((post) => (
           <li class="post-item">
             <a href={`/blog/${post.id}/`}>
-              <span class="post-meta">{fmt(post.data.pubDate)}</span>
-              <h2>{post.data.title}</h2>
-              <p>{post.data.description}</p>
+              <figure class="post-thumb">
+                <img
+                  src={post.data.image ?? `/blog/${post.id}.jpg`}
+                  alt={post.data.title}
+                  width="1600"
+                  height="900"
+                  loading="lazy"
+                  onerror="this.closest('.post-thumb').classList.add('post-thumb--empty'); this.remove();"
+                />
+              </figure>
+              <div class="post-item-text">
+                <span class="post-meta">{fmt(post.data.pubDate)}</span>
+                <h2>{post.data.title}</h2>
+                <p>{post.data.description}</p>
+              </div>
             </a>
           </li>
         ))
