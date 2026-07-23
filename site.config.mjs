@@ -5,7 +5,7 @@
 export const site = {
   // --- Identidad ---
   name: "Ópticas Jarmar",
-  url: "https://jarmar.com", // sin slash final
+  url: "https://www.jarmar.com", // sin slash final
   description:
     "Clínica Óptica Boutique con 60 años cuidando tu salud visual. Diagnóstico médico de precisión, lentes graduados, Jarmar Eyewear y lentes esclerales. Chiapas y Tijuana.",
   lang: "es-MX",
@@ -14,7 +14,7 @@ export const site = {
   org: {
     legalName: "Ópticas Jarmar",
     type: "Optician",
-    logo: "/Logo BlancoEsp.png",
+    logo: "/logo-opticas-jarmar-blanco-esp.png",
     sameAs: [
       "https://www.facebook.com/opticasjarmarchiapas",
       "https://www.instagram.com/opticasjarmar/",

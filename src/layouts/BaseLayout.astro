@@ -75,6 +75,29 @@ const brandVars = `
     ))}
     <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
     <style set:html={`:root{${brandVars}}`}></style>
+    <script type="application/ld+json">{
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://www.jarmar.com/#organization",
+      "name": "Ópticas Jarmar",
+      "alternateName": "Clínica Óptica Boutique Jarmar",
+      "url": "https://www.jarmar.com/",
+      "logo": "https://www.jarmar.com/logo-opticas-jarmar-color.png",
+      "foundingDate": "1966",
+      "description": "Clínica Óptica Boutique con más de 60 años cuidando la salud visual de México. Especialistas en lentes esclerales, con sucursales en Tuxtla Gutiérrez, Chiapas y Tijuana, Baja California.",
+      "sameAs": [
+        "https://www.facebook.com/opticasjarmarchiapas",
+        "https://www.instagram.com/opticasjarmar/",
+        "https://www.facebook.com/opticasjarmartijuana",
+        "https://www.instagram.com/opticasjarmartijuana/"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "880",
+        "bestRating": "5"
+      }
+    }</script>
     <slot name="head" />
   </head>
   <body>
@@ -83,7 +106,7 @@ const brandVars = `
     <nav class="site-nav" id="nav">
       <div class="nav-container">
         <a href="/" class="nav-logo">
-          <img src="/Logo BlancoEsp.png" alt="Ópticas Jarmar" />
+          <img src="/logo-opticas-jarmar-blanco-esp.png" alt="Ópticas Jarmar" />
         </a>
         <div class="nav-links" id="navLinks">
           <button class="nav-close" id="navClose" aria-label="Cerrar menú">✕</button>
@@ -108,7 +131,7 @@ const brandVars = `
     <footer class="site-footer">
       <div class="footer-container">
         <div class="footer-brand">
-          <img src="/Logo BlancoEsp.png" alt="Ópticas Jarmar" style="height:36px; width:auto; opacity:0.85;" />
+          <img src="/logo-opticas-jarmar-blanco-esp.png" alt="Ópticas Jarmar" style="height:36px; width:auto; opacity:0.85;" />
           <p>{site.description}</p>
         </div>
         <div class="footer-links">

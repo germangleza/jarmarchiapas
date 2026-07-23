@@ -1,0 +1,210 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "jarmar.com"
+        }
+      ],
+      "destination": "https://www.jarmar.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/en/productos",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/en/productos/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/en/contact-lenses",
+      "destination": "/lentes-de-contacto",
+      "permanent": true
+    },
+    {
+      "source": "/en/contact-lenses/",
+      "destination": "/lentes-de-contacto",
+      "permanent": true
+    },
+    {
+      "source": "/en/sunglasses",
+      "destination": "/lentes-de-sol",
+      "permanent": true
+    },
+    {
+      "source": "/en/sunglasses/",
+      "destination": "/lentes-de-sol",
+      "permanent": true
+    },
+    {
+      "source": "/en/prescription-glasses",
+      "destination": "/lentes-graduados",
+      "permanent": true
+    },
+    {
+      "source": "/en/prescription-glasses/",
+      "destination": "/lentes-graduados",
+      "permanent": true
+    },
+    {
+      "source": "/en/eye-exams",
+      "destination": "/estudio-de-la-vista",
+      "permanent": true
+    },
+    {
+      "source": "/en/eye-exams/",
+      "destination": "/estudio-de-la-vista",
+      "permanent": true
+    },
+    {
+      "source": "/en/testimonios",
+      "destination": "/#testimonios",
+      "permanent": true
+    },
+    {
+      "source": "/en/testimonios/",
+      "destination": "/#testimonios",
+      "permanent": true
+    },
+    {
+      "source": "/en/empresa",
+      "destination": "/historia/",
+      "permanent": true
+    },
+    {
+      "source": "/en/empresa/",
+      "destination": "/historia/",
+      "permanent": true
+    },
+    {
+      "source": "/en/about-us",
+      "destination": "/historia/",
+      "permanent": true
+    },
+    {
+      "source": "/en/about-us/",
+      "destination": "/historia/",
+      "permanent": true
+    },
+    {
+      "source": "/contacto",
+      "destination": "/#ciudades",
+      "permanent": true
+    },
+    {
+      "source": "/contacto/",
+      "destination": "/#ciudades",
+      "permanent": true
+    },
+    {
+      "source": "/wp-content/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/wp-admin/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/wp-admin",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/wp-login.php",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/wp-login",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/feed",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/feed/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/category/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/tag/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/LogoXS color.png",
+      "destination": "/logo-opticas-jarmar-color.png",
+      "permanent": true
+    },
+    {
+      "source": "/LogoS blanco.png",
+      "destination": "/logo-opticas-jarmar-blanco.png",
+      "permanent": true
+    },
+    {
+      "source": "/Logo BlancoEsp.png",
+      "destination": "/logo-opticas-jarmar-blanco-esp.png",
+      "permanent": true
+    },
+    {
+      "source": "/eslcerales1.jpg",
+      "destination": "/lentes-esclerales-jarmar.jpg",
+      "permanent": true
+    },
+    {
+      "source": "/IMG-1925.JPG",
+      "destination": "/examen-vista-jarmar-tijuana.jpg",
+      "permanent": true
+    },
+    {
+      "source": "/IMG-1929.JPG",
+      "destination": "/optica-jarmar-tijuana-zona-rio.jpg",
+      "permanent": true
+    },
+    {
+      "source": "/PLAZACRYSTAL.PNG",
+      "destination": "/sucursal-jarmar-plaza-crystal.png",
+      "permanent": true
+    },
+    {
+      "source": "/IMAGEN 1.jpg",
+      "destination": "/consulta-visual-jarmar.jpg",
+      "permanent": true
+    },
+    {
+      "source": "/ATENCION.jpg",
+      "destination": "/atencion-opticas-jarmar.jpg",
+      "permanent": true
+    },
+    {
+      "source": "/Aaron.jpeg",
+      "destination": "/opt-aaron-linares-jarmar.jpeg",
+      "permanent": true
+    },
+    {
+      "source": "/hector.jpeg",
+      "destination": "/opt-hector-pineda-jarmar.jpeg",
+      "permanent": true
+    },
+    {
+      "source": "/yoyo.jpeg",
+      "destination": "/opt-jorge-aranda-tello-jarmar.jpeg",
+      "permanent": true
+    }
+  ]
+}

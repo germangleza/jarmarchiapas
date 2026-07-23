@@ -1,5 +1,5 @@
 # robots.txt — Ópticas Jarmar
-# https://jarmar.com/
+# https://www.jarmar.com/
 
 # ── Motores de búsqueda tradicionales ─────────────────────────────────────────
 User-agent: Googlebot
@@ -80,6 +80,6 @@ User-agent: *
 Allow: /
 
 # ── Archivos de IA legibles ────────────────────────────────────────────────────
-# llms.txt: https://jarmar.com/llms.txt
+# llms.txt: https://www.jarmar.com/llms.txt
 
-Sitemap: https://jarmar.com/sitemap.xml
+Sitemap: https://www.jarmar.com/sitemap.xml
