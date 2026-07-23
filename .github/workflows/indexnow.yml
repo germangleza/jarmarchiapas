@@ -1,0 +1,41 @@
+name: IndexNow ping
+
+# Cada push a main → espera al deploy de Vercel → envía todas las URLs
+# del sitemap a IndexNow (Bing las recibe al instante, sin esperar al crawler).
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: {}
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Esperar al deploy de Vercel
+        run: sleep 120
+
+      - name: Enviar URLs del sitemap a IndexNow
+        run: |
+          set -e
+          curl -sf https://www.jarmar.com/sitemap.xml -o sitemap.xml
+          python3 - << 'EOF' > payload.json
+          import json, re
+          xml = open('sitemap.xml').read()
+          urls = re.findall(r'<loc>([^<]+)</loc>', xml)
+          # solo <loc> de páginas (excluir image:loc ya se filtra por regex de <loc> exacto)
+          urls = [u for u in urls if not re.search(r'\.(jpg|jpeg|png|webp)$', u)]
+          print(json.dumps({
+              "host": "www.jarmar.com",
+              "key": "fa8d7b3a402949c1a7554b4f99bb75c8",
+              "keyLocation": "https://www.jarmar.com/fa8d7b3a402949c1a7554b4f99bb75c8.txt",
+              "urlList": urls[:10000],
+          }))
+          EOF
+          echo "URLs a enviar: $(python3 -c "import json;print(len(json.load(open('payload.json'))['urlList']))")"
+          code=$(curl -s -o response.txt -w "%{http_code}" -X POST "https://api.indexnow.org/IndexNow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            --data-binary @payload.json)
+          echo "IndexNow HTTP $code"
+          cat response.txt || true
+          # 200 = OK, 202 = aceptado
+          [ "$code" = "200" ] || [ "$code" = "202" ]
