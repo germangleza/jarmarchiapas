@@ -1,0 +1,603 @@
+---
+// Landing B2B: Jarmar en tu Empresa (óptica móvil)
+// Ruta: /optica-movil
+---
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <title>Jarmar en tu Empresa | Óptica Móvil para Empresas · Estudios Visuales en tus Instalaciones</title>
+  <meta name="description" content="Llevamos nuestra óptica móvil a tu empresa: estudios visuales, asesoría y lentes con descuentos y facilidades de pago para tus colaboradores, sin salir del trabajo." />
+  <link rel="canonical" href="https://jarmar.com/optica-movil/" />
+  <meta property="og:title" content="Jarmar en tu Empresa | Óptica Móvil para Empresas" />
+  <meta property="og:description" content="Salud visual para tu equipo, directamente en sus instalaciones. Estudios visuales, asesoría y lentes con beneficios exclusivos." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://jarmar.com/optica-movil/" />
+  <meta property="og:image" content="https://jarmar.com/favicon.png" />
+  <meta property="og:locale" content="es_MX" />
+  <meta property="og:site_name" content="Ópticas Jarmar" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Google tag (gtag.js) -->
+  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=AW-17977352986"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17977352986');
+  </script>
+
+  <!-- Schema FAQPage -->
+  <script type="application/ld+json" is:inline>{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿La empresa tiene que pagar?","acceptedAnswer":{"@type":"Answer","text":"No. Los colaboradores pueden pagar directamente. También existen opciones de subsidio, prestación empresarial o descuento vía nómina."}},{"@type":"Question","name":"¿Cuántas personas pueden atender?","acceptedAnswer":{"@type":"Answer","text":"Depende de la duración de la jornada y del número de colaboradores. Preparamos una propuesta operativa para cada empresa."}},{"@type":"Question","name":"¿Qué espacio necesitan?","acceptedAnswer":{"@type":"Answer","text":"Un área privada o semiprivada con conexión eléctrica, iluminación y espacio para instalar el equipo y los armazones."}},{"@type":"Question","name":"¿Pueden atender varias sucursales?","acceptedAnswer":{"@type":"Answer","text":"Sí. Podemos crear un calendario para visitar diferentes oficinas, plantas o centros de trabajo."}},{"@type":"Question","name":"¿Los familiares reciben beneficios?","acceptedAnswer":{"@type":"Answer","text":"Sí. El convenio puede extender descuentos preferenciales a familiares directos."}}]}</script>
+
+  <style>
+    :root {
+      --azul:      #071A3E;
+      --azul-med:  #0D2B6B;
+      --azul-vivo: #1A5BB5;
+      --acento:    #3A8FE0;
+      --blanco:    #FFFFFF;
+      --crema:     #F4F8FF;
+      --gris:      #4A5568;
+      --muted:     #8899AA;
+      --verde-wa:  #25D366;
+      --grad:      linear-gradient(135deg, #071A3E 0%, #0D2B6B 55%, #1A5BB5 100%);
+      --grad-btn:  linear-gradient(135deg, #1A5BB5 0%, #3A8FE0 100%);
+      --trans:     all 0.3s cubic-bezier(0.4,0,0.2,1);
+      --radius:    16px;
+      --font-d:    'Playfair Display', Georgia, serif;
+      --font-b:    'DM Sans', system-ui, sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; animation: none !important; } }
+    body { font-family: var(--font-b); color: var(--azul); background: var(--blanco); -webkit-font-smoothing: antialiased; }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    :focus-visible { outline: 2px solid var(--acento); outline-offset: 3px; }
+
+    .wrap { max-width: 1180px; margin: 0 auto; padding: 0 22px; }
+    .wrap-md { max-width: 880px; margin: 0 auto; padding: 0 22px; }
+
+    /* HEADER */
+    .lp-header {
+      background: var(--azul);
+      padding: 15px 0;
+      position: sticky; top: 0; z-index: 100;
+      box-shadow: 0 2px 16px rgba(7,26,62,0.3);
+    }
+    .lp-header .wrap { display: flex; align-items: center; justify-content: space-between; }
+    .lp-header img { height: 38px; width: auto; }
+    .btn-primary {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      background: var(--grad-btn); color: #fff;
+      padding: 14px 30px; border-radius: 100px;
+      font-family: var(--font-b); font-size: 1rem; font-weight: 700;
+      border: none; cursor: pointer; transition: var(--trans);
+      box-shadow: 0 4px 20px rgba(58,143,224,0.35);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(58,143,224,0.45); }
+    .btn-primary.sm { padding: 11px 22px; font-size: 0.9rem; }
+    .btn-ghost {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      background: transparent; color: #fff;
+      padding: 13px 28px; border-radius: 100px; border: 2px solid rgba(255,255,255,0.45);
+      font-size: 1rem; font-weight: 600; cursor: pointer; transition: var(--trans);
+    }
+    .btn-ghost:hover { border-color: #fff; background: rgba(255,255,255,0.08); }
+    .btn-group { display: flex; flex-wrap: wrap; gap: 12px; }
+
+    /* HERO */
+    .hero { background: var(--grad); color: #fff; padding: 96px 0 84px; position: relative; overflow: hidden; }
+    .hero-eyebrow {
+      display: inline-block;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--acento);
+      background: rgba(58,143,224,0.15); border: 1px solid rgba(58,143,224,0.35);
+      padding: 6px 16px; border-radius: 100px; margin-bottom: 22px;
+    }
+    .hero h1 {
+      font-family: var(--font-d);
+      font-size: clamp(2rem, 4.6vw, 3.3rem);
+      line-height: 1.15; margin-bottom: 18px; max-width: 720px;
+    }
+    .hero h1 span { color: var(--acento); }
+    .hero-sub { color: rgba(255,255,255,0.85); font-size: 1.12rem; line-height: 1.7; max-width: 640px; margin-bottom: 14px; }
+    .hero-note { color: rgba(255,255,255,0.65); font-size: 0.98rem; line-height: 1.65; max-width: 600px; margin-bottom: 30px; }
+
+    /* SECCIONES */
+    section { padding: 78px 0; }
+    .eyebrow {
+      display: block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--acento); margin-bottom: 12px;
+    }
+    h2.title {
+      font-family: var(--font-d);
+      font-size: clamp(1.6rem, 3.4vw, 2.3rem);
+      line-height: 1.2; margin-bottom: 16px; color: var(--azul);
+    }
+    h2.title.white { color: #fff; }
+    .lead { color: var(--gris); font-size: 1.05rem; line-height: 1.75; max-width: 680px; }
+
+    /* BENEFICIOS */
+    .beneficios { background: var(--crema); }
+    .bene-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 44px; }
+    .bene-card {
+      background: #fff; border-radius: var(--radius); padding: 34px 30px;
+      border: 1.5px solid rgba(26,91,181,0.12);
+      box-shadow: 0 6px 24px rgba(13,43,107,0.06);
+    }
+    .bene-card h3 {
+      font-family: var(--font-d); font-size: 1.25rem; color: var(--azul-med);
+      margin-bottom: 18px;
+    }
+    .bene-card ul { list-style: none; display: flex; flex-direction: column; gap: 11px; }
+    .bene-card li { display: flex; gap: 10px; color: var(--gris); font-size: 0.97rem; line-height: 1.55; }
+    .bene-card li::before { content: '✓'; color: var(--acento); font-weight: 700; flex-shrink: 0; }
+
+    /* CÓMO FUNCIONA */
+    .pasos { display: flex; flex-direction: column; gap: 18px; margin-top: 44px; }
+    .paso {
+      display: grid; grid-template-columns: 52px 1fr; gap: 18px; align-items: start;
+      background: #fff; border-radius: var(--radius); padding: 26px;
+      border: 1.5px solid rgba(26,91,181,0.12);
+    }
+    .paso-num {
+      width: 52px; height: 52px; border-radius: 50%;
+      background: var(--grad-btn); color: #fff;
+      font-size: 1.25rem; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .paso h3 { font-size: 1.05rem; font-weight: 700; color: var(--azul); margin-bottom: 6px; }
+    .paso p { color: var(--gris); font-size: 0.96rem; line-height: 1.65; }
+    .como .cta-row { margin-top: 36px; }
+
+    /* QUÉ INCLUYE */
+    .incluye { background: var(--azul); color: #fff; }
+    .chips { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
+    .chip {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(58,143,224,0.15); border: 1px solid rgba(58,143,224,0.35);
+      color: #fff; font-size: 0.95rem; font-weight: 600;
+      padding: 11px 20px; border-radius: 100px;
+    }
+    .chip::before { content: '✓'; color: var(--acento); font-weight: 700; }
+
+    /* MODALIDADES */
+    .moda-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 44px; }
+    .moda-card {
+      background: #fff; border-radius: var(--radius); padding: 30px 28px;
+      border: 1.5px solid rgba(26,91,181,0.15);
+      transition: var(--trans);
+    }
+    .moda-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(13,43,107,0.12); border-color: rgba(58,143,224,0.4); }
+    .moda-card h3 { font-family: var(--font-d); font-size: 1.1rem; color: var(--azul-med); margin-bottom: 10px; }
+    .moda-card p { color: var(--gris); font-size: 0.95rem; line-height: 1.65; }
+
+    /* ADAPTABLE */
+    .adaptable { background: var(--crema); }
+    .adapt-list { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; margin-top: 36px; }
+    .adapt-list li {
+      display: flex; gap: 10px; background: #fff; border-radius: 12px;
+      padding: 14px 18px; color: var(--gris); font-size: 0.95rem; font-weight: 500;
+      border: 1.5px solid rgba(26,91,181,0.1);
+    }
+    .adapt-list li::before { content: '•'; color: var(--acento); font-weight: 700; }
+    .adapt-note { margin-top: 26px; color: var(--gris); font-size: 0.98rem; line-height: 1.7; max-width: 640px; }
+
+    /* TRAYECTORIA */
+    .trayectoria { background: var(--grad); color: #fff; text-align: center; }
+    .trayectoria .lead { color: rgba(255,255,255,0.8); margin: 0 auto 40px; }
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; max-width: 940px; margin: 0 auto; }
+    .stat {
+      background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);
+      border-radius: var(--radius); padding: 26px 18px;
+      font-size: 0.98rem; font-weight: 600;
+      backdrop-filter: blur(6px);
+    }
+
+    /* FAQ */
+    .faq-list { margin-top: 40px; }
+    .faq-item { border-bottom: 1px solid rgba(13,43,107,0.12); }
+    .faq-item:first-child { border-top: 1px solid rgba(13,43,107,0.12); }
+    .faq-q {
+      width: 100%; text-align: left; background: none; border: none; cursor: pointer;
+      padding: 20px 0; display: flex; justify-content: space-between; align-items: center; gap: 16px;
+      font-family: var(--font-b); font-size: 1.02rem; font-weight: 600; color: var(--azul);
+    }
+    .faq-chevron { font-size: 1.3rem; color: var(--acento); transition: transform 0.25s; flex-shrink: 0; }
+    .faq-item.open .faq-chevron { transform: rotate(45deg); }
+    .faq-a { display: none; padding: 0 0 20px; color: var(--gris); font-size: 0.98rem; line-height: 1.7; }
+    .faq-item.open .faq-a { display: block; }
+
+    /* CTA FINAL + FORM */
+    .cta-final { background: var(--grad); color: #fff; }
+    .cta-final .inner { display: grid; grid-template-columns: 1fr 1fr; gap: 52px; align-items: start; }
+    .cta-final h2 { font-family: var(--font-d); font-size: clamp(1.7rem, 3.6vw, 2.5rem); line-height: 1.2; margin-bottom: 16px; }
+    .cta-final .lead { color: rgba(255,255,255,0.82); margin-bottom: 30px; }
+
+    .form-card {
+      background: #fff; border-radius: 20px; padding: 34px 30px;
+      box-shadow: 0 20px 60px rgba(7,26,62,0.35);
+    }
+    .form-card h3 { font-family: var(--font-d); font-size: 1.3rem; color: var(--azul); margin-bottom: 6px; }
+    .form-card .form-sub { color: var(--muted); font-size: 0.88rem; margin-bottom: 22px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+    .form-group label { font-size: 0.82rem; font-weight: 600; color: var(--azul); }
+    .form-group input, .form-group select {
+      padding: 12px 15px; border: 1.5px solid #D1DBE8; border-radius: 10px;
+      font-family: var(--font-b); font-size: 0.95rem; color: var(--azul);
+      background: #fff; transition: border-color 0.2s; width: 100%;
+    }
+    .form-group input:focus, .form-group select:focus { outline: none; border-color: var(--acento); }
+    .form-submit { width: 100%; margin-top: 6px; padding: 16px; font-size: 1rem; }
+    .form-micro { text-align: center; color: var(--muted); font-size: 0.78rem; margin-top: 12px; }
+
+    /* FOOTER */
+    .lp-footer { background: var(--azul); padding: 30px 0; text-align: center; }
+    .lp-footer img { height: 30px; width: auto; margin: 0 auto 10px; opacity: 0.85; }
+    .lp-footer p { color: var(--muted); font-size: 0.78rem; }
+    .lp-footer a { color: var(--acento); }
+
+    @media (max-width: 860px) {
+      section { padding: 58px 0; }
+      .bene-grid, .moda-grid { grid-template-columns: 1fr; }
+      .stats { grid-template-columns: repeat(2, 1fr); }
+      .cta-final .inner { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .lp-header .btn-primary.sm { padding: 10px 16px; font-size: 0.82rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="lp-header">
+    <div class="wrap">
+      <a href="/"><img src="/Logo BlancoEsp.png" alt="Ópticas Jarmar" /></a>
+      <a href="#contacto" class="btn-primary sm">Solicitar una visita</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <span class="hero-eyebrow">Jarmar en tu Empresa</span>
+      <h1>Salud visual para tu equipo, <span>directamente en sus instalaciones</span></h1>
+      <p class="hero-sub">Llevamos nuestra óptica móvil a tu empresa para realizar estudios visuales, brindar asesoría personalizada y ofrecer lentes con descuentos y facilidades de pago.</p>
+      <p class="hero-note">Una prestación práctica que cuida a tus colaboradores y reduce traslados durante la jornada laboral.</p>
+      <div class="btn-group">
+        <a href="#contacto" class="btn-primary">Solicitar una visita</a>
+        <a href="https://wa.me/529611855475?text=Hola%2C+quiero+informaci%C3%B3n+sobre+Jarmar+en+tu+Empresa+%28%C3%B3ptica+m%C3%B3vil%29." target="_blank" class="btn-ghost wa-link">Hablar con un asesor</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFICIOS -->
+  <section class="beneficios">
+    <div class="wrap">
+      <span class="eyebrow">Bienestar laboral</span>
+      <h2 class="title">Ver mejor también ayuda a trabajar mejor</h2>
+      <p class="lead">El uso constante de computadoras, celulares y actividades que requieren precisión puede provocar cansancio visual, dificultad para enfocar y molestias durante el día. Con Jarmar en tu Empresa, tus colaboradores pueden revisar su visión y encontrar una solución adecuada sin salir del lugar de trabajo.</p>
+      <div class="bene-grid">
+        <div class="bene-card">
+          <h3>Beneficios para tus colaboradores</h3>
+          <ul>
+            <li>Estudio visual en la empresa.</li>
+            <li>Asesoría profesional.</li>
+            <li>Selección de armazones y lentes.</li>
+            <li>Descuentos preferenciales.</li>
+            <li>Facilidades de pago.</li>
+            <li>Menos traslados y ausencias.</li>
+            <li>Beneficios para familiares directos.</li>
+          </ul>
+        </div>
+        <div class="bene-card">
+          <h3>Beneficios para tu empresa</h3>
+          <ul>
+            <li>Una prestación útil y valorada.</li>
+            <li>Apoyo al bienestar del equipo.</li>
+            <li>Menor tiempo fuera del trabajo.</li>
+            <li>Atención organizada en tus instalaciones.</li>
+            <li>Modalidades flexibles de pago.</li>
+            <li>Acompañamiento durante todo el proceso.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CÓMO FUNCIONA -->
+  <section class="como">
+    <div class="wrap-md">
+      <span class="eyebrow">El proceso</span>
+      <h2 class="title">¿Cómo funciona?</h2>
+      <div class="pasos">
+        <div class="paso">
+          <div class="paso-num">1</div>
+          <div>
+            <h3>Organizamos la jornada</h3>
+            <p>Definimos fecha, horarios, espacio y número estimado de colaboradores.</p>
+          </div>
+        </div>
+        <div class="paso">
+          <div class="paso-num">2</div>
+          <div>
+            <h3>Instalamos la óptica móvil</h3>
+            <p>Llevamos el equipo necesario y una selección de armazones.</p>
+          </div>
+        </div>
+        <div class="paso">
+          <div class="paso-num">3</div>
+          <div>
+            <h3>Realizamos los estudios</h3>
+            <p>Cada colaborador recibe atención y asesoría de acuerdo con sus necesidades visuales.</p>
+          </div>
+        </div>
+        <div class="paso">
+          <div class="paso-num">4</div>
+          <div>
+            <h3>Eligen sus lentes</h3>
+            <p>Orientamos en la elección de armazones, materiales, tratamientos y opciones de graduación.</p>
+          </div>
+        </div>
+        <div class="paso">
+          <div class="paso-num">5</div>
+          <div>
+            <h3>Entregamos los pedidos</h3>
+            <p>Damos seguimiento a la fabricación y coordinamos la entrega con la empresa.</p>
+          </div>
+        </div>
+      </div>
+      <div class="cta-row">
+        <a href="#contacto" class="btn-primary">Organizar una jornada visual</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUÉ INCLUYE -->
+  <section class="incluye">
+    <div class="wrap-md">
+      <span class="eyebrow">Todo resuelto</span>
+      <h2 class="title white">¿Qué incluye?</h2>
+      <div class="chips">
+        <span class="chip">Estudios visuales</span>
+        <span class="chip">Asesoría personalizada</span>
+        <span class="chip">Exhibición de armazones</span>
+        <span class="chip">Recomendación de lentes y tratamientos</span>
+        <span class="chip">Precios preferenciales</span>
+        <span class="chip">Facilidades de pago</span>
+        <span class="chip">Gestión y seguimiento de pedidos</span>
+        <span class="chip">Entrega de lentes</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODALIDADES -->
+  <section>
+    <div class="wrap">
+      <span class="eyebrow">Flexibilidad total</span>
+      <h2 class="title">Modalidades disponibles</h2>
+      <div class="moda-grid">
+        <div class="moda-card">
+          <h3>Pago directo por el colaborador</h3>
+          <p>Cada persona elige y paga sus lentes con los beneficios establecidos en el convenio. La empresa no necesita asumir el costo.</p>
+        </div>
+        <div class="moda-card">
+          <h3>Descuento vía nómina</h3>
+          <p>Los colaboradores pueden pagar en parcialidades mediante descuentos programados, de acuerdo con las políticas de la empresa.</p>
+        </div>
+        <div class="moda-card">
+          <h3>Prestación empresarial</h3>
+          <p>La empresa puede cubrir total o parcialmente los lentes como parte de su programa de beneficios.</p>
+        </div>
+        <div class="moda-card">
+          <h3>Previsión social</h3>
+          <p>El programa puede analizarse como parte de un esquema de previsión social, sujeto a la revisión contable, fiscal y legal de la empresa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ADAPTABLE -->
+  <section class="adaptable">
+    <div class="wrap">
+      <span class="eyebrow">A tu medida</span>
+      <h2 class="title">Un programa adaptable a tu organización</h2>
+      <p class="lead">Podemos ajustar cada jornada según:</p>
+      <ul class="adapt-list">
+        <li>Número de colaboradores</li>
+        <li>Horarios y turnos</li>
+        <li>Ubicación</li>
+        <li>Presupuesto</li>
+        <li>Modalidad de pago</li>
+        <li>Número de sucursales</li>
+        <li>Participación de familiares</li>
+      </ul>
+      <p class="adapt-note">También podemos organizar visitas periódicas para empresas con diferentes oficinas o centros de trabajo.</p>
+    </div>
+  </section>
+
+  <!-- TRAYECTORIA -->
+  <section class="trayectoria">
+    <div class="wrap">
+      <span class="eyebrow" style="color:#7EC8F5;">Desde 1966</span>
+      <h2 class="title white">Más de 60 años cuidando la salud visual</h2>
+      <p class="lead">Desde 1966, Jarmar ha acompañado a generaciones de familias con atención profesional y soluciones visuales personalizadas. Hoy llevamos esa experiencia directamente a tu empresa.</p>
+      <div class="stats">
+        <div class="stat">60 años de experiencia</div>
+        <div class="stat">Atención profesional</div>
+        <div class="stat">Descuentos exclusivos</div>
+        <div class="stat">Acompañamiento de principio a fin</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section>
+    <div class="wrap-md">
+      <span class="eyebrow">Dudas frecuentes</span>
+      <h2 class="title">Preguntas frecuentes</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q">¿La empresa tiene que pagar?<span class="faq-chevron">+</span></button>
+          <div class="faq-a">No. Los colaboradores pueden pagar directamente. También existen opciones de subsidio, prestación empresarial o descuento vía nómina.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">¿Cuántas personas pueden atender?<span class="faq-chevron">+</span></button>
+          <div class="faq-a">Depende de la duración de la jornada y del número de colaboradores. Preparamos una propuesta operativa para cada empresa.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">¿Qué espacio necesitan?<span class="faq-chevron">+</span></button>
+          <div class="faq-a">Un área privada o semiprivada con conexión eléctrica, iluminación y espacio para instalar el equipo y los armazones.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">¿Pueden atender varias sucursales?<span class="faq-chevron">+</span></button>
+          <div class="faq-a">Sí. Podemos crear un calendario para visitar diferentes oficinas, plantas o centros de trabajo.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">¿Los familiares reciben beneficios?<span class="faq-chevron">+</span></button>
+          <div class="faq-a">Sí. El convenio puede extender descuentos preferenciales a familiares directos.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL + FORMULARIO -->
+  <section class="cta-final" id="contacto">
+    <div class="wrap">
+      <div class="inner">
+        <div>
+          <h2>Lleva Jarmar a tu empresa</h2>
+          <p class="lead">Ofrece a tus colaboradores una forma sencilla de revisar su visión, elegir sus lentes y acceder a beneficios especiales sin salir del trabajo.</p>
+          <div class="btn-group">
+            <a href="https://wa.me/529611855475?text=Hola%2C+quiero+solicitar+una+propuesta+de+Jarmar+en+tu+Empresa+%28%C3%B3ptica+m%C3%B3vil%29." target="_blank" class="btn-ghost wa-link">Solicitar propuesta</a>
+            <a href="https://wa.me/529611855475?text=Hola%2C+quiero+agendar+una+llamada+para+conocer+Jarmar+en+tu+Empresa." target="_blank" class="btn-ghost wa-link">Agendar una llamada</a>
+          </div>
+        </div>
+        <div class="form-card">
+          <h3>Solicita tu propuesta</h3>
+          <p class="form-sub">Completa el formulario y un asesor te contactará.</p>
+          <form id="empresaForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="f-nombre">Nombre</label>
+                <input type="text" id="f-nombre" name="nombre" required />
+              </div>
+              <div class="form-group">
+                <label for="f-empresa">Empresa</label>
+                <input type="text" id="f-empresa" name="empresa" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="f-puesto">Puesto</label>
+                <input type="text" id="f-puesto" name="puesto" />
+              </div>
+              <div class="form-group">
+                <label for="f-ciudad">Ciudad</label>
+                <input type="text" id="f-ciudad" name="ciudad" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="f-colaboradores">Número de colaboradores</label>
+                <input type="number" id="f-colaboradores" name="colaboradores" min="1" />
+              </div>
+              <div class="form-group">
+                <label for="f-telefono">Teléfono</label>
+                <input type="tel" id="f-telefono" name="telefono" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="f-correo">Correo</label>
+              <input type="email" id="f-correo" name="correo" required />
+            </div>
+            <div class="form-group">
+              <label for="f-modalidad">Modalidad de interés</label>
+              <select id="f-modalidad" name="modalidad">
+                <option value="">Selecciona una opción</option>
+                <option>Pago directo por el colaborador</option>
+                <option>Descuento vía nómina</option>
+                <option>Prestación empresarial</option>
+                <option>Previsión social</option>
+                <option>Aún no lo sé</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-primary form-submit">Quiero llevar Jarmar a mi empresa</button>
+            <p class="form-micro">Al enviar se abrirá WhatsApp con tu información para contactarnos.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="lp-footer">
+    <div class="wrap">
+      <img src="/Logo BlancoEsp.png" alt="Ópticas Jarmar" />
+      <p>© 2026 Ópticas Jarmar · <a href="/">jarmar.com</a> · Chiapas y Tijuana</p>
+    </div>
+  </footer>
+
+  <script is:inline>
+    // FAQ accordion
+    document.querySelectorAll('.faq-q').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var item = btn.closest('.faq-item');
+        var isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('open'); });
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+
+    // Conversión Google Ads en clics de WhatsApp (sin bloquear el clic)
+    document.querySelectorAll('a[href*="wa.me"]').forEach(function(el) {
+      el.addEventListener('click', function() {
+        if (typeof gtag === 'function') {
+          gtag('event', 'conversion', {
+            send_to: 'AW-17977352986/zRKPCO6GotIcEJrGovxC',
+            value: 1.0,
+            currency: 'MXN'
+          });
+        }
+      });
+    });
+
+    // Formulario → abre WhatsApp con los datos
+    document.getElementById('empresaForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var v = function(id) { return (document.getElementById(id).value || '').trim(); };
+      var lineas = [
+        'Hola, quiero llevar Jarmar a mi empresa.',
+        '',
+        'Nombre: ' + v('f-nombre'),
+        'Empresa: ' + v('f-empresa'),
+        'Puesto: ' + (v('f-puesto') || 'N/D'),
+        'Ciudad: ' + v('f-ciudad'),
+        'Colaboradores: ' + (v('f-colaboradores') || 'N/D'),
+        'Teléfono: ' + v('f-telefono'),
+        'Correo: ' + v('f-correo'),
+        'Modalidad de interés: ' + (v('f-modalidad') || 'Por definir')
+      ];
+      if (typeof gtag === 'function') {
+        gtag('event', 'conversion', {
+          send_to: 'AW-17977352986/zRKPCO6GotIcEJrGovxC',
+          value: 1.0,
+          currency: 'MXN'
+        });
+      }
+      window.open('https://wa.me/529611855475?text=' + encodeURIComponent(lineas.join('\n')), '_blank');
+    });
+  </script>
+
+</body>
+</html>
