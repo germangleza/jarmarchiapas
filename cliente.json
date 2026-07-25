@@ -1,0 +1,9 @@
+{
+  "nombre": "Ópticas Jarmar",
+  "vertical": "salud",
+  "dominio": "https://www.jarmar.com",
+  "estatus": "activo",
+  "inicio": "2026-07-25",
+  "tipo": "sitio-astro",
+  "notas": "Clínica Óptica Boutique fundada en 1966. Modelo 3 en 1 (clínica + óptica + boutique) con marca propia Jarmar Eyewear. Dos plazas: Tuxtla Gutiérrez, Chiapas (Plaza Cedros y Plaza Crystal) y Tijuana, B.C. (Zona Urbana Río). Servicio estrella: lentes esclerales para queratocono. Sitio con sección en inglés (/en/tijuana/) para turismo médico de San Diego. Deploy en Vercel; canónico con www."
+}
