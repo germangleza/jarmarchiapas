@@ -60,8 +60,26 @@ Estudio de la vista, lentes graduados, lentes de contacto, lentes de sol, filtro
 
 **❓ Preguntas**
 - ¿Cuál de estos perfiles deja mejor margen y cuál quieres priorizar?
-- ¿De dónde llegan hoy la mayoría de los pacientes de esclerales (referidos de oftalmólogos, Google, redes)?
+- ✅ **RESPONDIDO (2026-07-25):** hoy la mayoría de los pacientes de esclerales llega por **referidos de oftalmólogos**. El objetivo declarado es **abrir el canal Google** sin descuidar el referido.
 - ¿Trabajan referencias con oftalmólogos? (contenido dirigido a médicos referidores sería otra veta)
+
+
+### Canal de adquisición y prioridad (actualizado 2026-07-25)
+
+| Canal | Hoy | Meta |
+|---|---|---|
+| Referido de oftalmólogos | Principal fuente de pacientes de esclerales | Mantener |
+| **Google (orgánico)** | Marginal | **Canal a construir — prioridad** |
+
+**Implicación para el contenido:** el paciente de queratocono casi siempre **ya fue diagnosticado por un oftalmólogo** antes de buscar en Google. Su búsqueda no es "¿qué tengo?", sino **"¿dónde y con quién me adapto?"**. El clúster informativo (qué son, síntomas, comparativas, cuidados) ya está bien cubierto — 9 posts; donde falta contenido es en el **fondo del embudo**:
+
+- ❌ "dónde adaptar lentes esclerales en México / Tijuana / Chiapas"
+- ❌ "especialista en lentes esclerales" / "quién adapta lentes esclerales"
+- ❌ "me diagnosticaron queratocono, ¿ahora qué?" (guía del siguiente paso tras el diagnóstico)
+- ❌ Prueba social clínica: casos, testimonios de pacientes de esclerales, pacientes que viajan de otros estados
+- ✅ Precio (cubierto)
+
+Además, el canal de referidos se puede reforzar desde el sitio con una **página para médicos referidores** (cómo referir, qué recibe el paciente, contrarreferencia) — pendiente de validar con el cliente.
 
 ---
 
