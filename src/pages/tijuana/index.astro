@@ -794,7 +794,9 @@
       .testimonios {
         grid-auto-flow: column; grid-auto-columns: 82%;
         grid-template-columns: none;
-        overflow-x: auto; scroll-snap-type: x mandatory;
+        overflow-x: auto; scroll-snap-type: x proximity;
+        touch-action: pan-x pinch-zoom;
+        -webkit-overflow-scrolling: touch;
         scroll-padding-inline: 20px;
         margin-inline: -20px; padding-inline: 20px; padding-bottom: 8px;
         scrollbar-width: none; overscroll-behavior-x: contain;
