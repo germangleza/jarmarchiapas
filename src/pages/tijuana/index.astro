@@ -727,15 +727,6 @@
     .sucursal { padding: 100px 0; background: var(--blanco); }
     .sucursal-header { text-align: center; margin-bottom: 60px; }
     .sucursal-header .section-subtitle { margin: 16px auto 0; }
-    .apertura-foto {
-      max-width: 700px; margin: 0 auto 32px;
-      border-radius: 24px; overflow: hidden;
-      box-shadow: 0 20px 60px var(--sombra-fuerte);
-      aspect-ratio: 16 / 10;
-      background: var(--gradiente-hero);
-    }
-    .apertura-foto img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .apertura-foto--empty { display: none; }
     .sucursal-card {
       max-width: 700px; margin: 0 auto;
       background: var(--azul-oscuro);
@@ -1350,14 +1341,6 @@
         <h2 class="section-title">Nuestra <span>sucursal</span> en Tijuana</h2>
         <p class="section-subtitle">Visítanos en Zona Río — el corazón comercial de Tijuana.</p>
       </div>
-      <figure class="apertura-foto reveal">
-        <img
-          src="/apertura-jarmar-tijuana.jpg"
-          alt="Corte de listón en la apertura de Ópticas Jarmar Tijuana"
-          width="1600" height="1000" loading="lazy"
-          onerror="this.closest('.apertura-foto').classList.add('apertura-foto--empty'); this.remove();"
-        />
-      </figure>
       <div class="sucursal-wrap reveal delay-1">
       <div class="sucursal-card">
         <div class="sucursal-body">

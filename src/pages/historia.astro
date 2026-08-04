@@ -93,6 +93,25 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     }
     .historia-item p + p { margin-top: 10px; }
 
+    .historia-foto {
+      margin: 16px 0;
+      border-radius: 16px;
+      overflow: hidden;
+      aspect-ratio: 16 / 10;
+      max-width: 480px;
+      background: var(--surface);
+      box-shadow: 0 12px 32px rgba(13,43,107,0.18);
+    }
+    .historia-foto img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .historia-foto figcaption {
+      font-size: 0.8rem;
+      color: var(--gris-texto);
+      opacity: 0.75;
+      margin-top: 8px;
+      font-style: italic;
+    }
+    .historia-foto--empty { display: none; }
+
     .historia-cierre {
       margin-top: 56px;
       background: linear-gradient(135deg, #071A3E 0%, #0D2B6B 60%, #1A5BB5 100%);
@@ -190,6 +209,15 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           <span class="historia-year">2020</span>
           <h3>Jarmar cruza el país</h3>
           <p>Ese impulso cruzó el país y se concretó en enero de 2020 con la inauguración de la sucursal de Tijuana, uniendo a México de frontera a frontera, desde el sur en Chiapas hasta el norte. Esta expansión nació con una visión clara: atender al turismo médico y consolidar la fuerza clínica de Jarmar en Baja California.</p>
+          <figure class="historia-foto">
+            <img
+              src="/apertura-jarmar-tijuana.jpg"
+              alt="Corte de listón en la inauguración de Ópticas Jarmar Tijuana, enero de 2020"
+              width="1600" height="1000" loading="lazy"
+              onerror="this.closest('.historia-foto').classList.add('historia-foto--empty'); this.remove();"
+            />
+            <figcaption>Inauguración de la sucursal Tijuana, enero de 2020</figcaption>
+          </figure>
           <p>Fruto del trabajo interdisciplinario de los años anteriores, en octubre de 2020 se materializó nuestro segundo gran proyecto: el Centro Visual, creado en cooperación con el centro oftalmológico referente en Chiapas. Esta alianza nos permitió crecer dentro del mismo espacio y consolidar nuestra Clínica Óptica Boutique Jarmar Arboledas en Tuxtla Gutiérrez.</p>
         </div>
         <div class="historia-item">
