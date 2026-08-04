@@ -26,9 +26,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     .hero::before {
       content: '';
       position: absolute; inset: 0;
-      background: linear-gradient(160deg, rgba(7,26,62,0.92) 0%, rgba(13,43,107,0.88) 55%, rgba(7,26,62,0.85) 100%);
+      background: linear-gradient(160deg, rgba(7,26,62,0.62) 0%, rgba(13,43,107,0.55) 55%, rgba(7,26,62,0.62) 100%);
     }
     .hero .container { position: relative; z-index: 1; }
+    .hero h1, .hero p, .hero .hero-tag {
+      text-shadow: 0 2px 12px rgba(0,0,0,0.55);
+    }
+    .hero-tag { backdrop-filter: blur(4px); }
     .hero-tag {
       display: inline-block;
       background: rgba(58,143,224,0.2);
@@ -256,6 +260,15 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           <span class="historia-year">2025</span>
           <h3>La siguiente etapa</h3>
           <p>Alejandro Aranda Tello —hijo menor de nuestros fundadores y destacado consultor de negocios— se sumó a la empresa como asesor estratégico y financiero. Con más de 25 años de experiencia, su llegada aporta una visión clave para acompañar a Jarmar en su siguiente etapa de crecimiento y liderar la institucionalización de la empresa para los años por venir.</p>
+          <figure class="historia-foto">
+            <img
+              src="/la-siguiente-etapa-jarmar.jpg"
+              alt="Sesión de trabajo estratégico de la familia Aranda González, liderazgo de Ópticas Jarmar"
+              width="1600" height="900" loading="lazy"
+              onerror="this.closest('.historia-foto').classList.add('historia-foto--empty'); this.remove();"
+            />
+            <figcaption>Sesión de trabajo estratégico con la tercera generación al frente</figcaption>
+          </figure>
         </div>
       </div>
 
