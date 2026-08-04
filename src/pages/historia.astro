@@ -16,11 +16,19 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     }
 
     .hero {
-      background: linear-gradient(135deg, var(--bg) 0%, var(--surface) 100%);
+      position: relative;
+      background: url('/historia-header-jarmar.jpg') center 30%/cover no-repeat;
       color: #fff;
       padding: 100px 20px 80px;
       text-align: center;
+      overflow: hidden;
     }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(160deg, rgba(7,26,62,0.92) 0%, rgba(13,43,107,0.88) 55%, rgba(7,26,62,0.85) 100%);
+    }
+    .hero .container { position: relative; z-index: 1; }
     .hero-tag {
       display: inline-block;
       background: rgba(58,143,224,0.2);
@@ -178,6 +186,15 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           <span class="historia-year">1966</span>
           <h3>La primer óptica con laboratorio de lentes</h3>
           <p>En 1966, Jorge Aranda Marín y Rosalinda Tello Marín abrieron las puertas de la primer óptica con laboratorio de lentes en el centro de Tuxtla Gutiérrez. No tenían más que su oficio, su nombre y el compromiso de cuidar a su gente. Con los años, aquel proyecto familiar se convertiría en la óptica más longeva y con mayor tradición de Chiapas.</p>
+          <figure class="historia-foto">
+            <img
+              src="/primera-optica-jarmar-1966.jpg"
+              alt="Fachada de la primera Óptica Jarmar en Tuxtla Gutiérrez, 1966"
+              width="1600" height="1240" loading="lazy"
+              onerror="this.closest('.historia-foto').classList.add('historia-foto--empty'); this.remove();"
+            />
+            <figcaption>La primera Óptica Jarmar, Tuxtla Gutiérrez, 1966</figcaption>
+          </figure>
           <p>Década tras década, la confianza de las familias chiapanecas trascendió generaciones: los hijos volvían convertidos en padres y, más tarde, en abuelos. Ese respaldo permitió que Jarmar se expandiera por todo el estado e hiciera historia más allá de él. Fue así como el apellido dejó de ser un simple nombre y se convirtió en un refugio de certeza: un lugar al que la gente sabía que siempre podía volver.</p>
         </div>
         <div class="historia-item">
@@ -219,6 +236,15 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             <figcaption>Inauguración de la sucursal Tijuana, enero de 2020</figcaption>
           </figure>
           <p>Fruto del trabajo interdisciplinario de los años anteriores, en octubre de 2020 se materializó nuestro segundo gran proyecto: el Centro Visual, creado en cooperación con el centro oftalmológico referente en Chiapas. Esta alianza nos permitió crecer dentro del mismo espacio y consolidar nuestra Clínica Óptica Boutique Jarmar Arboledas en Tuxtla Gutiérrez.</p>
+          <figure class="historia-foto">
+            <img
+              src="/apertura-centro-visual-jarmar.jpg"
+              alt="Apertura del Centro Visual Jarmar en Tuxtla Gutiérrez, octubre de 2020"
+              width="1600" height="1200" loading="lazy"
+              onerror="this.closest('.historia-foto').classList.add('historia-foto--empty'); this.remove();"
+            />
+            <figcaption>Apertura del Centro Visual, octubre de 2020</figcaption>
+          </figure>
         </div>
         <div class="historia-item">
           <span class="historia-year">2022</span>
