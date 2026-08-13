@@ -1144,6 +1144,39 @@
       flex-direction: column;
       gap: 0;
     }
+    .escleral-img-wrap {
+      position: relative;
+      border-radius: 24px;
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.35);
+      margin-bottom: 20px;
+    }
+    .escleral-img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .escleral-img-badge {
+      position: absolute;
+      top: 20px; left: 20px;
+      background: linear-gradient(135deg, #7EC8F5, #3A8FE0);
+      color: var(--azul-noche, #071A3E);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 8px 14px;
+      border-radius: 100px;
+    }
+    .escleral-img-years {
+      position: absolute;
+      bottom: 20px; right: 20px;
+      background: rgba(7,26,62,0.85);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(58,143,224,0.25);
+      border-radius: 16px;
+      padding: 14px 18px;
+      text-align: center;
+    }
+    .escleral-img-years strong { display: block; font-family: var(--font-display); font-size: 1.8rem; color: #7EC8F5; line-height: 1; }
+    .escleral-img-years span { font-size: 0.62rem; color: rgba(255,255,255,0.55); text-transform: uppercase; letter-spacing: 0.12em; }
     .escleral-stat-block {
       background: rgba(255,255,255,0.06);
       border: 1px solid rgba(255,255,255,0.12);
@@ -1731,6 +1764,14 @@
           </div>
         </div>
         <div class="esclerales-right reveal delay-2">
+          <div class="escleral-img-wrap">
+            <img src="/lentes-esclerales-jarmar.jpg" alt="Lentes Esclerales Jarmar Chiapas" loading="lazy" />
+            <div class="escleral-img-badge">Producto estrella</div>
+            <div class="escleral-img-years">
+              <strong>+10</strong>
+              <span>Años de especialidad</span>
+            </div>
+          </div>
           <div class="escleral-stat-block">
             <span class="escleral-stat-num">100%</span>
             <span class="escleral-stat-label">de adaptación garantizada — si no funciona, lo resolvemos</span>
