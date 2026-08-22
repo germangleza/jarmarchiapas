@@ -105,6 +105,36 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     }
     .historia-item p + p { margin-top: 10px; }
 
+    .historia-acronimo {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      background: rgba(58,143,224,0.08);
+      border: 1px solid rgba(58,143,224,0.25);
+      border-left: 4px solid var(--accent);
+      border-radius: 16px;
+      padding: 20px 24px;
+      margin: 20px 0;
+      max-width: 480px;
+    }
+    .acronimo-marca {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      color: var(--azul-medio);
+    }
+    .acronimo-desglose {
+      font-size: 1rem;
+      color: #2D3748;
+    }
+    .acronimo-desglose strong { color: var(--azul-medio); }
+    .acronimo-nota {
+      font-size: 0.85rem;
+      font-style: italic;
+      color: #4A5568;
+      margin-top: 2px;
+    }
     .historia-foto {
       margin: 16px 0;
       border-radius: 16px;
@@ -189,7 +219,12 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         <div class="historia-item">
           <span class="historia-year">1966</span>
           <h3>La primer óptica con laboratorio de lentes</h3>
-          <p>En 1966, Jorge Aranda Marín y Rosalinda Tello Marín abrieron las puertas de la primer óptica con laboratorio de lentes en el centro de Tuxtla Gutiérrez. No tenían más que su oficio, su nombre y el compromiso de cuidar a su gente. Con los años, aquel proyecto familiar se convertiría en la óptica más longeva y con mayor tradición de Chiapas.</p>
+          <p>En 1966, Jorge Aranda Marín y Rosalinda Tello Marín abrieron las puertas de la primer óptica con laboratorio de lentes en el centro de Tuxtla Gutiérrez. De su nombre nació el de la empresa: Jarmar es el acrónimo de <strong>J</strong>orge <strong>Ar</strong>anda <strong>Mar</strong>ín — desde entonces, cada par de lentes lleva la firma de su fundador. No tenían más que su oficio, su nombre y el compromiso de cuidar a su gente. Con los años, aquel proyecto familiar se convertiría en la óptica más longeva y con mayor tradición de Chiapas.</p>
+          <div class="historia-acronimo">
+            <span class="acronimo-marca">JARMAR</span>
+            <span class="acronimo-desglose"><strong>J</strong>orge · <strong>AR</strong>anda · <strong>MAR</strong>ín</span>
+            <span class="acronimo-nota">El nombre del fundador, convertido en apellido de la marca.</span>
+          </div>
           <figure class="historia-foto">
             <img
               src="/primera-optica-jarmar-1966.jpg"

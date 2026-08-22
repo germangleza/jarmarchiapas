@@ -13,7 +13,7 @@ Esta es nuestra historia en corto. La versión completa, con fotografías de ép
 
 ## 1966: una pareja, un oficio y una convicción
 
-Todo comenzó cuando **Jorge Aranda Marín y Rosalinda Tello Marín** abrieron en el centro de Tuxtla Gutiérrez la primera óptica con laboratorio de lentes propio. No había plan de expansión ni visión de cadena: había un oficio bien aprendido, un apellido que cuidar y una convicción sencilla que seguimos repitiendo hoy — **ver bien es parte de vivir bien**.
+Todo comenzó cuando **Jorge Aranda Marín y Rosalinda Tello Marín** abrieron en el centro de Tuxtla Gutiérrez la primera óptica con laboratorio de lentes propio. Hasta el nombre del negocio salió de ahí: **Jarmar** son las iniciales del fundador — **J**orge **Ar**anda **Mar**ín. No había plan de expansión ni visión de cadena: había un oficio bien aprendido, un apellido que cuidar y una convicción sencilla que seguimos repitiendo hoy — **ver bien es parte de vivir bien**.
 
 El letrero de aquel local ya prometía lo esencial: examen de la vista y lentes de contacto. Con las décadas, ese proyecto de dos se convertiría en la óptica más longeva y con mayor tradición de Chiapas.
 
