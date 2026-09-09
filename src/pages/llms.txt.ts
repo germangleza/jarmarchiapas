@@ -15,6 +15,8 @@ export const GET: APIRoute = async () => {
 
 - [Inicio](${site.url}/): Hub nacional de Ópticas Jarmar — Clínica Óptica Boutique con presencia en Chiapas y Tijuana.
 - [Chiapas — Tuxtla Gutiérrez](${site.url}/chiapas/): Sucursales Plaza Cedros y Plaza Crystal. Diagnóstico médico, lentes graduados, Jarmar Eyewear, lentes esclerales.
+- [Chiapas — Sucursal Arboledas](${site.url}/chiapas/arboledas/): Óptica Jarmar en Plaza Cedros, Col. Arboledas, Tuxtla Gutiérrez. Sede clínica con Centro Visual y contactología especializada. Ubicación, horario, teléfono y WhatsApp.
+- [Chiapas — Sucursal Plaza Crystal](${site.url}/chiapas/plaza-crystal/): Óptica Jarmar dentro de Plaza Crystal, Tuxtla Gutiérrez. Desde 1996. Examen de la vista, lentes y boutique Jarmar Eyewear. Ubicación, horario, teléfono y WhatsApp.
 - [Tijuana — Baja California](${site.url}/tijuana/): Sucursal Zona Urbana Río. Clínica Óptica Boutique de referencia en Tijuana.
 - [Nuestra Historia](${site.url}/historia/): 60 años de historia, de Tuxtla Gutiérrez (1966) a Tijuana. Tres generaciones cuidando la visión de México.
 
