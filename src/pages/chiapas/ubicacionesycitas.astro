@@ -104,6 +104,17 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     }
     .link-btn--maps:hover { box-shadow: 0 8px 22px rgba(7,26,62,0.35); }
 
+    .sucursal-ficha {
+      display: block;
+      text-align: center;
+      margin: 12px 0 0;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--azul-medio);
+      text-decoration: none;
+    }
+    .sucursal-ficha:hover { text-decoration: underline; }
+
     .social-row {
       display: flex;
       justify-content: center;
@@ -175,6 +186,8 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
             <span class="link-btn-sub">Plaza Cedros, Col. Arboledas</span>
           </span>
         </a>
+
+        <a href="/chiapas/arboledas" class="sucursal-ficha">Ver horario, mapa y servicios de Arboledas →</a>
       </div>
 
       <p class="sucursal-label">Sucursal Plaza Crystal</p>
@@ -205,6 +218,8 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
             <span class="link-btn-sub">Plaza Crystal</span>
           </span>
         </a>
+
+        <a href="/chiapas/plaza-crystal" class="sucursal-ficha">Ver horario, mapa y servicios de Plaza Crystal →</a>
       </div>
 
       <!-- REDES -->

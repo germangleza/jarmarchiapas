@@ -1,0 +1,43 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import SucursalLanding from "../../components/SucursalLanding.astro";
+---
+
+<BaseLayout
+  title="Óptica en Tuxtla Gutiérrez | Ópticas Jarmar Plaza Crystal"
+  description="Ópticas Jarmar Plaza Crystal: óptica en Tuxtla Gutiérrez en Blvd. Belisario Domínguez, Int. 6-A. Examen de la vista, lentes graduados y de contacto. Horario, teléfono, WhatsApp y mapa."
+  ogImage="https://www.jarmar.com/sucursal-jarmar-plaza-crystal.png"
+>
+  <SucursalLanding
+    nombre="Plaza Crystal"
+    slug="plaza-crystal"
+    etiqueta="Sucursal · Plaza Crystal"
+    direccionCorta="Plaza Crystal, Blvd. Belisario Domínguez Int. 6-A<br>Col. Jardines de Tuxtla, C.P. 29020<br>Tuxtla Gutiérrez, Chiapas"
+    direccionCompleta="Plaza Crystal, Blvd. Belisario Domínguez Int. 6-A, Col. Jardines de Tuxtla, C.P. 29020, Tuxtla Gutiérrez, Chiapas"
+    streetAddress="Plaza Crystal, Blvd. Belisario Domínguez Int. 6-A, Col. Jardines de Tuxtla"
+    postalCode="29020"
+    ubicacionNota="Dentro del centro comercial, con estacionamiento."
+    telefono="961 185 5475"
+    telefonoIntl="+529611855475"
+    whatsapp="https://wa.me/529611855475?text=Hola%2C%20quiero%20agendar%20una%20cita%20en%20%C3%93pticas%20Jarmar%20Plaza%20Crystal."
+    mapa="https://maps.app.goo.gl/3cwL8wvXXwQtokMz9"
+    embed="https://www.google.com/maps?q=Plaza%20Crystal%2C%20Blvd.%20Belisario%20Dom%C3%ADnguez%2C%20Jardines%20de%20Tuxtla%2C%2029020%20Tuxtla%20Guti%C3%A9rrez%2C%20Chiapas&output=embed"
+    horarios={[{ dias: "Lunes a sábado", horas: "11:00 – 20:00" }]}
+    horarioFrase="Atendemos de lunes a sábado de 11:00 a 20:00."
+    horarioSchema={[
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        opens: "11:00",
+        closes: "20:00",
+      },
+    ]}
+    comoLlegar="Estamos dentro de Plaza Crystal, sobre el Blvd. Belisario Domínguez, en la colonia Jardines de Tuxtla. Abre el mapa para trazar tu ruta desde donde estés."
+    imagen="https://www.jarmar.com/sucursal-jarmar-plaza-crystal.png"
+    otra={{
+      nombre: "Arboledas",
+      url: "/chiapas/arboledas",
+      gancho: "¿Te queda más cerca la colonia Arboledas?",
+    }}
+  />
+</BaseLayout>

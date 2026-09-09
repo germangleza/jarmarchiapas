@@ -1,0 +1,548 @@
+---
+// Landing de sucursal. Las dos sucursales de Chiapas ofrecen exactamente los
+// mismos servicios, así que toda la comunicación vive aquí y solo cambian los
+// datos de contacto de cada una (dirección, horario, teléfono, mapa).
+
+interface Horario {
+  dias: string;
+  horas: string;
+}
+
+interface Props {
+  nombre: string;           // "Arboledas" / "Plaza Crystal"
+  slug: string;             // "arboledas" / "plaza-crystal"
+  etiqueta: string;         // texto de la píldora del hero
+  direccionCorta: string;   // para la tarjeta de datos
+  direccionCompleta: string;// para el schema y la FAQ
+  streetAddress: string;
+  postalCode: string;
+  ubicacionNota: string;
+  telefono: string;         // "961 240 6013"
+  telefonoIntl: string;     // "+529612406013"
+  whatsapp: string;
+  mapa: string;             // link corto de Google Maps
+  embed: string;            // src del iframe
+  horarios: Horario[];      // para la tarjeta de datos
+  horarioFrase: string;     // misma info, en prosa, para la FAQ
+  horarioSchema: Array<Record<string, unknown>>;
+  comoLlegar: string;
+  imagen: string;
+  otra: { nombre: string; url: string; gancho: string };
+  // TODO: coordenadas reales de cada sucursal (ver README de la sucursal).
+  // Cuando estén, se agregan aquí y se inyectan al schema como GeoCoordinates.
+  geo?: { lat: string; lng: string };
+}
+
+const p = Astro.props as Props;
+const url = `https://www.jarmar.com/chiapas/${p.slug}/`;
+
+// Fuente única de la FAQ: el texto visible y el JSON-LD salen de aquí,
+// así nunca se desincronizan (ver CLAUDE.md → Schema).
+const faq = [
+  {
+    q: `¿Dónde está Ópticas Jarmar ${p.nombre}?`,
+    a: `Estamos en ${p.direccionCompleta}. ${p.ubicacionNota} Desde el mapa de esta página puedes abrir la ruta directa en Google Maps.`,
+  },
+  {
+    q: `¿Cuál es el horario de la sucursal ${p.nombre}?`,
+    a: `${p.horarioFrase} Los domingos permanecemos cerrados. Si quieres confirmar antes de venir, escríbenos por WhatsApp al ${p.telefono}.`,
+  },
+  {
+    q: `¿Necesito cita para que me atiendan en ${p.nombre}?`,
+    a: `Puedes llegar sin cita. Aun así te recomendamos agendar por WhatsApp al ${p.telefono}: así reservamos el tiempo completo del optometrista para tu evaluación y no tienes que esperar.`,
+  },
+  {
+    q: `¿Qué servicios encuentro en la sucursal ${p.nombre}?`,
+    a: "Los mismos que en cualquier sucursal de Ópticas Jarmar: estudio de la vista completo, lentes graduados, lentes de contacto, lentes esclerales y contactología especializada, examen visual infantil, lentes con filtro de luz azul, lentes de sol y nuestra boutique de armazones con la línea propia Jarmar Eyewear. No hay servicios que atendamos en una sucursal y en la otra no.",
+  },
+  {
+    q: `¿Adaptan lentes esclerales en ${p.nombre}?`,
+    a: "Sí. Contamos con contactología especializada y más de 10 años adaptando lentes esclerales para queratocono, córneas irregulares, pacientes post-trasplante de córnea y ojo seco severo. Es una valoración que conviene agendar con anticipación.",
+  },
+  {
+    q: `¿Atienden a niños en ${p.nombre}?`,
+    a: "Sí. Evaluamos a niños desde los 3 años con un protocolo pensado para que la revisión sea tranquila y sin estrés. La detección temprana de un problema visual puede cambiar el desempeño escolar de un niño.",
+  },
+  {
+    q: "¿Aceptan el beneficio de visión de mi seguro?",
+    a: "Sí. Aceptamos el beneficio de visión de cualquier aseguradora. Trae tu póliza o la carta de tu seguro y te ayudamos a aplicarla en tu examen de la vista y en tus lentes.",
+  },
+];
+
+const localBusiness = {
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "Optician"],
+  "@id": `${url}#local`,
+  name: `Ópticas Jarmar ${p.nombre}`,
+  parentOrganization: { "@id": "https://www.jarmar.com/#organization" },
+  url,
+  image: p.imagen,
+  telephone: p.telefonoIntl.replace(/^\+52/, "+52-").replace(/(\d{3})(\d{3})(\d{4})$/, "$1-$2-$3"),
+  priceRange: "$$",
+  currenciesAccepted: "MXN",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: p.streetAddress,
+    addressLocality: "Tuxtla Gutiérrez",
+    addressRegion: "Chiapas",
+    postalCode: p.postalCode,
+    addressCountry: "MX",
+  },
+  ...(p.geo ? { geo: { "@type": "GeoCoordinates", latitude: p.geo.lat, longitude: p.geo.lng } } : {}),
+  hasMap: p.mapa,
+  openingHoursSpecification: p.horarioSchema,
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.9",
+    reviewCount: "880",
+    bestRating: "5",
+    worstRating: "1",
+  },
+  sameAs: [
+    "https://www.facebook.com/opticasjarmarchiapas",
+    "https://www.instagram.com/opticasjarmar/",
+    `https://wa.me/${p.telefonoIntl.replace("+", "")}`,
+  ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: `Servicios en Ópticas Jarmar ${p.nombre}`,
+    itemListElement: [
+      "Estudio de la vista",
+      "Lentes graduados",
+      "Lentes de contacto",
+      "Lentes esclerales",
+      "Examen visual infantil",
+      "Lentes de luz azul",
+      "Lentes de sol",
+      "Jarmar Eyewear",
+    ].map((name) => ({ "@type": "Offer", itemOffered: { "@type": "Service", name } })),
+  },
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": `${url}#faq`,
+  mainEntity: faq.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+
+const breadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Inicio", item: "https://www.jarmar.com/" },
+    { "@type": "ListItem", position: 2, name: "Chiapas", item: "https://www.jarmar.com/chiapas/" },
+    { "@type": "ListItem", position: 3, name: p.nombre, item: url },
+  ],
+};
+
+const servicios = [
+  { href: "/chiapas/estudio-de-la-vista", ico: "👁", label: "Estudio de la vista" },
+  { href: "/chiapas/lentes-graduados", ico: "👓", label: "Lentes graduados" },
+  { href: "/chiapas/lentes-de-contacto", ico: "🔵", label: "Lentes de contacto" },
+  { href: "/chiapas/lentes-esclerales", ico: "⭐", label: "Lentes esclerales" },
+  { href: "/chiapas/queratocono", ico: "🩺", label: "Queratocono" },
+  { href: "/chiapas/examen-ninos", ico: "🧒", label: "Examen visual infantil" },
+  { href: "/chiapas/lentes-luz-azul", ico: "💻", label: "Lentes de luz azul" },
+  { href: "/chiapas/lentes-de-sol", ico: "😎", label: "Lentes de sol" },
+];
+
+const resenas = [
+  {
+    hook: "Cambié mis lentes y desaparecieron los dolores.",
+    texto: "Llevaba años con dolores de cabeza y pensé que era estrés. En Jarmar descubrieron que tenía la graduación mal desde hacía tiempo. No puedo creer que esperé tanto.",
+    autor: "Mariana R.",
+  },
+  {
+    hook: "Ya usa sus lentes y mejoró mucho en la escuela.",
+    texto: "Llevé a mi hijo de 7 años porque la maestra dijo que se distraía mucho. Tenía miopía. La atención fue muy amable y paciente con él.",
+    autor: "Carlos M.",
+  },
+  {
+    hook: "Todo el mundo me pregunta dónde los compré.",
+    texto: "Me enamoré de los lentes Jarmar Eyewear. Son cómodos, ligeros y únicos. Nada que ver con los que había comprado antes en otro lugar.",
+    autor: "Sofía T.",
+  },
+];
+---
+
+<Fragment slot="head">
+  <meta name="geo.region" content="MX-CHP" />
+  <meta name="geo.placename" content="Tuxtla Gutiérrez, Chiapas, México" />
+  {p.geo && <meta name="geo.position" content={`${p.geo.lat};${p.geo.lng}`} />}
+  {p.geo && <meta name="ICBM" content={`${p.geo.lat}, ${p.geo.lng}`} />}
+  <script type="application/ld+json" set:html={JSON.stringify(localBusiness)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumb)} />
+</Fragment>
+
+<style>
+  :root {
+    --bg: #071A3E;
+    --surface: #0D2B6B;
+    --accent: #3A8FE0;
+    --gris: #4A5568;
+    --verde-wa: #25D366;
+  }
+
+  .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, var(--bg) 0%, var(--surface) 100%);
+    color: #fff;
+    padding: 92px 20px 72px;
+    text-align: center;
+  }
+  .hero-tag {
+    display: inline-block;
+    background: rgba(58,143,224,0.2);
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    border-radius: 100px;
+    padding: 6px 18px;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+  .hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(1.9rem, 5vw, 3rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+  .hero h1 span { color: var(--accent); }
+  .hero-intro {
+    font-size: 1.08rem;
+    opacity: 0.88;
+    max-width: 660px;
+    margin: 0 auto 32px;
+    line-height: 1.75;
+  }
+  .hero-rating {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 28px;
+  }
+  .hero-rating .stars { color: #F6AD55; letter-spacing: 1px; }
+
+  .btn-row { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+  .btn-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    border-radius: 100px;
+    font-weight: 700;
+    font-size: 0.98rem;
+    text-decoration: none;
+    transition: opacity 0.2s, transform 0.2s;
+  }
+  .btn-cta:hover { opacity: 0.92; transform: translateY(-2px); }
+  .btn-wa { background: var(--verde-wa); color: #fff; }
+  .btn-tel { background: var(--accent); color: #fff; }
+  .btn-ghost { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,0.5); }
+
+  /* SECCIONES */
+  .section { padding: 68px 20px; }
+  .section--alt { background: #f7f9fc; }
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 3vw, 2.1rem);
+    font-weight: 700;
+    color: var(--bg);
+    margin-bottom: 16px;
+  }
+  .section-title span { color: var(--accent); }
+  .section-sub { color: var(--gris); line-height: 1.75; font-size: 1.03rem; margin-bottom: 34px; }
+
+  /* DATOS DE CONTACTO */
+  .datos { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+  .dato {
+    background: #fff;
+    border: 1.5px solid rgba(58,143,224,0.22);
+    border-radius: 16px;
+    padding: 22px 24px;
+  }
+  .dato h3 {
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 10px;
+  }
+  .dato p { color: #2d3748; line-height: 1.6; font-size: 1rem; }
+  .dato p strong { color: var(--bg); }
+  .dato a { color: var(--surface); font-weight: 600; text-decoration: none; }
+  .dato a:hover { text-decoration: underline; }
+  .dato-nota { display: block; margin-top: 8px; font-size: 0.86rem; color: var(--gris); }
+
+  /* MAPA */
+  .mapa-wrap {
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1.5px solid rgba(58,143,224,0.22);
+    box-shadow: 0 6px 24px rgba(13,43,107,0.08);
+    line-height: 0;
+  }
+  .mapa-wrap iframe { width: 100%; height: 400px; border: 0; display: block; }
+  .mapa-link { display: inline-block; margin-top: 18px; color: var(--accent); font-weight: 700; text-decoration: none; }
+  .mapa-link:hover { text-decoration: underline; }
+
+  /* SERVICIOS */
+  .servicios { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; }
+  .servicio {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #fff;
+    border: 1.5px solid rgba(58,143,224,0.22);
+    border-radius: 14px;
+    padding: 18px 20px;
+    color: #2d3748;
+    text-decoration: none;
+    font-weight: 600;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .servicio:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .servicio .ico { font-size: 1.3rem; }
+
+  /* DESTACADO */
+  .destacado { background: var(--surface); color: #fff; border-radius: 20px; padding: 38px 34px; }
+  .destacado h3 { font-family: var(--font-display); font-size: 1.25rem; color: var(--accent); margin-bottom: 14px; }
+  .destacado p { opacity: 0.9; line-height: 1.8; }
+  .destacado p + p { margin-top: 14px; }
+  .destacado a { color: var(--accent); font-weight: 700; text-decoration: none; }
+  .destacado a:hover { text-decoration: underline; }
+  @media (max-width: 600px) { .destacado { padding: 28px 22px; } }
+
+  /* RESEÑAS */
+  .rating-head { text-align: center; margin-bottom: 34px; }
+  .rating-num { font-family: var(--font-display); font-size: 3rem; font-weight: 700; color: var(--bg); line-height: 1; }
+  .rating-stars { display: block; color: #F6AD55; font-size: 1.15rem; letter-spacing: 3px; margin: 8px 0 10px; }
+  .rating-sub { color: var(--gris); font-size: 1rem; }
+  .resenas { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+  .resena {
+    background: #fff;
+    border: 1.5px solid rgba(58,143,224,0.2);
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+  }
+  .resena-hook { font-family: var(--font-display); font-weight: 700; color: var(--bg); font-size: 1.02rem; margin-bottom: 10px; }
+  .resena p { color: var(--gris); line-height: 1.7; font-size: 0.95rem; flex: 1; }
+  .resena-autor { margin-top: 16px; font-size: 0.85rem; color: var(--gris); }
+  .resena-autor strong { display: block; color: var(--bg); font-size: 0.95rem; }
+  .ver-resenas { display: inline-block; margin-top: 26px; color: var(--accent); font-weight: 700; text-decoration: none; }
+  .ver-resenas:hover { text-decoration: underline; }
+
+  /* FAQ */
+  .faq { display: flex; flex-direction: column; gap: 18px; }
+  .faq-item {
+    background: #fff;
+    border: 1.5px solid rgba(58,143,224,0.2);
+    border-radius: 16px;
+    padding: 24px 28px;
+  }
+  .faq-item h3 {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--bg);
+    margin-bottom: 10px;
+  }
+  .faq-item p { color: var(--gris); line-height: 1.75; font-size: 1rem; }
+
+  /* CTA FINAL */
+  .cta-section {
+    background: linear-gradient(135deg, var(--bg) 0%, var(--surface) 100%);
+    color: #fff;
+    text-align: center;
+    padding: 76px 20px;
+  }
+  .cta-section h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .cta-section p { font-size: 1.05rem; opacity: 0.86; margin: 0 auto 32px; max-width: 560px; line-height: 1.7; }
+
+  /* NAV INFERIOR */
+  .otra-sucursal { text-align: center; padding: 34px 20px 12px; color: var(--gris); font-size: 0.98rem; }
+  .otra-sucursal a { color: var(--accent); font-weight: 700; text-decoration: none; }
+  .otra-sucursal a:hover { text-decoration: underline; }
+  .back-link {
+    display: block;
+    text-align: center;
+    padding: 12px 20px 34px;
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+  .back-link:hover { text-decoration: underline; }
+</style>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <span class="hero-tag">{p.etiqueta}</span>
+    <h1>Óptica Jarmar {p.nombre}<br>en <span>Tuxtla Gutiérrez</span></h1>
+    <p class="hero-intro">Ópticas Jarmar {p.nombre} es una óptica en Tuxtla Gutiérrez especializada en salud visual, lentes graduados, lentes de contacto y exámenes de la vista. Desde 1966 cuidamos la visión de las familias chiapanecas con atención profesional y soluciones visuales de precisión.</p>
+    <div class="hero-rating">
+      <span class="stars">★★★★★</span>
+      <span>4.9 · más de 880 reseñas en Google</span>
+    </div>
+    <div class="btn-row">
+      <a href={p.whatsapp} target="_blank" rel="noopener" class="btn-cta btn-wa">Agendar por WhatsApp</a>
+      <a href={`tel:${p.telefonoIntl}`} class="btn-cta btn-tel">Llamar {p.telefono}</a>
+      <a href={p.mapa} target="_blank" rel="noopener" class="btn-cta btn-ghost">Cómo llegar</a>
+    </div>
+  </div>
+</section>
+
+<!-- DATOS DE LA SUCURSAL -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Ubicación, horario y <span>contacto</span></h2>
+    <p class="section-sub">Todo lo que necesitas para visitarnos en nuestra sucursal {p.nombre}, en Tuxtla Gutiérrez.</p>
+    <div class="datos">
+      <div class="dato">
+        <h3>Ubicación</h3>
+        <p>
+          <strong set:html={p.direccionCorta} />
+          <span class="dato-nota">{p.ubicacionNota}</span>
+        </p>
+      </div>
+      <div class="dato">
+        <h3>Horario</h3>
+        <p>
+          {p.horarios.map((h) => (
+            <Fragment><strong>{h.dias}:</strong> {h.horas}<br /></Fragment>
+          ))}
+          <strong>Domingo:</strong> cerrado
+          <span class="dato-nota">¿Vienes en día festivo? Confírmanos por WhatsApp antes de salir.</span>
+        </p>
+      </div>
+      <div class="dato">
+        <h3>Teléfono</h3>
+        <p>
+          <a href={`tel:${p.telefonoIntl}`}>{p.telefono}</a>
+          <span class="dato-nota">Atención en horario de sucursal.</span>
+        </p>
+      </div>
+      <div class="dato">
+        <h3>WhatsApp</h3>
+        <p>
+          <a href={p.whatsapp} target="_blank" rel="noopener">Escribir al {p.telefono}</a>
+          <span class="dato-nota">La vía más rápida para agendar tu cita.</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAPA -->
+<section class="section section--alt">
+  <div class="container">
+    <h2 class="section-title">Cómo llegar a <span>{p.nombre}</span></h2>
+    <p class="section-sub">{p.comoLlegar}</p>
+    <div class="mapa-wrap">
+      <iframe
+        src={p.embed}
+        title={`Mapa de Ópticas Jarmar ${p.nombre}, Tuxtla Gutiérrez`}
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <a href={p.mapa} target="_blank" rel="noopener" class="mapa-link">Abrir en Google Maps →</a>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Servicios en la sucursal <span>{p.nombre}</span></h2>
+    <p class="section-sub">Atendemos exactamente lo mismo en nuestras dos sucursales de Tuxtla Gutiérrez: el mismo examen, el mismo equipo clínico y las mismas soluciones visuales. Elige la que te quede más cerca.</p>
+    <div class="servicios">
+      {servicios.map((s) => (
+        <a href={s.href} class="servicio"><span class="ico">{s.ico}</span> {s.label}</a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- CLÍNICA ÓPTICA BOUTIQUE -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="destacado">
+      <h3>La misma Clínica Óptica Boutique, en las dos sucursales</h3>
+      <p>Nuestro modelo es 3 en 1 y funciona igual aquí que en nuestra otra sucursal de Tuxtla: una <strong>clínica</strong> donde revisamos la salud completa de tus ojos y no solo la graduación, una <strong>óptica</strong> con todas las soluciones visuales —incluidos lentes de contacto y <a href="/chiapas/lentes-esclerales">lentes esclerales</a> para córneas irregulares y <a href="/chiapas/queratocono">queratocono</a>— y una <strong>boutique</strong> de armazones de diseño con nuestra línea propia Jarmar Eyewear.</p>
+      <p>Detrás está el mismo equipo: nuestro Optometrista Director, el <a href="/jorgearanda/">Opt. Jorge Aranda Tello</a>, y el <a href="/hectorpineda/">Opt. Héctor Pineda</a>, que atienden a los pacientes de Chiapas. Si tu caso necesita valoración médica, te referimos con oftalmólogos de confianza. Somos la óptica con mayor trayectoria de Chiapas: <a href="/historia/">60 años y tres generaciones</a> de la misma familia.</p>
+    </div>
+  </div>
+</section>
+
+<!-- RESEÑAS -->
+<section class="section">
+  <div class="container">
+    <div class="rating-head">
+      <span class="rating-num">4.9</span>
+      <span class="rating-stars">★★★★★</span>
+      <p class="rating-sub">Más de 880 reseñas de pacientes reales en Google, entre nuestras sucursales de Chiapas y Tijuana.</p>
+    </div>
+    <div class="resenas">
+      {resenas.map((r) => (
+        <div class="resena">
+          <p class="resena-hook">{r.hook}</p>
+          <p>{r.texto}</p>
+          <div class="resena-autor"><strong>{r.autor}</strong> Reseña en Google</div>
+        </div>
+      ))}
+    </div>
+    <a href={p.mapa} target="_blank" rel="noopener" class="ver-resenas">Ver las reseñas de {p.nombre} en Google →</a>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section--alt">
+  <div class="container">
+    <h2 class="section-title">Preguntas frecuentes sobre <span>esta sucursal</span></h2>
+    <div class="faq">
+      {faq.map((item) => (
+        <div class="faq-item">
+          <h3>{item.q}</h3>
+          <p>{item.a}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-section">
+  <div class="container">
+    <h2>Te esperamos en {p.nombre}</h2>
+    <p>Agenda tu examen de la vista en nuestra sucursal {p.nombre}. Escríbenos por WhatsApp y te confirmamos horario en el momento.</p>
+    <div class="btn-row">
+      <a href={p.whatsapp} target="_blank" rel="noopener" class="btn-cta btn-wa">Agendar por WhatsApp</a>
+      <a href={`tel:${p.telefonoIntl}`} class="btn-cta btn-ghost">Llamar {p.telefono}</a>
+    </div>
+  </div>
+</section>
+
+<p class="otra-sucursal">{p.otra.gancho} <a href={p.otra.url}>Conoce nuestra sucursal {p.otra.nombre} →</a></p>
+<a href="/chiapas/" class="back-link">← Volver a Ópticas Jarmar Chiapas</a>

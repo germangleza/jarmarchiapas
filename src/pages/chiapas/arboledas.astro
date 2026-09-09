@@ -1,0 +1,47 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import SucursalLanding from "../../components/SucursalLanding.astro";
+---
+
+<BaseLayout
+  title="Óptica en Tuxtla Gutiérrez | Ópticas Jarmar Arboledas"
+  description="Ópticas Jarmar Arboledas: óptica en Tuxtla Gutiérrez en Calle 16A Pte. Nte. #266, Plaza Cedros. Examen de la vista, lentes graduados y de contacto. Horario, teléfono, WhatsApp y mapa."
+  ogImage="https://www.jarmar.com/apertura-centro-visual-jarmar.jpg"
+>
+  <SucursalLanding
+    nombre="Arboledas"
+    slug="arboledas"
+    etiqueta="Sucursal · Plaza Cedros, Arboledas"
+    direccionCorta="Calle 16A Pte. Nte. #266<br>Plaza Cedros, C.P. 29030<br>Tuxtla Gutiérrez, Chiapas"
+    direccionCompleta="Calle 16A Pte. Nte. #266, Plaza Cedros, C.P. 29030, Tuxtla Gutiérrez, Chiapas"
+    streetAddress="Calle 16A Pte. Nte. #266, Plaza Cedros"
+    postalCode="29030"
+    ubicacionNota="Dentro de Plaza Cedros, con estacionamiento."
+    telefono="961 240 6013"
+    telefonoIntl="+529612406013"
+    whatsapp="https://wa.me/529612406013?text=Hola%2C%20quiero%20agendar%20una%20cita%20en%20%C3%93pticas%20Jarmar%20Arboledas."
+    mapa="https://maps.app.goo.gl/g2ZZd4kXs5LiX5H57"
+    embed="https://www.google.com/maps?q=Calle%2016A%20Pte.%20Nte.%20266%2C%20Plaza%20Cedros%2C%2029030%20Tuxtla%20Guti%C3%A9rrez%2C%20Chiapas&output=embed"
+    horarios={[
+      { dias: "Lunes a viernes", horas: "9:00 – 17:00" },
+      { dias: "Sábado", horas: "9:00 – 15:00" },
+    ]}
+    horarioFrase="Atendemos de lunes a viernes de 9:00 a 17:00 y los sábados de 9:00 a 15:00."
+    horarioSchema={[
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "09:00",
+        closes: "17:00",
+      },
+      { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "09:00", closes: "15:00" },
+    ]}
+    comoLlegar="Estamos sobre la Calle 16A Poniente Norte #266, dentro de Plaza Cedros, en la colonia Arboledas de Tuxtla Gutiérrez. Abre el mapa para trazar tu ruta desde donde estés."
+    imagen="https://www.jarmar.com/apertura-centro-visual-jarmar.jpg"
+    otra={{
+      nombre: "Plaza Crystal",
+      url: "/chiapas/plaza-crystal",
+      gancho: "¿Te queda más cerca el Blvd. Belisario Domínguez?",
+    }}
+  />
+</BaseLayout>
