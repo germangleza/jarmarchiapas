@@ -27,6 +27,7 @@ interface Props {
   horarioSchema: Array<Record<string, unknown>>;
   comoLlegar: string;
   imagen: string;
+  heroImagen?: string;   // imagen de fondo del hero; si falta, queda el degradado solo
   otra: { nombre: string; url: string; gancho: string };
   // TODO: coordenadas reales de cada sucursal (ver README de la sucursal).
   // Cuando estén, se agregan aquí y se inyectan al schema como GeoCoordinates.
@@ -198,6 +199,20 @@ const resenas = [
     padding: 92px 20px 72px;
     text-align: center;
   }
+  /* Hero con imagen de fondo: mismo overlay que el hero de /chiapas/ */
+  .hero--img {
+    position: relative;
+    background: var(--hero-img) center/cover no-repeat;
+  }
+  .hero--img::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, rgba(7,26,62,0.90) 0%, rgba(13,43,107,0.75) 55%, rgba(26,91,181,0.50) 100%);
+    z-index: 0;
+  }
+  .hero--img > .container { position: relative; z-index: 1; }
+
   .hero-tag {
     display: inline-block;
     background: rgba(58,143,224,0.2);
@@ -396,10 +411,13 @@ const resenas = [
 </style>
 
 <!-- HERO -->
-<section class="hero">
+<section
+  class:list={["hero", p.heroImagen && "hero--img"]}
+  style={p.heroImagen ? `--hero-img: url('${p.heroImagen}')` : undefined}
+>
   <div class="container">
     <span class="hero-tag">{p.etiqueta}</span>
-    <h1>Óptica Jarmar {p.nombre}<br>en <span>Tuxtla Gutiérrez</span></h1>
+    <h1>Ópticas Jarmar {p.nombre}<br>en <span>Tuxtla Gutiérrez</span></h1>
     <p class="hero-intro">Ópticas Jarmar {p.nombre} es una óptica en Tuxtla Gutiérrez especializada en salud visual, lentes graduados, lentes de contacto y exámenes de la vista. Desde 1966 cuidamos la visión de las familias chiapanecas con atención profesional y soluciones visuales de precisión.</p>
     <div class="hero-rating">
       <span class="stars">★★★★★</span>
