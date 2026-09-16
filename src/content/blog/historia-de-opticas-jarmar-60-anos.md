@@ -29,7 +29,7 @@ Entre **2015 y 2018** trabajamos en un proyecto interdisciplinario en el Hospita
 
 En **2018** se integró la tercera generación: **Germán González Aranda**, nieto mayor, con un encargo mayúsculo — llevar a Jarmar más lejos. Y lo cumplió literalmente: en enero de **2020** inauguramos nuestra sucursal de **[Tijuana, Zona Urbana Río](/tijuana/)**, uniendo a México de frontera a frontera y abriendo la puerta al turismo médico de San Diego y el sur de California.
 
-Ese mismo 2020, en plena pandemia, abrimos en Tuxtla el **Centro Visual** en alianza con el centro oftalmológico de referencia en Chiapas, consolidando nuestra sede de **[Arboledas](/chiapas/)**.
+Ese mismo 2020, en plena pandemia, abrimos en Tuxtla el **Centro Visual** en alianza con el centro oftalmológico de referencia en Chiapas, consolidando nuestra sede de **[Arboledas](/tuxtla/)**.
 
 ## Jarmar Eyewear y el presente
 
@@ -49,4 +49,4 @@ Como pioneros del formato **Clínica Óptica Boutique** en México, seguimos com
 
 **Y sé parte del siguiente capítulo:**
 
-[Visítanos en Chiapas](/chiapas/) · [Visítanos en Tijuana](/tijuana/)
+[Visítanos en Chiapas](/tuxtla/) · [Visítanos en Tijuana](/tijuana/)

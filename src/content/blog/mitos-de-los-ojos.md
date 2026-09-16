@@ -51,4 +51,4 @@ Estos síntomas sí requieren revisión pronto, no en algún momento:
 
 ## Una revisión a tiempo marca la diferencia
 
-En **Ópticas Jarmar** realizamos [exámenes de la vista](/tijuana/estudio-de-la-vista) completos en nuestras clínicas de [Chiapas](/chiapas/estudio-de-la-vista) (Plaza Cedros y Plaza Crystal) y [Tijuana](/tijuana/estudio-de-la-vista) (Zona Urbana Río). Si tienes dudas sobre tu salud visual o llevas más de un año sin revisión, te recomendamos agendar una consulta — muchas condiciones se tratan mejor cuando se detectan temprano.
+En **Ópticas Jarmar** realizamos [exámenes de la vista](/tijuana/estudio-de-la-vista) completos en nuestras clínicas de [Chiapas](/tuxtla/estudio-de-la-vista) (Plaza Cedros y Plaza Crystal) y [Tijuana](/tijuana/estudio-de-la-vista) (Zona Urbana Río). Si tienes dudas sobre tu salud visual o llevas más de un año sin revisión, te recomendamos agendar una consulta — muchas condiciones se tratan mejor cuando se detectan temprano.

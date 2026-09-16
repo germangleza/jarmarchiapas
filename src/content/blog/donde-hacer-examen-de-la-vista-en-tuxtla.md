@@ -11,7 +11,7 @@ draft: false
 
 Tuxtla tiene de todo: cadenas nacionales de ópticas, consultorios en plazas comerciales, farmacias con medición rápida y ópticas de barrio. La variedad es amplia — y la diferencia entre una revisión de 10 minutos y un examen clínico completo, también.
 
-Si lo que buscas es un [examen de la vista completo](/chiapas/estudio-de-la-vista) que realmente te diga cómo están tus ojos —y no solo una graduación para venderte lentes— hay criterios concretos que conviene revisar antes de elegir.
+Si lo que buscas es un [examen de la vista completo](/tuxtla/estudio-de-la-vista) que realmente te diga cómo están tus ojos —y no solo una graduación para venderte lentes— hay criterios concretos que conviene revisar antes de elegir.
 
 ---
 
@@ -42,8 +42,8 @@ Lo que encuentras en nuestras sucursales de Tuxtla:
 
 - **Examen realizado por optometristas certificados**, con equipo clínico de diagnóstico.
 - **Detección temprana**: evaluamos la salud completa del ojo, no solo la graduación, y si algo requiere atención médica te referimos con oftalmólogos de confianza.
-- **Especialidades que pocas ópticas del sureste ofrecen**, como topografía corneal y adaptación de [lentes esclerales](/chiapas/lentes-esclerales) para queratocono y córneas irregulares.
-- **Protocolo infantil** para evaluar a los pequeños desde los 3 años ([examen para niños](/chiapas/examen-ninos)).
+- **Especialidades que pocas ópticas del sureste ofrecen**, como topografía corneal y adaptación de [lentes esclerales](/tuxtla/lentes-esclerales) para queratocono y córneas irregulares.
+- **Protocolo infantil** para evaluar a los pequeños desde los 3 años ([examen para niños](/tuxtla/examen-ninos)).
 - **4.9★ en Google con más de 880 reseñas** entre nuestras sucursales.
 
 ¿Quieres saber exactamente qué pruebas incluye y cómo es la visita paso a paso? Lo contamos en [Examen de la vista en Tuxtla: qué incluye y cuánto dura](/blog/examen-de-la-vista-tuxtla-gutierrez/).
@@ -60,7 +60,7 @@ La sucursal donde también opera nuestro Centro Visual, en alianza con el centro
 Nuestra sede con tres décadas de historia en el centro comercial más conocido de Tuxtla.
 [Agendar por WhatsApp: 961 185 5475](https://wa.me/529611855475?text=Hola%2C+quiero+agendar+un+examen+de+la+vista+en+%C3%93pticas+Jarmar+Plaza+Crystal.)
 
-Encuentra mapas y botones de cita de ambas sucursales en [ubicaciones y citas](/chiapas/ubicacionesycitas/).
+Encuentra mapas y botones de cita de ambas sucursales en [ubicaciones y citas](/tuxtla/ubicacionesycitas/).
 
 ---
 
@@ -68,7 +68,7 @@ Encuentra mapas y botones de cita de ambas sucursales en [ubicaciones y citas](/
 
 ¿Dónde hacerte un examen de la vista en Tuxtla Gutiérrez? Donde te examine un optometrista certificado, con equipo clínico, tiempo suficiente y respaldo médico. En Ópticas Jarmar lo hacemos así desde hace 60 años — y nos encantaría que lo comprobaras.
 
-[Agendar mi examen en Tuxtla](https://wa.me/529611855475?text=Hola%2C+quiero+agendar+un+examen+de+la+vista+en+%C3%93pticas+Jarmar.) · [Conoce el servicio completo](/chiapas/estudio-de-la-vista)
+[Agendar mi examen en Tuxtla](https://wa.me/529611855475?text=Hola%2C+quiero+agendar+un+examen+de+la+vista+en+%C3%93pticas+Jarmar.) · [Conoce el servicio completo](/tuxtla/estudio-de-la-vista)
 
 ---
 

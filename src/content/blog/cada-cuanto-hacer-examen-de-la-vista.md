@@ -111,6 +111,6 @@ Si llevas más de dos años sin revisión, independientemente de tu edad o situa
 
 ## Dónde revisarte en Chiapas o Tijuana
 
-En **Ópticas Jarmar** realizamos [exámenes de la vista completos](/tijuana/estudio-de-la-vista) con evaluación de salud ocular, no solo medición de graduación. Estamos en [Chiapas](/chiapas/estudio-de-la-vista) (Plaza Cedros y Plaza Crystal) y [Tijuana](/tijuana/estudio-de-la-vista) (Zona Urbana Río).
+En **Ópticas Jarmar** realizamos [exámenes de la vista completos](/tijuana/estudio-de-la-vista) con evaluación de salud ocular, no solo medición de graduación. Estamos en [Chiapas](/tuxtla/estudio-de-la-vista) (Plaza Cedros y Plaza Crystal) y [Tijuana](/tijuana/estudio-de-la-vista) (Zona Urbana Río).
 
 Si no sabes cuándo fue tu última revisión o tienes dudas sobre la frecuencia adecuada para tu caso, escríbenos — podemos orientarte antes de agendar.

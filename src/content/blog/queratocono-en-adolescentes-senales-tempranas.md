@@ -69,7 +69,7 @@ Un adolescente con queratocono detectado temprano, con la progresión frenada y 
 
 En **Ópticas Jarmar** realizamos topografía corneal y valoración especializada de queratocono, y somos líderes en adaptación de lentes esclerales en México:
 
-- **Tuxtla Gutiérrez, Chiapas**: [Queratocono en Chiapas](/chiapas/queratocono)
+- **Tuxtla Gutiérrez, Chiapas**: [Queratocono en Chiapas](/tuxtla/queratocono)
 - **Tijuana, Baja California**: [Queratocono en Tijuana](/tijuana/queratocono)
 
 ---

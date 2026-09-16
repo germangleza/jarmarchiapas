@@ -84,13 +84,13 @@ En **Ópticas Jarmar** contamos con más de 10 años de experiencia en adaptaci�
 Realizamos la valoración completa incluyendo topografía corneal en:
 
 - **Tijuana** — Zona Urbana Río: [ver servicio completo](/tijuana/lentes-esclerales)
-- **Tuxtla Gutiérrez, Chiapas** — Plaza Cedros y Plaza Crystal: [ver servicio completo](/chiapas/lentes-esclerales)
+- **Tuxtla Gutiérrez, Chiapas** — Plaza Cedros y Plaza Crystal: [ver servicio completo](/tuxtla/lentes-esclerales)
 
 ---
 
 **¿Tuviste un trasplante de córnea y tu visión todavía no es la que esperabas?**
 
-[Agendar valoración en Tijuana](/tijuana/lentes-esclerales) · [Agendar valoración en Chiapas](/chiapas/lentes-esclerales)
+[Agendar valoración en Tijuana](/tijuana/lentes-esclerales) · [Agendar valoración en Chiapas](/tuxtla/lentes-esclerales)
 
 ---
 

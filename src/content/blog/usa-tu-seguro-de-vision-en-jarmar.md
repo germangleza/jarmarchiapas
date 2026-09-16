@@ -37,7 +37,7 @@ No importa con quién tengas tu seguro: si tu plan incluye servicio de visión, 
 
 En cualquiera de nuestras sucursales:
 
-- **Tuxtla Gutiérrez, Chiapas** — Plaza Cedros (Col. Arboledas) y Plaza Crystal: [Ópticas Jarmar Chiapas](/chiapas/)
+- **Tuxtla Gutiérrez, Chiapas** — Plaza Cedros (Col. Arboledas) y Plaza Crystal: [Ópticas Jarmar Chiapas](/tuxtla/)
 - **Tijuana, Baja California** — Zona Urbana Río: [Ópticas Jarmar Tijuana](/tijuana/)
 
 Y aplica para nuestros servicios: [estudio de la vista](/estudio-de-la-vista/), [lentes graduados](/lentes-graduados/), [lentes de contacto](/lentes-de-contacto/) y más, según lo que tu póliza incluya.

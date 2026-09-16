@@ -20,7 +20,7 @@ Unos lentes son tan buenos como la receta con la que se fabrican. Si la medició
 El armazón que se le ve increíble a alguien más puede no funcionar para tu rostro, tu puente nasal o —importante y poco conocido— tu graduación: las graduaciones altas necesitan armazones de cierto tamaño y forma para que el lente no quede grueso ni distorsione. Aquí ayuda la asesoría, no el espejo solo: [cómo elegir armazones según tu rostro](/blog/como-elegir-armazones-segun-tu-rostro/).
 
 **3. No preguntar por el tipo de mica.**
-"Lentes graduados" puede significar muchas cosas: monofocales, progresivos, con filtro de [luz azul](/chiapas/lentes-luz-azul), fotocromáticos, con antirreflejante… La óptica debe explicarte qué necesitas según tu graduación y tu estilo de vida — no venderte el paquete del mes.
+"Lentes graduados" puede significar muchas cosas: monofocales, progresivos, con filtro de [luz azul](/tuxtla/lentes-luz-azul), fotocromáticos, con antirreflejante… La óptica debe explicarte qué necesitas según tu graduación y tu estilo de vida — no venderte el paquete del mes.
 
 **4. Decidir solo por precio.**
 Lo barato puede salir caro cuando la graduación viene mal tomada o la mica no es la adecuada. Y lo caro no garantiza nada si nadie evaluó tu caso. El criterio correcto no es el precio: es quién te examinó y cómo.
@@ -44,7 +44,7 @@ Somos la **óptica con más tradición de Chiapas**: desde **1966**, tres genera
 
 **Clínica.** Antes de venderte cualquier lente, un optometrista certificado evalúa la salud completa de tus ojos. Si tu graduación está cambiando rápido o hay señales que ameritan estudios, lo detectamos ahí — no después de que pagaste.
 
-**Óptica.** [Lentes graduados](/chiapas/lentes-graduados) con laboratorio y todas las opciones de mica, [lentes de contacto](/chiapas/lentes-de-contacto) convencionales y especializados, y soluciones que pocas ópticas del sureste ofrecen, como los [lentes esclerales](/chiapas/lentes-esclerales).
+**Óptica.** [Lentes graduados](/tuxtla/lentes-graduados) con laboratorio y todas las opciones de mica, [lentes de contacto](/tuxtla/lentes-de-contacto) convencionales y especializados, y soluciones que pocas ópticas del sureste ofrecen, como los [lentes esclerales](/tuxtla/lentes-esclerales).
 
 **Boutique.** Armazones de diseño con asesoría de estilo personalizada, incluida nuestra línea propia **Jarmar Eyewear** — diseñada por nosotros, pensada para todo tipo de rostros, y hoy la marca que más eligen nuestros pacientes.
 
@@ -56,11 +56,11 @@ Todo respaldado por **4.9★ en Google con más de 880 reseñas**.
 
 **Plaza Crystal** — tres décadas en el centro comercial más conocido de Tuxtla — [WhatsApp: 961 185 5475](https://wa.me/529611855475?text=Hola%2C+quiero+informaci%C3%B3n+sobre+lentes+graduados+en+%C3%93pticas+Jarmar+Plaza+Crystal.)
 
-Mapas y citas de ambas sucursales en [ubicaciones y citas](/chiapas/ubicacionesycitas/).
+Mapas y citas de ambas sucursales en [ubicaciones y citas](/tuxtla/ubicacionesycitas/).
 
 **¿Listo para unos lentes bien hechos?** Empieza por donde se debe empezar: agenda tu examen y de ahí te acompañamos hasta el armazón perfecto.
 
-[Agendar por WhatsApp](https://wa.me/529611855475?text=Hola%2C+quiero+agendar+una+cita+en+%C3%93pticas+Jarmar+Tuxtla.) · [Conoce nuestros lentes graduados](/chiapas/lentes-graduados)
+[Agendar por WhatsApp](https://wa.me/529611855475?text=Hola%2C+quiero+agendar+una+cita+en+%C3%93pticas+Jarmar+Tuxtla.) · [Conoce nuestros lentes graduados](/tuxtla/lentes-graduados)
 
 ---
 

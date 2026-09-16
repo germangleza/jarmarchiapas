@@ -77,7 +77,7 @@ En Ópticas Jarmar llevamos más de 10 años especializados en la rehabilitació
 
 **Atendemos en:**
 
-- **Tuxtla Gutiérrez, Chiapas**: [Queratocono en Chiapas](/chiapas/queratocono)
+- **Tuxtla Gutiérrez, Chiapas**: [Queratocono en Chiapas](/tuxtla/queratocono)
 - **Tijuana, Baja California**: [Queratocono en Tijuana](/tijuana/queratocono)
 
 [Agendar valoración en Chiapas](https://wa.me/529611855475?text=Hola%2C+quiero+agendar+una+valoraci%C3%B3n+con+topograf%C3%ADa+corneal.) · [Agendar valoración en Tijuana](https://wa.me/526645791970?text=Hola%2C+quiero+agendar+una+valoraci%C3%B3n+con+topograf%C3%ADa+corneal.)
