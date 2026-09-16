@@ -115,6 +115,6 @@ Muchas personas postergan la revisión porque "tampoco es para tanto" o porque p
 
 ## Una evaluación resuelve la duda
 
-En **Ópticas Jarmar** realizamos exámenes de la vista completos con equipamiento de diagnóstico actualizado en nuestras clínicas de [Chiapas](/chiapas/estudio-de-la-vista) (Plaza Cedros y Plaza Crystal) y [Tijuana](/tijuana/estudio-de-la-vista) (Zona Urbana Río). Si llevas tiempo notando que ves borroso de lejos —ya sea con lentes o sin ellos— te invitamos a agendar una evaluación.
+En **Ópticas Jarmar** realizamos exámenes de la vista completos con equipamiento de diagnóstico actualizado en nuestras clínicas de [Chiapas](/tuxtla/estudio-de-la-vista) (Plaza Cedros y Plaza Crystal) y [Tijuana](/tijuana/estudio-de-la-vista) (Zona Urbana Río). Si llevas tiempo notando que ves borroso de lejos —ya sea con lentes o sin ellos— te invitamos a agendar una evaluación.
 
 La mayoría de las causas de visión borrosa a distancia tienen solución. El primer paso es saber exactamente a qué nos enfrentamos.

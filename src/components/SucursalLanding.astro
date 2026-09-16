@@ -35,7 +35,7 @@ interface Props {
 }
 
 const p = Astro.props as Props;
-const url = `https://www.jarmar.com/chiapas/${p.slug}/`;
+const url = `https://www.jarmar.com/tuxtla/${p.slug}/`;
 
 // Fuente única de la FAQ: el texto visible y el JSON-LD salen de aquí,
 // así nunca se desincronizan (ver CLAUDE.md → Schema).
@@ -136,20 +136,20 @@ const breadcrumb = {
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Inicio", item: "https://www.jarmar.com/" },
-    { "@type": "ListItem", position: 2, name: "Chiapas", item: "https://www.jarmar.com/chiapas/" },
+    { "@type": "ListItem", position: 2, name: "Chiapas", item: "https://www.jarmar.com/tuxtla/" },
     { "@type": "ListItem", position: 3, name: p.nombre, item: url },
   ],
 };
 
 const servicios = [
-  { href: "/chiapas/estudio-de-la-vista", ico: "👁", label: "Estudio de la vista" },
-  { href: "/chiapas/lentes-graduados", ico: "👓", label: "Lentes graduados" },
-  { href: "/chiapas/lentes-de-contacto", ico: "🔵", label: "Lentes de contacto" },
-  { href: "/chiapas/lentes-esclerales", ico: "⭐", label: "Lentes esclerales" },
-  { href: "/chiapas/queratocono", ico: "🩺", label: "Queratocono" },
-  { href: "/chiapas/examen-ninos", ico: "🧒", label: "Examen visual infantil" },
-  { href: "/chiapas/lentes-luz-azul", ico: "💻", label: "Lentes de luz azul" },
-  { href: "/chiapas/lentes-de-sol", ico: "😎", label: "Lentes de sol" },
+  { href: "/tuxtla/estudio-de-la-vista", ico: "👁", label: "Estudio de la vista" },
+  { href: "/tuxtla/lentes-graduados", ico: "👓", label: "Lentes graduados" },
+  { href: "/tuxtla/lentes-de-contacto", ico: "🔵", label: "Lentes de contacto" },
+  { href: "/tuxtla/lentes-esclerales", ico: "⭐", label: "Lentes esclerales" },
+  { href: "/tuxtla/queratocono", ico: "🩺", label: "Queratocono" },
+  { href: "/tuxtla/examen-ninos", ico: "🧒", label: "Examen visual infantil" },
+  { href: "/tuxtla/lentes-luz-azul", ico: "💻", label: "Lentes de luz azul" },
+  { href: "/tuxtla/lentes-de-sol", ico: "😎", label: "Lentes de sol" },
 ];
 
 const resenas = [
@@ -199,7 +199,7 @@ const resenas = [
     padding: 92px 20px 72px;
     text-align: center;
   }
-  /* Hero con imagen de fondo: mismo overlay que el hero de /chiapas/ */
+  /* Hero con imagen de fondo: mismo overlay que el hero de /tuxtla/ */
   .hero--img {
     position: relative;
     background: var(--hero-img) center/cover no-repeat;
@@ -508,7 +508,7 @@ const resenas = [
   <div class="container">
     <div class="destacado">
       <h3>La misma Clínica Óptica Boutique, en las dos sucursales</h3>
-      <p>Nuestro modelo es 3 en 1 y funciona igual aquí que en nuestra otra sucursal de Tuxtla: una <strong>clínica</strong> donde revisamos la salud completa de tus ojos y no solo la graduación, una <strong>óptica</strong> con todas las soluciones visuales —incluidos lentes de contacto y <a href="/chiapas/lentes-esclerales">lentes esclerales</a> para córneas irregulares y <a href="/chiapas/queratocono">queratocono</a>— y una <strong>boutique</strong> de armazones de diseño con nuestra línea propia Jarmar Eyewear.</p>
+      <p>Nuestro modelo es 3 en 1 y funciona igual aquí que en nuestra otra sucursal de Tuxtla: una <strong>clínica</strong> donde revisamos la salud completa de tus ojos y no solo la graduación, una <strong>óptica</strong> con todas las soluciones visuales —incluidos lentes de contacto y <a href="/tuxtla/lentes-esclerales">lentes esclerales</a> para córneas irregulares y <a href="/tuxtla/queratocono">queratocono</a>— y una <strong>boutique</strong> de armazones de diseño con nuestra línea propia Jarmar Eyewear.</p>
       <p>Detrás está el mismo equipo: nuestro Optometrista Director, el <a href="/jorgearanda/">Opt. Jorge Aranda Tello</a>, y el <a href="/hectorpineda/">Opt. Héctor Pineda</a>, que atienden a los pacientes de Chiapas. Si tu caso necesita valoración médica, te referimos con oftalmólogos de confianza. Somos la óptica con mayor trayectoria de Chiapas: <a href="/historia/">60 años y tres generaciones</a> de la misma familia.</p>
     </div>
   </div>
@@ -563,4 +563,4 @@ const resenas = [
 </section>
 
 <p class="otra-sucursal">{p.otra.gancho} <a href={p.otra.url}>Conoce nuestra sucursal {p.otra.nombre} →</a></p>
-<a href="/chiapas/" class="back-link">← Volver a Ópticas Jarmar Chiapas</a>
+<a href="/tuxtla/" class="back-link">← Volver a Ópticas Jarmar Chiapas</a>

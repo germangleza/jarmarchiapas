@@ -129,6 +129,6 @@ La presbicia es progresiva: ignorarla no la detiene, solo hace que el esfuerzo v
 
 ## Soluciones para la vista cansada en Ópticas Jarmar
 
-En **Ópticas Jarmar** evaluamos tu visión de forma completa y te asesoramos sobre la opción de corrección más adecuada para tu caso — ya sea lentes monofocales, bifocales, progresivos u ocupacionales. Contamos con clínicas en [Chiapas](/chiapas/lentes-graduados) (Plaza Cedros y Plaza Crystal) y [Tijuana](/tijuana/lentes-graduados) (Zona Urbana Río).
+En **Ópticas Jarmar** evaluamos tu visión de forma completa y te asesoramos sobre la opción de corrección más adecuada para tu caso — ya sea lentes monofocales, bifocales, progresivos u ocupacionales. Contamos con clínicas en [Chiapas](/tuxtla/lentes-graduados) (Plaza Cedros y Plaza Crystal) y [Tijuana](/tijuana/lentes-graduados) (Zona Urbana Río).
 
 Si llevas tiempo adaptando inconscientemente la distancia a la que lees, agenda una evaluación. Hay soluciones cómodas y efectivas — solo hay que encontrar la que mejor se ajusta a ti.

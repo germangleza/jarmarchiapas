@@ -13,10 +13,10 @@ function pathToUrl(filePath: string): string {
 // Assigns SEO priority based on URL depth and section
 function getPriority(url: string): string {
   if (url === "/") return "1.0";
-  if (/^\/(chiapas|tijuana)\/$/.test(url)) return "0.9";
+  if (/^\/(tuxtla|tijuana)\/$/.test(url)) return "0.9";
   if (url === "/blog/") return "0.8";
   if (/^\/en\/tijuana\/$/.test(url)) return "0.8";
-  if (/^\/(chiapas|tijuana)\//.test(url)) return "0.8";
+  if (/^\/(tuxtla|tijuana)\//.test(url)) return "0.8";
   if (/^\/en\/tijuana\//.test(url)) return "0.7";
   if (/^\/(jorgearanda|aaronlinares|hectorpineda)\//.test(url)) return "0.6";
   return "0.7";

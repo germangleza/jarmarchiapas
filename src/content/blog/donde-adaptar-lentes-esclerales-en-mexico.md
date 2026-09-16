@@ -52,7 +52,7 @@ Nuestra sucursal de **Zona Urbana Río** es referencia en adaptación de esclera
 
 Somos la clínica óptica con mayor trayectoria de Chiapas y el centro de adaptación de esclerales de referencia para el sureste — muchos pacientes nos visitan desde otros municipios y estados vecinos. Dos sucursales: **Plaza Cedros (Col. Arboledas)** y **Plaza Crystal**.
 
-→ [Lentes esclerales en Chiapas](/chiapas/lentes-esclerales) · WhatsApp: [+52 961 185 5475](https://wa.me/529611855475?text=Hola%2C+quiero+una+valoraci%C3%B3n+para+adaptaci%C3%B3n+de+lentes+esclerales+en+Chiapas.)
+→ [Lentes esclerales en Chiapas](/tuxtla/lentes-esclerales) · WhatsApp: [+52 961 185 5475](https://wa.me/529611855475?text=Hola%2C+quiero+una+valoraci%C3%B3n+para+adaptaci%C3%B3n+de+lentes+esclerales+en+Chiapas.)
 
 ### ¿Vives en otra parte de México?
 

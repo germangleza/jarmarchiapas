@@ -81,4 +81,4 @@ En la mayoría de los exámenes de rutina sin dilatación, reservar una hora es 
 
 En **Ópticas Jarmar** los exámenes de la vista se realizan con el tiempo necesario para ser completos. No hacemos revisiones exprés que omiten la evaluación de salud ocular — cada cita incluye todas las pruebas relevantes para tu caso.
 
-Puedes agendar en nuestras clínicas de [Chiapas](/chiapas/estudio-de-la-vista) (Plaza Cedros y Plaza Crystal) o [Tijuana](/tijuana/estudio-de-la-vista) (Zona Urbana Río). Si tienes dudas sobre [qué esperar durante el examen](/blog/que-incluye-un-examen-de-la-vista/) o [con qué frecuencia deberías revisarte](/blog/cada-cuanto-hacer-examen-de-la-vista/), nuestros artículos de blog tienen la información que necesitas.
+Puedes agendar en nuestras clínicas de [Chiapas](/tuxtla/estudio-de-la-vista) (Plaza Cedros y Plaza Crystal) o [Tijuana](/tijuana/estudio-de-la-vista) (Zona Urbana Río). Si tienes dudas sobre [qué esperar durante el examen](/blog/que-incluye-un-examen-de-la-vista/) o [con qué frecuencia deberías revisarte](/blog/cada-cuanto-hacer-examen-de-la-vista/), nuestros artículos de blog tienen la información que necesitas.

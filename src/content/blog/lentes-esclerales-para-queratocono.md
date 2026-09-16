@@ -171,7 +171,7 @@ Si tienes queratocono diagnosticado, ves borroso con tus lentes actuales, o sosp
 **Ópticas Jarmar** cuenta con especialistas en adaptación de lentes esclerales en dos ciudades:
 
 - **Tijuana** (Zona Río): [Lentes esclerales en Tijuana](/tijuana/lentes-esclerales)
-- **Tuxtla Gutiérrez, Chiapas**: [Lentes esclerales en Chiapas](/chiapas/lentes-esclerales)
+- **Tuxtla Gutiérrez, Chiapas**: [Lentes esclerales en Chiapas](/tuxtla/lentes-esclerales)
 
 Escríbenos por WhatsApp y te orientamos sobre los pasos a seguir:
 

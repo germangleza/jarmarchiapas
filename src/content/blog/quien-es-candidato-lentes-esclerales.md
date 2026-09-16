@@ -95,7 +95,7 @@ Con esa información, el optometrista puede determinar si los esclerales son la 
 En **Ópticas Jarmar** realizamos valoraciones para adaptación de lentes esclerales en:
 
 - **Tijuana** — Zona Urbana Río: [más información](/tijuana/lentes-esclerales)
-- **Tuxtla Gutiérrez, Chiapas** — Plaza Cedros y Plaza Crystal: [más información](/chiapas/lentes-esclerales)
+- **Tuxtla Gutiérrez, Chiapas** — Plaza Cedros y Plaza Crystal: [más información](/tuxtla/lentes-esclerales)
 
 Contamos con equipo de topografía corneal y más de 10 años de experiencia en adaptación de lentes esclerales para queratocono y córneas irregulares.
 
@@ -103,7 +103,7 @@ Contamos con equipo de topografía corneal y más de 10 años de experiencia en 
 
 **¿Crees que podrías ser candidato?**
 
-[Agendar valoración en Tijuana](/tijuana/lentes-esclerales) · [Agendar valoración en Chiapas](/chiapas/lentes-esclerales)
+[Agendar valoración en Tijuana](/tijuana/lentes-esclerales) · [Agendar valoración en Chiapas](/tuxtla/lentes-esclerales)
 
 ---
 

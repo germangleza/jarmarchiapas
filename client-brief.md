@@ -131,7 +131,7 @@ No hay datos de competencia en el sitio. Necesito:
 `scleral lenses Tijuana`, `keratoconus specialist Tijuana`, `eye exam Tijuana`, `optometrist near San Diego`
 
 **Arquitectura ya implementada**
-3 niveles por servicio: genérica (`/lentes-esclerales`) + Chiapas (`/chiapas/lentes-esclerales`) + Tijuana (`/tijuana/lentes-esclerales`). Blog como capa informativa que enlaza hacia las páginas de servicio.
+3 niveles por servicio: genérica (`/lentes-esclerales`) + Chiapas (`/tuxtla/lentes-esclerales`) + Tijuana (`/tijuana/lentes-esclerales`). Blog como capa informativa que enlaza hacia las páginas de servicio.
 
 **Temas SÍ**
 - Queratocono en todas sus aristas (síntomas, etapas, tratamientos, casos especiales)

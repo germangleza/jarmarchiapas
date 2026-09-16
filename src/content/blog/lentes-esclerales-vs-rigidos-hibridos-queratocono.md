@@ -178,7 +178,7 @@ La respuesta depende de tu caso específico. El primer paso es una evaluación c
 En Ópticas Jarmar realizamos valoraciones para queratocono en:
 
 - **Tijuana** (Zona Río): [Lentes esclerales en Tijuana](/tijuana/lentes-esclerales)
-- **Tuxtla Gutiérrez, Chiapas**: [Lentes esclerales en Chiapas](/chiapas/lentes-esclerales)
+- **Tuxtla Gutiérrez, Chiapas**: [Lentes esclerales en Chiapas](/tuxtla/lentes-esclerales)
 
 [Agendar valoración en Tijuana](https://wa.me/526645791970?text=Hola%2C+quiero+agendar+una+valoraci%C3%B3n+para+queratocono.) · [Agendar valoración en Chiapas](https://wa.me/529611855475?text=Hola%2C+quiero+agendar+una+valoraci%C3%B3n+para+queratocono.)
 

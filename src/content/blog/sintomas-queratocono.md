@@ -132,7 +132,7 @@ El diagnóstico temprano importa: cuando el queratocono se detecta antes de que 
 En Ópticas Jarmar realizamos topografía corneal y valoración especializada en:
 
 - **Tijuana** (Zona Río): [Ver servicios en Tijuana](/tijuana/queratocono)
-- **Tuxtla Gutiérrez, Chiapas**: [Ver servicios en Chiapas](/chiapas/lentes-esclerales)
+- **Tuxtla Gutiérrez, Chiapas**: [Ver servicios en Chiapas](/tuxtla/lentes-esclerales)
 
 [Agendar en Tijuana](https://wa.me/526645791970?text=Hola%2C+quiero+agendar+una+valoraci%C3%B3n+para+queratocono+con+topograf%C3%ADa+corneal.) · [Agendar en Chiapas](https://wa.me/529611855475?text=Hola%2C+quiero+agendar+una+valoraci%C3%B3n+para+queratocono+con+topograf%C3%ADa+corneal.)
 

@@ -12,6 +12,21 @@
       "permanent": true
     },
     {
+      "source": "/chiapas",
+      "destination": "/tuxtla",
+      "permanent": true
+    },
+    {
+      "source": "/chiapas/",
+      "destination": "/tuxtla",
+      "permanent": true
+    },
+    {
+      "source": "/chiapas/:path*",
+      "destination": "/tuxtla/:path*",
+      "permanent": true
+    },
+    {
       "source": "/en/productos",
       "destination": "/",
       "permanent": true

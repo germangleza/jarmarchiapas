@@ -134,7 +134,7 @@ Eso te permite comparar con criterio, sabiendo exactamente qué incluye cada opc
 Agenda una valoración con nuestro equipo especializado:
 
 - **Tijuana** (Zona Río): [Lentes esclerales en Tijuana](/tijuana/lentes-esclerales)
-- **Tuxtla Gutiérrez, Chiapas**: [Lentes esclerales en Chiapas](/chiapas/lentes-esclerales)
+- **Tuxtla Gutiérrez, Chiapas**: [Lentes esclerales en Chiapas](/tuxtla/lentes-esclerales)
 
 [Solicitar cotización en Tijuana](https://wa.me/526645791970?text=Hola%2C+quiero+solicitar+una+cotizaci%C3%B3n+para+lentes+esclerales.) · [Solicitar cotización en Chiapas](https://wa.me/529611855475?text=Hola%2C+quiero+solicitar+una+cotizaci%C3%B3n+para+lentes+esclerales.)
 

@@ -102,13 +102,13 @@ Si no te han pedido una topografía pero tienes visión que no corrigue bien con
 En **Ópticas Jarmar** contamos con topografía corneal y más de 10 años de experiencia en adaptación de lentes esclerales para [queratocono](/tijuana/queratocono) y córneas irregulares.
 
 - **Tijuana** — Zona Urbana Río: [solicitar valoración](/tijuana/lentes-esclerales)
-- **Tuxtla Gutiérrez, Chiapas** — Plaza Cedros y Plaza Crystal: [solicitar valoración](/chiapas/lentes-esclerales)
+- **Tuxtla Gutiérrez, Chiapas** — Plaza Cedros y Plaza Crystal: [solicitar valoración](/tuxtla/lentes-esclerales)
 
 ---
 
 **¿Tienes dudas sobre tu visión o te han mencionado la posibilidad de queratocono?**
 
-[Agendar valoración en Tijuana](/tijuana/lentes-esclerales) · [Agendar valoración en Chiapas](/chiapas/lentes-esclerales)
+[Agendar valoración en Tijuana](/tijuana/lentes-esclerales) · [Agendar valoración en Chiapas](/tuxtla/lentes-esclerales)
 
 ---
 

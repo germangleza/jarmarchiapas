@@ -205,7 +205,7 @@ Los lentes esclerales son más estables que los lentes blandos o rígidos conven
 En Ópticas Jarmar estamos disponibles para resolver cualquier pregunta sobre el manejo de tus lentes:
 
 - **Tijuana** (Zona Río): [Lentes esclerales en Tijuana](/tijuana/lentes-esclerales)
-- **Tuxtla Gutiérrez, Chiapas**: [Lentes esclerales en Chiapas](/chiapas/lentes-esclerales)
+- **Tuxtla Gutiérrez, Chiapas**: [Lentes esclerales en Chiapas](/tuxtla/lentes-esclerales)
 
 [Contactar en Tijuana](https://wa.me/526645791970?text=Hola%2C+tengo+dudas+sobre+el+manejo+de+mis+lentes+esclerales.) · [Contactar en Chiapas](https://wa.me/529611855475?text=Hola%2C+tengo+dudas+sobre+el+manejo+de+mis+lentes+esclerales.)
 

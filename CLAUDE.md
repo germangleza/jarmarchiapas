@@ -29,15 +29,15 @@ Es un sitio de **vertical salud**: no dar diagnósticos, no prometer resultados,
 Los servicios viven en **3 niveles**:
 
 - **Genérica** (sin ciudad): `/lentes-esclerales`, `/estudio-de-la-vista`, `/lentes-graduados`, `/lentes-de-contacto`, `/lentes-de-sol`, `/lentes-luz-azul`, `/examen-ninos`
-- **Chiapas**: `/chiapas/<servicio>`
+- **Tuxtla (Chiapas)**: `/tuxtla/<servicio>`
 - **Tijuana**: `/tijuana/<servicio>`
 - **Inglés** (Tijuana / cross-border): `/en/tijuana/<service>`
 
 Cada nivel tiene canonical propio — **no** canonicalizar las de ciudad hacia la genérica, y evitar texto duplicado entre ellas.
 
-Otras: `/` (hub nacional), `/chiapas/`, `/tijuana/`, `/historia/` (+ `/en/history/`), `/blog/`, `/optica-movil/` (B2B), perfiles de optometristas (`/jorgearanda/`, `/aaronlinares/`, `/hectorpineda/`).
+Otras: `/` (hub nacional), `/tuxtla/`, `/tijuana/`, `/historia/` (+ `/en/history/`), `/blog/`, `/optica-movil/` (B2B), perfiles de optometristas (`/jorgearanda/`, `/aaronlinares/`, `/hectorpineda/`).
 
-⚠️ **Nota de arquitectura:** `/`, `/chiapas/`, `/tijuana/`, `/en/tijuana/`, `/tijuana/examen`, `/optica-movil` y los perfiles son **páginas standalone** — tienen su propio `<head>` y **no usan `BaseLayout`**. Un cambio global (analítica, meta, schema) hay que replicarlo en cada una.
+⚠️ **Nota de arquitectura:** `/`, `/tuxtla/`, `/tijuana/`, `/en/tijuana/`, `/tijuana/examen`, `/optica-movil` y los perfiles son **páginas standalone** — tienen su propio `<head>` y **no usan `BaseLayout`**. Un cambio global (analítica, meta, schema) hay que replicarlo en cada una.
 
 ## Crear un post
 

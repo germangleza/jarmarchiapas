@@ -125,6 +125,6 @@ La revisión rápida puede ser útil para ajustar una graduación conocida y est
 
 ## Dónde hacerte un examen completo
 
-En **Ópticas Jarmar** realizamos [exámenes de la vista completos](/tijuana/estudio-de-la-vista) en nuestras clínicas de [Chiapas](/chiapas/estudio-de-la-vista) (Plaza Cedros y Plaza Crystal) y [Tijuana](/tijuana/estudio-de-la-vista) (Zona Urbana Río). Cada evaluación incluye todos los componentes descritos en este artículo, adaptados a las necesidades de cada paciente.
+En **Ópticas Jarmar** realizamos [exámenes de la vista completos](/tijuana/estudio-de-la-vista) en nuestras clínicas de [Chiapas](/tuxtla/estudio-de-la-vista) (Plaza Cedros y Plaza Crystal) y [Tijuana](/tijuana/estudio-de-la-vista) (Zona Urbana Río). Cada evaluación incluye todos los componentes descritos en este artículo, adaptados a las necesidades de cada paciente.
 
 Si tienes dudas sobre qué tipo de revisión necesitas o cuándo fue tu última evaluación completa, escríbenos — con gusto te orientamos antes de agendar.

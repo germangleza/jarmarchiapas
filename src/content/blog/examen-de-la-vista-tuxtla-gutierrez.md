@@ -27,9 +27,9 @@ En Jarmar el examen lo realiza un optometrista certificado con equipo clínico, 
 
 **5. Evaluación binocular.** Cómo trabajan tus ojos en equipo: alineación, enfoque y coordinación — clave si pasas horas frente a pantallas o tienes dolores de cabeza frecuentes.
 
-**6. Diagnóstico y recomendación personalizada.** Te explicamos los resultados con claridad y te recomendamos la solución adecuada: [lentes graduados](/chiapas/lentes-graduados), [lentes de contacto](/chiapas/lentes-de-contacto) o, si tu caso lo requiere, una valoración de especialidad.
+**6. Diagnóstico y recomendación personalizada.** Te explicamos los resultados con claridad y te recomendamos la solución adecuada: [lentes graduados](/tuxtla/lentes-graduados), [lentes de contacto](/tuxtla/lentes-de-contacto) o, si tu caso lo requiere, una valoración de especialidad.
 
-Cuando detectamos señales que lo ameritan —cambios acelerados de graduación, astigmatismos irregulares, sospecha de queratocono— contamos con estudios de especialidad como la [topografía corneal](/blog/que-es-topografia-corneal/) y el área de [lentes esclerales](/chiapas/lentes-esclerales), nuestro servicio bandera. Y si encontramos algo que requiere atención médica, te referimos con oftalmólogos de confianza: en Plaza Cedros trabajamos junto al centro oftalmológico de referencia en Chiapas a través de nuestro Centro Visual.
+Cuando detectamos señales que lo ameritan —cambios acelerados de graduación, astigmatismos irregulares, sospecha de queratocono— contamos con estudios de especialidad como la [topografía corneal](/blog/que-es-topografia-corneal/) y el área de [lentes esclerales](/tuxtla/lentes-esclerales), nuestro servicio bandera. Y si encontramos algo que requiere atención médica, te referimos con oftalmólogos de confianza: en Plaza Cedros trabajamos junto al centro oftalmológico de referencia en Chiapas a través de nuestro Centro Visual.
 
 El detalle clínico de cada prueba está en [¿Qué incluye un examen de la vista completo?](/blog/que-incluye-un-examen-de-la-vista/)
 
@@ -48,19 +48,19 @@ Si al final quieres elegir armazón, considera unos minutos extra: te asesoramos
 Tres décadas atendiendo en el centro comercial más conocido de la ciudad.
 [WhatsApp: 961 185 5475](https://wa.me/529611855475?text=Hola%2C+quiero+agendar+un+examen+de+la+vista+en+%C3%93pticas+Jarmar+Plaza+Crystal.)
 
-Ambas con ubicación en Google Maps y botones de cita en [ubicaciones y citas](/chiapas/ubicacionesycitas/). Si aún no decides dónde atenderte, en [¿Dónde hacer un examen de la vista en Tuxtla?](/blog/donde-hacer-examen-de-la-vista-en-tuxtla/) te damos los criterios para comparar opciones.
+Ambas con ubicación en Google Maps y botones de cita en [ubicaciones y citas](/tuxtla/ubicacionesycitas/). Si aún no decides dónde atenderte, en [¿Dónde hacer un examen de la vista en Tuxtla?](/blog/donde-hacer-examen-de-la-vista-en-tuxtla/) te damos los criterios para comparar opciones.
 
 ## ¿Cada cuándo conviene hacérselo?
 
 Para la mayoría de las personas, **una revisión al año** — y con mayor razón si usas lentes, pasas muchas horas en pantallas, vives con diabetes o tienes antecedentes familiares de enfermedades oculares. Aquí explicamos [cada cuánto hacerse un examen de la vista](/blog/cada-cuanto-hacer-examen-de-la-vista/) según edad y caso.
 
-¿Es para tu hijo? Contamos con un protocolo especial para evaluar a los pequeños desde los 3 años: conoce el [examen de la vista para niños en Chiapas](/chiapas/examen-ninos).
+¿Es para tu hijo? Contamos con un protocolo especial para evaluar a los pequeños desde los 3 años: conoce el [examen de la vista para niños en Chiapas](/tuxtla/examen-ninos).
 
 ## Agenda tu examen en Tuxtla
 
 La forma más rápida es por WhatsApp — te confirmamos horario en el momento:
 
-[Agendar en Plaza Cedros](https://wa.me/529612406013?text=Hola%2C+quiero+agendar+un+examen+de+la+vista+en+%C3%93pticas+Jarmar+Plaza+Cedros.) · [Agendar en Plaza Crystal](https://wa.me/529611855475?text=Hola%2C+quiero+agendar+un+examen+de+la+vista+en+%C3%93pticas+Jarmar+Plaza+Crystal.) · [Conoce el servicio completo](/chiapas/estudio-de-la-vista)
+[Agendar en Plaza Cedros](https://wa.me/529612406013?text=Hola%2C+quiero+agendar+un+examen+de+la+vista+en+%C3%93pticas+Jarmar+Plaza+Cedros.) · [Agendar en Plaza Crystal](https://wa.me/529611855475?text=Hola%2C+quiero+agendar+un+examen+de+la+vista+en+%C3%93pticas+Jarmar+Plaza+Crystal.) · [Conoce el servicio completo](/tuxtla/estudio-de-la-vista)
 
 ---
 
