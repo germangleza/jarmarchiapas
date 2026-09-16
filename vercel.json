@@ -225,6 +225,11 @@
       "source": "/IMG_1519.2.jpeg",
       "destination": "/sucursal-jarmar-arboledas.jpg",
       "permanent": true
+    },
+    {
+      "source": "/IMG_1519.JPG.jpeg",
+      "destination": "/sucursal-jarmar-arboledas.jpg",
+      "permanent": true
     }
   ]
 }
