@@ -220,6 +220,11 @@
       "source": "/yoyo.jpeg",
       "destination": "/opt-jorge-aranda-tello-jarmar.jpeg",
       "permanent": true
+    },
+    {
+      "source": "/IMG_1519.2.jpeg",
+      "destination": "/sucursal-jarmar-arboledas.jpg",
+      "permanent": true
     }
   ]
 }
