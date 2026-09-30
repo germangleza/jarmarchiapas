@@ -1,0 +1,661 @@
+---
+// Landing de captación: Programa de Aceleración para Ópticas
+// Ruta: /aceleracion — página standalone (head propio, ver CLAUDE.md)
+//
+// El sitio es estático, así que el formulario envía a un servicio externo
+// (Formspree, Basin, Getform, Web3Forms… cualquiera que acepte un POST).
+// Se configura con la variable de entorno PUBLIC_ACELERACION_FORM_ENDPOINT.
+// Si no está definida o el envío falla, el formulario NO finge que se guardó:
+// muestra un aviso y ofrece enviar los datos por WhatsApp, para no perder el registro.
+const FORM_ENDPOINT = import.meta.env.PUBLIC_ACELERACION_FORM_ENDPOINT ?? "";
+const WHATSAPP = "529611855475";
+
+const areas = [
+  "Gestión y control del negocio.",
+  "Estrategia comercial y ventas.",
+  "Operación y digitalización.",
+  "Marketing y crecimiento.",
+  "Diferenciación de la óptica.",
+  "Equipo y gestión.",
+];
+---
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="msvalidate.01" content="7BC48F9D0740327D02EED2218E21311A" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <title>Programa de Aceleración para Ópticas | Jarmar</title>
+  <meta name="description" content="Programa para dueños de ópticas que buscan profesionalizar, digitalizar y hacer crecer su negocio. Regístrate para recibir información de la próxima generación." />
+  <link rel="canonical" href="https://www.jarmar.com/aceleracion/" />
+  <meta property="og:title" content="Programa de Aceleración para Ópticas | Jarmar" />
+  <meta property="og:description" content="De óptica tradicional a empresa profesional. Un programa diseñado para dueños de ópticas que quieren profesionalizar, digitalizar y hacer crecer su negocio." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.jarmar.com/aceleracion/" />
+  <meta property="og:image" content="https://www.jarmar.com/logo-opticas-jarmar-color.png" />
+  <meta property="og:locale" content="es_MX" />
+  <meta property="og:site_name" content="Ópticas Jarmar" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Programa de Aceleración para Ópticas | Jarmar" />
+  <meta name="twitter:description" content="De óptica tradicional a empresa profesional. Un programa para dueños de ópticas." />
+  <meta name="twitter:image" content="https://www.jarmar.com/logo-opticas-jarmar-color.png" />
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://www.jarmar.com/#organization",
+    "name": "Ópticas Jarmar",
+    "alternateName": "Clínica Óptica Boutique Jarmar",
+    "url": "https://www.jarmar.com/",
+    "logo": "https://www.jarmar.com/logo-opticas-jarmar-color.png",
+    "foundingDate": "1966",
+    "description": "Clínica Óptica Boutique con más de 60 años cuidando la salud visual de México. Especialistas en lentes esclerales, con sucursales en Tuxtla Gutiérrez, Chiapas y Tijuana, Baja California.",
+    "sameAs": [
+      "https://www.facebook.com/opticasjarmarchiapas",
+      "https://www.instagram.com/opticasjarmar/",
+      "https://www.facebook.com/opticasjarmartijuana",
+      "https://www.instagram.com/opticasjarmartijuana/"
+    ]
+  }</script>
+
+  <!-- Google tag (gtag.js) -->
+  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=AW-17977352986"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17977352986');
+  </script>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript" is:inline>
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "xr1fwqa9cs");
+  </script>
+
+  <style>
+    :root {
+      --bg: #071A3E;
+      --surface: #0D2B6B;
+      --accent: #3A8FE0;
+      --gris: #4A5568;
+      --gris-claro: #F7F9FC;
+      --error: #C53030;
+      --exito: #2F855A;
+      --font-display: "Playfair Display", serif;
+      --font-body: "DM Sans", system-ui, -apple-system, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: var(--font-body);
+      color: #1A202C;
+      background: #fff;
+      -webkit-font-smoothing: antialiased;
+    }
+    .container { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+
+    /* HEADER */
+    .site-header {
+      background: var(--bg);
+      padding: 16px 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .site-header .container { display: flex; align-items: center; }
+    .site-header img { height: 34px; width: auto; display: block; }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, var(--bg) 0%, var(--surface) 100%);
+      color: #fff;
+      padding: 64px 20px 72px;
+    }
+    .eyebrow {
+      display: inline-block;
+      background: rgba(58,143,224,0.2);
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      border-radius: 100px;
+      padding: 6px 18px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 26px;
+    }
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 6vw, 3.1rem);
+      font-weight: 700;
+      line-height: 1.15;
+      margin: 0 0 24px;
+    }
+    .hero p {
+      font-size: 1.08rem;
+      line-height: 1.75;
+      opacity: 0.9;
+      margin: 0 0 16px;
+      max-width: 620px;
+    }
+    .hero .btn { margin-top: 20px; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 16px 32px;
+      border-radius: 100px;
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    .btn:hover { opacity: 0.92; transform: translateY(-2px); }
+    .btn:disabled { opacity: 0.6; cursor: progress; transform: none; }
+
+    /* SECCIONES */
+    .section { padding: 64px 20px; }
+    .section--alt { background: var(--gris-claro); }
+    .section--dark { background: var(--surface); color: #fff; }
+    .section h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.45rem, 4vw, 2.05rem);
+      font-weight: 700;
+      line-height: 1.3;
+      color: var(--bg);
+      margin: 0 0 20px;
+    }
+    .section--dark h2 { color: #fff; }
+    .section p {
+      color: var(--gris);
+      line-height: 1.8;
+      font-size: 1.03rem;
+      margin: 0 0 16px;
+      max-width: 660px;
+    }
+    .section--dark p { color: rgba(255,255,255,0.88); }
+    .section p:last-child { margin-bottom: 0; }
+
+    /* ÁREAS */
+    .areas {
+      list-style: none;
+      padding: 0;
+      margin: 28px 0 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px;
+    }
+    .areas li {
+      background: #fff;
+      border: 1.5px solid rgba(58,143,224,0.22);
+      border-radius: 14px;
+      padding: 18px 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      color: #2D3748;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+    .areas li::before {
+      content: "";
+      flex-shrink: 0;
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      margin-top: 8px;
+    }
+
+    /* FORMULARIO */
+    .registro { background: var(--gris-claro); padding: 56px 20px; }
+    .registro--final { background: #fff; border-top: 1px solid rgba(13,43,107,0.08); }
+    .registro h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.4rem, 4vw, 1.95rem);
+      font-weight: 700;
+      line-height: 1.3;
+      color: var(--bg);
+      margin: 0 0 14px;
+    }
+    .registro > .container > p {
+      color: var(--gris);
+      line-height: 1.75;
+      margin: 0 0 8px;
+      max-width: 620px;
+    }
+    .registro .apoyo { font-size: 0.93rem; opacity: 0.85; margin-bottom: 28px; }
+
+    .form-card {
+      background: #fff;
+      border: 1.5px solid rgba(58,143,224,0.22);
+      border-radius: 18px;
+      padding: 28px 24px;
+      max-width: 560px;
+      box-shadow: 0 4px 20px rgba(13,43,107,0.05);
+    }
+    .registro--final .form-card { background: var(--gris-claro); }
+    .campo { margin-bottom: 20px; }
+    .campo:last-of-type { margin-bottom: 24px; }
+    .campo label, .campo legend {
+      display: block;
+      font-weight: 600;
+      font-size: 0.93rem;
+      color: var(--bg);
+      margin-bottom: 8px;
+      padding: 0;
+    }
+    .campo input[type="text"],
+    .campo input[type="tel"],
+    .campo input[type="email"] {
+      width: 100%;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      padding: 14px 16px;
+      border: 1.5px solid rgba(13,43,107,0.18);
+      border-radius: 12px;
+      background: #fff;
+      color: #1A202C;
+      transition: border-color 0.18s, box-shadow 0.18s;
+    }
+    .campo input:focus-visible {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(58,143,224,0.18);
+    }
+    .campo input[aria-invalid="true"] { border-color: var(--error); }
+    .campo fieldset { border: 0; margin: 0; padding: 0; }
+    .opciones { display: flex; gap: 10px; flex-wrap: wrap; }
+    .opcion {
+      flex: 1 1 120px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border: 1.5px solid rgba(13,43,107,0.18);
+      border-radius: 12px;
+      padding: 13px 16px;
+      cursor: pointer;
+      font-weight: 600;
+      color: #2D3748;
+      background: #fff;
+      transition: border-color 0.18s, background 0.18s;
+    }
+    .opcion:hover { border-color: var(--accent); }
+    .opcion input { accent-color: var(--accent); width: 18px; height: 18px; margin: 0; }
+    .opcion:has(input:checked) { border-color: var(--accent); background: rgba(58,143,224,0.07); }
+    .opcion:has(input:focus-visible) { box-shadow: 0 0 0 3px rgba(58,143,224,0.18); }
+
+    .error {
+      display: none;
+      color: var(--error);
+      font-size: 0.86rem;
+      font-weight: 600;
+      margin-top: 7px;
+    }
+    .campo.con-error .error { display: block; }
+    .form-card .btn { width: 100%; }
+
+    .aviso {
+      margin-top: 18px;
+      padding: 14px 16px;
+      border-radius: 12px;
+      font-size: 0.93rem;
+      line-height: 1.6;
+      background: rgba(197,48,48,0.07);
+      border: 1px solid rgba(197,48,48,0.28);
+      color: #742A2A;
+    }
+    .aviso a { color: #742A2A; font-weight: 700; }
+
+    .gracias {
+      background: #fff;
+      border: 1.5px solid rgba(47,133,90,0.35);
+      border-radius: 18px;
+      padding: 32px 26px;
+      max-width: 560px;
+    }
+    .registro--final .gracias { background: var(--gris-claro); }
+    .gracias h3 {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      color: var(--exito);
+      margin: 0 0 12px;
+    }
+    .gracias p { color: var(--gris); line-height: 1.75; margin: 0 0 10px; }
+    .gracias p:last-child { margin-bottom: 0; }
+
+    /* FOOTER */
+    .site-footer {
+      background: var(--bg);
+      color: rgba(255,255,255,0.72);
+      padding: 40px 20px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+    .site-footer img { height: 30px; width: auto; opacity: 0.85; margin-bottom: 16px; }
+    .site-footer p { margin: 0 0 6px; line-height: 1.6; }
+    .site-footer a { color: var(--accent); text-decoration: none; font-weight: 600; }
+    .site-footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 600px) {
+      .hero { padding: 48px 20px 56px; }
+      .section, .registro { padding: 48px 20px; }
+      .form-card { padding: 24px 20px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .btn:hover { transform: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container">
+      <a href="/" aria-label="Ópticas Jarmar — ir al inicio">
+        <img src="/logo-opticas-jarmar-blanco-esp.png" alt="Ópticas Jarmar" />
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <span class="eyebrow">Programa de Aceleración para Ópticas</span>
+      <h1>De óptica tradicional a empresa profesional.</h1>
+      <p>Un programa diseñado para dueños de ópticas que quieren profesionalizar, digitalizar y hacer crecer su negocio.</p>
+      <p>Basado en la experiencia, procesos y aprendizajes que hemos desarrollado y aplicado en Ópticas Jarmar.</p>
+      <a href="#registro" class="btn">Quiero recibir información</a>
+    </div>
+  </section>
+
+  <!-- FORMULARIO (inmediatamente después del hero) -->
+  <section class="registro" id="registro">
+    <div class="container">
+      <h2>Déjanos tus datos</h2>
+      <p>Te contactaremos cuando abramos el registro del Programa de Aceleración para Ópticas.</p>
+      <p class="apoyo">Tus datos nos permitirán compartirte información sobre fechas, formato y proceso de inscripción cuando esté disponible.</p>
+
+      <div class="form-card" data-form-card>
+        <form data-aceleracion data-endpoint={FORM_ENDPOINT} data-whatsapp={WHATSAPP} novalidate>
+          <div class="campo">
+            <label for="top-nombre">Nombre completo</label>
+            <input type="text" id="top-nombre" name="nombre" placeholder="Ej. Juan Pérez" autocomplete="name" required aria-describedby="top-nombre-err" />
+            <p class="error" id="top-nombre-err">Escribe tu nombre completo.</p>
+          </div>
+
+          <div class="campo">
+            <fieldset aria-describedby="top-duenio-err">
+              <legend>¿Eres dueño(a) de una óptica?</legend>
+              <div class="opciones">
+                <label class="opcion"><input type="radio" name="duenio" value="Sí" required /> Sí</label>
+                <label class="opcion"><input type="radio" name="duenio" value="No" required /> No</label>
+              </div>
+            </fieldset>
+            <p class="error" id="top-duenio-err">Selecciona una opción.</p>
+          </div>
+
+          <div class="campo">
+            <label for="top-telefono">Teléfono / WhatsApp</label>
+            <input type="tel" id="top-telefono" name="telefono" placeholder="Ej. +52 961 000 0000" autocomplete="tel" inputmode="tel" required aria-describedby="top-telefono-err" />
+            <p class="error" id="top-telefono-err">Escribe un teléfono de contacto.</p>
+          </div>
+
+          <div class="campo">
+            <label for="top-correo">Correo electrónico</label>
+            <input type="email" id="top-correo" name="correo" placeholder="nombre@correo.com" autocomplete="email" inputmode="email" required aria-describedby="top-correo-err" />
+            <p class="error" id="top-correo-err">Escribe un correo válido. Ej. nombre@correo.com</p>
+          </div>
+
+          <button type="submit" class="btn">Quiero recibir información</button>
+          <div class="aviso" data-aviso hidden></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROPUESTA DE VALOR -->
+  <section class="section">
+    <div class="container">
+      <h2>El objetivo es transformar la forma en que opera tu óptica.</h2>
+      <p>Estamos desarrollando un programa especializado para propietarios de ópticas que buscan tener mayor control de su negocio, mejorar su operación, fortalecer su estrategia comercial y aprovechar mejor la tecnología y los canales digitales.</p>
+      <p>La propuesta combina experiencia real dentro de la industria óptica con herramientas actuales de gestión, crecimiento y digitalización.</p>
+    </div>
+  </section>
+
+  <!-- ENFOQUE -->
+  <section class="section section--alt">
+    <div class="container">
+      <h2>Un programa creado específicamente para ópticas</h2>
+      <p>El programa estará enfocado en ayudar a los propietarios a profesionalizar las principales áreas de su negocio, incluyendo temas relacionados con:</p>
+      <ul class="areas">
+        {areas.map((a) => <li>{a}</li>)}
+      </ul>
+    </div>
+  </section>
+
+  <!-- AUTORIDAD -->
+  <section class="section section--dark">
+    <div class="container">
+      <h2>Construido desde la experiencia de 60 años de operar una óptica</h2>
+      <p>El programa parte de la experiencia de Ópticas Jarmar, llevando aprendizajes, procesos y herramientas desarrollados a lo largo de años de operación y evolución del negocio.</p>
+      <p>La intención no es enseñar teoría general de administración, sino compartir un enfoque diseñado específicamente para la realidad de una óptica.</p>
+    </div>
+  </section>
+
+  <!-- CTA / REGISTRO FINAL -->
+  <section class="registro registro--final" id="registro-final">
+    <div class="container">
+      <h2>¿Te interesa participar en la próxima generación?</h2>
+      <p>Déjanos tus datos y te contactaremos cuando abramos el registro del Programa de Aceleración para Ópticas.</p>
+      <p class="apoyo">Tus datos nos permitirán compartirte información sobre fechas, formato y proceso de inscripción cuando esté disponible.</p>
+
+      <div class="form-card" data-form-card>
+        <form data-aceleracion data-endpoint={FORM_ENDPOINT} data-whatsapp={WHATSAPP} novalidate>
+          <div class="campo">
+            <label for="fin-nombre">Nombre completo</label>
+            <input type="text" id="fin-nombre" name="nombre" placeholder="Ej. Juan Pérez" autocomplete="name" required aria-describedby="fin-nombre-err" />
+            <p class="error" id="fin-nombre-err">Escribe tu nombre completo.</p>
+          </div>
+
+          <div class="campo">
+            <fieldset aria-describedby="fin-duenio-err">
+              <legend>¿Eres dueño(a) de una óptica?</legend>
+              <div class="opciones">
+                <label class="opcion"><input type="radio" name="duenio" value="Sí" required /> Sí</label>
+                <label class="opcion"><input type="radio" name="duenio" value="No" required /> No</label>
+              </div>
+            </fieldset>
+            <p class="error" id="fin-duenio-err">Selecciona una opción.</p>
+          </div>
+
+          <div class="campo">
+            <label for="fin-telefono">Teléfono / WhatsApp</label>
+            <input type="tel" id="fin-telefono" name="telefono" placeholder="Ej. +52 961 000 0000" autocomplete="tel" inputmode="tel" required aria-describedby="fin-telefono-err" />
+            <p class="error" id="fin-telefono-err">Escribe un teléfono de contacto.</p>
+          </div>
+
+          <div class="campo">
+            <label for="fin-correo">Correo electrónico</label>
+            <input type="email" id="fin-correo" name="correo" placeholder="nombre@correo.com" autocomplete="email" inputmode="email" required aria-describedby="fin-correo-err" />
+            <p class="error" id="fin-correo-err">Escribe un correo válido. Ej. nombre@correo.com</p>
+          </div>
+
+          <button type="submit" class="btn">Quiero registrarme</button>
+          <div class="aviso" data-aviso hidden></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <img src="/logo-opticas-jarmar-blanco-esp.png" alt="Ópticas Jarmar" />
+    <p>Clínica Óptica Boutique desde 1966 · Tuxtla Gutiérrez y Tijuana</p>
+    <p><a href="/">Ir al sitio de Ópticas Jarmar</a></p>
+    <p style="margin-top:14px;opacity:0.6;">© <span id="anio"></span> Ópticas Jarmar · Todos los derechos reservados</p>
+  </footer>
+
+  <script is:inline>
+    document.getElementById('anio').textContent = new Date().getFullYear();
+
+    var CONFIRMACION = {
+      titulo: '¡Gracias por registrarte!',
+      lineas: [
+        'Hemos recibido tus datos.',
+        'Te contactaremos cuando tengamos disponible la información de la próxima generación del Programa de Aceleración para Ópticas.'
+      ]
+    };
+
+    function limpiar(campo) { campo.classList.remove('con-error'); }
+
+    function marcar(campo, input) {
+      campo.classList.add('con-error');
+      if (input) input.setAttribute('aria-invalid', 'true');
+    }
+
+    function validar(form) {
+      var ok = true, primero = null;
+      var campos = form.querySelectorAll('.campo');
+
+      campos.forEach(function (campo) {
+        limpiar(campo);
+        var input = campo.querySelector('input[type="text"], input[type="tel"], input[type="email"]');
+
+        if (input) {
+          input.setAttribute('aria-invalid', 'false');
+          var valor = (input.value || '').trim();
+          var malo = !valor;
+          // Validación de correo: algo@algo.dominio, sin espacios
+          if (!malo && input.type === 'email') malo = !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(valor);
+          // Teléfono: al menos 8 dígitos, permitiendo +, espacios, guiones y paréntesis
+          if (!malo && input.type === 'tel') malo = (valor.replace(/\D/g, '').length < 8);
+          if (malo) { marcar(campo, input); ok = false; primero = primero || input; }
+          return;
+        }
+
+        var radios = campo.querySelectorAll('input[type="radio"]');
+        if (radios.length) {
+          var elegido = Array.prototype.some.call(radios, function (r) { return r.checked; });
+          if (!elegido) { marcar(campo, null); ok = false; primero = primero || radios[0]; }
+        }
+      });
+
+      if (primero) primero.focus({ preventScroll: false });
+      return ok;
+    }
+
+    function enlaceWhatsApp(form, datos) {
+      var lineas = [
+        'Hola, quiero recibir información del Programa de Aceleración para Ópticas.',
+        '',
+        'Nombre: ' + datos.nombre,
+        '¿Dueño(a) de una óptica?: ' + datos.duenio,
+        'Teléfono: ' + datos.telefono,
+        'Correo: ' + datos.correo
+      ];
+      return 'https://wa.me/' + form.dataset.whatsapp + '?text=' + encodeURIComponent(lineas.join('\n'));
+    }
+
+    function mostrarGracias(form) {
+      var tarjeta = form.closest('[data-form-card]');
+      var caja = document.createElement('div');
+      caja.className = 'gracias';
+      caja.setAttribute('role', 'status');
+      caja.setAttribute('tabindex', '-1');
+      var h = document.createElement('h3');
+      h.textContent = CONFIRMACION.titulo;
+      caja.appendChild(h);
+      CONFIRMACION.lineas.forEach(function (t) {
+        var p = document.createElement('p');
+        p.textContent = t;
+        caja.appendChild(p);
+      });
+      tarjeta.replaceWith(caja);
+      caja.focus();
+    }
+
+    function mostrarAviso(form, datos) {
+      var aviso = form.querySelector('[data-aviso]');
+      aviso.hidden = false;
+      aviso.setAttribute('role', 'alert');
+      aviso.innerHTML = 'No pudimos enviar tu registro en este momento. ' +
+        '<a href="' + enlaceWhatsApp(form, datos) + '" target="_blank" rel="noopener">Mándanos tus datos por WhatsApp</a> ' +
+        'y te contactamos igual.';
+    }
+
+    document.querySelectorAll('form[data-aceleracion]').forEach(function (form) {
+      // Limpia el error de un campo en cuanto la persona lo corrige
+      form.addEventListener('input', function (e) {
+        var campo = e.target.closest('.campo');
+        if (campo) { limpiar(campo); e.target.setAttribute('aria-invalid', 'false'); }
+      });
+      form.addEventListener('change', function (e) {
+        var campo = e.target.closest('.campo');
+        if (campo && e.target.type === 'radio') limpiar(campo);
+      });
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (!validar(form)) return;
+
+        var fd = new FormData(form);
+        var datos = {
+          nombre: (fd.get('nombre') || '').trim(),
+          duenio: fd.get('duenio') || '',
+          telefono: (fd.get('telefono') || '').trim(),
+          correo: (fd.get('correo') || '').trim()
+        };
+
+        var boton = form.querySelector('button[type="submit"]');
+        var textoOriginal = boton.textContent;
+        var endpoint = form.dataset.endpoint;
+
+        // Sin endpoint configurado no se afirma que los datos se guardaron:
+        // se ofrece WhatsApp para que el registro no se pierda.
+        if (!endpoint) { mostrarAviso(form, datos); return; }
+
+        boton.disabled = true;
+        boton.textContent = 'Enviando…';
+        form.querySelector('[data-aviso]').hidden = true;
+
+        fetch(endpoint, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: fd
+        }).then(function (r) {
+          if (!r.ok) throw new Error('respuesta ' + r.status);
+          if (typeof gtag === 'function') {
+            gtag('event', 'generate_lead', { event_category: 'aceleracion', event_label: 'registro' });
+          }
+          mostrarGracias(form);
+        }).catch(function () {
+          boton.disabled = false;
+          boton.textContent = textoOriginal;
+          mostrarAviso(form, datos);
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

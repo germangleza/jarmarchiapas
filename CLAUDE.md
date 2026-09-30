@@ -23,6 +23,7 @@ Es un sitio de **vertical salud**: no dar diagnósticos, no prometer resultados,
 | Estilos globales | `src/styles/global.css` |
 | Sitemap y llms.txt (dinámicos) | `src/pages/sitemap.xml.ts`, `src/pages/llms.txt.ts` |
 | Redirects 301 | `vercel.json` |
+| **Endpoint del formulario de `/aceleracion`** | variable de entorno `PUBLIC_ACELERACION_FORM_ENDPOINT` (en Vercel). Sin ella el formulario no simula un envío correcto: avisa y ofrece WhatsApp |
 
 ## Estructura de páginas
 
