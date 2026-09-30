@@ -124,17 +124,19 @@ const areas = [
       padding: 64px 20px 72px;
     }
     .eyebrow {
-      display: inline-block;
+      display: block;
+      width: fit-content;
+      margin: 0 auto 26px;
       background: rgba(58,143,224,0.2);
       border: 1px solid var(--accent);
       color: var(--accent);
       border-radius: 100px;
       padding: 6px 18px;
-      font-size: 0.8rem;
+      font-size: 1.05rem;   /* 16.8px — 4px más que los 12.8px originales */
       font-weight: 600;
       letter-spacing: 0.05em;
       text-transform: uppercase;
-      margin-bottom: 26px;
+      text-align: center;
     }
     .hero h1 {
       font-family: var(--font-display);
@@ -142,7 +144,9 @@ const areas = [
       font-weight: 700;
       line-height: 1.15;
       margin: 0 0 24px;
+      text-align: center;
     }
+    .hero p strong { font-weight: 700; }
     .hero p {
       font-size: 1.08rem;
       line-height: 1.75;
@@ -388,7 +392,7 @@ const areas = [
     <div class="container">
       <span class="eyebrow">Programa de Aceleración para Ópticas</span>
       <h1>De óptica tradicional a empresa profesional.</h1>
-      <p>Un programa diseñado para dueños de ópticas que quieren profesionalizar, digitalizar y hacer crecer su negocio.</p>
+      <p>Un programa diseñado para dueños de ópticas que quieren <strong>profesionalizar, digitalizar y hacer crecer su negocio.</strong></p>
       <p>Basado en la experiencia, procesos y aprendizajes que hemos desarrollado y aplicado en Ópticas Jarmar.</p>
       <a href="#registro" class="btn">Quiero recibir información</a>
     </div>
