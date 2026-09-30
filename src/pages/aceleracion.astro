@@ -226,7 +226,8 @@ const areas = [
     }
 
     /* FORMULARIO */
-    .registro { background: var(--gris-claro); padding: 56px 20px; }
+    /* El header es sticky: sin esto el ancla del CTA deja el título debajo de él */
+    .registro { background: var(--gris-claro); padding: 56px 20px; scroll-margin-top: 82px; }
     .registro--final { background: #fff; border-top: 1px solid rgba(13,43,107,0.08); }
     .registro h2 {
       font-family: var(--font-display);
@@ -243,6 +244,11 @@ const areas = [
       max-width: 620px;
     }
     .registro .apoyo { font-size: 0.93rem; opacity: 0.85; margin-bottom: 28px; }
+    .registro h2 + .form-card { margin-top: 24px; }
+    .registro .nota { max-width: 560px; margin-top: 22px; }
+    .registro .nota p { color: var(--gris); line-height: 1.75; margin: 0 0 8px; }
+    .registro .nota p:last-child { margin-bottom: 0; }
+    .registro .nota .apoyo { margin-bottom: 0; }
 
     .form-card {
       background: #fff;
@@ -392,8 +398,6 @@ const areas = [
   <section class="registro" id="registro">
     <div class="container">
       <h2>Déjanos tus datos</h2>
-      <p>Te contactaremos cuando abramos el registro del Programa de Aceleración para Ópticas.</p>
-      <p class="apoyo">Tus datos nos permitirán compartirte información sobre fechas, formato y proceso de inscripción cuando esté disponible.</p>
 
       <div class="form-card" data-form-card>
         <form data-aceleracion data-endpoint={FORM_ENDPOINT} data-whatsapp={WHATSAPP} novalidate>
@@ -429,6 +433,11 @@ const areas = [
           <button type="submit" class="btn">Quiero recibir información</button>
           <div class="aviso" data-aviso hidden></div>
         </form>
+      </div>
+
+      <div class="nota" data-nota>
+        <p>Te contactaremos cuando abramos el registro del Programa de Aceleración para Ópticas.</p>
+        <p class="apoyo">Tus datos nos permitirán compartirte información sobre fechas, formato y proceso de inscripción cuando esté disponible.</p>
       </div>
     </div>
   </section>
@@ -590,6 +599,8 @@ const areas = [
         p.textContent = t;
         caja.appendChild(p);
       });
+      var nota = tarjeta.parentElement.querySelector('[data-nota]');
+      if (nota) nota.remove();
       tarjeta.replaceWith(caja);
       caja.focus();
     }
