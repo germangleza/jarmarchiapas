@@ -23,7 +23,7 @@ Es un sitio de **vertical salud**: no dar diagnósticos, no prometer resultados,
 | Estilos globales | `src/styles/global.css` |
 | Sitemap y llms.txt (dinámicos) | `src/pages/sitemap.xml.ts`, `src/pages/llms.txt.ts` |
 | Redirects 301 | `vercel.json` |
-| **Endpoint del formulario de `/aceleracion`** | variable de entorno `PUBLIC_ACELERACION_FORM_ENDPOINT` (en Vercel). Sin ella el formulario no simula un envío correcto: avisa y ofrece WhatsApp |
+| **Formulario de `/aceleracion`** | Los registros van a Formspree (`https://formspree.io/f/myezavyy`), definido en la propia página. `PUBLIC_ACELERACION_FORM_ENDPOINT` lo sobrescribe si hay que apuntar a otro servicio. Si el envío falla no se finge que se guardó: avisa y ofrece WhatsApp |
 
 ## Estructura de páginas
 

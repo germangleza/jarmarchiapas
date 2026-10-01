@@ -2,12 +2,14 @@
 // Landing de captación: Programa de Aceleración para Ópticas
 // Ruta: /aceleracion — página standalone (head propio, ver CLAUDE.md)
 //
-// El sitio es estático, así que el formulario envía a un servicio externo
-// (Formspree, Basin, Getform, Web3Forms… cualquiera que acepte un POST).
-// Se configura con la variable de entorno PUBLIC_ACELERACION_FORM_ENDPOINT.
-// Si no está definida o el envío falla, el formulario NO finge que se guardó:
-// muestra un aviso y ofrece enviar los datos por WhatsApp, para no perder el registro.
-const FORM_ENDPOINT = import.meta.env.PUBLIC_ACELERACION_FORM_ENDPOINT ?? "";
+// El sitio es estático, así que los registros van a Formspree.
+// El id del formulario es público por diseño —viaja en el HTML del cliente de
+// todas formas—, así que se deja en el código. PUBLIC_ACELERACION_FORM_ENDPOINT
+// lo sobrescribe si alguna vez hay que apuntar a otro servicio sin tocar esto.
+// Si el envío falla, el formulario NO finge que se guardó: muestra un aviso y
+// ofrece mandar los datos por WhatsApp, para no perder el registro.
+const FORM_ENDPOINT =
+  import.meta.env.PUBLIC_ACELERACION_FORM_ENDPOINT ?? "https://formspree.io/f/myezavyy";
 const WHATSAPP = "529611855475";
 
 const areas = [
@@ -430,9 +432,13 @@ const areas = [
 
           <div class="campo">
             <label for="top-correo">Correo electrónico</label>
-            <input type="email" id="top-correo" name="correo" placeholder="nombre@correo.com" autocomplete="email" inputmode="email" required aria-describedby="top-correo-err" />
+            <input type="email" id="top-correo" name="email" placeholder="nombre@correo.com" autocomplete="email" inputmode="email" required aria-describedby="top-correo-err" />
             <p class="error" id="top-correo-err">Escribe un correo válido. Ej. nombre@correo.com</p>
           </div>
+
+          <input type="hidden" name="_subject" value="Nuevo registro — Programa de Aceleración para Ópticas" />
+          <input type="hidden" name="origen" value="hero" />
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" />
 
           <button type="submit" class="btn">Quiero recibir información</button>
           <div class="aviso" data-aviso hidden></div>
@@ -509,9 +515,13 @@ const areas = [
 
           <div class="campo">
             <label for="fin-correo">Correo electrónico</label>
-            <input type="email" id="fin-correo" name="correo" placeholder="nombre@correo.com" autocomplete="email" inputmode="email" required aria-describedby="fin-correo-err" />
+            <input type="email" id="fin-correo" name="email" placeholder="nombre@correo.com" autocomplete="email" inputmode="email" required aria-describedby="fin-correo-err" />
             <p class="error" id="fin-correo-err">Escribe un correo válido. Ej. nombre@correo.com</p>
           </div>
+
+          <input type="hidden" name="_subject" value="Nuevo registro — Programa de Aceleración para Ópticas" />
+          <input type="hidden" name="origen" value="final" />
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" />
 
           <button type="submit" class="btn">Quiero registrarme</button>
           <div class="aviso" data-aviso hidden></div>
@@ -638,7 +648,7 @@ const areas = [
           nombre: (fd.get('nombre') || '').trim(),
           duenio: fd.get('duenio') || '',
           telefono: (fd.get('telefono') || '').trim(),
-          correo: (fd.get('correo') || '').trim()
+          correo: (fd.get('email') || '').trim()
         };
 
         var boton = form.querySelector('button[type="submit"]');
