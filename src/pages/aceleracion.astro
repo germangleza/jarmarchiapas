@@ -203,9 +203,9 @@ const areas = [
     }
     .section--dark p { color: rgba(255,255,255,0.88); }
     .section p:last-child { margin-bottom: 0; }
-    /* Propuesta de valor y autoridad: texto al 70% del tamaño normal */
-    .section--compacta h2 { font-size: calc(clamp(1.45rem, 4vw, 2.05rem) * 0.7); }
-    .section--compacta p { font-size: calc(1.03rem * 0.7); }
+    /* Evita palabras sueltas en la última línea ("óptica.", "digitales.") */
+    .section h2, .registro h2 { text-wrap: balance; }
+    .section p, .registro p { text-wrap: pretty; }
 
     /* ÁREAS */
     .areas {
@@ -372,6 +372,22 @@ const areas = [
     .site-footer a { color: var(--accent); text-decoration: none; font-weight: 600; }
     .site-footer a:hover { text-decoration: underline; }
 
+    /* Computadora y tablet: todo en una columna centrada. Antes el bloque
+       quedaba pegado a la izquierda del contenedor y dejaba un hueco a la
+       derecha, y el hero mezclaba título centrado con párrafos a la izquierda. */
+    @media (min-width: 768px) {
+      .hero .container,
+      .section .container,
+      .registro .container { text-align: center; }
+      .hero p,
+      .section p,
+      .registro > .container > p,
+      .registro .nota { margin-left: auto; margin-right: auto; }
+      .form-card,
+      .gracias { margin-left: auto; margin-right: auto; text-align: left; }
+      .areas { text-align: left; }
+    }
+
     @media (max-width: 600px) {
       .hero { padding: 48px 20px 56px; }
       .section, .registro { padding: 48px 20px; }
@@ -456,11 +472,11 @@ const areas = [
   </section>
 
   <!-- PROPUESTA DE VALOR -->
-  <section class="section section--compacta">
+  <section class="section">
     <div class="container">
       <h2>El objetivo es transformar la forma en que opera tu óptica.</h2>
-      <p>Estamos desarrollando un programa especializado para propietarios de ópticas que buscan tener mayor control de su negocio, mejorar su operación, fortalecer su estrategia comercial y aprovechar mejor la tecnología y los canales digitales.</p>
-      <p>La propuesta combina experiencia real dentro de la industria óptica con herramientas actuales de gestión, crecimiento y digitalización.</p>
+      <p>Un programa para dueños de ópticas que buscan más control de su negocio, una mejor operación, una estrategia comercial sólida y aprovechar los canales digitales.</p>
+      <p>Combina experiencia real en la industria óptica con herramientas actuales de gestión y crecimiento.</p>
     </div>
   </section>
 
@@ -475,11 +491,11 @@ const areas = [
   </section>
 
   <!-- AUTORIDAD -->
-  <section class="section section--dark section--compacta">
+  <section class="section section--dark">
     <div class="container">
       <h2>Construido desde la experiencia de 60 años de operar una óptica</h2>
-      <p>El programa parte de la experiencia de Ópticas Jarmar, llevando aprendizajes, procesos y herramientas desarrollados a lo largo de años de operación y evolución del negocio.</p>
-      <p>La intención no es enseñar teoría general de administración, sino compartir un enfoque diseñado específicamente para la realidad de una óptica.</p>
+      <p>Parte de los aprendizajes, procesos y herramientas que Ópticas Jarmar ha desarrollado a lo largo de su operación.</p>
+      <p>No es teoría general de administración: es un enfoque pensado para la realidad de una óptica.</p>
     </div>
   </section>
 
