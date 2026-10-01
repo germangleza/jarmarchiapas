@@ -406,7 +406,7 @@ const areas = [
   <section class="registro" id="registro">
     <div class="container">
       <div class="form-card" data-form-card>
-        <form data-aceleracion data-endpoint={FORM_ENDPOINT} data-whatsapp={WHATSAPP} novalidate>
+        <form action={FORM_ENDPOINT} method="POST" data-aceleracion data-endpoint={FORM_ENDPOINT} data-whatsapp={WHATSAPP}>
           <div class="campo">
             <label for="top-nombre">Nombre completo</label>
             <input type="text" id="top-nombre" name="nombre" placeholder="Ej. Juan Pérez" autocomplete="name" required aria-describedby="top-nombre-err" />
@@ -489,7 +489,7 @@ const areas = [
       <p class="apoyo">Tus datos nos permitirán compartirte información sobre fechas, formato y proceso de inscripción cuando esté disponible.</p>
 
       <div class="form-card" data-form-card>
-        <form data-aceleracion data-endpoint={FORM_ENDPOINT} data-whatsapp={WHATSAPP} novalidate>
+        <form action={FORM_ENDPOINT} method="POST" data-aceleracion data-endpoint={FORM_ENDPOINT} data-whatsapp={WHATSAPP}>
           <div class="campo">
             <label for="fin-nombre">Nombre completo</label>
             <input type="text" id="fin-nombre" name="nombre" placeholder="Ej. Juan Pérez" autocomplete="name" required aria-describedby="fin-nombre-err" />
@@ -629,6 +629,10 @@ const areas = [
     }
 
     document.querySelectorAll('form[data-aceleracion]').forEach(function (form) {
+      // Se desactiva la validación nativa solo si hay JS, que es quien muestra
+      // los errores. Sin JS el navegador valida y el form hace POST por su cuenta.
+      form.noValidate = true;
+
       // Limpia el error de un campo en cuanto la persona lo corrige
       form.addEventListener('input', function (e) {
         var campo = e.target.closest('.campo');
