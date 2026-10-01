@@ -203,6 +203,9 @@ const areas = [
     }
     .section--dark p { color: rgba(255,255,255,0.88); }
     .section p:last-child { margin-bottom: 0; }
+    /* Propuesta de valor y autoridad: texto al 70% del tamaño normal */
+    .section--compacta h2 { font-size: calc(clamp(1.45rem, 4vw, 2.05rem) * 0.7); }
+    .section--compacta p { font-size: calc(1.03rem * 0.7); }
 
     /* ÁREAS */
     .areas {
@@ -453,7 +456,7 @@ const areas = [
   </section>
 
   <!-- PROPUESTA DE VALOR -->
-  <section class="section">
+  <section class="section section--compacta">
     <div class="container">
       <h2>El objetivo es transformar la forma en que opera tu óptica.</h2>
       <p>Estamos desarrollando un programa especializado para propietarios de ópticas que buscan tener mayor control de su negocio, mejorar su operación, fortalecer su estrategia comercial y aprovechar mejor la tecnología y los canales digitales.</p>
@@ -465,7 +468,6 @@ const areas = [
   <section class="section section--alt">
     <div class="container">
       <h2>Un programa creado específicamente para ópticas</h2>
-      <p>El programa estará enfocado en ayudar a los propietarios a profesionalizar las principales áreas de su negocio, incluyendo temas relacionados con:</p>
       <ul class="areas">
         {areas.map((a) => <li>{a}</li>)}
       </ul>
@@ -473,7 +475,7 @@ const areas = [
   </section>
 
   <!-- AUTORIDAD -->
-  <section class="section section--dark">
+  <section class="section section--dark section--compacta">
     <div class="container">
       <h2>Construido desde la experiencia de 60 años de operar una óptica</h2>
       <p>El programa parte de la experiencia de Ópticas Jarmar, llevando aprendizajes, procesos y herramientas desarrollados a lo largo de años de operación y evolución del negocio.</p>
