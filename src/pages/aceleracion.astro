@@ -661,7 +661,12 @@ const areas = [
 
         // Sin endpoint configurado no se afirma que los datos se guardaron:
         // se ofrece WhatsApp para que el registro no se pierda.
-        if (!endpoint) { mostrarAviso(form, datos); return; }
+        if (!endpoint) {
+          console.error('[aceleracion] No hay endpoint configurado; el registro no se envió a ningún sitio.');
+          mostrarAviso(form, datos);
+          return;
+        }
+        console.info('[aceleracion] Enviando registro a', endpoint);
 
         boton.disabled = true;
         boton.textContent = 'Enviando…';
@@ -672,12 +677,22 @@ const areas = [
           headers: { 'Accept': 'application/json' },
           body: fd
         }).then(function (r) {
-          if (!r.ok) throw new Error('respuesta ' + r.status);
+          return r.text().then(function (cuerpo) {
+            return { ok: r.ok, status: r.status, cuerpo: cuerpo };
+          });
+        }).then(function (res) {
+          if (!res.ok) {
+            // Formspree explica el motivo en el cuerpo de la respuesta
+            console.error('[aceleracion] Formspree rechazó el envío. HTTP ' + res.status, res.cuerpo);
+            throw new Error('HTTP ' + res.status);
+          }
+          console.info('[aceleracion] Registro aceptado por Formspree.', res.cuerpo);
           if (typeof gtag === 'function') {
             gtag('event', 'generate_lead', { event_category: 'aceleracion', event_label: 'registro' });
           }
           mostrarGracias(form);
-        }).catch(function () {
+        }).catch(function (e) {
+          console.error('[aceleracion] El envío no se completó:', e && e.message ? e.message : e);
           boton.disabled = false;
           boton.textContent = textoOriginal;
           mostrarAviso(form, datos);
