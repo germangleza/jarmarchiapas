@@ -163,6 +163,16 @@ const areas = [
     /* Hero centrado en todos los tamaños: etiqueta, titular, párrafos y botón */
     .hero .container { text-align: center; }
     .hero p { margin-left: auto; margin-right: auto; }
+    /* Párrafo justificado: todas las líneas al mismo ancho y la última
+       centrada, para que siga cuadrando con el resto del hero */
+    .hero p.justificado {
+      text-align: justify;
+      text-align-last: center;
+      /* Sin división silábica, en la columna angosta del celular el
+         justificado abre huecos grandes entre palabras */
+      -webkit-hyphens: auto;
+      hyphens: auto;
+    }
 
     .btn {
       display: inline-flex;
@@ -416,7 +426,7 @@ const areas = [
     <div class="container">
       <span class="eyebrow">Programa de Aceleración para Ópticas</span>
       <h1>De óptica tradicional <span class="sin-corte">a empresa profesional.</span></h1>
-      <p>Un programa diseñado para dueños de ópticas que quieren <strong>profesionalizar, digitalizar y hacer crecer su negocio.</strong></p>
+      <p class="justificado">Un programa diseñado para dueños de ópticas que quieren <strong>profesionalizar, digitalizar y hacer crecer su negocio.</strong></p>
       <p>Basado en la experiencia, procesos y aprendizajes que hemos desarrollado y aplicado en Ópticas Jarmar.</p>
       <a href="#registro" class="btn">Quiero recibir información</a>
     </div>
