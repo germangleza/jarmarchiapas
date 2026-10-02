@@ -160,6 +160,9 @@ const areas = [
       max-width: 620px;
     }
     .hero .btn { margin-top: 20px; }
+    /* Hero centrado en todos los tamaños: etiqueta, titular, párrafos y botón */
+    .hero .container { text-align: center; }
+    .hero p { margin-left: auto; margin-right: auto; }
 
     .btn {
       display: inline-flex;
@@ -376,10 +379,8 @@ const areas = [
        quedaba pegado a la izquierda del contenedor y dejaba un hueco a la
        derecha, y el hero mezclaba título centrado con párrafos a la izquierda. */
     @media (min-width: 768px) {
-      .hero .container,
       .section .container,
       .registro .container { text-align: center; }
-      .hero p,
       .section p,
       .registro > .container > p,
       .registro .nota { margin-left: auto; margin-right: auto; }
