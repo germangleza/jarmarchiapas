@@ -70,6 +70,7 @@ Además, **aceptamos el beneficio de visión de cualquier aseguradora**; te expl
 - **Dirección:** David Alfaro Siqueiros #2795, local 101, Zona Urbana Río, Tijuana, B.C.
 - **Horario:** lunes a viernes de 10:00 a 18:00 · sábados de 10:00 a 15:00
 - **WhatsApp:** [664 579 1970](https://wa.me/526645791970)
+- **Estacionamiento:** contamos con estacionamiento para pacientes
 
 ¿Trabajas en Zona Río? Escríbenos antes y aparta un horario que te acomode, a la hora de la comida o al salir de la oficina.
 

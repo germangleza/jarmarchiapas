@@ -1,6 +1,6 @@
 ---
 title: "¿Vives en San Diego? Guía para hacer tus lentes en una óptica de Zona Río, Tijuana"
-description: "Si cruzas desde San Diego, Chula Vista o el sur de California para tu examen de la vista o tus lentes, esto es lo que conviene saber: cómo planear la visita, qué llevar, cuántas vueltas implica cada servicio y cómo agendar en Ópticas Jarmar Zona Río."
+description: "Si cruzas desde San Diego, Chula Vista o el sur de California para tu examen de la vista o tus lentes, esto es lo que conviene saber: cómo planear la visita, qué llevar, cuántas vueltas implica cada servicio, envío de lentes a domicilio en EE.UU. y cómo agendar en Ópticas Jarmar Zona Río."
 pubDate: 2026-10-06
 author: "Equipo Ópticas Jarmar"
 tags: ["óptica en Tijuana", "óptica Zona Río", "óptica cerca de la garita", "lentes en Tijuana desde San Diego", "turismo médico Tijuana", "examen de la vista Tijuana"]
@@ -15,7 +15,7 @@ Si es tu caso, esta guía te ayuda a **planear la visita para aprovecharla**: qu
 
 ## Por qué Zona Río es práctico si vienes del otro lado
 
-Nuestra clínica está en la **Zona Urbana Río**, a unos minutos de la garita de San Ysidro. Es la zona comercial y de servicios más céntrica de Tijuana, con estacionamientos, restaurantes y plazas alrededor, así que la visita puede ser corta o combinarse con otros pendientes del día.
+Nuestra clínica está en la **Zona Urbana Río**, a unos minutos de la garita de San Ysidro. Es la zona comercial y de servicios más céntrica de Tijuana, y **contamos con estacionamiento para pacientes**, así que no tienes que dar vueltas buscando dónde dejar el auto. La visita puede ser corta o combinarse con otros pendientes del día.
 
 Lo que más nos comentan los pacientes que cruzan es la combinación de **atención sin prisas, examen completo y trato en su idioma**: atendemos en español o inglés, como prefieras.
 
@@ -35,7 +35,10 @@ Esta es la pregunta más práctica para quien cruza, así que vamos por partes:
 
 **Examen de la vista.** Una sola visita. El [estudio de la vista completo](/tijuana/estudio-de-la-vista) toma **entre 30 y 45 minutos**, según tu caso. Te explicamos los resultados en la misma consulta.
 
-**Lentes graduados.** Normalmente son **dos visitas**: el examen y la elección de armazón, y luego la entrega. El tiempo de fabricación depende del tipo de mica (monofocal, progresivo, con filtros o tratamientos), así que te lo confirmamos al hacer tu pedido para que planees tu siguiente cruce. En la entrega ajustamos el armazón a tu rostro. Conoce las opciones en [lentes graduados en Tijuana](/tijuana/lentes-graduados).
+**Lentes graduados.** Basta con **una visita**: haces tu examen y eliges tu armazón. El tiempo de fabricación depende del tipo de mica (monofocal, progresivo, con filtros o tratamientos) y te lo confirmamos al hacer tu pedido. Para la entrega tienes dos opciones:
+
+- **Te los enviamos a tu domicilio en Estados Unidos**, para que no tengas que volver a cruzar.
+- **Regresas a recogerlos a Zona Río**, y aprovechamos para ajustar el armazón a tu rostro. Conoce las opciones en [lentes graduados en Tijuana](/tijuana/lentes-graduados).
 
 **Lentes de contacto.** Si ya los usas y tu graduación está estable, puede resolverse en pocas visitas. Si es tu primera vez, la adaptación incluye pruebas, entrenamiento para ponerlos y quitarlos, y una revisión de seguimiento. Ver [lentes de contacto en Tijuana](/tijuana/lentes-de-contacto).
 
@@ -56,6 +59,8 @@ Muchos pacientes de San Diego aprovechan el viaje para traer a toda la familia: 
 - **Dirección:** David Alfaro Siqueiros #2795, local 101, Zona Urbana Río, Tijuana, B.C.
 - **Horario:** lunes a viernes de 10:00 a 18:00 · sábados de 10:00 a 15:00
 - **WhatsApp:** [+52 664 579 1970](https://wa.me/526645791970) (desde Estados Unidos, marca con el prefijo de México, +52)
+- **Estacionamiento:** contamos con estacionamiento para pacientes
+- **Envío a domicilio en EE.UU.:** pregúntanos al hacer tu pedido
 
 [Agendar mi visita por WhatsApp](https://wa.me/526645791970?text=Hola%2C+vengo+desde+San+Diego+y+quiero+agendar+una+cita+en+%C3%93pticas+Jarmar+Zona+R%C3%ADo.) · [Conoce Ópticas Jarmar Tijuana](/tijuana/)
 
