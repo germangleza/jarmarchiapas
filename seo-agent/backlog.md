@@ -5,7 +5,7 @@ Ninguno compite con los posts existentes en `src/content/blog/`.
 
 ## Chiapas (Tuxtla Gutiérrez)
 
-- [ ] Lentes progresivos en Tuxtla: cómo saber si los necesitas y cómo adaptarte
+- [x] Lentes progresivos en Tuxtla: cómo saber si los necesitas y cómo adaptarte
 - [ ] Lentes de contacto en Tuxtla: guía para tu primera vez
 - [ ] Examen de la vista para niños en Tuxtla Gutiérrez (señales y edad para la primera revisión)
 - [ ] Lentes de sol graduados en Chiapas: protección UV para el sol y la altura (Tuxtla, San Cristóbal)
