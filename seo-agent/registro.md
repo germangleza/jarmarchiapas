@@ -6,3 +6,4 @@
 | 2 | 2026-10-09 | Tijuana | /blog/lentes-progresivos-tijuana/ | lentes progresivos Tijuana | cómo elegir lentes progresivos; adaptación a progresivos; progresivos Zona Río |
 | 3 | 2026-10-09 | Chiapas | /blog/lentes-de-contacto-tuxtla-primera-vez/ | lentes de contacto Tuxtla | lentes de contacto primera vez; adaptación de lentes de contacto; cómo poner lentes de contacto (publicación de recuperación) |
 | 4 | 2026-10-10 | Tijuana | /blog/lentes-para-computadora-tijuana/ | lentes para computadora Tijuana | fatiga visual digital; lentes con filtro de luz azul; lentes ocupacionales home office |
+| 5 | 2026-10-11 | Chiapas | /blog/examen-de-la-vista-ninos-tuxtla/ | examen de la vista niños Tuxtla | examen visual infantil; mi hijo no ve bien; ojo flojo; lentes para niños |
