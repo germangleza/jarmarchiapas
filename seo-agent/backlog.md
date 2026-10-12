@@ -20,7 +20,7 @@ Ninguno compite con los posts existentes en `src/content/blog/`.
 
 ## Tijuana (Zona Río)
 
-- [ ] Lentes de contacto en Zona Río, Tijuana: tipos y adaptación
+- [x] Lentes de contacto en Zona Río, Tijuana: tipos y adaptación
 - [x] Lentes progresivos en Tijuana: cómo elegirlos y cuánto tarda la adaptación
 - [x] Lentes para computadora en Tijuana: home office, oficinas y maquiladoras
 - [ ] Especialista en queratocono en Tijuana: qué esperar de tu primera consulta
