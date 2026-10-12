@@ -93,16 +93,30 @@ exige texto idéntico en schema. Usa subtítulos con preguntas en su lugar.
 - Tono cálido, claro, sin jerga, nunca alarmista. Sin comparaciones contra competidores con nombre.
 - Siempre invitar a la consulta presencial.
 
-## 5. Publicar
+## 5. Portada (obligatoria)
+
+Cada post lleva foto. Elige una foto real de `seo-agent/fotos/catalogo.md` que corresponda al tema y a la
+ciudad del post (no uses fotos de la sucursal de Tuxtla en un post de Tijuana ni al revés) y que no se haya
+usado en los últimos 3 posts del registro. Genera la portada:
+
+```bash
+node seo-agent/portada.mjs <ruta-foto> <slug> [encuadre]   # encuadre: attention (default) | centre | north | south…
+```
+
+Eso crea `public/blog/<slug>.jpg` (1600×900, <300 KB), que el post toma solo. **Mírala** (ábrela con Read):
+si el recorte corta una cara, deja solo techo/piso o no se entiende qué es, repite con otro encuadre u otra
+foto. No uses fotos de stock de internet ni imágenes generadas con personas.
+
+## 6. Publicar
 
 1. `npm ci` (si no hay `node_modules`) y `npm run build`. **Si el build falla, corrige; si no puedes, no publiques**
    y termina explicando el error.
 2. Verifica que cada enlace interno del post exista en `dist/` (ej. `dist/tijuana/lentes-graduados/index.html`).
 3. Agrega una línea al final de la tabla de `seo-agent/registro.md`:
-   `| N | AAAA-MM-DD | Chiapas/Tijuana/General | /blog/<slug>/ | keyword principal | 2–3 variantes |`
+   `| N | AAAA-MM-DD | Chiapas/Tijuana/General | /blog/<slug>/ | keyword principal | 2–3 variantes | foto usada |`
    y marca el tema como hecho en `seo-agent/backlog.md` (`- [x]`).
 4. `git pull --rebase origin main`, commit (`blog(seo-agent): <título corto>`) y `git push origin main`
    (si falla por red, reintenta hasta 4 veces con espera 2s, 4s, 8s, 16s).
 5. Termina con un resumen de 3 líneas: título, URL `https://www.jarmar.com/blog/<slug>/`, keywords objetivo.
 
-La imagen del post (`public/blog/<slug>.jpg`) la sube el equipo después; mientras tanto se ve el placeholder de marca.
+Incluye `public/blog/<slug>.jpg` en el mismo commit que el post.
