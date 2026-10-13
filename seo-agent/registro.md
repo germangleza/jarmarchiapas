@@ -8,3 +8,4 @@
 | 4 | 2026-10-10 | Tijuana | /blog/lentes-para-computadora-tijuana/ | lentes para computadora Tijuana | fatiga visual digital; lentes con filtro de luz azul; lentes ocupacionales home office | examen-vista-jarmar-tijuana.jpg |
 | 5 | 2026-10-11 | Chiapas | /blog/examen-de-la-vista-ninos-tuxtla/ | examen de la vista niños Tuxtla | examen visual infantil; mi hijo no ve bien; ojo flojo; lentes para niños | atencion-opticas-jarmar.jpg |
 | 6 | 2026-10-12 | Tijuana | /blog/lentes-de-contacto-tijuana-zona-rio/ | lentes de contacto Tijuana | adaptación de lentes de contacto; lentes de contacto Zona Río; lentes de contacto para astigmatismo | opt-aaron-linares-jarmar.jpeg |
+| 7 | 2026-10-13 | Chiapas | /blog/lentes-de-sol-graduados-tuxtla/ | lentes de sol graduados Tuxtla | lentes de sol con graduación; protección UV; polarizados vs fotocromáticos | jarmar-eyewear-coleccion.jpg |
