@@ -10,3 +10,4 @@
 | 6 | 2026-10-12 | Tijuana | /blog/lentes-de-contacto-tijuana-zona-rio/ | lentes de contacto Tijuana | adaptación de lentes de contacto; lentes de contacto Zona Río; lentes de contacto para astigmatismo | opt-aaron-linares-jarmar.jpeg |
 | 7 | 2026-10-13 | Chiapas | /blog/lentes-de-sol-graduados-tuxtla/ | lentes de sol graduados Tuxtla | lentes de sol con graduación; protección UV; polarizados vs fotocromáticos | jarmar-eyewear-coleccion.jpg |
 | 8 | 2026-10-14 | Tijuana | /blog/especialista-queratocono-tijuana/ | especialista en queratocono Tijuana | lentes para queratocono Tijuana; primera consulta queratocono; topografía corneal Tijuana | opt-jorge-aranda-tello-jarmar.jpeg |
+| 9 | 2026-10-15 | Chiapas | /blog/diabetes-y-vista-examen-tuxtla/ | diabetes y vista Tuxtla | retinopatía diabética; examen de la vista para diabéticos; revisión anual de fondo de ojo | consulta-visual-jarmar.jpg |

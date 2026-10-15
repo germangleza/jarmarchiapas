@@ -12,7 +12,7 @@ Ninguno compite con los posts existentes en `src/content/blog/`.
 - [ ] Vienes de Tapachula, San Cristóbal o Comitán: cómo planear tu cita de lentes esclerales en Tuxtla
 - [ ] Óptica en Plaza Crystal, Tuxtla: servicios y cómo llegar (enlazar `/tuxtla/plaza-crystal`)
 - [ ] Óptica en Col. Arboledas / Plaza Cedros, Tuxtla (enlazar `/tuxtla/arboledas`)
-- [ ] Diabetes y vista: por qué revisarte cada año en Tuxtla (retinopatía diabética, sin alarmismo)
+- [x] Diabetes y vista: por qué revisarte cada año en Tuxtla (retinopatía diabética, sin alarmismo)
 - [ ] Glaucoma: el examen preventivo que conviene hacerse después de los 40 en Tuxtla
 - [ ] Lentes con filtro de luz azul en Tuxtla: para quién sí valen la pena
 - [ ] Queratocono en Chiapas: especialista en lentes esclerales en el sureste
