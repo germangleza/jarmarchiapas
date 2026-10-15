@@ -5,6 +5,8 @@ pubDate: 2026-07-18
 author: "Ópticas Jarmar"
 tags: ["cómo poner lentes esclerales", "cómo quitar lentes esclerales", "limpieza de lentes esclerales", "cuidado de lentes esclerales", "solución para lentes esclerales", "lentes esclerales empañados", "cuántas horas usar lentes esclerales"]
 draft: false
+ciudad: general
+servicios: ["lentes-esclerales"]
 ---
 
 La primera vez que un paciente ve el tamaño de un lente escleral, la reacción más común es de incredulidad: *¿eso va a entrar en mi ojo?*

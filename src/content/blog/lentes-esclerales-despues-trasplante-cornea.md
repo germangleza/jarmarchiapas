@@ -5,6 +5,8 @@ pubDate: 2026-07-17
 author: "Ópticas Jarmar"
 tags: ["lentes esclerales", "trasplante de córnea", "queratoplastia", "queratocono", "rehabilitación visual", "contactología especializada"]
 draft: false
+ciudad: general
+servicios: ["lentes-esclerales"]
 ---
 
 Un trasplante de córnea es una cirugía transformadora: reemplaza tejido corneal dañado por uno sano y devuelve la transparencia al ojo. Pero transparencia no es lo mismo que visión perfecta. Muchos pacientes descubren, tras su recuperación, que la visión con gafas sigue siendo imprecisa o que la imagen está distorsionada. Los lentes esclerales son, en la mayoría de estos casos, la solución más efectiva para completar esa rehabilitación visual.

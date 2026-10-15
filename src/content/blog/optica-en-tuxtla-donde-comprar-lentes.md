@@ -5,6 +5,8 @@ pubDate: 2026-08-21
 author: "Equipo Ópticas Jarmar"
 tags: ["óptica en Tuxtla", "óptica Tuxtla Gutiérrez", "dónde comprar lentes en Tuxtla", "lentes graduados Tuxtla", "armazones Tuxtla", "Jarmar Eyewear", "Plaza Crystal"]
 draft: false
+ciudad: tuxtla
+servicios: ["lentes-graduados", "estudio-de-la-vista"]
 ---
 
 Comprar lentes parece sencillo: entras a una **óptica en Tuxtla**, te miden, escoges un armazón y pagas. Pero si alguna vez terminaste con unos lentes que te marean, que "no se sienten como los anteriores" o que a los seis meses ya no te sirven, sabes que la elección de la óptica importa tanto como la elección del armazón.
@@ -36,7 +38,7 @@ Lo barato puede salir caro cuando la graduación viene mal tomada o la mica no e
 - **Servicio postventa**: ajustes, adaptación y seguimiento.
 - **Trayectoria comprobable**: reseñas, años en la ciudad, pacientes que regresan.
 
-Si quieres profundizar en la parte del examen, escribimos una guía completa: [¿dónde hacer un examen de la vista en Tuxtla?](/blog/donde-hacer-examen-de-la-vista-en-tuxtla/)
+Si quieres profundizar en la parte del examen, escribimos una guía completa: [¿dónde hacer un examen de la vista en Tuxtla?](/blog/donde-hacer-examen-de-la-vista-en-tuxtla/) También puedes ver qué incluye nuestro [examen de la vista en Tuxtla](/tuxtla/estudio-de-la-vista).
 
 ## Lo que encuentras en Ópticas Jarmar
 

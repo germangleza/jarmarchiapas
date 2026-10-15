@@ -5,6 +5,8 @@ pubDate: 2026-10-14
 author: "Equipo Ópticas Jarmar"
 tags: ["especialista en queratocono Tijuana", "queratocono Tijuana", "lentes para queratocono Tijuana", "lentes esclerales Tijuana", "topografía corneal Tijuana", "Zona Río"]
 draft: false
+ciudad: tijuana
+servicios: ["queratocono", "lentes-esclerales"]
 ---
 
 Si tienes queratocono (o te lo sospechan) y buscas un especialista en Tijuana, en **Ópticas Jarmar, en Zona Río,** nuestros optometristas se dedican a la **adaptación de lentes especializados para córneas irregulares**, entre ellos los lentes esclerales, con más de 10 años de especialidad. La primera consulta sirve para mapear tu córnea, entender qué visión tienes hoy y definir qué tipo de lente puede ayudarte; los resultados dependen de cada paciente.
@@ -72,7 +74,7 @@ Un buen especialista responde con claridad, no promete resultados idénticos par
 
 Nuestra sucursal está en **David Alfaro Siqueiros #2795, local 101, Zona Urbana Río**, con estacionamiento para pacientes. Atendemos de lunes a viernes de 10:00 a 18:00 y sábados de 10:00 a 15:00, en español e inglés. Si vienes desde Estados Unidos, también podemos enviar tus lentes a domicilio en EE.UU. o puedes recogerlos en Zona Río.
 
-Con más de 880 reseñas y 4.9★ en Google, y 60 años de trayectoria desde 1966, cuidamos la vista de familias enteras. Conoce más en [Ópticas Jarmar en Tijuana](/tijuana/) y en la página de [queratocono en Tijuana](/tijuana/queratocono/).
+Con más de 880 reseñas y 4.9★ en Google, y 60 años de trayectoria desde 1966, cuidamos la vista de familias enteras. Conoce más en [Ópticas Jarmar en Tijuana](/tijuana/), en la página de [queratocono en Tijuana](/tijuana/queratocono/) y en [lentes esclerales en Tijuana](/tijuana/lentes-esclerales/).
 
 ## Agenda tu primera consulta
 

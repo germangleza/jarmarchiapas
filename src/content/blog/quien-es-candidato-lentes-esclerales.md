@@ -5,6 +5,8 @@ pubDate: 2026-07-17
 author: "Ópticas Jarmar"
 tags: ["lentes esclerales", "candidato", "queratocono", "ojo seco", "córnea irregular", "contactología especializada"]
 draft: false
+ciudad: general
+servicios: ["lentes-esclerales"]
 ---
 
 Los [lentes esclerales](/tijuana/lentes-esclerales) no son para todo el mundo — y eso es algo bueno. Son una solución altamente especializada para personas cuya visión no puede corregirse de forma adecuada con lentes convencionales. Si te preguntas si podrías ser candidato, esta guía te ayudará a entenderlo.

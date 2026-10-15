@@ -5,6 +5,8 @@ pubDate: 2026-07-15
 author: "Equipo Ópticas Jarmar"
 tags: ["qué incluye examen de la vista", "evaluación visual", "optometría", "salud ocular", "graduación"]
 draft: false
+ciudad: general
+servicios: ["estudio-de-la-vista"]
 ---
 
 ## Un examen de la vista es más que leer letras

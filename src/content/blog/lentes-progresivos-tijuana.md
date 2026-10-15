@@ -5,6 +5,8 @@ pubDate: 2026-10-09
 author: "Equipo Ópticas Jarmar"
 tags: ["lentes progresivos Tijuana", "lentes progresivos", "cómo elegir lentes progresivos", "presbicia", "óptica Zona Río", "lentes multifocales", "Tijuana"]
 draft: false
+ciudad: tijuana
+servicios: ["lentes-graduados"]
 ---
 
 Los **lentes progresivos** son lentes multifocales sin línea visible que permiten ver de lejos, a distancia intermedia y de cerca con un solo par. Para elegirlos bien en Tijuana, lo importante es que un optometrista tome tus medidas y revise cómo usas tu vista a diario. En Ópticas Jarmar, en Zona Río, te atendemos en consulta presencial, en español o en inglés, para valorar si son la opción adecuada para ti.

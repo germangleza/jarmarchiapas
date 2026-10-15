@@ -5,6 +5,8 @@ pubDate: 2026-07-18
 author: "Ópticas Jarmar"
 tags: ["mejores lentes para queratocono", "lentes rígidos para queratocono", "lentes esclerales vs rígidos", "lentes híbridos para queratocono", "lentes de contacto especiales", "opciones para queratocono"]
 draft: false
+ciudad: general
+servicios: ["lentes-esclerales", "queratocono"]
 ---
 
 Una de las preguntas más frecuentes que hacen los pacientes con [queratocono](/tijuana/queratocono) recién diagnosticado es: *¿qué tipo de lente necesito?*
@@ -177,8 +179,8 @@ La respuesta depende de tu caso específico. El primer paso es una evaluación c
 
 En Ópticas Jarmar realizamos valoraciones para queratocono en:
 
-- **Tijuana** (Zona Río): [Lentes esclerales en Tijuana](/tijuana/lentes-esclerales)
-- **Tuxtla Gutiérrez, Chiapas**: [Lentes esclerales en Chiapas](/tuxtla/lentes-esclerales)
+- **Tijuana** (Zona Río): [Lentes esclerales en Tijuana](/tijuana/lentes-esclerales) · [Queratocono en Tijuana](/tijuana/queratocono)
+- **Tuxtla Gutiérrez, Chiapas**: [Lentes esclerales en Chiapas](/tuxtla/lentes-esclerales) · [Queratocono en Chiapas](/tuxtla/queratocono)
 
 [Agendar valoración en Tijuana](https://wa.me/526645791970?text=Hola%2C+quiero+agendar+una+valoraci%C3%B3n+para+queratocono.) · [Agendar valoración en Chiapas](https://wa.me/529611855475?text=Hola%2C+quiero+agendar+una+valoraci%C3%B3n+para+queratocono.)
 

@@ -5,6 +5,8 @@ pubDate: 2026-07-30
 author: "Ópticas Jarmar"
 tags: ["dónde adaptar lentes esclerales", "lentes esclerales en México", "lentes esclerales Tijuana", "lentes esclerales Chiapas", "especialista en lentes esclerales", "adaptación de lentes esclerales"]
 draft: false
+ciudad: general
+servicios: ["lentes-esclerales", "queratocono"]
 ---
 
 Si tu oftalmólogo te dijo "necesitas lentes esclerales" — o llegaste a esa conclusión después de investigar tu queratocono — ahora enfrentas la pregunta práctica: **¿dónde me los adapto y con quién?**
@@ -46,13 +48,13 @@ Nos respaldan **60 años de trayectoria** (desde 1966) y una calificación de **
 
 Nuestra sucursal de **Zona Urbana Río** es referencia en adaptación de esclerales para el noroeste del país — y para pacientes de **San Diego y el sur de California**, que cruzan la frontera por la combinación de especialidad y precio (atendemos en español e inglés).
 
-→ [Lentes esclerales en Tijuana](/tijuana/lentes-esclerales) · WhatsApp: [+52 664 579 1970](https://wa.me/526645791970?text=Hola%2C+quiero+una+valoraci%C3%B3n+para+adaptaci%C3%B3n+de+lentes+esclerales+en+Tijuana.)
+→ [Lentes esclerales en Tijuana](/tijuana/lentes-esclerales) · [Queratocono en Tijuana](/tijuana/queratocono) · WhatsApp: [+52 664 579 1970](https://wa.me/526645791970?text=Hola%2C+quiero+una+valoraci%C3%B3n+para+adaptaci%C3%B3n+de+lentes+esclerales+en+Tijuana.)
 
 ### 📍 En el sur: Tuxtla Gutiérrez, Chiapas
 
 Somos la clínica óptica con mayor trayectoria de Chiapas y el centro de adaptación de esclerales de referencia para el sureste — muchos pacientes nos visitan desde otros municipios y estados vecinos. Dos sucursales: **Plaza Cedros (Col. Arboledas)** y **Plaza Crystal**.
 
-→ [Lentes esclerales en Chiapas](/tuxtla/lentes-esclerales) · WhatsApp: [+52 961 185 5475](https://wa.me/529611855475?text=Hola%2C+quiero+una+valoraci%C3%B3n+para+adaptaci%C3%B3n+de+lentes+esclerales+en+Chiapas.)
+→ [Lentes esclerales en Chiapas](/tuxtla/lentes-esclerales) · [Queratocono en Chiapas](/tuxtla/queratocono) · WhatsApp: [+52 961 185 5475](https://wa.me/529611855475?text=Hola%2C+quiero+una+valoraci%C3%B3n+para+adaptaci%C3%B3n+de+lentes+esclerales+en+Chiapas.)
 
 ### ¿Vives en otra parte de México?
 

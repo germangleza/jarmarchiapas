@@ -5,6 +5,8 @@ pubDate: 2026-10-13
 author: "Equipo Ópticas Jarmar"
 tags: ["lentes de sol graduados Tuxtla", "lentes de sol con graduación", "protección UV", "lentes polarizados", "lentes fotocromáticos", "óptica en Tuxtla", "Chiapas"]
 draft: false
+ciudad: tuxtla
+servicios: ["lentes-de-sol", "lentes-graduados"]
 ---
 
 Los **lentes de sol graduados** son lentes de sol fabricados con tu receta, para que veas nítido y te protejas de la radiación ultravioleta (UV) con un solo par. En Ópticas Jarmar, en Tuxtla Gutiérrez, un optometrista revisa tu graduación en consulta presencial y te ayuda a elegir el tipo de lente solar que mejor se adapta a tu rutina, desde monofocales hasta progresivos con filtro solar.

@@ -5,6 +5,8 @@ pubDate: 2026-08-12
 author: "Equipo Ópticas Jarmar"
 tags: ["examen visual para niños Tijuana", "examen de la vista niños Zona Río", "mi hijo no ve el pizarrón", "salud visual infantil", "optometría pediátrica Tijuana", "lentes para niños"]
 draft: false
+ciudad: tijuana
+servicios: ["examen-ninos"]
 ---
 
 "Es que no veo el pizarrón." A veces la frase llega así de directa. Pero la mayoría de las veces no llega: los niños **no saben que ven mal**, porque para ellos ver borroso es lo normal — nunca han visto de otra forma. Y entonces las señales aparecen por otro lado: las calificaciones bajan, la maestra manda un recado, el niño "ya no quiere leer".

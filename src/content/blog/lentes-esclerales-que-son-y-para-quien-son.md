@@ -5,6 +5,8 @@ pubDate: 2026-07-09
 author: "Equipo Ópticas Jarmar"
 tags: ["lentes esclerales", "lentes de contacto", "salud visual", "contactología especializada", "queratocono"]
 draft: false
+ciudad: general
+servicios: ["lentes-esclerales"]
 ---
 
 ## ¿Qué son los lentes esclerales?

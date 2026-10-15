@@ -5,6 +5,8 @@ pubDate: 2026-07-01
 author: "Equipo Ópticas Jarmar"
 tags: ["armazones", "guía", "estilo"]
 draft: false
+ciudad: general
+servicios: ["lentes-graduados"]
 ---
 
 Elegir armazones no es solo cuestión de gusto: la forma de tu rostro determina qué monturas te favorecen más. La regla general es buscar contraste. Un rostro con ángulos marcados se suaviza con monturas redondas, y un rostro redondo gana definición con monturas angulares.
@@ -33,6 +35,6 @@ Frente ancha y barbilla estrecha. Los armazones más ligeros en la parte inferio
 
 El tamaño importa tanto como la forma. El armazón debe terminar cerca del borde de tu rostro, sin sobresalir ni apretar en las sienes. El puente debe apoyarse cómodamente sin dejar marca.
 
-Si además necesitas [lentes graduados](/tijuana/lentes-graduados), la elección del armazón se vuelve más importante todavía: una montura mal proporcional puede afectar tanto la estética como la posición de los centros ópticos de tus lentes, especialmente si usas [lentes progresivos](/blog/presbicia-o-vista-cansada/).
+Si además necesitas lentes graduados (en [Tuxtla Gutiérrez](/tuxtla/lentes-graduados) o en [Tijuana](/tijuana/lentes-graduados)), la elección del armazón se vuelve más importante todavía: una montura mal proporcional puede afectar tanto la estética como la posición de los centros ópticos de tus lentes, especialmente si usas [lentes progresivos](/blog/presbicia-o-vista-cansada/).
 
 Si tienes dudas, lo más confiable es probártelos en persona. En una [revisión presencial](/tijuana/estudio-de-la-vista) podemos ajustar la montura a tu graduación y a la forma real de tu rostro, algo que ninguna guía general puede reemplazar.

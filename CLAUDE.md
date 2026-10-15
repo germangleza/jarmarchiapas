@@ -42,9 +42,9 @@ Otras: `/` (hub nacional), `/tuxtla/`, `/tijuana/`, `/historia/` (+ `/en/history
 
 ## Crear un post
 
-1. Nuevo `.md` en `src/content/blog/` con frontmatter: `title`, `description`, `pubDate`, `author`, `tags`, `draft`. Opcional `image` (solo si la imagen no es `.jpg`).
+1. Nuevo `.md` en `src/content/blog/` con frontmatter: `title`, `description`, `pubDate`, `author`, `tags`, `draft`, y los obligatorios `ciudad` (`tuxtla` | `tijuana` | `general`) y `servicios` (slugs de `src/lib/servicios.ts`). Opcional `image` (solo si la imagen no es `.jpg`).
 2. Subir la imagen a `public/blog/<slug>.jpg` (16:9, ~1600×900, <300 KB).
-3. Enlazar a las páginas de servicio relevantes y a otros posts del clúster.
+3. Enlazar en el texto a las páginas de servicio de la ciudad y a otros posts del clúster. Además, `ciudad` + `servicios` generan solos las tarjetas al final del post y el bloque "Guías…" en `/<ciudad>/<servicio>/`, la página genérica y el hub (`src/lib/blog-relaciones.ts`, componentes `PostRelaciones` y `GuiasCiudad`).
 4. Cerrar los posts clínicos con el revisor (ver `client-brief.md` → Salud).
 
 El sitemap, `llms.txt` y el ping de IndexNow se actualizan solos en el build/deploy.

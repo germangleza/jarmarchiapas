@@ -5,6 +5,8 @@ pubDate: 2026-07-18
 author: "Ópticas Jarmar"
 tags: ["lentes esclerales precio", "cuánto cuestan los lentes esclerales", "precio de lentes esclerales en México", "adaptación de lentes esclerales precio", "dónde comprar lentes esclerales", "cuánto duran los lentes esclerales"]
 draft: false
+ciudad: general
+servicios: ["lentes-esclerales"]
 ---
 
 Una de las primeras preguntas que hacen los pacientes con queratocono cuando descubren los lentes esclerales es: *¿cuánto cuestan?*

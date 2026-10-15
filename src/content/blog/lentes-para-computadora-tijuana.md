@@ -5,6 +5,8 @@ pubDate: 2026-10-10
 author: "Equipo Ópticas Jarmar"
 tags: ["lentes para computadora Tijuana", "fatiga visual digital", "lentes para pantallas", "filtro de luz azul", "lentes ocupacionales", "home office", "óptica Zona Río", "Tijuana"]
 draft: false
+ciudad: tijuana
+servicios: ["lentes-luz-azul", "lentes-graduados"]
 ---
 
 Los **lentes para computadora** son lentes graduados (o con una graduación pensada para distancia intermedia) que ayudan a ver cómoda la pantalla durante horas. No todas las personas con ojos cansados los necesitan: primero conviene un examen de la vista para saber si lo que sientes viene de una graduación sin corregir, de la vista cansada o de hábitos de trabajo. En Ópticas Jarmar, en Zona Río, Tijuana, lo revisamos contigo en consulta presencial.
