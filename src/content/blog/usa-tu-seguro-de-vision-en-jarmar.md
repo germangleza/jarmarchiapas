@@ -5,6 +5,8 @@ pubDate: 2026-07-24
 author: "Ópticas Jarmar"
 tags: ["seguros de visión", "beneficio de visión", "seguro de gastos médicos", "aseguradoras", "examen de la vista", "lentes con seguro"]
 draft: false
+ciudad: general
+servicios: ["estudio-de-la-vista", "lentes-graduados"]
 ---
 
 Muchas personas tienen un beneficio de visión en su seguro de gastos médicos —por su empresa o por una póliza individual— y **nunca lo usan**, simplemente porque no saben que lo tienen o no saben dónde aplicarlo.
@@ -37,8 +39,8 @@ No importa con quién tengas tu seguro: si tu plan incluye servicio de visión, 
 
 En cualquiera de nuestras sucursales:
 
-- **Tuxtla Gutiérrez, Chiapas** — Plaza Cedros (Col. Arboledas) y Plaza Crystal: [Ópticas Jarmar Chiapas](/tuxtla/)
-- **Tijuana, Baja California** — Zona Urbana Río: [Ópticas Jarmar Tijuana](/tijuana/)
+- **Tuxtla Gutiérrez, Chiapas** — Plaza Cedros (Col. Arboledas) y Plaza Crystal: [Ópticas Jarmar Chiapas](/tuxtla/) · [examen de la vista](/tuxtla/estudio-de-la-vista) · [lentes graduados](/tuxtla/lentes-graduados)
+- **Tijuana, Baja California** — Zona Urbana Río: [Ópticas Jarmar Tijuana](/tijuana/) · [examen de la vista](/tijuana/estudio-de-la-vista) · [lentes graduados](/tijuana/lentes-graduados)
 
 Y aplica para nuestros servicios: [estudio de la vista](/estudio-de-la-vista/), [lentes graduados](/lentes-graduados/), [lentes de contacto](/lentes-de-contacto/) y más, según lo que tu póliza incluya.
 

@@ -5,6 +5,8 @@ pubDate: 2026-10-11
 author: "Equipo Ópticas Jarmar"
 tags: ["examen de la vista niños Tuxtla", "examen visual infantil", "optometrista para niños", "mi hijo no ve bien", "lentes para niños", "regreso a clases", "Tuxtla Gutiérrez", "Chiapas"]
 draft: false
+ciudad: tuxtla
+servicios: ["examen-ninos"]
 ---
 
 El **examen de la vista para niños** es una revisión adaptada a su edad que mide cuánto ve cada ojo, si necesita lentes y cómo trabajan sus ojos en equipo. En Ópticas Jarmar, en Tuxtla Gutiérrez, atendemos a niños **desde los 3 años**, y conviene adelantar la cita si notas señales como acercarse mucho a las pantallas o entrecerrar los ojos. La revisión es presencial y la hace un optometrista.

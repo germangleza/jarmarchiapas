@@ -5,6 +5,8 @@ pubDate: 2026-10-12
 author: "Equipo Ópticas Jarmar"
 tags: ["lentes de contacto Tijuana", "adaptación de lentes de contacto", "lentes de contacto Zona Río", "lentes de contacto blandos", "lentes de contacto para astigmatismo", "lentes de contacto multifocales", "Tijuana"]
 draft: false
+ciudad: tijuana
+servicios: ["lentes-de-contacto"]
 ---
 
 Para usar **lentes de contacto en Tijuana** lo primero es una adaptación con un optometrista: un examen de la vista más una prueba de lentes, porque el lente correcto depende de tu graduación, de la forma de tu ojo y de tu rutina. En Ópticas Jarmar, en Zona Río, te explicamos los tipos disponibles y te acompañamos en tu primera cita, de forma presencial.

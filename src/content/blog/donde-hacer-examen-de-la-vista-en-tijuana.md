@@ -5,6 +5,8 @@ pubDate: 2026-07-15
 author: "Equipo Ópticas Jarmar"
 tags: ["examen de la vista Tijuana", "optometría Tijuana", "Zona Río", "salud visual", "dónde hacer examen de la vista"]
 draft: false
+ciudad: tijuana
+servicios: ["estudio-de-la-vista"]
 ---
 
 ## ¿Dónde hacerse un examen de la vista en Tijuana?

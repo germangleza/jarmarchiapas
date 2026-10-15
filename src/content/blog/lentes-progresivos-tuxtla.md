@@ -5,6 +5,8 @@ pubDate: 2026-10-09
 author: "Equipo Ópticas Jarmar"
 tags: ["lentes progresivos Tuxtla", "lentes progresivos", "vista cansada", "presbicia", "adaptación a progresivos", "óptica en Tuxtla", "Chiapas"]
 draft: false
+ciudad: tuxtla
+servicios: ["lentes-graduados"]
 ---
 
 Los **lentes progresivos** son lentes sin línea divisoria que combinan en una sola pieza la graduación para ver de lejos, a distancia intermedia y de cerca. Suelen ser una opción cuando, después de los 40 años aproximadamente, la vista de cerca se cansa y ya no quieres alternar entre dos pares de lentes. En Ópticas Jarmar, en Tuxtla Gutiérrez, un optometrista evalúa tu caso en consulta presencial para decirte si te convienen y qué diseño se ajusta a tu rutina.

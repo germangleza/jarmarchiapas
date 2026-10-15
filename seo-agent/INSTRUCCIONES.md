@@ -51,8 +51,24 @@ pubDate: AAAA-MM-DD   # fecha de hoy
 author: "Equipo Ópticas Jarmar"
 tags: ["keyword principal", "variante 1", "variante 2", "ciudad", "…"]
 draft: false
+ciudad: tuxtla        # tuxtla | tijuana | general (general = aplica a las dos ciudades)
+servicios: ["lentes-graduados"]   # 1–3 servicios del post (lista abajo)
 ---
 ```
+
+**`ciudad` y `servicios` son obligatorios** (el build falla sin ellos). Con esos dos campos el sitio crea solo
+la relación post ↔ páginas de servicio de la región:
+
+- Al final del post salen tarjetas a `/<ciudad>/<servicio>/` de cada servicio (en un post `general`, a Tuxtla
+  **y** a Tijuana) y "Artículos relacionados" que comparten servicio.
+- La página `/<ciudad>/<servicio>/`, la genérica `/<servicio>/` y el hub `/<ciudad>/` muestran el post en su
+  bloque "Guías…".
+
+Servicios válidos (son las páginas que existen en `/tuxtla/` y `/tijuana/`; la lista vive en `src/lib/servicios.ts`):
+`estudio-de-la-vista`, `examen-ninos`, `lentes-graduados` (incluye progresivos, armazones, micas, lentes
+para computadora), `lentes-de-contacto`, `lentes-de-sol`, `lentes-luz-azul`, `lentes-esclerales`, `queratocono`.
+Elige los que el post realmente trata, el principal primero. Si el tema no encaja en ninguno, usa el más cercano
+(normalmente `estudio-de-la-vista`); no inventes slugs.
 
 Estructura (900–1,400 palabras):
 1. **Primer párrafo = respuesta directa** a la búsqueda en 2–3 frases (esto es lo que citan las IA). Menciona
@@ -65,9 +81,12 @@ Estructura (900–1,400 palabras):
    - Post clínico: `*Contenido revisado por nuestro Optometrista Director [Jorge Aranda Tello](/jorgearanda/). Especialista en salud visual y diagnóstico optométrico.*`
    - Post comercial/general: `*Contenido elaborado por el equipo de Ópticas Jarmar. Clínica Óptica Boutique desde 1966.*`
 
-Enlaces internos (mínimo 4): la página de servicio de la ciudad (`/tuxtla/<servicio>` o `/tijuana/<servicio>`), el hub
-de la ciudad (`/tuxtla/` o `/tijuana/`) y 2+ posts relacionados del blog (`/blog/<slug>/`). Usa solo rutas que existan
-(revisa `src/pages/` y `src/content/blog/`). Nunca uses URLs absolutas sin `www`.
+Enlaces internos **dentro del texto** (mínimo 4, además de las tarjetas automáticas): la página de servicio de la
+ciudad (`/tuxtla/<servicio>/` o `/tijuana/<servicio>/`) de cada servicio del frontmatter —en el primer tercio del post
+y otra vez en el cierre—, el hub de la ciudad (`/tuxtla/` o `/tijuana/`) y 2+ posts relacionados del blog
+(`/blog/<slug>/`). En un post `general`, enlaza la página de servicio de **ambas** ciudades. Usa como texto del enlace
+el servicio + la ciudad ("lentes progresivos en Tuxtla"), no "clic aquí". Usa solo rutas que existan (revisa
+`src/pages/` y `src/content/blog/`). Nunca uses URLs absolutas sin `www`.
 
 **No** pongas una sección "Preguntas frecuentes": el layout del blog no genera `FAQPage` JSON-LD y la regla del sitio
 exige texto idéntico en schema. Usa subtítulos con preguntas en su lugar.
@@ -111,7 +130,9 @@ foto. No uses fotos de stock de internet ni imágenes generadas con personas.
 
 1. `npm ci` (si no hay `node_modules`) y `npm run build`. **Si el build falla, corrige; si no puedes, no publiques**
    y termina explicando el error.
-2. Verifica que cada enlace interno del post exista en `dist/` (ej. `dist/tijuana/lentes-graduados/index.html`).
+2. Verifica que cada enlace interno del post exista en `dist/` (ej. `dist/tijuana/lentes-graduados/index.html`) y
+   que la relación quedó hecha: `grep -l "/blog/<slug>/" dist/<ciudad>/<servicio>/index.html` debe encontrar la página
+   de servicio de cada servicio del frontmatter (en un post `general`, la de ambas ciudades).
 3. Agrega una línea al final de la tabla de `seo-agent/registro.md`:
    `| N | AAAA-MM-DD | Chiapas/Tijuana/General | /blog/<slug>/ | keyword principal | 2–3 variantes | foto usada |`
    y marca el tema como hecho en `seo-agent/backlog.md` (`- [x]`).

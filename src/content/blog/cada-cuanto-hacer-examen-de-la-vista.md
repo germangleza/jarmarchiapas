@@ -5,6 +5,8 @@ pubDate: 2026-07-15
 author: "Equipo Ópticas Jarmar"
 tags: ["cada cuánto hacer examen de la vista", "frecuencia revisión visual", "optometría", "salud visual", "revisión ocular"]
 draft: false
+ciudad: general
+servicios: ["estudio-de-la-vista"]
 ---
 
 ## ¿Con qué frecuencia hacerse un examen de la vista?

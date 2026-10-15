@@ -5,6 +5,8 @@ pubDate: 2026-09-03
 author: "Equipo Ópticas Jarmar"
 tags: ["el queratocono se cura", "mitos del queratocono", "queratocono", "tratamiento queratocono México", "lentes esclerales", "crosslinking", "salud visual"]
 draft: false
+ciudad: general
+servicios: ["queratocono", "lentes-esclerales"]
 ---
 
 Cuando alguien recibe un diagnóstico de queratocono —o sospecha que lo tiene—, lo primero que hace es buscar en internet. Y ahí se encuentra de todo: desde quien asegura que "se cura con gotas" hasta quien afirma que la ceguera es inevitable. Ninguno de los dos extremos es cierto.
@@ -77,8 +79,8 @@ En Ópticas Jarmar llevamos más de 10 años especializados en la rehabilitació
 
 **Atendemos en:**
 
-- **Tuxtla Gutiérrez, Chiapas**: [Queratocono en Chiapas](/tuxtla/queratocono)
-- **Tijuana, Baja California**: [Queratocono en Tijuana](/tijuana/queratocono)
+- **Tuxtla Gutiérrez, Chiapas**: [Queratocono en Chiapas](/tuxtla/queratocono) · [Lentes esclerales en Chiapas](/tuxtla/lentes-esclerales)
+- **Tijuana, Baja California**: [Queratocono en Tijuana](/tijuana/queratocono) · [Lentes esclerales en Tijuana](/tijuana/lentes-esclerales)
 
 [Agendar valoración en Chiapas](https://wa.me/529611855475?text=Hola%2C+quiero+agendar+una+valoraci%C3%B3n+con+topograf%C3%ADa+corneal.) · [Agendar valoración en Tijuana](https://wa.me/526645791970?text=Hola%2C+quiero+agendar+una+valoraci%C3%B3n+con+topograf%C3%ADa+corneal.)
 

@@ -1,0 +1,137 @@
+---
+// Al final de cada post: enlaces a las páginas de servicio de su ciudad (o de
+// ambas ciudades si el post es general) y artículos relacionados. Sale del
+// frontmatter `ciudad` + `servicios`; ver src/lib/blog-relaciones.ts.
+import type { CollectionEntry } from "astro:content";
+import { postsRelacionados } from "../lib/blog-relaciones";
+import { CIUDADES, SERVICIOS, servicioUrl, type Ciudad } from "../lib/servicios";
+
+interface Props {
+  post: CollectionEntry<"blog">;
+}
+const { post } = Astro.props;
+const { ciudad, servicios } = post.data;
+const ciudades: Ciudad[] = ciudad === "general" ? ["tuxtla", "tijuana"] : [ciudad];
+const relacionados = await postsRelacionados(post);
+---
+
+<aside class="rel" aria-label="Servicios y artículos relacionados">
+  <h2 class="rel-title">
+    {ciudad === "general" ? "Atiéndete en Ópticas Jarmar" : `Ópticas Jarmar en ${CIUDADES[ciudad].nombre}`}
+  </h2>
+
+  {
+    servicios.length > 0 && (
+      <ul class="rel-servicios">
+        {servicios.map((s) =>
+          ciudades.map((c) => (
+            <li>
+              <a href={servicioUrl(s, c)}>
+                <span class="rel-servicio">{SERVICIOS[s]}</span>
+                <span class="rel-ciudad">
+                  en {CIUDADES[c].nombre} →
+                </span>
+              </a>
+            </li>
+          ))
+        )}
+      </ul>
+    )
+  }
+
+  <p class="rel-hubs">
+    {ciudades.map((c, i) => (
+      <>
+        {i > 0 && " · "}
+        <a href={CIUDADES[c].hub}>
+          Sucursales y citas en {CIUDADES[c].nombre}
+        </a>
+      </>
+    ))}
+  </p>
+
+  {
+    relacionados.length > 0 && (
+      <>
+        <h2 class="rel-title">Artículos relacionados</h2>
+        <ul class="rel-posts">
+          {relacionados.map((p) => (
+            <li>
+              <a href={`/blog/${p.id}/`}>{p.data.title}</a>
+              <p>{p.data.description}</p>
+            </li>
+          ))}
+        </ul>
+      </>
+    )
+  }
+</aside>
+
+<style>
+  .rel {
+    margin-top: 48px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+  }
+  .rel-title {
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    margin: 0 0 16px;
+  }
+  .rel-servicios {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 12px;
+  }
+  .rel-servicios a {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    height: 100%;
+    padding: 14px 16px;
+    border-radius: var(--radius);
+    background: var(--surface);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    transition: var(--trans);
+  }
+  .rel-servicios a:hover {
+    border-color: var(--accent);
+  }
+  .rel-servicio {
+    font-weight: 600;
+  }
+  .rel-ciudad {
+    color: var(--accent);
+    font-size: 0.92rem;
+  }
+  .rel-hubs {
+    margin: 16px 0 40px;
+    font-size: 0.95rem;
+    color: var(--muted);
+  }
+  .rel-hubs a:hover,
+  .rel-posts a:hover {
+    text-decoration: underline;
+  }
+  .rel-posts {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .rel-posts li {
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .rel-posts a {
+    font-weight: 600;
+  }
+  .rel-posts p {
+    margin: 4px 0 0;
+    font-size: 0.93rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+</style>

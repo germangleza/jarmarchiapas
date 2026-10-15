@@ -5,6 +5,8 @@ pubDate: 2026-07-23
 author: "Ópticas Jarmar"
 tags: ["queratocono en adolescentes", "señales de queratocono", "queratocono jóvenes", "topografía corneal", "frotarse los ojos", "astigmatismo en adolescentes", "salud visual infantil"]
 draft: false
+ciudad: general
+servicios: ["queratocono"]
 ---
 
 El queratocono no espera a la edad adulta. En la gran mayoría de los casos, esta enfermedad de la córnea da sus primeras señales **entre los 10 y los 25 años** — justo en la etapa en que los cambios de graduación se atribuyen a "que está creciendo" o "que pasa mucho tiempo en la pantalla".

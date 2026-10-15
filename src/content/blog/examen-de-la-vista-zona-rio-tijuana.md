@@ -5,6 +5,8 @@ pubDate: 2026-08-12
 author: "Equipo Ópticas Jarmar"
 tags: ["examen de la vista Zona Río", "examen de la vista Tijuana", "optometría Zona Río", "estudio de la vista Tijuana", "salud visual", "óptica en Zona Río"]
 draft: false
+ciudad: tijuana
+servicios: ["estudio-de-la-vista"]
 ---
 
 Si buscas dónde hacerte un **examen de la vista en Zona Río, Tijuana**, aquí está todo lo que necesitas saber antes de agendar: qué pruebas incluye la evaluación en Ópticas Jarmar, cuánto tiempo dura, dónde estamos exactamente y cómo apartar tu cita.

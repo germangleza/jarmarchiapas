@@ -6,6 +6,8 @@ author: "Ópticas Jarmar"
 tags: ["topografía corneal", "queratocono", "lentes esclerales", "diagnóstico", "salud visual", "examen de la vista"]
 image: "/blog/que-es-topografia-corneal.webp"
 draft: false
+ciudad: general
+servicios: ["queratocono", "lentes-esclerales"]
 ---
 
 Cuando tu optometrista menciona una "topografía corneal", puede sonar a algo complejo. En realidad es un estudio indoloro, rápido y muy valioso: crea un mapa detallado de la superficie de tu córnea y revela irregularidades que ningún otro examen puede detectar de la misma manera.
@@ -101,8 +103,8 @@ Si no te han pedido una topografía pero tienes visión que no corrigue bien con
 
 En **Ópticas Jarmar** contamos con topografía corneal y más de 10 años de experiencia en adaptación de lentes esclerales para [queratocono](/tijuana/queratocono) y córneas irregulares.
 
-- **Tijuana** — Zona Urbana Río: [solicitar valoración](/tijuana/lentes-esclerales)
-- **Tuxtla Gutiérrez, Chiapas** — Plaza Cedros y Plaza Crystal: [solicitar valoración](/tuxtla/lentes-esclerales)
+- **Tijuana** — Zona Urbana Río: [solicitar valoración](/tijuana/lentes-esclerales) · [queratocono en Tijuana](/tijuana/queratocono)
+- **Tuxtla Gutiérrez, Chiapas** — Plaza Cedros y Plaza Crystal: [solicitar valoración](/tuxtla/lentes-esclerales) · [queratocono en Chiapas](/tuxtla/queratocono)
 
 ---
 

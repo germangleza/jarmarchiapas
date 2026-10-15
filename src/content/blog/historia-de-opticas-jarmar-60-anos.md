@@ -5,6 +5,8 @@ pubDate: 2026-08-11
 author: "Equipo Ópticas Jarmar"
 tags: ["historia de Jarmar", "Ópticas Jarmar", "óptica en Tuxtla Gutiérrez", "óptica en Tijuana", "Jarmar Eyewear", "empresa familiar", "60 años"]
 draft: false
+ciudad: general
+servicios: []
 ---
 
 Hay negocios que se miden en ventas y negocios que se miden en generaciones. En Jarmar tenemos la fortuna de medirnos en las segundas: los niños que llegaban de la mano de sus papás a nuestro primer local hoy traen a sus propios nietos. Sesenta años después, seguimos haciendo lo mismo que aquel primer día — cuidar la vista de la gente — aunque el camino nos haya llevado mucho más lejos de lo que aquella pareja fundadora imaginó.

@@ -5,6 +5,8 @@ pubDate: 2026-10-06
 author: "Equipo Ópticas Jarmar"
 tags: ["óptica en Tijuana", "óptica Zona Río", "óptica cerca de la garita", "lentes en Tijuana desde San Diego", "turismo médico Tijuana", "examen de la vista Tijuana"]
 draft: false
+ciudad: tijuana
+servicios: ["lentes-graduados", "estudio-de-la-vista"]
 ---
 
 Con frecuencia recibimos en Zona Río a pacientes que viven del otro lado: en San Diego, Chula Vista, National City o más al norte. Algunos son tijuanenses que se mudaron y siguen confiando en su óptica de siempre. Otros cruzan por primera vez porque alguien les recomendó hacer sus lentes en Tijuana.

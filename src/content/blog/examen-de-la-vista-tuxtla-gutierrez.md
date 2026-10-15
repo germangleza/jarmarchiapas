@@ -5,6 +5,8 @@ pubDate: 2026-08-21
 author: "Equipo Ópticas Jarmar"
 tags: ["examen de la vista Tuxtla", "óptica en Tuxtla Gutiérrez", "estudio de la vista Chiapas", "optometría Tuxtla", "salud visual", "Plaza Cedros", "Plaza Crystal"]
 draft: false
+ciudad: tuxtla
+servicios: ["estudio-de-la-vista"]
 ---
 
 Si estás buscando hacerte un **examen de la vista en Tuxtla Gutiérrez**, aquí está todo lo que necesitas saber antes de agendar: qué pruebas incluye la evaluación en Ópticas Jarmar, cuánto tiempo toma, en cuál de nuestras dos sucursales te queda más cerca y cómo apartar tu cita.

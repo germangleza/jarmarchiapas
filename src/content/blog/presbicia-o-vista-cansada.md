@@ -6,6 +6,8 @@ author: "Equipo Ópticas Jarmar"
 tags: ["presbicia", "vista cansada", "lentes progresivos", "lentes bifocales", "salud visual", "optometría"]
 image: "/blog/presbicia-o-vista-cansada.webp"
 draft: false
+ciudad: general
+servicios: ["lentes-graduados", "estudio-de-la-vista"]
 ---
 
 ## ¿Qué es la presbicia?
@@ -102,7 +104,7 @@ La mayoría de los ópticos hoy recomiendan **lentes progresivos** como primera 
 
 Los bifocales siguen siendo una alternativa válida para pacientes que no logran adaptarse a los progresivos, o para quienes su actividad principal requiere alternar solo entre dos distancias muy definidas.
 
-La clave está en una [evaluación individualizada](/tijuana/estudio-de-la-vista). No hay una respuesta universal; hay una respuesta correcta para cada persona.
+La clave está en una evaluación individualizada: un [examen de la vista en Tuxtla](/tuxtla/estudio-de-la-vista) o [en Tijuana](/tijuana/estudio-de-la-vista). No hay una respuesta universal; hay una respuesta correcta para cada persona.
 
 ---
 

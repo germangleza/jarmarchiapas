@@ -5,6 +5,8 @@ pubDate: 2026-07-30
 author: "Ópticas Jarmar"
 tags: ["me diagnosticaron queratocono", "queratocono qué hacer", "tratamiento queratocono", "lentes esclerales", "especialista en queratocono", "crosslinking", "topografía corneal"]
 draft: false
+ciudad: general
+servicios: ["queratocono", "lentes-esclerales"]
 ---
 
 Si estás leyendo esto, probablemente saliste hace poco de una consulta con dos palabras nuevas dando vueltas en tu cabeza: **queratocono** y "es progresivo". Es normal sentir miedo — la mayoría de nuestros pacientes lo sintió. Así que empecemos por lo más importante:
@@ -63,7 +65,7 @@ Elegir dónde adaptarte importa tanto como decidir hacerlo. Una adaptación de e
 - **Optometrista Director especializado**: [Jorge Aranda Tello](/jorgearanda/), con formación específica en córneas irregulares, post-trasplante y ojo seco severo.
 - **Proceso completo, no una venta**: topografía, lentes de prueba, ajustes personalizados, entrenamiento para ponerlos y quitarlos, y seguimiento.
 - **60 años de trayectoria** (desde 1966) y una calificación de **4.9★ en más de 880 reseñas de Google**.
-- **Dos ciudades**: [Tuxtla Gutiérrez, Chiapas](/tuxtla/lentes-esclerales) y [Tijuana, B.C.](/tijuana/lentes-esclerales) — con atención en inglés en Tijuana.
+- **Dos ciudades**: [Tuxtla Gutiérrez, Chiapas](/tuxtla/lentes-esclerales) y [Tijuana, B.C.](/tijuana/lentes-esclerales) — con atención en inglés en Tijuana. Más sobre la valoración en [queratocono en Chiapas](/tuxtla/queratocono) y [queratocono en Tijuana](/tijuana/queratocono).
 
 ¿Quieres saber exactamente cómo es el proceso? Lee la [guía completa de lentes esclerales para queratocono](/blog/lentes-esclerales-para-queratocono/) o revisa [quién es candidato](/blog/quien-es-candidato-lentes-esclerales/).
 

@@ -5,6 +5,8 @@ pubDate: 2026-07-18
 author: "Ópticas Jarmar"
 tags: ["lentes esclerales", "queratocono", "lentes para queratocono", "lentes de contacto para queratocono", "beneficios de los lentes esclerales", "queratocono avanzado"]
 draft: false
+ciudad: general
+servicios: ["lentes-esclerales", "queratocono"]
 ---
 
 Si tienes queratocono, es probable que hayas escuchado que los lentes normales ya no te dan la visión que necesitas. Esta guía explica qué son los lentes esclerales, por qué son la solución más eficaz para el queratocono y qué puedes esperar en cada etapa del proceso.
@@ -170,8 +172,8 @@ Si tienes queratocono diagnosticado, ves borroso con tus lentes actuales, o sosp
 
 **Ópticas Jarmar** cuenta con especialistas en adaptación de lentes esclerales en dos ciudades:
 
-- **Tijuana** (Zona Río): [Lentes esclerales en Tijuana](/tijuana/lentes-esclerales)
-- **Tuxtla Gutiérrez, Chiapas**: [Lentes esclerales en Chiapas](/tuxtla/lentes-esclerales)
+- **Tijuana** (Zona Río): [Lentes esclerales en Tijuana](/tijuana/lentes-esclerales) · [Queratocono en Tijuana](/tijuana/queratocono)
+- **Tuxtla Gutiérrez, Chiapas**: [Lentes esclerales en Chiapas](/tuxtla/lentes-esclerales) · [Queratocono en Chiapas](/tuxtla/queratocono)
 
 Escríbenos por WhatsApp y te orientamos sobre los pasos a seguir:
 

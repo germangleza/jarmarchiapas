@@ -5,6 +5,8 @@ pubDate: 2026-07-15
 author: "Equipo Ópticas Jarmar"
 tags: ["cuánto dura examen de la vista", "examen de la vista", "optometría", "evaluación visual", "salud ocular"]
 draft: false
+ciudad: general
+servicios: ["estudio-de-la-vista"]
 ---
 
 ## ¿Cuánto tiempo tarda un examen de la vista?

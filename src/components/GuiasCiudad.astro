@@ -1,0 +1,181 @@
+---
+// Bloque "Guías para pacientes" en páginas de servicio y hubs de ciudad.
+// Lista los posts relacionados (ver src/lib/blog-relaciones.ts):
+//   <GuiasCiudad ciudad="tuxtla" servicio="lentes-graduados" />  página de servicio de ciudad
+//   <GuiasCiudad servicio="lentes-graduados" />                  página genérica (ambas ciudades)
+//   <GuiasCiudad ciudad="tuxtla" />                              hub de la ciudad
+// Los primeros 6 van como tarjetas y el resto como lista de enlaces, para que
+// todo post relacionado quede enlazado. Si no hay posts, no muestra nada.
+import { postsDeCiudad, postsDeServicio } from "../lib/blog-relaciones";
+import { CIUDADES, SERVICIOS, type Ciudad, type Servicio } from "../lib/servicios";
+
+interface Props {
+  ciudad?: Ciudad;
+  servicio?: Servicio;
+}
+const { ciudad, servicio } = Astro.props;
+
+const posts = servicio
+  ? await postsDeServicio(servicio, ciudad)
+  : ciudad
+    ? await postsDeCiudad(ciudad)
+    : [];
+
+const TARJETAS = 6;
+const tarjetas = posts.slice(0, TARJETAS);
+const resto = posts.slice(TARJETAS);
+
+const enCiudad = ciudad ? ` en ${CIUDADES[ciudad].nombre}` : "";
+const titulo = servicio
+  ? `Guías sobre ${SERVICIOS[servicio].toLowerCase()}${enCiudad}`
+  : `Guías para pacientes${enCiudad}`;
+---
+
+{
+  posts.length > 0 && (
+    <section class="guias" aria-labelledby={`guias-${servicio ?? ciudad}`}>
+      <div class="guias-wrap">
+        <h2 class="guias-title" id={`guias-${servicio ?? ciudad}`}>{titulo}</h2>
+        <p class="guias-sub">
+          Artículos de nuestro blog para resolver tus dudas antes de tu consulta.
+        </p>
+        <ul class="guias-grid">
+          {tarjetas.map((p) => (
+            <li>
+              <a class="guias-card" href={`/blog/${p.id}/`}>
+                <img
+                  src={p.data.image ?? `/blog/${p.id}.jpg`}
+                  alt=""
+                  width="1600"
+                  height="900"
+                  loading="lazy"
+                  onerror="this.remove()"
+                />
+                <span class="guias-card-title">{p.data.title}</span>
+                <span class="guias-card-desc">{p.data.description}</span>
+                <span class="guias-card-cta">Leer guía →</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+        {resto.length > 0 && (
+          <>
+            <h3 class="guias-mas-title">Más guías</h3>
+            <ul class="guias-mas">
+              {resto.map((p) => (
+                <li>
+                  <a href={`/blog/${p.id}/`}>{p.data.title}</a>
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
+        <a class="guias-all" href="/blog/">Ver todos los artículos</a>
+      </div>
+    </section>
+  )
+}
+
+<style>
+  .guias {
+    background: #f4f7fc;
+    padding: 64px 20px;
+    color: #071a3e;
+  }
+  .guias-wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .guias-title {
+    font-family: var(--font-display, "Playfair Display", serif);
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+    color: #071a3e;
+    margin: 0 0 8px;
+    text-align: center;
+  }
+  .guias-sub {
+    text-align: center;
+    color: #4a5a70;
+    margin: 0 auto 32px;
+    max-width: 560px;
+  }
+  .guias-grid {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+  }
+  .guias-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: #fff;
+    border: 1px solid #dde5f0;
+    border-radius: 14px;
+    overflow: hidden;
+    color: #071a3e;
+    text-decoration: none;
+    transition: box-shadow 0.25s, transform 0.25s;
+  }
+  .guias-card:hover {
+    box-shadow: 0 10px 28px rgba(7, 26, 62, 0.12);
+    transform: translateY(-2px);
+  }
+  .guias-card img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    height: auto;
+  }
+  .guias-card-title {
+    font-weight: 700;
+    line-height: 1.35;
+    padding: 16px 18px 6px;
+  }
+  .guias-card-desc {
+    font-size: 0.92rem;
+    line-height: 1.5;
+    color: #4a5a70;
+    padding: 0 18px;
+    flex: 1;
+  }
+  .guias-card-cta {
+    color: #1a5bb5;
+    font-weight: 600;
+    font-size: 0.92rem;
+    padding: 12px 18px 18px;
+  }
+  .guias-mas-title {
+    font-size: 1.05rem;
+    color: #071a3e;
+    margin: 32px 0 8px;
+  }
+  .guias-mas {
+    margin: 0;
+    padding-left: 1.2em;
+    columns: 2 280px;
+    column-gap: 32px;
+  }
+  .guias-mas li {
+    margin: 6px 0;
+    break-inside: avoid;
+  }
+  .guias-mas a {
+    color: #1a5bb5;
+  }
+  .guias-mas a:hover {
+    text-decoration: underline;
+  }
+  .guias-all {
+    display: block;
+    width: fit-content;
+    margin: 28px auto 0;
+    color: #1a5bb5;
+    font-weight: 600;
+  }
+  .guias-all:hover {
+    text-decoration: underline;
+  }
+</style>

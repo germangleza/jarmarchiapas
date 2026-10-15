@@ -5,6 +5,8 @@ pubDate: 2026-07-09
 author: "Equipo Ópticas Jarmar"
 tags: ["salud visual", "mitos ojos", "cuidado de la vista", "optometría", "consejos visuales"]
 draft: false
+ciudad: general
+servicios: ["estudio-de-la-vista"]
 ---
 
 ## Los mitos sobre los ojos más comunes ya tienen respuesta

@@ -5,6 +5,8 @@ pubDate: 2026-10-06
 author: "Equipo Ópticas Jarmar"
 tags: ["óptica Zona Río", "óptica en Tijuana", "lentes graduados Tijuana", "armazones Tijuana", "micas para lentes", "Jarmar Eyewear", "Zona Urbana Río"]
 draft: false
+ciudad: tijuana
+servicios: ["lentes-graduados"]
 ---
 
 Zona Río es el corazón comercial y de oficinas de Tijuana. Aquí se trabaja frente a una computadora, se maneja a diario por el bulevar con el sol de frente y se cruza la línea varias veces por semana. Por eso, cuando buscas una **óptica en Zona Río**, no te sirven unos lentes cualquiera: necesitas unos que funcionen con tu rutina.

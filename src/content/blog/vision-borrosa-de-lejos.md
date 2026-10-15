@@ -6,6 +6,8 @@ author: "Equipo Ópticas Jarmar"
 tags: ["visión borrosa de lejos", "miopía", "salud visual", "examen de la vista", "graduación", "optometría"]
 image: "/blog/vision-borrosa-de-lejos.webp"
 draft: false
+ciudad: general
+servicios: ["estudio-de-la-vista", "lentes-graduados"]
 ---
 
 ## ¿Por qué ves borroso a distancia?
@@ -28,7 +30,7 @@ Es una condición muy prevalente: afecta a cerca del 30 % de la población mundi
 - Te acercas a pantallas o a la televisión sin darte cuenta
 - Tienes dificultad para leer letreros o reconocer caras a distancia
 
-La miopía se corrige con [lentes graduados](/tijuana/lentes-graduados) de potencia negativa (cóncavos), lentes de contacto, o en algunos casos mediante cirugía refractiva. Una vez diagnosticada, la solución es sencilla — el problema está en no saberlo.
+La miopía se corrige con lentes graduados (en [Tuxtla Gutiérrez](/tuxtla/lentes-graduados) o en [Tijuana](/tijuana/lentes-graduados)) de potencia negativa (cóncavos), lentes de contacto, o en algunos casos mediante cirugía refractiva. Una vez diagnosticada, la solución es sencilla — el problema está en no saberlo.
 
 ---
 
