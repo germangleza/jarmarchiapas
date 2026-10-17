@@ -12,3 +12,4 @@
 | 8 | 2026-10-14 | Tijuana | /blog/especialista-queratocono-tijuana/ | especialista en queratocono Tijuana | lentes para queratocono Tijuana; primera consulta queratocono; topografía corneal Tijuana | opt-jorge-aranda-tello-jarmar.jpeg |
 | 9 | 2026-10-15 | Chiapas | /blog/diabetes-y-vista-examen-tuxtla/ | diabetes y vista Tuxtla | retinopatía diabética; examen de la vista para diabéticos; revisión anual de fondo de ojo | consulta-visual-jarmar.jpg |
 | 10 | 2026-10-16 | Tijuana | /blog/ojo-seco-tijuana/ | ojo seco Tijuana | síntomas de ojo seco; ojos secos con lentes de contacto; lentes esclerales para ojo seco | atencion-opticas-jarmar.jpg |
+| 11 | 2026-10-17 | Chiapas | /blog/glaucoma-examen-preventivo-tuxtla/ | glaucoma Tuxtla | examen preventivo de glaucoma; glaucoma después de los 40; presión intraocular | opt-hector-pineda-jarmar.jpeg |

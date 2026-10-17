@@ -13,7 +13,7 @@ Ninguno compite con los posts existentes en `src/content/blog/`.
 - [ ] Óptica en Plaza Crystal, Tuxtla: servicios y cómo llegar (enlazar `/tuxtla/plaza-crystal`)
 - [ ] Óptica en Col. Arboledas / Plaza Cedros, Tuxtla (enlazar `/tuxtla/arboledas`)
 - [x] Diabetes y vista: por qué revisarte cada año en Tuxtla (retinopatía diabética, sin alarmismo)
-- [ ] Glaucoma: el examen preventivo que conviene hacerse después de los 40 en Tuxtla
+- [x] Glaucoma: el examen preventivo que conviene hacerse después de los 40 en Tuxtla
 - [ ] Lentes con filtro de luz azul en Tuxtla: para quién sí valen la pena
 - [ ] Queratocono en Chiapas: especialista en lentes esclerales en el sureste
 - [ ] Jarmar en tu Empresa en Chiapas: exámenes visuales para colaboradores
