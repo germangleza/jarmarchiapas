@@ -14,3 +14,4 @@
 | 10 | 2026-10-16 | Tijuana | /blog/ojo-seco-tijuana/ | ojo seco Tijuana | síntomas de ojo seco; ojos secos con lentes de contacto; lentes esclerales para ojo seco | atencion-opticas-jarmar.jpg |
 | 11 | 2026-10-17 | Chiapas | /blog/glaucoma-examen-preventivo-tuxtla/ | glaucoma Tuxtla | examen preventivo de glaucoma; glaucoma después de los 40; presión intraocular | opt-hector-pineda-jarmar.jpeg |
 | 12 | 2026-10-18 | Tijuana | /blog/lentes-de-sol-graduados-tijuana/ | lentes de sol graduados Tijuana | lentes de sol con graduación; polarizados para manejar; lentes de sol graduados Rosarito / envío a EE.UU. | jarmar-eyewear-coleccion.jpg |
+| 13 | 2026-10-19 | Chiapas | /blog/lentes-filtro-luz-azul-tuxtla/ | lentes con filtro de luz azul Tuxtla | ¿sirven los lentes con filtro de luz azul?; fatiga visual digital; regla 20-20-20 | sucursal-jarmar-arboledas.jpg |
