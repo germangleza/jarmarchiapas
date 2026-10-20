@@ -29,7 +29,7 @@ Ninguno compite con los posts existentes en `src/content/blog/`.
 - [ ] Examen de la vista en Tijuana con seguro de visión (también planes de EE.UU.)
 - [ ] Lentes esclerales para pacientes de San Diego: proceso de adaptación cruzando la frontera
 - [ ] Jarmar en tu Empresa en Tijuana: óptica móvil para maquiladoras y oficinas
-- [ ] Lentes para manejar de noche en Tijuana (deslumbramiento, antirreflejante)
+- [x] Lentes para manejar de noche en Tijuana (deslumbramiento, antirreflejante)
 
 ## General / nacional (enlaza a ambas ciudades)
 

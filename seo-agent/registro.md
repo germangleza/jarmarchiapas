@@ -15,3 +15,4 @@
 | 11 | 2026-10-17 | Chiapas | /blog/glaucoma-examen-preventivo-tuxtla/ | glaucoma Tuxtla | examen preventivo de glaucoma; glaucoma después de los 40; presión intraocular | opt-hector-pineda-jarmar.jpeg |
 | 12 | 2026-10-18 | Tijuana | /blog/lentes-de-sol-graduados-tijuana/ | lentes de sol graduados Tijuana | lentes de sol con graduación; polarizados para manejar; lentes de sol graduados Rosarito / envío a EE.UU. | jarmar-eyewear-coleccion.jpg |
 | 13 | 2026-10-19 | Chiapas | /blog/lentes-filtro-luz-azul-tuxtla/ | lentes con filtro de luz azul Tuxtla | ¿sirven los lentes con filtro de luz azul?; fatiga visual digital; regla 20-20-20 | sucursal-jarmar-arboledas.jpg |
+| 14 | 2026-10-20 | Tijuana | /blog/lentes-para-manejar-de-noche-tijuana/ | lentes para manejar de noche Tijuana | deslumbramiento al manejar; antirreflejante; halos en las luces (reemplaza tema de seguro de visión por canibalización) | examen-vista-jarmar-tijuana.jpg |
