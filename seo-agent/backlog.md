@@ -34,7 +34,7 @@ Ninguno compite con los posts existentes en `src/content/blog/`.
 ## General / nacional (enlaza a ambas ciudades)
 
 - [ ] Optometrista vs. oftalmólogo: a quién acudir y cuándo
-- [ ] Astigmatismo: qué es, síntomas y opciones de lentes
+- [x] Astigmatismo: qué es, síntomas y opciones de lentes (publicado como Tijuana)
 - [ ] Miopía en niños y pantallas: qué pueden hacer los papás
 - [ ] Lentes esclerales para ojo seco severo
 - [ ] Ectasia después de LASIK: opciones con lentes esclerales
