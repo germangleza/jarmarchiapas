@@ -1,4 +1,5 @@
 ---
+import CtaCita from "./CtaCita.astro";
 // Landing de sucursal. Las dos sucursales de Chiapas ofrecen exactamente los
 // mismos servicios, así que toda la comunicación vive aquí y solo cambian los
 // datos de contacto de cada una (dirección, horario, teléfono, mapa).
@@ -469,6 +470,8 @@ const resenas = [
         </p>
       </div>
     </div>
+
+    <CtaCita ciudad="tuxtla" whatsapp={p.whatsapp} />
   </div>
 </section>
 
@@ -487,6 +490,8 @@ const resenas = [
       ></iframe>
     </div>
     <a href={p.mapa} target="_blank" rel="noopener" class="mapa-link">Abrir en Google Maps →</a>
+
+    <CtaCita ciudad="tuxtla" whatsapp={p.whatsapp} />
   </div>
 </section>
 
@@ -500,6 +505,8 @@ const resenas = [
         <a href={s.href} class="servicio"><span class="ico">{s.ico}</span> {s.label}</a>
       ))}
     </div>
+
+    <CtaCita ciudad="tuxtla" whatsapp={p.whatsapp} />
   </div>
 </section>
 
@@ -511,6 +518,8 @@ const resenas = [
       <p>Nuestro modelo es 3 en 1 y funciona igual aquí que en nuestra otra sucursal de Tuxtla: una <strong>clínica</strong> donde revisamos la salud completa de tus ojos y no solo la graduación, una <strong>óptica</strong> con todas las soluciones visuales —incluidos lentes de contacto y <a href="/tuxtla/lentes-esclerales">lentes esclerales</a> para córneas irregulares y <a href="/tuxtla/queratocono">queratocono</a>— y una <strong>boutique</strong> de armazones de diseño con nuestra línea propia Jarmar Eyewear.</p>
       <p>Detrás está el mismo equipo: nuestro Optometrista Director, el <a href="/jorgearanda/">Opt. Jorge Aranda Tello</a>, y el <a href="/hectorpineda/">Opt. Héctor Pineda</a>, que atienden a los pacientes de Chiapas. Si tu caso necesita valoración médica, te referimos con oftalmólogos de confianza. Somos la óptica con mayor trayectoria de Chiapas: <a href="/historia/">60 años y tres generaciones</a> de la misma familia.</p>
     </div>
+
+    <CtaCita ciudad="tuxtla" whatsapp={p.whatsapp} />
   </div>
 </section>
 
@@ -532,6 +541,8 @@ const resenas = [
       ))}
     </div>
     <a href={p.mapa} target="_blank" rel="noopener" class="ver-resenas">Ver las reseñas de {p.nombre} en Google →</a>
+
+    <CtaCita ciudad="tuxtla" whatsapp={p.whatsapp} />
   </div>
 </section>
 
@@ -547,6 +558,8 @@ const resenas = [
         </div>
       ))}
     </div>
+
+    <CtaCita ciudad="tuxtla" whatsapp={p.whatsapp} />
   </div>
 </section>
 

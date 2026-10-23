@@ -62,4 +62,5 @@ npm run preview  # previsualizar el build
 - **Scripts en `<head>` de páginas standalone**: usar `is:inline`, si no Astro los compila como módulo y rompe los globales (p. ej. `gtag`).
 - **Imágenes**: nombres en kebab-case, sin espacios ni acentos. Al renombrar, agregar el 301 en `vercel.json`.
 - **URLs absolutas**: siempre `https://www.jarmar.com` (con www).
+- **CTA de cita**: en páginas de servicio y sucursal, cada sección de contenido (no hero ni CTA final) cierra con `<CtaCita ciudad="tuxtla|tijuana|general" servicio="…" />` (`src/components/CtaCita.astro`, botón a WhatsApp; `lang="en"` en `/en/`). Al crear una sección nueva, agrégalo antes del `</div>` del container.
 - **Schema**: si se agrega una FAQ visible, agregar también su `FAQPage` JSON-LD con **texto idéntico**.
