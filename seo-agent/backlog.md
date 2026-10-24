@@ -27,7 +27,7 @@ Ninguno compite con los posts existentes en `src/content/blog/`.
 - [x] Ojo seco en Tijuana: causas comunes y cuándo considerar lentes esclerales
 - [x] Lentes de sol graduados en Tijuana y Rosarito
 - [ ] Examen de la vista en Tijuana con seguro de visión (también planes de EE.UU.)
-- [ ] Lentes esclerales para pacientes de San Diego: proceso de adaptación cruzando la frontera
+- [x] Lentes esclerales para pacientes de San Diego: proceso de adaptación cruzando la frontera
 - [ ] Jarmar en tu Empresa en Tijuana: óptica móvil para maquiladoras y oficinas
 - [x] Lentes para manejar de noche en Tijuana (deslumbramiento, antirreflejante)
 
