@@ -39,5 +39,5 @@ Ninguno compite con los posts existentes en `src/content/blog/`.
 - [ ] Lentes esclerales para ojo seco severo
 - [ ] Ectasia después de LASIK: opciones con lentes esclerales
 - [ ] Lentes fotocromáticos: ventajas, límites y para quién convienen
-- [ ] Cataratas: señales para acudir a revisión (y derivación a oftalmología)
+- [x] Cataratas: señales para acudir a revisión (y derivación a oftalmología)
 - [ ] Jarmar Eyewear: la línea propia de armazones y cómo elegir el tuyo
