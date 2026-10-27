@@ -38,6 +38,6 @@ Ninguno compite con los posts existentes en `src/content/blog/`.
 - [x] Miopía en niños y pantallas: qué pueden hacer los papás
 - [ ] Lentes esclerales para ojo seco severo
 - [ ] Ectasia después de LASIK: opciones con lentes esclerales
-- [ ] Lentes fotocromáticos: ventajas, límites y para quién convienen
+- [x] Lentes fotocromáticos: ventajas, límites y para quién convienen
 - [x] Cataratas: señales para acudir a revisión (y derivación a oftalmología)
 - [ ] Jarmar Eyewear: la línea propia de armazones y cómo elegir el tuyo
