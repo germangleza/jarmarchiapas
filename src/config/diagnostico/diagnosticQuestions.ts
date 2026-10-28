@@ -58,11 +58,12 @@ export const diagnosticQuestions: DiagnosticQuestion[] = [
   { id: "L4", dimension: "team_leadership", texto: "Tenemos prioridades y objetivos definidos para el crecimiento de los próximos 12 meses." },
 ];
 
-// Escala de madurez 1–5: `corto` va en los botones, `texto` en la ayuda.
+// Escala de madurez 1–5: `corto` va en los botones y como título en la ayuda,
+// `texto` es la explicación breve de la ayuda.
 export const scale = [
-  { valor: 1, corto: "No existe", titulo: "No existe actualmente", texto: "No tenemos este proceso, práctica, información o herramienta." },
-  { valor: 2, corto: "Informal", titulo: "Existe de forma informal", texto: "Lo hacemos ocasionalmente o depende de una persona, pero no existe un proceso claro." },
-  { valor: 3, corto: "Parcial", titulo: "Está parcialmente implementado", texto: "Existe una forma de hacerlo, pero no se ejecuta de manera consistente ni se mide correctamente." },
-  { valor: 4, corto: "Implementado", titulo: "Está implementado y se utiliza consistentemente", texto: "Existe un proceso definido, el equipo lo conoce y se utiliza regularmente." },
-  { valor: 5, corto: "Medido y optimizado", titulo: "Está implementado, medido y optimizado", texto: "Además de ejecutarse consistentemente, medimos los resultados y usamos esa información para mejorar." },
+  { valor: 1, corto: "No existe", texto: "No lo tenemos." },
+  { valor: 2, corto: "Informal", texto: "Se hace a veces o depende de una persona." },
+  { valor: 3, corto: "Parcial", texto: "Existe, pero no es constante ni se mide." },
+  { valor: 4, corto: "Implementado", texto: "Proceso definido que el equipo usa siempre." },
+  { valor: 5, corto: "Medido y optimizado", texto: "Lo medimos y lo mejoramos con datos." },
 ];

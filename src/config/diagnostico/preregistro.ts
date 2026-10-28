@@ -1,5 +1,6 @@
 // Campos del pre-registro al Programa de Aceleración (los datos básicos ya
-// capturados al inicio no se vuelven a pedir).
+// capturados al inicio no se vuelven a pedir). Con `multiple: true` se pueden
+// elegir varias opciones; se guardan juntas separadas por " | ".
 
 export const preregistroQuestions = [
   {
@@ -9,7 +10,8 @@ export const preregistroQuestions = [
   },
   {
     id: "program_goal",
-    texto: "¿Cuál sería tu principal objetivo al entrar al programa?",
+    texto: "¿Cuáles serían tus principales objetivos al entrar al programa?",
+    multiple: true,
     opciones: [
       "Mejorar rentabilidad",
       "Tener mayor control del negocio",
@@ -19,7 +21,6 @@ export const preregistroQuestions = [
       "Digitalizar la operación",
       "Mejorar el equipo",
       "Prepararme para crecer",
-      "Otro",
     ],
   },
   {

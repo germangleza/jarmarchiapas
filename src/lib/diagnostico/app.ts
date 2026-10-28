@@ -29,6 +29,8 @@ import { readTracking, track } from "./tracking";
 import { buildPayload, sendLead, type Etapa, type LeadState } from "./lead";
 
 const STORAGE_KEY = "jarmar-diagnostico-360";
+/** Separador de las respuestas de selección múltiple. */
+const SEP = " | ";
 const VERSION = 1;
 
 interface State extends LeadState {
@@ -321,12 +323,13 @@ function vistaDatos(): string {
     </form>`;
 }
 
-function opcionesHtml(grupo: string, opciones: string[], elegido: string | undefined): string {
-  return `<div class="opciones" role="group">${opciones
-    .map(
-      (o) =>
-        `<button type="button" class="opcion${elegido === o ? " activa" : ""}" aria-pressed="${elegido === o}" data-grupo="${grupo}" data-valor="${esc(o)}">${esc(o)}</button>`,
-    )
+function opcionesHtml(grupo: string, opciones: string[], elegido: string | undefined, multiple = false): string {
+  const elegidos = elegido ? elegido.split(SEP) : [];
+  return `${multiple ? `<p class="multi-hint">Puedes elegir varias.</p>` : ""}<div class="opciones${multiple ? " opciones--multi" : ""}" role="group">${opciones
+    .map((o) => {
+      const on = elegidos.includes(o);
+      return `<button type="button" class="opcion${on ? " activa" : ""}" aria-pressed="${on}" data-grupo="${grupo}" data-valor="${esc(o)}"${multiple ? " data-multiple" : ""}>${esc(o)}</button>`;
+    })
     .join("")}</div>`;
 }
 
@@ -337,13 +340,19 @@ function vistaContexto(i: number): string {
     <p class="pantalla-eyebrow">${esc(copy.contexto.titulo)} · ${i + 1} de ${contextQuestions.length}</p>
     <h2 class="pantalla-titulo" tabindex="-1" data-foco>${esc(c.texto)}</h2>
     ${i === 0 ? `<p class="pantalla-texto">${esc(copy.contexto.texto)}</p>` : ""}
-    ${opcionesHtml(`ctx:${c.id}`, c.opciones, elegido)}
-    <div class="nav-pantalla">${botonAtras()}${elegido ? `<button type="button" class="btn btn-sig" data-accion="siguiente">Siguiente →</button>` : ""}</div>`;
+    ${opcionesHtml(`ctx:${c.id}`, c.opciones, elegido, c.multiple)}
+    <div class="nav-pantalla">${botonAtras()}${
+      c.multiple
+        ? `<button type="button" class="btn btn-sig" data-accion="siguiente" data-sig-multi${elegido ? "" : " disabled"}>Siguiente →</button>`
+        : elegido
+          ? `<button type="button" class="btn btn-sig" data-accion="siguiente">Siguiente →</button>`
+          : ""
+    }</div>`;
 }
 
 function escalaLista(): string {
   return `<ol class="escala-lista">${scale
-    .map((s) => `<li><span class="escala-num">${s.valor}</span><div><strong>${esc(s.titulo)}</strong><p>${esc(s.texto)}</p></div></li>`)
+    .map((s) => `<li><span class="escala-num">${s.valor}</span><div><strong>${esc(s.corto)}</strong><p>${esc(s.texto)}</p></div></li>`)
     .join("")}</ol>`;
 }
 
@@ -484,7 +493,7 @@ function vistaPreregistro(): string {
       (g) => `
       <div class="campo" data-requerido="${g.id}">
         <p class="campo-titulo" id="lbl-${g.id}">${esc(g.texto)}</p>
-        ${opcionesHtml(`pr:${g.id}`, g.opciones, pr[g.id])}
+        ${opcionesHtml(`pr:${g.id}`, g.opciones, pr[g.id], g.multiple)}
         <span class="error">Elige una opción.</span>
       </div>`,
     )
@@ -518,7 +527,29 @@ function vistaConfirmacion(): string {
 
 // ---------- Interacción ----------
 
+/** Selección múltiple: marca o desmarca sin avanzar de pantalla. */
+function alternar(boton: HTMLElement) {
+  const [tipo, id] = boton.dataset.grupo!.split(":");
+  const on = boton.getAttribute("aria-pressed") !== "true";
+  boton.classList.toggle("activa", on);
+  boton.setAttribute("aria-pressed", String(on));
+  const valores = [...boton.parentElement!.querySelectorAll<HTMLElement>('.opcion[aria-pressed="true"]')]
+    .map((b) => b.dataset.valor!)
+    .join(SEP);
+  if (tipo === "ctx") {
+    state.contexto[id] = valores;
+    const sig = root.querySelector<HTMLButtonElement>("[data-sig-multi]");
+    if (sig) sig.disabled = !valores;
+  }
+  if (tipo === "pr") {
+    state.preregistro[id] = valores;
+    if (valores) boton.closest(".campo")?.classList.remove("con-error");
+  }
+  guardar();
+}
+
 function elegir(boton: HTMLElement) {
+  if (boton.hasAttribute("data-multiple")) return alternar(boton);
   const [tipo, id] = boton.dataset.grupo!.split(":");
   const valor = boton.dataset.valor!;
   boton.parentElement!.querySelectorAll(".opcion, .escala-opcion").forEach((b) => {

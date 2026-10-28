@@ -36,12 +36,10 @@ export const copy = {
     dimensiones: "Resultado por dimensión",
   },
   transicion: {
-    titulo: "Tu diagnóstico ya te mostró dónde están las oportunidades. El siguiente paso es trabajar en ellas.",
+    titulo: "El siguiente paso: trabajar en tus oportunidades",
     parrafos: [
-      "El Programa de Aceleración para Ópticas Jarmar está diseñado para ayudar a dueños de ópticas a profesionalizar, digitalizar y hacer crecer su negocio.",
-      "Durante el programa trabajamos precisamente las áreas evaluadas en este diagnóstico: números, diferenciación, producto, ventas, operación, digitalización, adquisición de pacientes y liderazgo.",
-      "No se trata únicamente de aprender qué hacer.",
-      "La intención es ayudarte a implementar mejores sistemas dentro de tu óptica.",
+      "El Programa de Aceleración para Ópticas Jarmar te ayuda a profesionalizar, digitalizar y hacer crecer tu óptica, trabajando justo las áreas de este diagnóstico.",
+      "No solo aprendes qué hacer: implementas mejores sistemas en tu negocio.",
     ],
     cta: "Quiero conocer el Programa",
   },

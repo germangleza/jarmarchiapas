@@ -1,11 +1,13 @@
 // Preguntas de contexto: segmentan el lead y NO suman puntos.
 // `id` es la columna que se guarda (ctx_<id>); el texto de la opción elegida
-// es lo que se guarda como valor.
+// es lo que se guarda como valor. Con `multiple: true` se pueden elegir varias
+// y se guardan juntas separadas por " | ".
 
 export interface ContextQuestion {
   id: string;
   texto: string;
   opciones: string[];
+  multiple?: boolean;
 }
 
 export const contextQuestions: ContextQuestion[] = [
@@ -31,7 +33,8 @@ export const contextQuestions: ContextQuestion[] = [
   },
   {
     id: "main_challenge",
-    texto: "¿Cuál es tu principal reto actualmente?",
+    texto: "¿Cuáles son tus principales retos actualmente?",
+    multiple: true,
     opciones: [
       "Aumentar ventas",
       "Mejorar rentabilidad",
