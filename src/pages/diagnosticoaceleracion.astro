@@ -1,0 +1,402 @@
+---
+// Diagnóstico 360 para Ópticas → resultado → pre-registro al Programa de
+// Aceleración. Ruta: /diagnosticoaceleracion — página standalone (head propio,
+// ver CLAUDE.md), con el mismo branding que /aceleracion.
+//
+// Preguntas, dimensiones, niveles y textos: src/config/diagnostico/
+// Scoring, tracking, envío y flujo:          src/lib/diagnostico/
+//
+// Los leads van a Formspree (exporta CSV desde su panel), igual que
+// /aceleracion. PUBLIC_DIAGNOSTICO_FORM_ENDPOINT lo sobrescribe para mandarlos
+// a otro formulario o servicio sin tocar código.
+import { copy, dimensions } from "../config/diagnostico";
+
+const FORM_ENDPOINT =
+  import.meta.env.PUBLIC_DIAGNOSTICO_FORM_ENDPOINT ?? "https://formspree.io/f/myezavyy";
+const WHATSAPP = "529611855475";
+
+const TITLE = "Diagnóstico 360 para Ópticas | Programa de Aceleración Jarmar";
+const DESCRIPTION =
+  "Evalúa en 5–7 minutos qué tan profesionalizada está tu óptica: finanzas, diferenciación, inventario, ventas, digitalización, adquisición de pacientes y equipo. Resultado inmediato y gratuito.";
+const URL = "https://www.jarmar.com/diagnosticoaceleracion/";
+---
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="msvalidate.01" content="7BC48F9D0740327D02EED2218E21311A" />
+  <meta name="theme-color" content="#071A3E" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <title>{TITLE}</title>
+  <meta name="description" content={DESCRIPTION} />
+  <link rel="canonical" href={URL} />
+  <meta property="og:title" content="¿Qué tan profesionalizada está tu óptica? · Diagnóstico 360" />
+  <meta property="og:description" content={DESCRIPTION} />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={URL} />
+  <meta property="og:image" content="https://www.jarmar.com/logo-opticas-jarmar-color.png" />
+  <meta property="og:locale" content="es_MX" />
+  <meta property="og:site_name" content="Ópticas Jarmar" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="¿Qué tan profesionalizada está tu óptica? · Diagnóstico 360" />
+  <meta name="twitter:description" content={DESCRIPTION} />
+  <meta name="twitter:image" content="https://www.jarmar.com/logo-opticas-jarmar-color.png" />
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://www.jarmar.com/#organization",
+    "name": "Ópticas Jarmar",
+    "alternateName": "Clínica Óptica Boutique Jarmar",
+    "url": "https://www.jarmar.com/",
+    "logo": "https://www.jarmar.com/logo-opticas-jarmar-color.png",
+    "foundingDate": "1966",
+    "description": "Clínica Óptica Boutique con más de 60 años cuidando la salud visual de México. Especialistas en lentes esclerales, con sucursales en Tuxtla Gutiérrez, Chiapas y Tijuana, Baja California.",
+    "sameAs": [
+      "https://www.facebook.com/opticasjarmarchiapas",
+      "https://www.instagram.com/opticasjarmar/",
+      "https://www.facebook.com/opticasjarmartijuana",
+      "https://www.instagram.com/opticasjarmartijuana/"
+    ]
+  }</script>
+
+  <!-- Google tag (gtag.js) -->
+  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=AW-17977352986"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17977352986');
+  </script>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript" is:inline>
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "xr1fwqa9cs");
+  </script>
+
+  <style is:global>
+    :root {
+      --bg: #071A3E;
+      --surface: #0D2B6B;
+      --accent: #3A8FE0;
+      --accent-oscuro: #1A5BB5;
+      --gris: #4A5568;
+      --gris-claro: #F7F9FC;
+      --borde: rgba(13,43,107,0.16);
+      --error: #C53030;
+      --exito: #2F855A;
+      --ambar: #B7791F;
+      --font-display: "Playfair Display", serif;
+      --font-body: "DM Sans", system-ui, -apple-system, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: var(--font-body);
+      color: #1A202C;
+      background: #fff;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    main { flex: 1; }
+    [hidden] { display: none !important; }
+    .container { max-width: 640px; margin: 0 auto; padding: 0 20px; }
+
+    /* HEADER */
+    .site-header { background: var(--bg); padding: 14px 0; position: sticky; top: 0; z-index: 10; }
+    .site-header .container { display: flex; align-items: center; max-width: 860px; }
+    .site-header img { height: 32px; width: auto; display: block; }
+
+    /* BOTONES */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      background: var(--accent); color: #fff; border: none;
+      padding: 16px 30px; min-height: 54px; border-radius: 100px;
+      font-family: var(--font-body); font-weight: 700; font-size: 1.02rem;
+      text-decoration: none; cursor: pointer; transition: opacity 0.2s, transform 0.2s;
+    }
+    .btn:hover { opacity: 0.92; transform: translateY(-2px); }
+    .btn:disabled { opacity: 0.6; cursor: progress; transform: none; }
+    .btn:focus-visible, button:focus-visible, a:focus-visible { outline: 3px solid rgba(58,143,224,0.55); outline-offset: 2px; }
+    .btn-full { width: 100%; }
+    .btn-claro { background: #fff; color: var(--bg); }
+    .btn-link {
+      background: none; border: none; padding: 10px 4px; cursor: pointer;
+      color: var(--accent-oscuro); font-family: var(--font-body); font-weight: 600; font-size: 0.95rem;
+      text-decoration: underline; text-underline-offset: 3px;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, var(--bg) 0%, var(--surface) 100%);
+      color: #fff; padding: 52px 0 60px; text-align: center;
+    }
+    .eyebrow {
+      display: inline-block; background: rgba(58,143,224,0.2); border: 1px solid var(--accent);
+      color: #fff; border-radius: 100px; padding: 6px 16px; font-size: 0.86rem; font-weight: 600;
+      letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 22px;
+    }
+    .hero h1 {
+      font-family: var(--font-display); font-size: clamp(1.9rem, 8vw, 3rem); font-weight: 700;
+      line-height: 1.15; margin: 0 0 20px; text-wrap: balance;
+    }
+    .hero .sub { font-size: 1.1rem; line-height: 1.7; opacity: 0.92; margin: 0 0 22px; text-wrap: pretty; }
+    .hero .apoyo {
+      text-align: left; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 16px; padding: 18px 20px; margin: 0 0 28px;
+    }
+    .hero .apoyo p { margin: 0 0 10px; line-height: 1.65; opacity: 0.88; font-size: 0.98rem; }
+    .hero .apoyo p:last-child { margin: 0; }
+    .hero .dims { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; list-style: none; padding: 0; margin: 0 0 28px; }
+    .hero .dims li { background: rgba(58,143,224,0.18); border-radius: 100px; padding: 6px 13px; font-size: 0.85rem; font-weight: 600; }
+    .hero .btn { width: 100%; max-width: 380px; }
+    .hero .micro { margin: 14px 0 0; font-size: 0.9rem; opacity: 0.75; }
+    .continuar { margin-top: 18px; font-size: 0.93rem; opacity: 0.9; }
+    .continuar .btn-link { color: #9CCBF5; }
+
+    /* APP */
+    .app { padding: 0 0 56px; background: var(--gris-claro); min-height: calc(100vh - 60px); }
+    .progreso { position: sticky; top: 60px; z-index: 5; background: var(--gris-claro); padding: 14px 20px 10px; max-width: 640px; margin: 0 auto; }
+    .progreso-info { display: flex; justify-content: space-between; font-size: 0.82rem; font-weight: 600; color: var(--gris); margin-bottom: 7px; }
+    .progreso-pista { height: 6px; background: rgba(13,43,107,0.1); border-radius: 100px; overflow: hidden; }
+    .progreso-relleno { height: 100%; background: var(--accent); border-radius: 100px; transition: width 0.35s ease; }
+    .pantalla { max-width: 640px; margin: 0 auto; padding: 22px 20px 0; animation: entrar 0.25s ease; }
+    @keyframes entrar { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+    .pantalla-eyebrow { color: var(--accent-oscuro); font-weight: 700; font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase; margin: 0 0 10px; }
+    .pantalla-titulo {
+      font-family: var(--font-display); color: var(--bg); font-size: clamp(1.45rem, 5.5vw, 1.95rem);
+      line-height: 1.3; margin: 0 0 12px; text-wrap: balance; outline: none;
+    }
+    .pantalla-titulo.pregunta { font-size: clamp(1.3rem, 5vw, 1.7rem); min-height: 3.9em; }
+    .pantalla-texto { color: var(--gris); line-height: 1.7; margin: 0 0 22px; }
+
+    .tarjeta {
+      background: #fff; border: 1.5px solid rgba(58,143,224,0.22); border-radius: 18px;
+      padding: 24px 20px; box-shadow: 0 4px 20px rgba(13,43,107,0.05);
+    }
+    .campo { margin-bottom: 18px; }
+    .campo label, .campo-titulo { display: block; font-weight: 700; font-size: 0.95rem; color: var(--bg); margin: 0 0 8px; }
+    .campo input, .campo select, .campo textarea {
+      width: 100%; font-family: var(--font-body); font-size: 1rem; padding: 14px 16px;
+      border: 1.5px solid var(--borde); border-radius: 12px; background: #fff; color: #1A202C;
+    }
+    .campo select { appearance: auto; }
+    .campo #f-pais-otro { margin-top: 10px; }
+    .campo input:focus-visible, .campo select:focus-visible, .campo textarea:focus-visible {
+      outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(58,143,224,0.18);
+    }
+    .campo [aria-invalid="true"] { border-color: var(--error); }
+    .opcional { font-weight: 400; color: var(--gris); }
+    .error { display: none; color: var(--error); font-size: 0.86rem; font-weight: 600; margin-top: 7px; }
+    .campo.con-error .error { display: block; }
+    .privacidad { font-size: 0.85rem; color: var(--gris); line-height: 1.6; margin: 14px 0 0; text-align: center; }
+
+    .opciones { display: grid; gap: 10px; }
+    .opcion, .escala-opcion {
+      display: flex; align-items: center; gap: 12px; width: 100%; text-align: left;
+      background: #fff; border: 1.5px solid var(--borde); border-radius: 14px;
+      padding: 15px 18px; min-height: 56px; cursor: pointer;
+      font-family: var(--font-body); font-size: 1rem; font-weight: 600; color: #2D3748;
+      transition: border-color 0.15s, background 0.15s, transform 0.1s;
+    }
+    .opcion:hover, .escala-opcion:hover { border-color: var(--accent); }
+    .opcion:active, .escala-opcion:active { transform: scale(0.99); }
+    .opcion.activa, .escala-opcion.activa { border-color: var(--accent); background: rgba(58,143,224,0.09); color: var(--bg); }
+    .opcion.activa::after { content: "✓"; margin-left: auto; color: var(--accent-oscuro); font-weight: 700; }
+    .campo.con-error .opcion { border-color: rgba(197,48,48,0.45); }
+
+    .escala-head { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; margin: 4px 0 14px; font-size: 0.85rem; color: var(--gris); }
+    .btn-ayuda { background: none; border: none; color: var(--accent-oscuro); font-family: var(--font-body); font-weight: 700; font-size: 0.85rem; cursor: pointer; padding: 6px 0; text-decoration: underline; text-underline-offset: 3px; }
+    .escala-opciones { display: grid; gap: 10px; }
+    .escala-num {
+      flex-shrink: 0; width: 34px; height: 34px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;
+      background: rgba(58,143,224,0.12); color: var(--accent-oscuro); font-weight: 700;
+    }
+    .escala-opcion.activa .escala-num { background: var(--accent); color: #fff; }
+
+    .nav-pantalla { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: 22px; min-height: 54px; }
+    .btn-atras, .btn-omitir {
+      background: none; border: none; cursor: pointer; padding: 12px 4px;
+      font-family: var(--font-body); font-weight: 600; font-size: 0.97rem; color: var(--gris);
+    }
+    .btn-omitir { color: var(--accent-oscuro); text-decoration: underline; text-underline-offset: 3px; }
+    .btn-sig { padding: 14px 26px; min-height: 50px; }
+
+    .escala-lista { list-style: none; padding: 0; margin: 0 0 6px; display: grid; gap: 12px; }
+    .escala-lista li { display: flex; gap: 14px; align-items: flex-start; background: #fff; border: 1.5px solid rgba(58,143,224,0.18); border-radius: 14px; padding: 14px 16px; }
+    .escala-lista strong { display: block; color: var(--bg); margin-bottom: 4px; }
+    .escala-lista p { margin: 0; color: var(--gris); line-height: 1.55; font-size: 0.95rem; }
+
+    .calculando { text-align: center; padding: 90px 0; color: var(--bg); font-weight: 700; font-size: 1.1rem; }
+    .calculando p { outline: none; }
+    .spinner { width: 46px; height: 46px; margin: 0 auto 22px; border: 4px solid rgba(58,143,224,0.2); border-top-color: var(--accent); border-radius: 50%; animation: girar 0.9s linear infinite; }
+    @keyframes girar { to { transform: rotate(360deg); } }
+
+    /* RESULTADO */
+    .resultado-head { text-align: center; background: #fff; border-radius: 20px; padding: 26px 20px; border: 1.5px solid rgba(58,143,224,0.18); }
+    .resultado-head .pantalla-titulo { font-size: 1.3rem; margin-bottom: 16px; }
+    .score {
+      --p: 0; width: 168px; height: 168px; margin: 0 auto 18px; border-radius: 50%;
+      background: conic-gradient(var(--accent) calc(var(--p) * 1%), rgba(58,143,224,0.14) 0);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .score-num { width: 136px; height: 136px; border-radius: 50%; background: #fff; display: flex; align-items: baseline; justify-content: center; padding-top: 40px; }
+    .score-num strong { font-family: var(--font-display); font-size: 3.2rem; color: var(--bg); line-height: 1; }
+    .score-num span { font-weight: 700; color: var(--gris); margin-left: 2px; }
+    .nivel { display: inline-block; font-weight: 700; border-radius: 100px; padding: 7px 16px; margin: 0 0 12px; background: rgba(58,143,224,0.12); color: var(--accent-oscuro); }
+    .nivel--reactiva { background: rgba(197,48,48,0.1); color: #9B2C2C; }
+    .nivel--en_desarrollo { background: rgba(183,121,31,0.12); color: #8A5A13; }
+    .nivel--preparada { background: rgba(47,133,90,0.12); color: #276749; }
+    .nivel-texto { color: var(--gris); line-height: 1.65; margin: 0; }
+
+    .bloque { background: #fff; border-radius: 18px; padding: 22px 20px; margin-top: 16px; border: 1.5px solid rgba(58,143,224,0.14); }
+    .bloque h3 { font-family: var(--font-display); color: var(--bg); font-size: 1.2rem; margin: 0 0 14px; line-height: 1.35; }
+    .bloque p { color: var(--gris); line-height: 1.7; margin: 0 0 8px; }
+    .bloque p:last-child { margin-bottom: 0; }
+    .bloque--fortaleza { border-left: 5px solid var(--exito); }
+    .bloque--cuello { border-left: 5px solid var(--ambar); }
+    .destacado { color: var(--bg) !important; font-weight: 600; }
+
+    .barras { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; }
+    .barra-info { display: flex; justify-content: space-between; gap: 10px; font-size: 0.95rem; color: #2D3748; margin-bottom: 6px; }
+    .barra-info strong { color: var(--bg); }
+    .barra-pista { height: 10px; background: rgba(13,43,107,0.08); border-radius: 100px; overflow: hidden; }
+    .barra-relleno { height: 100%; background: var(--accent); border-radius: 100px; transition: width 0.8s cubic-bezier(0.2, 0.7, 0.2, 1); }
+    .barra--fortaleza .barra-relleno { background: var(--exito); }
+    .barra--prioridad .barra-relleno { background: var(--ambar); }
+    .leyenda { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; font-size: 0.82rem; margin: 14px 0 0 !important; }
+    .ley { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-left: 8px; }
+    .ley:first-child { margin-left: 0; }
+    .ley--fortaleza { background: var(--exito); }
+    .ley--prioridad { background: var(--ambar); }
+
+    .prioridades { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+    .prioridades li { display: flex; align-items: center; gap: 12px; padding: 12px 14px; background: var(--gris-claro); border-radius: 12px; color: #2D3748; font-weight: 600; }
+    .prioridades li strong { margin-left: auto; color: var(--bg); white-space: nowrap; }
+    .prioridades .num { width: 28px; height: 28px; flex-shrink: 0; border-radius: 50%; background: var(--ambar); color: #fff; display: inline-flex; align-items: center; justify-content: center; font-size: 0.9rem; }
+
+    .recos { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+    .recos li { border: 1.5px solid rgba(58,143,224,0.18); border-radius: 14px; padding: 16px; }
+    .reco-dim { font-size: 0.76rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--accent-oscuro); }
+    .recos h4 { margin: 6px 0 6px; color: var(--bg); font-size: 1.02rem; line-height: 1.4; }
+    .recos p { margin: 0; font-size: 0.96rem; }
+
+    .transicion {
+      margin-top: 28px; border-radius: 20px; padding: 28px 22px;
+      background: linear-gradient(135deg, var(--bg) 0%, var(--surface) 100%); color: #fff;
+    }
+    .transicion h3 { font-family: var(--font-display); font-size: 1.35rem; line-height: 1.35; margin: 0 0 16px; text-wrap: balance; }
+    .transicion p { opacity: 0.88; line-height: 1.7; margin: 0 0 12px; }
+    .transicion .btn { margin-top: 12px; }
+    .ya-registrado { background: rgba(255,255,255,0.1); border-radius: 12px; padding: 14px 16px; opacity: 1 !important; font-weight: 600; }
+    .acciones-finales { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 18px; margin-top: 18px; }
+
+    .aviso { margin-top: 16px; padding: 14px 16px; border-radius: 12px; font-size: 0.93rem; line-height: 1.6; background: rgba(197,48,48,0.07); border: 1px solid rgba(197,48,48,0.28); color: #742A2A; }
+    .aviso a { color: #742A2A; font-weight: 700; }
+    .gracias { border-color: rgba(47,133,90,0.35); text-align: center; margin-top: 12px; }
+    .gracias .pantalla-titulo { color: var(--exito); }
+    .gracias p { color: var(--gris); line-height: 1.7; margin: 0 0 10px; }
+    .gracias .btn { margin: 14px 0 6px; }
+
+    /* AYUDA */
+    dialog.ayuda { border: none; border-radius: 20px; padding: 0; max-width: 520px; width: calc(100% - 32px); max-height: 85vh; }
+    dialog.ayuda::backdrop { background: rgba(7,26,62,0.55); }
+    .ayuda-cuerpo { padding: 22px 20px; }
+    .ayuda-cuerpo h2 { font-family: var(--font-display); color: var(--bg); margin: 0 0 14px; font-size: 1.35rem; }
+    .ayuda-cuerpo .btn { margin-top: 14px; }
+
+    /* FOOTER */
+    .site-footer { background: var(--bg); color: rgba(255,255,255,0.72); padding: 34px 20px; text-align: center; font-size: 0.9rem; }
+    .site-footer img { height: 28px; width: auto; opacity: 0.85; margin-bottom: 14px; }
+    .site-footer p { margin: 0 0 6px; line-height: 1.6; }
+    .site-footer a { color: var(--accent); text-decoration: none; font-weight: 600; }
+    /* Durante el diagnóstico el footer no distrae */
+    body.en-diagnostico .site-footer { display: none; }
+
+    @media (min-width: 640px) {
+      .escala-opciones { grid-template-columns: repeat(5, 1fr); }
+      .escala-opcion { flex-direction: column; text-align: center; justify-content: center; padding: 16px 8px; font-size: 0.9rem; min-height: 112px; }
+      .opciones { grid-template-columns: 1fr 1fr; }
+      .tarjeta, .bloque { padding: 28px 28px; }
+      .transicion { padding: 34px 32px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .pantalla, .spinner { animation: none; }
+      .barra-relleno, .progreso-relleno { transition: none; }
+      .btn:hover { transform: none; }
+    }
+    @media print {
+      .site-header, .site-footer, .transicion, .acciones-finales, .progreso { display: none !important; }
+      .app { background: #fff; }
+      .bloque, .resultado-head { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="/" aria-label="Ópticas Jarmar — ir al inicio">
+        <img src="/logo-opticas-jarmar-blanco-esp.png" alt="Ópticas Jarmar" width="140" height="32" />
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="diagnostico-hero">
+      <div class="container">
+        <span class="eyebrow">{copy.hero.eyebrow}</span>
+        <h1>{copy.hero.titulo}</h1>
+        <p class="sub">{copy.hero.subtitulo}</p>
+        <ul class="dims" aria-label="Dimensiones que evalúa">
+          {dimensions.map((d) => <li>{d.corto}</li>)}
+        </ul>
+        <div class="apoyo">
+          {copy.hero.apoyo.map((p) => <p>{p}</p>)}
+        </div>
+        <button type="button" class="btn" data-accion="iniciar">{copy.hero.cta}</button>
+        <p class="micro">{copy.hero.micro}</p>
+        <p class="continuar" data-continuar hidden>
+          Tienes un diagnóstico en curso en este dispositivo: el botón te lleva a donde te quedaste.
+          <button type="button" class="btn-link" data-accion="reiniciar-hero">Empezar de cero</button>
+        </p>
+        <noscript><p class="micro">Para hacer el diagnóstico necesitas tener JavaScript activado en tu navegador.</p></noscript>
+      </div>
+    </section>
+
+    <div class="app" id="diagnostico-app" data-endpoint={FORM_ENDPOINT} data-whatsapp={WHATSAPP} aria-live="polite" hidden></div>
+  </main>
+
+  <dialog class="ayuda" id="ayuda-escala" aria-labelledby="ayuda-titulo">
+    <div class="ayuda-cuerpo">
+      <h2 id="ayuda-titulo">Escala de madurez</h2>
+      <div data-escala></div>
+      <button type="button" class="btn btn-full" data-accion="cerrar-ayuda">Entendido</button>
+    </div>
+  </dialog>
+
+  <footer class="site-footer">
+    <img src="/logo-opticas-jarmar-blanco-esp.png" alt="Ópticas Jarmar" width="122" height="28" />
+    <p>Clínica Óptica Boutique desde 1966 · Tuxtla Gutiérrez y Tijuana</p>
+    <p><a href="/aceleracion/">Programa de Aceleración para Ópticas</a> · <a href="/">Ópticas Jarmar</a></p>
+  </footer>
+
+  <script>
+    import { iniciar } from "../lib/diagnostico/app";
+    iniciar();
+  </script>
+</body>
+</html>
