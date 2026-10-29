@@ -36,7 +36,7 @@ Ninguno compite con los posts existentes en `src/content/blog/`.
 - [x] Optometrista vs. oftalmólogo: a quién acudir y cuándo (publicado como Tuxtla)
 - [x] Astigmatismo: qué es, síntomas y opciones de lentes (publicado como Tijuana)
 - [x] Miopía en niños y pantallas: qué pueden hacer los papás
-- [ ] Lentes esclerales para ojo seco severo
+- [x] Lentes esclerales para ojo seco severo (publicado como Tuxtla)
 - [x] Ectasia después de LASIK: opciones con lentes esclerales
 - [x] Lentes fotocromáticos: ventajas, límites y para quién convienen
 - [x] Cataratas: señales para acudir a revisión (y derivación a oftalmología)
