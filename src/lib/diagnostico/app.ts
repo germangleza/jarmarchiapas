@@ -1,7 +1,9 @@
 // Flujo interactivo del Diagnóstico 360 (/diagnostico360).
 //
 // Pantallas: hero → datos → contexto (una por pregunta) → escala → preguntas
-// (una por pantalla) → calculando → resultado → pre-registro → confirmación.
+// (una por pantalla) → calculando → resultado. El resultado dice QUÉ le pasa a
+// la óptica; el CÓMO (plan, revisión de respuestas) se deja para la lectura
+// del diagnóstico, que es lo que la página invita a agendar.
 // Todo el contenido sale de src/config/diagnostico; aquí solo hay flujo,
 // persistencia y render.
 //
@@ -10,18 +12,27 @@
 // navegador (o del celular) recorren las pantallas.
 
 import {
+  bottleneckMessages,
+  calendarioEmbed,
+  calendarioLink,
+  challengeLine,
+  challengeToDimension,
   contextQuestions,
   copy,
   countries,
   diagnosticQuestions,
   dimensions,
   maturityLevels,
-  preregistroComment,
-  preregistroQuestions,
+  noStrengthMessage,
+  opportunityTieBreak,
+  professionalTarget,
   recommendations,
   scale,
   strengthMessage,
-  bottleneckMessages,
+  strengthMin,
+  targetMessages,
+  whatsappLectura,
+  whatsappLecturaMensaje,
 } from "../../config/diagnostico";
 import type { DimensionId } from "../../config/diagnostico";
 import { computeResult, type DiagnosticResult } from "./scoring";
@@ -52,18 +63,15 @@ const STEPS: string[] = [
   ...diagnosticQuestions.map((_, i) => `q-${i}`),
   "calculando",
   "resultado",
-  "preregistro",
-  "confirmacion",
 ];
 const PROGRESS_FIRST = STEPS.indexOf("datos");
 const PROGRESS_LAST = STEPS.indexOf(`q-${diagnosticQuestions.length - 1}`);
-const RESULT_STEPS = new Set(["resultado", "preregistro", "confirmacion"]);
+const RESULT_STEPS = new Set(["resultado"]);
 
 // ---------- Estado ----------
 
 let state: State;
 let endpoint = "";
-let whatsapp = "";
 let root: HTMLElement;
 let hero: HTMLElement;
 let dialog: HTMLDialogElement | null;
@@ -80,7 +88,6 @@ function nuevoEstado(): State {
     datos: { nombre: "", email: "", telefono: "", optica: "", ciudad: "", pais: countries[0] },
     contexto: {},
     respuestas: {},
-    preregistro: {},
     tracking: readTracking(),
     enviados: {},
     eventos: {},
@@ -119,12 +126,11 @@ const esc = (s: string) =>
 const dim = (id: DimensionId) => dimensions.find((d) => d.id === id)!;
 const dimIndex = (id: DimensionId) => dimensions.findIndex((d) => d.id === id);
 
-function diagnosticoCompleto(): boolean {
-  return diagnosticQuestions.every((q) => q.opcional || typeof state.respuestas[q.id] === "number");
-}
-
 function resultado(): DiagnosticResult {
-  return computeResult(dimensions, diagnosticQuestions, maturityLevels, state.respuestas);
+  return computeResult(dimensions, diagnosticQuestions, maturityLevels, state.respuestas, {
+    tieBreak: opportunityTieBreak,
+    strengthMin,
+  });
 }
 
 /** Primera pantalla incompleta: a donde se manda a quien intenta saltarse pasos. */
@@ -143,7 +149,7 @@ function puedeVer(step: string): boolean {
   if (i === -1) return false;
   if (step === "hero") return true;
   const pendiente = primerPendiente();
-  if (pendiente === "resultado") return step !== "confirmacion" || !!state.enviados.pre_registro;
+  if (pendiente === "resultado") return true;
   return i <= STEPS.indexOf(pendiente);
 }
 
@@ -210,8 +216,8 @@ function enviar(etapa: Etapa): Promise<void> {
     });
   enCurso[etapa] = p;
   // Los envíos de fondo no interrumpen al usuario si fallan; se reintentan
-  // en la siguiente visita. El pre-registro sí avisa (ver enviarPreregistro).
-  if (etapa !== "pre_registro") p.catch((e) => console.error(`[diagnostico] No se guardó "${etapa}":`, e?.message ?? e));
+  // en la siguiente visita.
+  p.catch((e) => console.error(`[diagnostico] No se guardó "${etapa}":`, e?.message ?? e));
   return p;
 }
 
@@ -237,8 +243,6 @@ function render() {
   else if (step.startsWith("q-")) html = vistaPregunta(Number(step.slice(2)));
   else if (step === "calculando") html = vistaCalculando();
   else if (step === "resultado") html = vistaResultado();
-  else if (step === "preregistro") html = vistaPreregistro();
-  else if (step === "confirmacion") html = vistaConfirmacion();
 
   root.innerHTML = barraProgreso(step) + `<div class="pantalla" data-step="${step}">${html}</div>`;
   window.scrollTo(0, 0);
@@ -255,12 +259,11 @@ function render() {
   }
   if (step === "resultado") {
     const r = resultado();
-    once("diagnostic_result_viewed", { global_score: r.global_score, maturity_level: r.maturity_level });
+    track("diagnostico_resultado_visto", { score: r.global_score, cuello_botella: r.priorities[0] });
     // Si el envío del diagnóstico falló en una visita anterior, se reintenta.
     if (!state.enviados.diagnostico_completado) enviar("diagnostico_completado");
     requestAnimationFrame(() => root.querySelectorAll<HTMLElement>(".barra-relleno").forEach((b) => (b.style.width = b.dataset.w + "%")));
   }
-  if (step === "preregistro") once("program_preregistration_started");
 }
 
 function actualizarHero() {
@@ -401,11 +404,54 @@ function vistaCalculando(): string {
     </div>`;
 }
 
+const plantilla = (t: string, vars: Record<string, string | number>) =>
+  t.replace(/\{(\w+)\}/g, (m, k) => (k in vars ? esc(String(vars[k])) : m));
+
+function escalaMadurez(score: number, nivelId: string): string {
+  const segmentos = maturityLevels
+    .map((l) => `<span class="seg seg--${l.id}${l.id === nivelId ? " seg--activo" : ""}" style="flex:${l.max - l.min + 1}"></span>`)
+    .join("");
+  const leyenda = maturityLevels
+    .map((l) => `<li class="${l.id === nivelId ? "activo" : ""}"><span class="ley-rango">${l.min}–${l.max}</span> ${esc(l.nombre)}</li>`)
+    .join("");
+  const meta =
+    score >= professionalTarget
+      ? esc(targetMessages.logrado)
+      : plantilla(targetMessages.faltan, { faltan: professionalTarget - score });
+  return `
+    <div class="madurez" aria-label="Escala de madurez">
+      <div class="madurez-barra">
+        ${segmentos}
+        <span class="madurez-marca" style="left:${Math.min(99, Math.max(1, score))}%"><span>Estás aquí</span></span>
+      </div>
+      <ol class="madurez-leyenda">${leyenda}</ol>
+      <p class="madurez-meta">${meta}</p>
+    </div>`;
+}
+
+/** Línea que conecta el cuello de botella con los retos que declaró: usa el
+ *  reto cuya dimensión tenga el puntaje más bajo. */
+function lineaReto(r: DiagnosticResult): string {
+  const retos = (state.contexto.main_challenge ?? "").split(SEP).filter((x) => challengeToDimension[x]);
+  if (!retos.length) return "";
+  const reto = retos.reduce((a, b) => (r.dimensions[challengeToDimension[b]] < r.dimensions[challengeToDimension[a]] ? b : a));
+  const d = challengeToDimension[reto];
+  return `<p class="linea-reto">${plantilla(challengeLine, { reto, dimension: dim(d).corto, puntaje: r.dimensions[d] })}</p>`;
+}
+
+function enlaceWhatsApp(r: DiagnosticResult): string {
+  const texto = whatsappLecturaMensaje
+    .replace("{optica}", state.datos.optica || state.datos.nombre)
+    .replace("{puntaje}", String(r.global_score));
+  return `https://wa.me/${whatsappLectura}?text=${encodeURIComponent(texto)}`;
+}
+
 function vistaResultado(): string {
   const r = resultado();
   const nivel = maturityLevels.find((l) => l.id === r.maturity_level_id)!;
-  const fuerte = dim(r.top_strength);
   const cuello = r.priorities[0];
+  // Un solo nombre por dimensión en todo el resultado: el de las barras.
+  const nombre = (id: DimensionId) => esc(dim(id).corto);
 
   const barras = dimensions
     .map((d) => {
@@ -414,24 +460,52 @@ function vistaResultado(): string {
       const fortaleza = d.id === r.top_strength;
       return `
         <li class="barra${prioridad ? " barra--prioridad" : ""}${fortaleza ? " barra--fortaleza" : ""}">
-          <div class="barra-info"><span>${esc(d.corto)}</span><strong>${v}</strong></div>
+          <div class="barra-info"><span>${nombre(d.id)}</span><strong>${v}</strong></div>
           <div class="barra-pista"><div class="barra-relleno" data-w="${v}" style="width:0"></div></div>
         </li>`;
     })
     .join("");
 
+  const fortaleza = r.top_strength
+    ? `<section class="bloque bloque--fortaleza">
+        <h3>${esc(copy.resultado.fortaleza)}</h3>
+        <p class="destacado">${nombre(r.top_strength)} — <strong>${r.dimensions[r.top_strength]}/100</strong></p>
+        <p>${esc(strengthMessage)}</p>
+      </section>`
+    : `<section class="bloque bloque--sin-fortaleza">
+        <h3>${esc(noStrengthMessage.titulo)}</h3>
+        <p>${esc(noStrengthMessage.texto)}</p>
+      </section>`;
+
   const prioridades = r.priorities
-    .map((id, i) => `<li><span class="num">${i + 1}</span><span>${esc(dim(id).corto)}</span><strong>${r.dimensions[id]}/100</strong></li>`)
+    .map((id, i) => `<li><span class="num">${i + 1}</span><span>${nombre(id)}</span><strong>${r.dimensions[id]}/100</strong></li>`)
     .join("");
 
-  const recos = r.priorities
-    .map((id) => {
-      const rec = recommendations[id];
-      return `<li><span class="reco-dim">${esc(dim(id).corto)}</span><h4>${esc(rec.titulo)}</h4><p>${esc(rec.texto)}</p></li>`;
-    })
+  // Paso 1 abierto. Pasos 2 y 3: nombre y título reales, cuerpo de relleno
+  // genérico (el texto real no se pone en la página).
+  const paso1 = recommendations[cuello];
+  const bloqueados = r.priorities
+    .slice(1)
+    .map(
+      (id, i) => `
+      <li>
+        <button type="button" class="paso paso--bloqueado" data-accion="paso-bloqueado" aria-label="Paso ${i + 2}: se entrega en tu lectura personalizada">
+          <span class="paso-num">Paso ${i + 2} · ${nombre(id)}</span>
+          <h4>${esc(recommendations[id].titulo)}</h4>
+          <span class="paso-cuerpo" aria-hidden="true">
+            <span class="paso-blur">${esc(copy.pasosBloqueados.relleno)}</span>
+            <span class="candado">🔒</span>
+          </span>
+        </button>
+      </li>`,
+    )
     .join("");
 
-  const yaRegistrado = !!state.enviados.pre_registro;
+  const calendario = calendarioEmbed
+    ? `<div class="calendario" data-calendario hidden>
+        <p class="calendario-respaldo"><a href="${esc(calendarioLink)}" target="_blank" rel="noopener">${esc(copy.cta.respaldo)} ↗</a></p>
+      </div>`
+    : "";
 
   return `
     <section class="resultado-head">
@@ -442,19 +516,16 @@ function vistaResultado(): string {
       </div>
       <p class="nivel nivel--${nivel.id}">${esc(nivel.nombre)}</p>
       <p class="nivel-texto">${esc(nivel.texto)}</p>
+      ${escalaMadurez(r.global_score, nivel.id)}
     </section>
 
     <section class="bloque">
       <h3>${esc(copy.resultado.dimensiones)}</h3>
       <ul class="barras">${barras}</ul>
-      <p class="leyenda"><span class="ley ley--fortaleza"></span>Fortaleza <span class="ley ley--prioridad"></span>Prioridad</p>
+      <p class="leyenda">${r.top_strength ? `<span class="ley ley--fortaleza"></span>Fortaleza ` : ""}<span class="ley ley--prioridad"></span>Oportunidad</p>
     </section>
 
-    <section class="bloque bloque--fortaleza">
-      <h3>${esc(copy.resultado.fortaleza)}</h3>
-      <p class="destacado">${esc(fuerte.nombre)} — <strong>${r.dimensions[fuerte.id]}/100</strong></p>
-      <p>${esc(strengthMessage)}</p>
-    </section>
+    ${fortaleza}
 
     <section class="bloque">
       <h3>${esc(copy.resultado.prioridades)}</h3>
@@ -462,67 +533,44 @@ function vistaResultado(): string {
     </section>
 
     <section class="bloque bloque--cuello">
-      <h3>${esc(copy.resultado.cuello)}: ${esc(dim(cuello).corto)}</h3>
+      <h3>${esc(copy.resultado.cuello)}: ${nombre(cuello)}</h3>
       <p>${esc(bottleneckMessages[cuello])}</p>
+      ${lineaReto(r)}
     </section>
 
     <section class="bloque">
       <h3>${esc(copy.resultado.recomendaciones)}</h3>
-      <ul class="recos">${recos}</ul>
+      <ol class="pasos">
+        <li>
+          <div class="paso">
+            <span class="paso-num">Paso 1 · ${nombre(cuello)}</span>
+            <h4>${esc(paso1.titulo)}</h4>
+            <p>${esc(paso1.texto)}</p>
+          </div>
+        </li>
+      </ol>
+      <div class="bloqueados-head">
+        <strong>${esc(copy.pasosBloqueados.titulo)}</strong>
+        <span>${esc(copy.pasosBloqueados.texto)}</span>
+      </div>
+      <ol class="pasos">${bloqueados}</ol>
     </section>
 
-    <section class="transicion">
-      <h3>${esc(copy.transicion.titulo)}</h3>
-      ${copy.transicion.parrafos.map((p) => `<p>${esc(p)}</p>`).join("")}
-      ${
-        yaRegistrado
-          ? `<p class="ya-registrado">✓ Ya estás pre-registrado. Te contactaremos con los detalles de la próxima generación.</p>`
-          : `<button type="button" class="btn btn-full btn-claro" data-accion="programa">${esc(copy.transicion.cta)}</button>`
-      }
+    <section class="bloque bloque--lectura">
+      <h3>${esc(copy.lectura.titulo)}</h3>
+      <ul class="lectura">${copy.lectura.items.map((t) => `<li><span aria-hidden="true">✅</span><span>${t}</span></li>`).join("")}</ul>
+    </section>
+
+    <section class="transicion" id="agendar">
+      <h3>${esc(copy.cta.titulo)}</h3>
+      <a class="btn btn-full btn-claro" href="${esc(calendarioLink)}" target="_blank" rel="noopener" data-accion="agendar">${esc(copy.cta.boton)}</a>
+      ${calendario}
+      <a class="link-whatsapp" href="${enlaceWhatsApp(r)}" target="_blank" rel="noopener" data-accion="whatsapp-lectura">${esc(copy.cta.whatsapp)}</a>
+      <p class="cta-nota">${esc(copy.cta.nota)}</p>
     </section>
 
     <div class="acciones-finales">
-      <button type="button" class="btn-link" data-accion="imprimir">Imprimir o guardar mi diagnóstico</button>
-      <button type="button" class="btn-link" data-accion="reiniciar">Hacer un diagnóstico nuevo</button>
-    </div>`;
-}
-
-function vistaPreregistro(): string {
-  const pr = state.preregistro;
-  const grupos = preregistroQuestions
-    .map(
-      (g) => `
-      <div class="campo" data-requerido="${g.id}">
-        <p class="campo-titulo" id="lbl-${g.id}">${esc(g.texto)}</p>
-        ${opcionesHtml(`pr:${g.id}`, g.opciones, pr[g.id], g.multiple)}
-        <span class="error">Elige una opción.</span>
-      </div>`,
-    )
-    .join("");
-  return `
-    <p class="pantalla-eyebrow">Programa de Aceleración para Ópticas Jarmar</p>
-    <h2 class="pantalla-titulo" tabindex="-1" data-foco>${esc(copy.preregistro.titulo)}</h2>
-    <p class="pantalla-texto">${esc(copy.preregistro.texto)}</p>
-    <form class="tarjeta" data-form="preregistro" novalidate>
-      ${grupos}
-      <div class="campo">
-        <label for="f-comment">${esc(preregistroComment.texto)} <span class="opcional">(opcional)</span></label>
-        <textarea id="f-comment" name="comment" rows="4">${esc(pr.comment ?? "")}</textarea>
-      </div>
-      <button type="submit" class="btn btn-full">${esc(copy.preregistro.cta)}</button>
-      <p class="privacidad">${esc(copy.preregistro.nota)}</p>
-      <div class="aviso" data-aviso hidden></div>
-    </form>
-    <div class="nav-pantalla">${botonAtras()}</div>`;
-}
-
-function vistaConfirmacion(): string {
-  return `
-    <div class="tarjeta gracias">
-      <h2 class="pantalla-titulo" tabindex="-1" data-foco>${esc(copy.confirmacion.titulo)}</h2>
-      ${copy.confirmacion.parrafos.map((p) => `<p>${esc(p)}</p>`).join("")}
-      <button type="button" class="btn btn-full" data-accion="ver-resultado">Ver mi Diagnóstico 360</button>
-      <a class="btn-link" href="/">Ir al sitio de Ópticas Jarmar</a>
+      <button type="button" class="btn-link btn-link--chico" data-accion="reiniciar">Hacer un diagnóstico nuevo</button>
     </div>`;
 }
 
@@ -542,10 +590,6 @@ function alternar(boton: HTMLElement) {
     const sig = root.querySelector<HTMLButtonElement>("[data-sig-multi]");
     if (sig) sig.disabled = !valores;
   }
-  if (tipo === "pr") {
-    state.preregistro[id] = valores;
-    if (valores) boton.closest(".campo")?.classList.remove("con-error");
-  }
   guardar();
 }
 
@@ -559,12 +603,6 @@ function elegir(boton: HTMLElement) {
   });
   if (tipo === "ctx") state.contexto[id] = valor;
   if (tipo === "q") state.respuestas[id] = Number(valor);
-  if (tipo === "pr") {
-    state.preregistro[id] = valor;
-    boton.closest(".campo")?.classList.remove("con-error");
-    guardar();
-    return;
-  }
   guardar();
   // Avanza solo tras una pausa breve para que se vea la opción marcada.
   const step = state.step;
@@ -607,66 +645,6 @@ function validarDatos(form: HTMLFormElement): boolean {
   return true;
 }
 
-function enlaceWhatsApp(): string {
-  const r = resultado();
-  const lineas = [
-    "Hola, hice el Diagnóstico 360 y quiero pre-registrarme al Programa de Aceleración para Ópticas.",
-    "",
-    `Nombre: ${state.datos.nombre}`,
-    `Correo: ${state.datos.email}`,
-    `Teléfono: ${state.datos.telefono}`,
-    `Óptica: ${state.datos.optica}`,
-    `Ciudad: ${state.datos.ciudad}, ${state.datos.pais}`,
-    `Resultado: ${r.global_score}/100 (${r.maturity_level})`,
-    `Interés: ${state.preregistro.program_interest ?? ""}`,
-    `Objetivo: ${state.preregistro.program_goal ?? ""}`,
-    `Contacto preferido: ${state.preregistro.contact_preference ?? ""}`,
-  ];
-  return `https://wa.me/${whatsapp}?text=${encodeURIComponent(lineas.join("\n"))}`;
-}
-
-function enviarPreregistro(form: HTMLFormElement) {
-  let primero: HTMLElement | null = null;
-  form.querySelectorAll<HTMLElement>("[data-requerido]").forEach((c) => {
-    const ok = !!state.preregistro[c.dataset.requerido!];
-    c.classList.toggle("con-error", !ok);
-    if (!ok) primero ??= c.querySelector<HTMLElement>(".opcion");
-  });
-  if (primero) {
-    (primero as HTMLElement).focus();
-    return;
-  }
-  state.preregistro.comment = String(new FormData(form).get("comment") ?? "").trim();
-  guardar();
-
-  const boton = form.querySelector<HTMLButtonElement>('button[type="submit"]')!;
-  const aviso = form.querySelector<HTMLElement>("[data-aviso]")!;
-  const texto = boton.textContent;
-  boton.disabled = true;
-  boton.textContent = "Enviando…";
-  aviso.hidden = true;
-
-  enviar("pre_registro")
-    .then(() => {
-      track("program_preregistration_completed", {
-        program_interest: state.preregistro.program_interest,
-        source: state.tracking.source,
-      });
-      if (typeof window.gtag === "function") {
-        window.gtag("event", "generate_lead", { event_category: "diagnostico_360", event_label: "pre_registro" });
-      }
-      ir("confirmacion");
-    })
-    .catch(() => {
-      // No se finge que se guardó: se avisa y se ofrece WhatsApp.
-      boton.disabled = false;
-      boton.textContent = texto;
-      aviso.hidden = false;
-      aviso.setAttribute("role", "alert");
-      aviso.innerHTML = `No pudimos enviar tu pre-registro en este momento. <a href="${enlaceWhatsApp()}" target="_blank" rel="noopener">Mándanos tus datos por WhatsApp</a> o vuelve a intentarlo en unos minutos.`;
-    });
-}
-
 function onClick(e: MouseEvent) {
   const t = e.target as HTMLElement;
   const opcion = t.closest<HTMLElement>("[data-grupo]");
@@ -696,21 +674,44 @@ function onClick(e: MouseEvent) {
     guardar();
     siguiente();
   }
-  if (accion === "ayuda") dialog?.showModal();
-  if (accion === "cerrar-ayuda") dialog?.close();
-  if (accion === "programa") {
-    track("program_cta_clicked");
-    ir("preregistro");
+  if (accion === "ayuda") {
+    // Navegadores sin <dialog> (algunos in-app): se muestra igual con [open].
+    if (dialog && typeof dialog.showModal === "function") dialog.showModal();
+    else dialog?.setAttribute("open", "");
   }
-  if (accion === "ver-resultado") ir("resultado");
-  if (accion === "imprimir") window.print();
+  if (accion === "cerrar-ayuda") {
+    if (dialog && typeof dialog.close === "function") dialog.close();
+    else dialog?.removeAttribute("open");
+  }
+  if (accion === "agendar") {
+    track("clic_agendar_lectura");
+    // Con la URL de inserción configurada, el calendario se abre dentro de la
+    // página; sin ella (o si falla) el enlace abre la pestaña nueva.
+    const caja = root.querySelector<HTMLElement>("[data-calendario]");
+    if (caja) {
+      e.preventDefault();
+      if (!caja.querySelector("iframe")) {
+        const iframe = document.createElement("iframe");
+        iframe.src = calendarioEmbed;
+        iframe.title = "Calendario para agendar tu lectura del diagnóstico";
+        iframe.loading = "lazy";
+        caja.prepend(iframe);
+      }
+      caja.hidden = false;
+      caja.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }
+  if (accion === "whatsapp-lectura") track("clic_whatsapp_lectura");
+  if (accion === "paso-bloqueado") {
+    track("clic_paso_bloqueado");
+    root.querySelector("#agendar")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
 }
 
 function onSubmit(e: SubmitEvent) {
   const form = e.target as HTMLFormElement;
   e.preventDefault();
   if (form.dataset.form === "datos" && validarDatos(form)) siguiente();
-  if (form.dataset.form === "preregistro") enviarPreregistro(form);
 }
 
 function onInput(e: Event) {
@@ -734,7 +735,6 @@ export function iniciar() {
   hero = document.getElementById("diagnostico-hero")!;
   dialog = document.getElementById("ayuda-escala") as HTMLDialogElement | null;
   endpoint = root.dataset.endpoint ?? "";
-  whatsapp = root.dataset.whatsapp ?? "";
 
   state = cargar();
   // La fuente es la del primer toque, salvo que la visita traiga UTMs nuevas
@@ -744,8 +744,6 @@ export function iniciar() {
     state.tracking = visita;
   }
   guardar();
-
-  if (dialog) dialog.querySelector("[data-escala]")!.innerHTML = escalaLista();
 
   document.addEventListener("click", onClick);
   root.addEventListener("submit", onSubmit as EventListener);

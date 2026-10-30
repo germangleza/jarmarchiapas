@@ -37,12 +37,12 @@ export const referrerSources: Record<string, string> = {
   "jarmar.com": "web",
 };
 
-// Etapas del lead. El sitio solo asigna las tres primeras; el resto las
+// Etapas del lead. El sitio solo asigna las dos primeras; el resto las
 // actualiza el equipo comercial en la exportación / CRM.
 export const leadStages = [
   "diagnostico_iniciado",
   "diagnostico_completado",
-  "pre_registro",
+  "lectura_agendada",
   "contactado",
   "entrevista_agendada",
   "entrevista_realizada",

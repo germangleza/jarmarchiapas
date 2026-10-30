@@ -1,6 +1,7 @@
-// Niveles de madurez por score global. Rangos iniciales (pueden ajustarse
-// después del piloto, con aprobación). `min` es inclusivo; se toma el nivel
-// con el `min` más alto que el score alcance.
+// Niveles de madurez por score global. `min` es inclusivo; se toma el nivel
+// con el `min` más alto que el score alcance. El nivel superior (Óptica
+// profesionalizada) empieza en `professionalTarget`: es la meta que muestra la
+// escala del resultado ("a la tuya le faltan X puntos").
 
 export interface MaturityLevel {
   id: string;
@@ -9,6 +10,8 @@ export interface MaturityLevel {
   nombre: string;
   texto: string;
 }
+
+export const professionalTarget = 80;
 
 export const maturityLevels: MaturityLevel[] = [
   {
@@ -26,17 +29,17 @@ export const maturityLevels: MaturityLevel[] = [
     texto: "Ya existen algunas prácticas y procesos, pero todavía son inconsistentes o poco medidos.",
   },
   {
-    id: "profesionalizada",
+    id: "en_consolidacion",
     min: 60,
     max: 79,
-    nombre: "Óptica profesionalizada",
+    nombre: "Óptica en consolidación",
     texto: "La empresa cuenta con una base sólida en varias áreas, aunque todavía existen cuellos de botella que limitan crecimiento, rentabilidad o diferenciación.",
   },
   {
-    id: "preparada",
+    id: "profesionalizada",
     min: 80,
     max: 100,
-    nombre: "Óptica preparada para crecer",
+    nombre: "Óptica profesionalizada",
     texto: "Existen procesos, información y estructura. El siguiente reto es optimizar, diferenciar y escalar.",
   },
 ];

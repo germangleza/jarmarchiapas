@@ -1,6 +1,6 @@
 ---
-// Diagnóstico 360 para Ópticas → resultado → pre-registro al Programa de
-// Aceleración. Ruta: /diagnostico360 — página standalone (head propio,
+// Diagnóstico 360 para Ópticas → resultado → agendar la lectura del
+// diagnóstico. Ruta: /diagnostico360 — página standalone (head propio,
 // ver CLAUDE.md), con el mismo branding que /aceleracion.
 //
 // Preguntas, dimensiones, niveles y textos: src/config/diagnostico/
@@ -9,11 +9,10 @@
 // Los leads van a Formspree (exporta CSV desde su panel), igual que
 // /aceleracion. PUBLIC_DIAGNOSTICO_FORM_ENDPOINT lo sobrescribe para mandarlos
 // a otro formulario o servicio sin tocar código.
-import { copy } from "../config/diagnostico";
+import { copy, maturityLevels, scale } from "../config/diagnostico";
 
 const FORM_ENDPOINT =
   import.meta.env.PUBLIC_DIAGNOSTICO_FORM_ENDPOINT ?? "https://formspree.io/f/myezavyy";
-const WHATSAPP = "529611855475";
 
 const TITLE = "Diagnóstico 360 para Ópticas | Programa de Aceleración Jarmar";
 const DESCRIPTION =
@@ -301,22 +300,76 @@ const URL = "https://www.jarmar.com/diagnostico360/";
     .transicion h3 { font-family: var(--font-display); font-size: 1.35rem; line-height: 1.35; margin: 0 0 16px; text-wrap: balance; }
     .transicion p { opacity: 0.88; line-height: 1.7; margin: 0 0 12px; }
     .transicion .btn { margin-top: 12px; }
-    .ya-registrado { background: rgba(255,255,255,0.1); border-radius: 12px; padding: 14px 16px; opacity: 1 !important; font-weight: 600; }
     .acciones-finales { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 18px; margin-top: 18px; }
 
-    .aviso { margin-top: 16px; padding: 14px 16px; border-radius: 12px; font-size: 0.93rem; line-height: 1.6; background: rgba(197,48,48,0.07); border: 1px solid rgba(197,48,48,0.28); color: #742A2A; }
-    .aviso a { color: #742A2A; font-weight: 700; }
-    .gracias { border-color: rgba(47,133,90,0.35); text-align: center; margin-top: 12px; }
-    .gracias .pantalla-titulo { color: var(--exito); }
-    .gracias p { color: var(--gris); line-height: 1.7; margin: 0 0 10px; }
-    .gracias .btn { margin: 14px 0 6px; }
 
     /* AYUDA */
+    /* Sin [open] el diálogo nunca se ve, aunque el navegador no soporte <dialog> */
+    dialog.ayuda:not([open]) { display: none; }
+    dialog.ayuda[open] { position: fixed; inset: 0; margin: auto; z-index: 50; overflow: auto; box-shadow: 0 20px 60px rgba(7,26,62,0.4); }
     dialog.ayuda { border: none; border-radius: 20px; padding: 0; max-width: 520px; width: calc(100% - 32px); max-height: 85vh; }
     dialog.ayuda::backdrop { background: rgba(7,26,62,0.55); }
     .ayuda-cuerpo { padding: 22px 20px; }
     .ayuda-cuerpo h2 { font-family: var(--font-display); color: var(--bg); margin: 0 0 14px; font-size: 1.35rem; }
     .ayuda-cuerpo .btn { margin-top: 14px; }
+
+    /* ESCALA DE MADUREZ (hero) */
+    .niveles-hero { text-align: left; margin: 0 0 28px; }
+    .niveles-hero h2 { font-family: var(--font-body); font-size: 0.86rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; opacity: 0.8; margin: 0 0 10px; text-align: center; }
+    .niveles-hero ol { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+    .niveles-hero li { display: flex; align-items: center; gap: 12px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 12px; padding: 10px 14px; font-weight: 600; font-size: 0.95rem; }
+    .niveles-hero .rango { min-width: 62px; color: #9CCBF5; font-variant-numeric: tabular-nums; }
+
+    /* ESCALA DE MADUREZ (resultado) */
+    .madurez { margin-top: 22px; text-align: left; }
+    .madurez-barra { position: relative; display: flex; gap: 3px; height: 14px; margin: 34px 0 12px; }
+    .seg { border-radius: 4px; opacity: 0.35; }
+    .seg--activo { opacity: 1; }
+    .seg--reactiva { background: #C53030; }
+    .seg--en_desarrollo { background: var(--ambar); }
+    .seg--en_consolidacion { background: var(--accent); }
+    .seg--profesionalizada { background: var(--exito); }
+    .madurez-marca { position: absolute; top: -6px; bottom: -6px; width: 3px; margin-left: -1.5px; background: var(--bg); border-radius: 2px; }
+    .madurez-marca span {
+      position: absolute; bottom: calc(100% + 4px); left: 50%; transform: translateX(-50%); white-space: nowrap;
+      background: var(--bg); color: #fff; font-size: 0.75rem; font-weight: 700; padding: 3px 8px; border-radius: 6px;
+    }
+    .madurez-leyenda { list-style: none; padding: 0; margin: 0 0 14px; display: grid; gap: 4px; font-size: 0.88rem; color: var(--gris); }
+    .madurez-leyenda li.activo { color: var(--bg); font-weight: 700; }
+    .ley-rango { display: inline-block; min-width: 54px; font-variant-numeric: tabular-nums; }
+    .madurez-meta { margin: 0; padding: 12px 14px; background: var(--gris-claro); border-radius: 12px; color: #2D3748; line-height: 1.6; font-size: 0.95rem; }
+
+    .bloque--sin-fortaleza { border-left: 5px solid var(--borde); }
+    .linea-reto { margin-top: 12px !important; padding: 12px 14px; background: rgba(183,121,31,0.08); border-radius: 12px; color: #2D3748 !important; }
+
+    /* PASOS */
+    .pasos { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+    .paso { display: block; width: 100%; text-align: left; border: 1.5px solid rgba(58,143,224,0.18); border-radius: 14px; padding: 16px; background: #fff; font-family: var(--font-body); }
+    .paso-num { font-size: 0.76rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--accent-oscuro); }
+    .paso h4 { margin: 6px 0 6px; color: var(--bg); font-size: 1.02rem; line-height: 1.4; }
+    .paso p { margin: 0; font-size: 0.96rem; }
+    .paso--bloqueado { cursor: pointer; background: var(--gris-claro); }
+    .paso--bloqueado:hover { border-color: var(--accent); }
+    .paso-cuerpo { position: relative; display: block; }
+    .paso-blur { display: block; filter: blur(5px); user-select: none; color: var(--gris); line-height: 1.6; font-size: 0.96rem; }
+    .candado { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; }
+    .bloqueados-head { margin: 18px 0 10px; padding: 12px 14px; background: rgba(13,43,107,0.06); border-radius: 12px; display: grid; gap: 2px; }
+    .bloqueados-head strong { color: var(--bg); }
+    .bloqueados-head span { color: var(--gris); font-size: 0.93rem; }
+
+    /* LECTURA + CTA */
+    .bloque--lectura { border: 2px solid var(--accent); }
+    .lectura { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+    .lectura li { display: flex; gap: 10px; line-height: 1.6; color: #2D3748; }
+    .lectura strong { color: var(--bg); }
+    .transicion { scroll-margin-top: 76px; }
+    .link-whatsapp { display: block; text-align: center; margin: 16px 0 0; color: #fff; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+    .cta-nota { text-align: center; font-size: 0.9rem; margin: 16px 0 0 !important; }
+    .calendario { margin-top: 16px; background: #fff; border-radius: 14px; overflow: hidden; scroll-margin-top: 76px; }
+    .calendario iframe { display: block; width: 100%; height: 640px; border: 0; }
+    .calendario-respaldo { margin: 0 !important; padding: 10px 14px; text-align: center; font-size: 0.88rem; }
+    .calendario-respaldo a { color: var(--accent-oscuro); font-weight: 600; }
+    .btn-link--chico { font-size: 0.85rem; color: var(--gris); }
 
     /* FOOTER */
     .site-footer { background: var(--bg); color: rgba(255,255,255,0.72); padding: 34px 20px; text-align: center; font-size: 0.9rem; }
@@ -337,11 +390,6 @@ const URL = "https://www.jarmar.com/diagnostico360/";
       .pantalla, .spinner { animation: none; }
       .barra-relleno, .progreso-relleno { transition: none; }
       .btn:hover { transform: none; }
-    }
-    @media print {
-      .site-header, .site-footer, .transicion, .acciones-finales, .progreso { display: none !important; }
-      .app { background: #fff; }
-      .bloque, .resultado-head { break-inside: avoid; }
     }
   </style>
 </head>
@@ -364,6 +412,14 @@ const URL = "https://www.jarmar.com/diagnostico360/";
         <div class="apoyo">
           {copy.hero.apoyo.map((p) => <p>{p}</p>)}
         </div>
+        <div class="niveles-hero">
+          <h2>Escala de madurez</h2>
+          <ol>
+            {maturityLevels.map((l) => (
+              <li><span class="rango">{l.min}–{l.max}</span><span>{l.nombre}</span></li>
+            ))}
+          </ol>
+        </div>
         <button type="button" class="btn" data-accion="iniciar">{copy.hero.cta}</button>
         <p class="micro">{copy.hero.micro}</p>
         <p class="continuar" data-continuar hidden>
@@ -374,13 +430,17 @@ const URL = "https://www.jarmar.com/diagnostico360/";
       </div>
     </section>
 
-    <div class="app" id="diagnostico-app" data-endpoint={FORM_ENDPOINT} data-whatsapp={WHATSAPP} aria-live="polite" hidden></div>
+    <div class="app" id="diagnostico-app" data-endpoint={FORM_ENDPOINT} aria-live="polite" hidden></div>
   </main>
 
   <dialog class="ayuda" id="ayuda-escala" aria-labelledby="ayuda-titulo">
     <div class="ayuda-cuerpo">
-      <h2 id="ayuda-titulo">Escala de madurez</h2>
-      <div data-escala></div>
+      <h2 id="ayuda-titulo">¿Qué significa cada nivel?</h2>
+      <ol class="escala-lista">
+        {scale.map((s) => (
+          <li><span class="escala-num">{s.valor}</span><div><strong>{s.corto}</strong><p>{s.texto}</p></div></li>
+        ))}
+      </ol>
       <button type="button" class="btn btn-full" data-accion="cerrar-ayuda">Entendido</button>
     </div>
   </dialog>

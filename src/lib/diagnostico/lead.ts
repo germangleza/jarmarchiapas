@@ -3,16 +3,16 @@
 // exportarlos a CSV. Se manda un objeto plano —una columna por dato— para que
 // el CSV quede legible.
 //
-// Cada lead se envía hasta tres veces, una por etapa (diagnostico_iniciado,
-// diagnostico_completado, pre_registro), siempre con el mismo lead_id; la fila
-// más reciente de cada lead_id es la vigente. El estado local recuerda qué
+// Cada lead se envía dos veces, una por etapa (diagnostico_iniciado y
+// diagnostico_completado), siempre con el mismo lead_id; la fila más reciente
+// de cada lead_id es la vigente. El estado local recuerda qué
 // etapas ya se enviaron para no duplicar registros al refrescar.
 
 import { contextQuestions, diagnosticQuestions, dimensions } from "../../config/diagnostico";
 import type { DiagnosticResult } from "./scoring";
 import type { Tracking } from "./tracking";
 
-export type Etapa = "diagnostico_iniciado" | "diagnostico_completado" | "pre_registro";
+export type Etapa = "diagnostico_iniciado" | "diagnostico_completado";
 
 export interface DatosBasicos {
   nombre: string;
@@ -29,7 +29,6 @@ export interface LeadState {
   datos: DatosBasicos;
   contexto: Record<string, string>;
   respuestas: Record<string, number>;
-  preregistro: Record<string, string>;
   tracking: Tracking;
 }
 
@@ -55,7 +54,7 @@ export function buildPayload(s: LeadState, etapa: Etapa, r: DiagnosticResult | n
     p.global_score = r.global_score;
     p.maturity_level = r.maturity_level;
     for (const d of dimensions) p[`score_${d.id}`] = r.dimensions[d.id];
-    p.top_strength = r.top_strength;
+    p.top_strength = r.top_strength ?? "";
     p.priority_1 = r.priorities[0] ?? "";
     p.priority_2 = r.priorities[1] ?? "";
     p.priority_3 = r.priorities[2] ?? "";
@@ -74,13 +73,6 @@ export function buildPayload(s: LeadState, etapa: Etapa, r: DiagnosticResult | n
       top_strength: r.top_strength,
       priorities: r.priorities,
     });
-  }
-
-  if (etapa === "pre_registro") {
-    p.program_interest = s.preregistro.program_interest ?? "";
-    p.program_goal = s.preregistro.program_goal ?? "";
-    p.contact_preference = s.preregistro.contact_preference ?? "";
-    p.comment = s.preregistro.comment ?? "";
   }
 
   const t = s.tracking;

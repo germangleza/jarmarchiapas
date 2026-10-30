@@ -9,5 +9,5 @@ export * from "./maturityLevels";
 export * from "./resultMessages";
 export * from "./recommendations";
 export * from "./leadSources";
-export * from "./preregistro";
 export * from "./copy";
+export * from "./contacto";

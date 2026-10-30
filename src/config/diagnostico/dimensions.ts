@@ -30,3 +30,18 @@ export const dimensions: Dimension[] = [
   { id: "patient_acquisition", nombre: "Presencia digital y adquisición de pacientes", corto: "Adquisición de pacientes", peso: 1 },
   { id: "team_leadership", nombre: "Equipo, liderazgo y crecimiento", corto: "Equipo y liderazgo", peso: 1 },
 ];
+
+/** Desempate de oportunidades: cuando dos dimensiones tienen el mismo
+ *  puntaje, sale primero como oportunidad la que aparece antes aquí. */
+export const opportunityTieBreak: DimensionId[] = [
+  "financial_control",
+  "sales_experience",
+  "product_inventory",
+  "patient_acquisition",
+  "differentiation",
+  "digital_operations",
+  "team_leadership",
+];
+
+/** Puntaje mínimo para que la dimensión más alta se muestre como fortaleza. */
+export const strengthMin = 70;

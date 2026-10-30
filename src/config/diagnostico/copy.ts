@@ -1,5 +1,5 @@
-// Textos fijos de la experiencia (hero, transición al programa, pre-registro y
-// confirmación). Editables sin tocar la lógica.
+// Textos fijos de la experiencia (hero, datos, resultado, lectura y CTA).
+// Editables sin tocar la lógica.
 
 export const copy = {
   hero: {
@@ -35,26 +35,26 @@ export const copy = {
     recomendaciones: "Por dónde empezar",
     dimensiones: "Resultado por dimensión",
   },
-  transicion: {
-    titulo: "El siguiente paso: trabajar en tus oportunidades",
-    parrafos: [
-      "El Programa de Aceleración para Ópticas Jarmar te ayuda a profesionalizar, digitalizar y hacer crecer tu óptica, trabajando justo las áreas de este diagnóstico.",
-      "No solo aprendes qué hacer: implementas mejores sistemas en tu negocio.",
-    ],
-    cta: "Quiero conocer el Programa",
+  pasosBloqueados: {
+    titulo: "🔒 Paso 2 y 3 de tu plan de 90 días",
+    texto: "Se entregan en tu lectura personalizada.",
+    // Relleno genérico debajo del difuminado: el texto real de los pasos 2 y
+    // 3 nunca se pone en la página.
+    relleno: "Esta acción se define contigo en tu lectura, a partir de tus respuestas y del contexto de tu óptica, para que sepas exactamente qué hacer y en qué orden.",
   },
-  preregistro: {
-    titulo: "¿Te interesa conocer la próxima generación?",
-    texto: "Déjanos algunos datos adicionales y te contactaremos cuando abramos el proceso de inscripción.",
-    nota: "El pre-registro no representa ningún compromiso de compra.",
-    cta: "Pre-registrarme para la próxima generación",
-  },
-  confirmacion: {
-    titulo: "Gracias por tu interés",
-    parrafos: [
-      "Hemos recibido tu información.",
-      "Te contactaremos cuando tengamos disponibles los detalles de la próxima generación del Programa de Aceleración para Ópticas Jarmar.",
-      "Mientras tanto, conserva tu Diagnóstico 360 como referencia de las áreas que puedes empezar a trabajar.",
+  lectura: {
+    titulo: "Lo que recibes en tu lectura (20 min, sin costo)",
+    items: [
+      "<strong>Tu plan de acción de 90 días</strong>, priorizado para tu óptica.",
+      "<strong>Las respuestas que más te están restando puntos</strong>, revisadas una por una.",
+      "<strong>Si tu óptica es candidata para la Generación 2027</strong> (solo 15 lugares).",
     ],
+  },
+  cta: {
+    titulo: "El siguiente paso: tu lectura del diagnóstico",
+    boton: "Agendar mi lectura del diagnóstico",
+    whatsapp: "Prefiero que me escriban por WhatsApp",
+    nota: "Las 15 ópticas de la Generación 2027 se seleccionan a partir de este diagnóstico.",
+    respaldo: "¿No carga el calendario? Ábrelo en una pestaña nueva",
   },
 };

@@ -5,6 +5,11 @@
 //   score_global    = promedio ponderado de las dimensiones (en V1 peso 1)
 //
 // Las preguntas opcionales omitidas no cuentan en obtenidos ni en máximos.
+//
+// Oportunidades = las 3 dimensiones con menor puntaje (la #1 es el cuello de
+// botella); los empates se ordenan con `tieBreak`. Fortaleza = la dimensión
+// con mayor puntaje entre las que NO son oportunidad, y solo si llega a
+// `strengthMin`; si ninguna llega, no hay fortaleza (null).
 
 import type { Dimension, DimensionId } from "../../config/diagnostico/dimensions";
 import type { DiagnosticQuestion } from "../../config/diagnostico/diagnosticQuestions";
@@ -20,8 +25,13 @@ export interface DiagnosticResult {
   maturity_level: string;
   maturity_level_id: string;
   dimensions: Record<DimensionId, number>;
-  top_strength: DimensionId;
+  top_strength: DimensionId | null;
   priorities: DimensionId[];
+}
+
+export interface ScoringRules {
+  tieBreak: DimensionId[];
+  strengthMin: number;
 }
 
 export function scoreDimensions(
@@ -57,6 +67,7 @@ export function computeResult(
   questions: DiagnosticQuestion[],
   levels: MaturityLevel[],
   answers: Answers,
+  rules: ScoringRules,
 ): DiagnosticResult {
   const scores = scoreDimensions(dimensions, questions, answers);
 
@@ -66,17 +77,29 @@ export function computeResult(
   );
   const nivel = maturityFor(levels, global);
 
-  // Empates: gana la dimensión que aparece primero en la configuración.
-  const orden = dimensions.map((d, i) => ({ id: d.id, score: scores[d.id], i }));
-  const desc = [...orden].sort((a, b) => b.score - a.score || a.i - b.i);
-  const asc = [...orden].sort((a, b) => a.score - b.score || a.i - b.i);
+  // Dimensiones fuera de la lista de desempate van al final, en su orden.
+  const rango = (id: DimensionId) => {
+    const i = rules.tieBreak.indexOf(id);
+    return i === -1 ? rules.tieBreak.length + dimensions.findIndex((d) => d.id === id) : i;
+  };
+  const priorities = dimensions
+    .map((d) => d.id)
+    .sort((a, b) => scores[a] - scores[b] || rango(a) - rango(b))
+    .slice(0, 3);
+
+  // Empate en la fortaleza: gana la que aparece primero en la configuración.
+  let top_strength: DimensionId | null = null;
+  for (const d of dimensions) {
+    if (priorities.includes(d.id) || scores[d.id] < rules.strengthMin) continue;
+    if (top_strength === null || scores[d.id] > scores[top_strength]) top_strength = d.id;
+  }
 
   return {
     global_score: global,
     maturity_level: nivel.nombre,
     maturity_level_id: nivel.id,
     dimensions: scores,
-    top_strength: desc[0].id,
-    priorities: asc.slice(0, 3).map((x) => x.id),
+    top_strength,
+    priorities,
   };
 }
