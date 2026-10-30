@@ -1,7 +1,7 @@
 // Contacto para agendar la lectura del diagnóstico. Todo en un solo lugar.
 
-/** ⚠️ Número pendiente de confirmar. Formato internacional sin "+" ni espacios. */
-export const whatsappLectura = "529611855475";
+/** Formato internacional sin "+" ni espacios (52 + 55 6066 3926). */
+export const whatsappLectura = "525560663926";
 
 /** Mensaje de WhatsApp. {optica} y {puntaje} se reemplazan. */
 export const whatsappLecturaMensaje =
@@ -15,4 +15,5 @@ export const calendarioLink = "https://calendar.app.google/EBawGUvoQWYu4He78";
  *  Compartir → "Insertar en sitio web", copiar el src del iframe. Tiene la
  *  forma https://calendar.google.com/calendar/appointments/schedules/<ID>?gv=true
  *  Mientras esté vacía, el botón abre el calendario en una pestaña nueva. */
-export const calendarioEmbed = "";
+export const calendarioEmbed =
+  "https://calendar.google.com/calendar/appointments/schedules/AcZssZ1GoDG9aC3_je8mRj_MBW-HCMQYTjnX-8dzY6m0TkJMRqQdr6-pSTtzBj0xZwakVU_p0B5kK2wP?gv=true";
