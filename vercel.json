@@ -12,6 +12,16 @@
       "permanent": true
     },
     {
+      "source": "/diagnosticoaceleracion",
+      "destination": "/diagnostico360",
+      "permanent": true
+    },
+    {
+      "source": "/diagnosticoaceleracion/",
+      "destination": "/diagnostico360",
+      "permanent": true
+    },
+    {
       "source": "/chiapas",
       "destination": "/tuxtla",
       "permanent": true

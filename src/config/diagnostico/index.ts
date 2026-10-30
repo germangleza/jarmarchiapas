@@ -1,4 +1,4 @@
-// Configuración editable del Diagnóstico 360 (/diagnosticoaceleracion).
+// Configuración editable del Diagnóstico 360 (/diagnostico360).
 // Preguntas, dimensiones, niveles, textos y fuentes viven aquí; la lógica
 // (src/lib/diagnostico/) y la UI solo los leen.
 

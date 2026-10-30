@@ -25,7 +25,7 @@ Es un sitio de **vertical salud**: no dar diagnósticos, no prometer resultados,
 | Redirects 301 | `vercel.json` |
 | **Formulario de `/aceleracion`** | Los registros van a Formspree (`https://formspree.io/f/myezavyy`), definido en la propia página. `PUBLIC_ACELERACION_FORM_ENDPOINT` lo sobrescribe si hay que apuntar a otro servicio. Si el envío falla no se finge que se guardó: avisa y ofrece WhatsApp |
 
-| **Diagnóstico 360** (`/diagnosticoaceleracion`) | Página `src/pages/diagnosticoaceleracion.astro`. Preguntas, dimensiones, niveles, textos, recomendaciones y fuentes de leads en `src/config/diagnostico/` (editar ahí, no en la lógica). Scoring, tracking, envío y flujo en `src/lib/diagnostico/`. Leads a Formspree (mismo endpoint que `/aceleracion`, columna `formulario=diagnostico-360`); `PUBLIC_DIAGNOSTICO_FORM_ENDPOINT` lo sobrescribe. Un registro por etapa con el mismo `lead_id` |
+| **Diagnóstico 360** (`/diagnostico360`) | Página `src/pages/diagnostico360.astro` (`/diagnosticoaceleracion` redirige 301). Preguntas, dimensiones, niveles, textos, recomendaciones y fuentes de leads en `src/config/diagnostico/` (editar ahí, no en la lógica). Scoring, tracking, envío y flujo en `src/lib/diagnostico/`. Leads a Formspree (mismo endpoint que `/aceleracion`, columna `formulario=diagnostico-360`); `PUBLIC_DIAGNOSTICO_FORM_ENDPOINT` lo sobrescribe. Un registro por etapa con el mismo `lead_id` |
 
 ## Estructura de páginas
 

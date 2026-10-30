@@ -1,4 +1,4 @@
-// Flujo interactivo del Diagnóstico 360 (/diagnosticoaceleracion).
+// Flujo interactivo del Diagnóstico 360 (/diagnostico360).
 //
 // Pantallas: hero → datos → contexto (una por pregunta) → escala → preguntas
 // (una por pantalla) → calculando → resultado → pre-registro → confirmación.
@@ -77,7 +77,7 @@ function nuevoEstado(): State {
     leadId: typeof crypto !== "undefined" && "randomUUID" in crypto ? crypto.randomUUID() : `${Date.now()}-${Math.random().toString(36).slice(2)}`,
     createdAt: new Date().toISOString(),
     step: "hero",
-    datos: { nombre: "", email: "", telefono: "", ciudad: "", pais: countries[0] },
+    datos: { nombre: "", email: "", telefono: "", optica: "", ciudad: "", pais: countries[0] },
     contexto: {},
     respuestas: {},
     preregistro: {},
@@ -130,7 +130,7 @@ function resultado(): DiagnosticResult {
 /** Primera pantalla incompleta: a donde se manda a quien intenta saltarse pasos. */
 function primerPendiente(): string {
   const d = state.datos;
-  if (!d.nombre || !d.email || !d.telefono || !d.ciudad || !d.pais) return "datos";
+  if (!d.nombre || !d.email || !d.telefono || !d.optica || !d.ciudad || !d.pais) return "datos";
   const ci = contextQuestions.findIndex((c) => !state.contexto[c.id]);
   if (ci !== -1) return `ctx-${ci}`;
   const qi = diagnosticQuestions.findIndex((q) => !q.opcional && typeof state.respuestas[q.id] !== "number");
@@ -311,6 +311,7 @@ function vistaDatos(): string {
       ${campo("nombre", "Nombre completo", "text", d.nombre, 'autocomplete="name"')}
       ${campo("email", "Correo electrónico", "email", d.email, 'autocomplete="email" inputmode="email"')}
       ${campo("telefono", "Teléfono / WhatsApp", "tel", d.telefono, 'autocomplete="tel" inputmode="tel" placeholder="Ej. +52 961 000 0000"')}
+      ${campo("optica", "Nombre de Óptica", "text", d.optica ?? "", 'autocomplete="organization"')}
       ${campo("ciudad", "Ciudad", "text", d.ciudad, 'autocomplete="address-level2"')}
       <div class="campo">
         <label for="f-pais">País</label>
@@ -576,12 +577,13 @@ function validarDatos(form: HTMLFormElement): boolean {
   const fd = new FormData(form);
   const v = (k: string) => String(fd.get(k) ?? "").trim();
   const pais = v("pais") === "Otro" ? v("pais_otro") : v("pais");
-  const datos = { nombre: v("nombre"), email: v("email"), telefono: v("telefono"), ciudad: v("ciudad"), pais };
+  const datos = { nombre: v("nombre"), email: v("email"), telefono: v("telefono"), optica: v("optica"), ciudad: v("ciudad"), pais };
   const errores: Record<string, string> = {};
   if (datos.nombre.length < 3) errores.nombre = "Escribe tu nombre completo.";
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(datos.email)) errores.email = "Escribe un correo válido.";
   if (datos.telefono.replace(/\D/g, "").length < 8 || !/^[+\d\s().-]+$/.test(datos.telefono))
     errores.telefono = "Escribe un teléfono válido (puedes incluir el código de país).";
+  if (!datos.optica) errores.optica = "Escribe el nombre de tu óptica.";
   if (!datos.ciudad) errores.ciudad = "Escribe tu ciudad.";
   if (!datos.pais) errores.pais = "Indica tu país.";
 
@@ -613,6 +615,7 @@ function enlaceWhatsApp(): string {
     `Nombre: ${state.datos.nombre}`,
     `Correo: ${state.datos.email}`,
     `Teléfono: ${state.datos.telefono}`,
+    `Óptica: ${state.datos.optica}`,
     `Ciudad: ${state.datos.ciudad}, ${state.datos.pais}`,
     `Resultado: ${r.global_score}/100 (${r.maturity_level})`,
     `Interés: ${state.preregistro.program_interest ?? ""}`,

@@ -1,7 +1,7 @@
 // Fuentes de leads. Cada QR, liga o campaña debe llevar ?utm_source=<id>
 // (y opcionalmente utm_medium / utm_campaign). Ejemplo para un QR del
 // congreso de Franja:
-//   https://www.jarmar.com/diagnosticoaceleracion/?utm_source=franja&utm_medium=qr&utm_campaign=franja-2026
+//   https://www.jarmar.com/diagnostico360/?utm_source=franja&utm_medium=qr&utm_campaign=franja-2026
 // Si utm_source no está en esta lista se guarda tal cual; si no hay UTM se
 // deduce del referrer (instagram, linkedin, google…) o queda como "directo".
 

@@ -18,6 +18,7 @@ export interface DatosBasicos {
   nombre: string;
   email: string;
   telefono: string;
+  optica: string;
   ciudad: string;
   pais: string;
 }
@@ -34,7 +35,7 @@ export interface LeadState {
 
 export function buildPayload(s: LeadState, etapa: Etapa, r: DiagnosticResult | null) {
   const p: Record<string, string | number> = {
-    _subject: `Diagnóstico 360 · ${etapa.replace(/_/g, " ")} · ${s.datos.nombre}`,
+    _subject: `Diagnóstico 360 · ${etapa.replace(/_/g, " ")} · ${s.datos.nombre}${s.datos.optica ? ` (${s.datos.optica})` : ""}`,
     formulario: "diagnostico-360",
     lead_id: s.leadId,
     created_at: s.createdAt,
@@ -43,6 +44,7 @@ export function buildPayload(s: LeadState, etapa: Etapa, r: DiagnosticResult | n
     name: s.datos.nombre,
     email: s.datos.email,
     phone: s.datos.telefono,
+    optical_name: s.datos.optica ?? "",
     city: s.datos.ciudad,
     country: s.datos.pais,
   };
