@@ -1,5 +1,5 @@
 // Arma y envía el registro del lead. El sitio es estático, así que los
-// registros van a Formspree (igual que /aceleracion), que los guarda y permite
+// registros van a Formspree, que los guarda y permite
 // exportarlos a CSV. Se manda un objeto plano —una columna por dato— para que
 // el CSV quede legible.
 //

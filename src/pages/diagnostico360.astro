@@ -1,20 +1,20 @@
 ---
 // Diagnóstico 360 para Ópticas → resultado → agendar la lectura del
 // diagnóstico. Ruta: /diagnostico360 — página standalone (head propio,
-// ver CLAUDE.md), con el mismo branding que /aceleracion.
+// ver CLAUDE.md), con el mismo branding que /optica360.
 //
 // Preguntas, dimensiones, niveles y textos: src/config/diagnostico/
 // Scoring, tracking, envío y flujo:          src/lib/diagnostico/
 //
-// Los leads van a Formspree (exporta CSV desde su panel), igual que
-// /aceleracion. PUBLIC_DIAGNOSTICO_FORM_ENDPOINT lo sobrescribe para mandarlos
+// Los leads van a Formspree (exporta CSV desde su panel).
+// PUBLIC_DIAGNOSTICO_FORM_ENDPOINT lo sobrescribe para mandarlos
 // a otro formulario o servicio sin tocar código.
 import { copy, maturityLevels, scale } from "../config/diagnostico";
 
 const FORM_ENDPOINT =
   import.meta.env.PUBLIC_DIAGNOSTICO_FORM_ENDPOINT ?? "https://formspree.io/f/myezavyy";
 
-const TITLE = "Diagnóstico 360 para Ópticas | Programa de Aceleración Jarmar";
+const TITLE = "Diagnóstico 360 para Ópticas | Óptica 360 · Ópticas Jarmar";
 const DESCRIPTION =
   "Evalúa en 5–7 minutos qué tan profesionalizada está tu óptica: finanzas, diferenciación, inventario, ventas, digitalización, adquisición de pacientes y equipo. Resultado inmediato y gratuito.";
 const URL = "https://www.jarmar.com/diagnostico360/";
@@ -448,7 +448,7 @@ const URL = "https://www.jarmar.com/diagnostico360/";
   <footer class="site-footer">
     <img src="/logo-opticas-jarmar-blanco-esp.png" alt="Ópticas Jarmar" width="122" height="28" />
     <p>Clínica Óptica Boutique desde 1966 · Tuxtla Gutiérrez y Tijuana</p>
-    <p><a href="/aceleracion/">Programa de Aceleración para Ópticas</a> · <a href="/">Ópticas Jarmar</a></p>
+    <p><a href="/optica360/">Óptica 360 · Generación 2027</a> · <a href="/">Ópticas Jarmar</a></p>
   </footer>
 
   <script>

@@ -23,9 +23,9 @@ Es un sitio de **vertical salud**: no dar diagnósticos, no prometer resultados,
 | Estilos globales | `src/styles/global.css` |
 | Sitemap y llms.txt (dinámicos) | `src/pages/sitemap.xml.ts`, `src/pages/llms.txt.ts` |
 | Redirects 301 | `vercel.json` |
-| **Formulario de `/aceleracion`** | Los registros van a Formspree (`https://formspree.io/f/myezavyy`), definido en la propia página. `PUBLIC_ACELERACION_FORM_ENDPOINT` lo sobrescribe si hay que apuntar a otro servicio. Si el envío falla no se finge que se guardó: avisa y ofrece WhatsApp |
+| **Landing Óptica 360 · Generación 2027** (`/optica360`) | Página `src/pages/optica360.astro` (`/aceleracion` redirige 301). Sin formularios: todos los CTA primarios van a `/diagnostico360` (conservando los UTM) y el secundario al calendario. Links, flag de testimonios (ocultos hasta tener reales) y FAQ (+ su `FAQPage` JSON-LD) en el frontmatter de la página |
 
-| **Diagnóstico 360** (`/diagnostico360`) | Página `src/pages/diagnostico360.astro` (`/diagnosticoaceleracion` redirige 301). Preguntas, dimensiones, niveles, textos, recomendaciones y fuentes de leads en `src/config/diagnostico/` (editar ahí, no en la lógica). Scoring, tracking, envío y flujo en `src/lib/diagnostico/`. Leads a Formspree (mismo endpoint que `/aceleracion`, columna `formulario=diagnostico-360`); `PUBLIC_DIAGNOSTICO_FORM_ENDPOINT` lo sobrescribe. Un registro por etapa (iniciado, completado) con el mismo `lead_id`. WhatsApp y calendario de la lectura en `src/config/diagnostico/contacto.ts` |
+| **Diagnóstico 360** (`/diagnostico360`) | Página `src/pages/diagnostico360.astro` (`/diagnosticoaceleracion` redirige 301). Preguntas, dimensiones, niveles, textos, recomendaciones y fuentes de leads en `src/config/diagnostico/` (editar ahí, no en la lógica). Scoring, tracking, envío y flujo en `src/lib/diagnostico/`. Leads a Formspree (`https://formspree.io/f/myezavyy`, columna `formulario=diagnostico-360`); `PUBLIC_DIAGNOSTICO_FORM_ENDPOINT` lo sobrescribe. Un registro por etapa (iniciado, completado) con el mismo `lead_id`. WhatsApp y calendario de la lectura en `src/config/diagnostico/contacto.ts` |
 
 ## Estructura de páginas
 

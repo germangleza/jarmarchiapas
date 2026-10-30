@@ -12,6 +12,16 @@
       "permanent": true
     },
     {
+      "source": "/aceleracion",
+      "destination": "/optica360",
+      "permanent": true
+    },
+    {
+      "source": "/aceleracion/",
+      "destination": "/optica360",
+      "permanent": true
+    },
+    {
       "source": "/diagnosticoaceleracion",
       "destination": "/diagnostico360",
       "permanent": true
