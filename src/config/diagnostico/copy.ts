@@ -6,10 +6,10 @@ export const copy = {
     eyebrow: "Diagnóstico 360 para Ópticas",
     titulo: "¿Qué tan profesionalizada está tu óptica?",
     subtitulo:
-      "Evalúa en pocos minutos las áreas clave de tu negocio y descubre cuáles son los principales cuellos de botella que podrían estar limitando su rentabilidad, diferenciación y crecimiento.",
+      "Evalúa en pocos minutos las áreas clave de tu negocio y descubre qué cuellos de botella limitan su rentabilidad, diferenciación y crecimiento.",
     apoyo: [
-      "El diagnóstico evalúa aspectos como finanzas, operación, diferenciación clínica, inventario, ventas, digitalización, adquisición de pacientes y equipo.",
-      "Al terminar recibirás una radiografía de tu óptica con tus fortalezas y principales áreas de oportunidad.",
+      "Revisa finanzas, operación, diferenciación clínica, inventario, ventas, digitalización, adquisición de pacientes y equipo.",
+      "Al terminar recibes una radiografía de tu óptica con sus fortalezas y principales oportunidades.",
     ],
     cta: "Iniciar diagnóstico gratuito",
     micro: "Tiempo estimado: 5–7 minutos · Resultado inmediato",

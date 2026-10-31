@@ -9,7 +9,7 @@
 // Los leads van a Formspree (exporta CSV desde su panel).
 // PUBLIC_DIAGNOSTICO_FORM_ENDPOINT lo sobrescribe para mandarlos
 // a otro formulario o servicio sin tocar código.
-import { copy, maturityLevels, scale } from "../config/diagnostico";
+import { copy, scale } from "../config/diagnostico";
 
 const FORM_ENDPOINT =
   import.meta.env.PUBLIC_DIAGNOSTICO_FORM_ENDPOINT ?? "https://formspree.io/f/xbggapow";
@@ -313,13 +313,6 @@ const URL = "https://www.jarmar.com/diagnostico360/";
     .ayuda-cuerpo h2 { font-family: var(--font-display); color: var(--bg); margin: 0 0 14px; font-size: 1.35rem; }
     .ayuda-cuerpo .btn { margin-top: 14px; }
 
-    /* ESCALA DE MADUREZ (hero) */
-    .niveles-hero { text-align: left; margin: 0 0 28px; }
-    .niveles-hero h2 { font-family: var(--font-body); font-size: 0.86rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; opacity: 0.8; margin: 0 0 10px; text-align: center; }
-    .niveles-hero ol { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
-    .niveles-hero li { display: flex; align-items: center; gap: 12px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 12px; padding: 10px 14px; font-weight: 600; font-size: 0.95rem; }
-    .niveles-hero .rango { min-width: 62px; color: #9CCBF5; font-variant-numeric: tabular-nums; }
-
     /* ESCALA DE MADUREZ (resultado) */
     .madurez { margin-top: 22px; text-align: left; }
     .madurez-barra { position: relative; display: flex; gap: 3px; height: 14px; margin: 34px 0 12px; }
@@ -411,14 +404,6 @@ const URL = "https://www.jarmar.com/diagnostico360/";
         <p class="sub">{copy.hero.subtitulo}</p>
         <div class="apoyo">
           {copy.hero.apoyo.map((p) => <p>{p}</p>)}
-        </div>
-        <div class="niveles-hero">
-          <h2>Escala de madurez</h2>
-          <ol>
-            {maturityLevels.map((l) => (
-              <li><span class="rango">{l.min}–{l.max}</span><span>{l.nombre}</span></li>
-            ))}
-          </ol>
         </div>
         <button type="button" class="btn" data-accion="iniciar">{copy.hero.cta}</button>
         <p class="micro">{copy.hero.micro}</p>
