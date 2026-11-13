@@ -68,8 +68,15 @@ const audit = !strictAll && only.length === 0;
 const words = (s) => String(s || '').trim().split(/\s+/).filter(Boolean).length;
 const iso = (d) => (d instanceof Date ? d.toISOString().slice(0, 10) : String(d || '').slice(0, 10));
 const site = String(cfg.sitio || '').replace(/\/$/, '');
-const siteHost = site ? new URL(site).host.replace(/^www\./, '') : '';
-const isExternal = (u) => /^https?:\/\//.test(u) && !(siteHost && new URL(u).host.replace(/^www\./, '') === siteHost);
+const hostOf = (u) => {
+  try {
+    return new URL(u).host.replace(/^www\./, '');
+  } catch {
+    return '';
+  }
+};
+const siteHost = /^https?:\/\//.test(site) ? hostOf(site) : ''; // vacío mientras "sitio" sea un TODO
+const isExternal = (u) => /^https?:\/\//.test(u) && !(siteHost && hostOf(u) === siteHost);
 const toInternal = (u) => {
   if (u.startsWith('/')) return u;
   if (/^https?:\/\//.test(u) && !isExternal(u)) return new URL(u).pathname + (new URL(u).hash || '');
