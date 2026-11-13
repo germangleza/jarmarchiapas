@@ -1,43 +1,44 @@
-# Backlog de temas — campaña 30 días
+# Backlog de temas — campaña 2
 
-Sugerencias iniciales. El agente puede reemplazar un tema si su investigación encuentra una keyword mejor.
-Ninguno compite con los posts existentes en `src/content/blog/`.
+Sugerencias. El agente puede reemplazar un tema si su investigación encuentra una keyword mejor o si detecta
+canibalización con un post existente (revisa `ls src/content/blog/` y los dos registros). Ninguno repite un tema
+de la campaña 1. Los temas de salud se tratan sin diagnosticar y derivando a oftalmología cuando corresponde.
 
 ## Chiapas (Tuxtla Gutiérrez)
 
-- [x] Lentes progresivos en Tuxtla: cómo saber si los necesitas y cómo adaptarte
-- [x] Lentes de contacto en Tuxtla: guía para tu primera vez
-- [x] Examen de la vista para niños en Tuxtla Gutiérrez (señales y edad para la primera revisión)
-- [x] Lentes de sol graduados en Chiapas: protección UV para el sol y la altura (Tuxtla, San Cristóbal)
-- [ ] Vienes de Tapachula, San Cristóbal o Comitán: cómo planear tu cita de lentes esclerales en Tuxtla
-- [ ] Óptica en Plaza Crystal, Tuxtla: servicios y cómo llegar (enlazar `/tuxtla/plaza-crystal`)
-- [ ] Óptica en Col. Arboledas / Plaza Cedros, Tuxtla (enlazar `/tuxtla/arboledas`)
-- [x] Diabetes y vista: por qué revisarte cada año en Tuxtla (retinopatía diabética, sin alarmismo)
-- [x] Glaucoma: el examen preventivo que conviene hacerse después de los 40 en Tuxtla
-- [x] Lentes con filtro de luz azul en Tuxtla: para quién sí valen la pena
-- [x] Queratocono en Chiapas: especialista en lentes esclerales en el sureste
-- [ ] Jarmar en tu Empresa en Chiapas: exámenes visuales para colaboradores
+- [ ] Pterigión (carnosidad en el ojo) en Tuxtla: sol, señales y cuándo revisarte (derivación a oftalmología)
+- [ ] Hipermetropía en Tuxtla: qué es, síntomas y opciones de lentes
+- [ ] Lentes de lectura de farmacia vs. lentes graduados en Tuxtla
+- [ ] Lentes de sol para niños en Tuxtla: protección UV desde pequeños
+- [ ] Estrabismo y ojo desviado en niños: señales para revisar en Tuxtla
+- [ ] Conjuntivitis y ojo rojo en Tuxtla: cuándo acudir y qué no hacer (derivación)
+- [ ] Orzuelo y chalazión: qué son y cuándo revisarlos en Tuxtla
+- [ ] Cada cuánto cambiar tus lentes graduados en Tuxtla (micas rayadas, graduación vieja)
+- [ ] Óptica en Plaza Crystal, Tuxtla (enlazar `/tuxtla/plaza-crystal/`; solo datos verificables del sitio)
+- [ ] Óptica en Col. Arboledas / Plaza Cedros, Tuxtla (enlazar `/tuxtla/arboledas/`; solo datos verificables del sitio)
+- [ ] Embarazo y cambios en la vista: cuándo revisarte en Tuxtla
+- [ ] Lentes de contacto multifocales en Tuxtla: alternativa a los progresivos
+- [ ] Jarmar en tu Empresa en Chiapas: exámenes visuales para colaboradores (enlazar `/optica-movil/`)
 
 ## Tijuana (Zona Río)
 
-- [x] Lentes de contacto en Zona Río, Tijuana: tipos y adaptación
-- [x] Lentes progresivos en Tijuana: cómo elegirlos y cuánto tarda la adaptación
-- [x] Lentes para computadora en Tijuana: home office, oficinas y maquiladoras
-- [x] Especialista en queratocono en Tijuana: qué esperar de tu primera consulta
-- [x] Ojo seco en Tijuana: causas comunes y cuándo considerar lentes esclerales
-- [x] Lentes de sol graduados en Tijuana y Rosarito
-- [ ] Examen de la vista en Tijuana con seguro de visión (también planes de EE.UU.)
-- [x] Lentes esclerales para pacientes de San Diego: proceso de adaptación cruzando la frontera
-- [ ] Jarmar en tu Empresa en Tijuana: óptica móvil para maquiladoras y oficinas
-- [x] Lentes para manejar de noche en Tijuana (deslumbramiento, antirreflejante)
+- [ ] Lentes de contacto multifocales en Tijuana: para presbicia
+- [ ] Nadar o ir a la playa con lentes de contacto (Rosarito): riesgos y alternativas
+- [ ] Cómo cuidar y limpiar lentes de contacto blandos: errores comunes (ángulo Tijuana)
+- [ ] Lentes graduados deportivos en Tijuana: correr, bici y gimnasio
+- [ ] Moscas volantes en la vista en Tijuana: cuándo es normal y cuándo urgente (derivación)
+- [ ] Visión doble en Tijuana: señales de alarma y a quién acudir (derivación)
+- [ ] Daltonismo: cómo se detecta y qué opciones hay (ángulo Tijuana)
+- [ ] Salud visual después de los 60 en Tijuana: qué revisar cada año
+- [ ] Lentes de contacto de color: riesgos de comprarlos sin adaptación (ángulo Tijuana)
+- [ ] Hipermetropía en Tijuana (si la de Tuxtla rinde; ángulo distinto: niños / lectura)
+- [ ] Cómo leer tu receta de lentes (esfera, cilindro, eje, adición) — ángulo Tijuana / pacientes de EE.UU.
+- [ ] Ojo rojo y alergia ocular en Tijuana: cuándo revisarte (derivación)
+- [ ] Jarmar en tu Empresa en Tijuana: óptica móvil para maquiladoras y oficinas (solo si hay datos verificables)
 
 ## General / nacional (enlaza a ambas ciudades)
 
-- [x] Optometrista vs. oftalmólogo: a quién acudir y cuándo (publicado como Tuxtla)
-- [x] Astigmatismo: qué es, síntomas y opciones de lentes (publicado como Tijuana)
-- [x] Miopía en niños y pantallas: qué pueden hacer los papás
-- [x] Lentes esclerales para ojo seco severo (publicado como Tuxtla)
-- [x] Ectasia después de LASIK: opciones con lentes esclerales
-- [x] Lentes fotocromáticos: ventajas, límites y para quién convienen
-- [x] Cataratas: señales para acudir a revisión (y derivación a oftalmología)
-- [x] Jarmar Eyewear: la línea propia de armazones y cómo elegir el tuyo
+- [ ] Lentes esclerales para queratocono avanzado: qué esperar de la adaptación (sin canibalizar la guía existente)
+- [ ] Ambliopía (ojo flojo): por qué la detección temprana importa
+- [ ] Qué es la presión intraocular y por qué se mide en el examen
+- [ ] Lentes esclerales para personas con lentes rígidos que ya no toleran

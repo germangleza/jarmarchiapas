@@ -6,8 +6,9 @@ en buscadores (SEO) y en respuestas de IA (GEO: ChatGPT, Gemini, Perplexity, AI 
 
 ## 0. ¿Toca publicar hoy?
 
-1. Lee `seo-agent/registro.md`. Si ya tiene **30 publicaciones**, la campaña terminó: no publiques nada y termina
-   diciendo "Campaña de 30 días completa".
+1. Lee `seo-agent/registro.md` (campaña actual). Si ya tiene **30 publicaciones**, la campaña terminó: no publiques
+   nada y termina diciendo "Campaña de 30 días completa". Las campañas anteriores están archivadas en
+   `seo-agent/registro-campana-*.md` y `seo-agent/backlog-campana-*.md` (no cuentan para el límite).
 2. Si ya hay una entrada con la fecha de hoy (zona horaria America/Mexico_City), no publiques otra: termina.
 
 ## 1. Contexto obligatorio (léelo antes de escribir)
@@ -15,7 +16,8 @@ en buscadores (SEO) y en respuestas de IA (GEO: ChatGPT, Gemini, Perplexity, AI 
 - `CLAUDE.md` — estructura del sitio y convenciones.
 - `client-brief.md` — negocio, audiencia, tono, keywords, temas sí/no y **guardrails de salud**.
 - `seo-agent/backlog.md` — temas sugeridos y reparto Chiapas / Tijuana.
-- `seo-agent/registro.md` — lo ya publicado por este agente.
+- `seo-agent/registro.md` — lo publicado en la campaña actual, y `seo-agent/registro-campana-*.md` — campañas
+  anteriores. Usa ambos para alternar ciudad, no repetir temas ni fotos.
 - Lista de posts existentes: `ls src/content/blog/` y sus `title:`. **No repitas un tema ni compitas por la misma keyword**
   que un post existente (canibalización).
 
