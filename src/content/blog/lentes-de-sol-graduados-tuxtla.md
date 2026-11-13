@@ -77,4 +77,4 @@ Si quieres lentes de sol con tu graduación, lo mejor es partir de una revisión
 
 Ver también: [lentes graduados en Tuxtla](/tuxtla/lentes-graduados/).
 
-*Contenido elaborado por el equipo de Ópticas Jarmar. Clínica Óptica Boutique desde 1966.*
+*Contenido elaborado y revisado por el equipo de Ópticas Jarmar. Clínica Óptica Boutique desde 1966.*

@@ -78,4 +78,4 @@ Mándanos un mensaje con tu caso — sin compromiso. Te decimos con honestidad s
 
 ---
 
-*Contenido revisado por nuestro Optometrista Director Jorge Aranda Tello. Especialista en adaptación de lentes esclerales y contactología avanzada.*
+*Contenido elaborado y revisado por el equipo de Ópticas Jarmar. Clínica Óptica Boutique desde 1966.*

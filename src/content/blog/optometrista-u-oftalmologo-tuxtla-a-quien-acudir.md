@@ -64,4 +64,4 @@ Conoce más sobre el [estudio de la vista en Tuxtla](/tuxtla/estudio-de-la-vista
 
 ---
 
-*Contenido revisado por nuestro Optometrista Director [Jorge Aranda Tello](/jorgearanda/). Especialista en salud visual y diagnóstico optométrico.*
+*Contenido elaborado y revisado por el equipo de Ópticas Jarmar. Clínica Óptica Boutique desde 1966.*

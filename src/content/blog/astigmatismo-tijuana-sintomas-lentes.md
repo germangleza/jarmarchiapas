@@ -56,4 +56,4 @@ Somos una Clínica Óptica Boutique desde 1966 y nuestros pacientes nos califica
 
 Cuéntanos tus síntomas y te damos cita. [Escríbenos por WhatsApp en Tijuana](https://wa.me/526645791970?text=Hola%2C%20quiero%20agendar%20un%20examen%20de%20la%20vista%20por%20astigmatismo%20en%20Tijuana) o conoce el [estudio de la vista en Tijuana](/tijuana/estudio-de-la-vista/).
 
-*Contenido revisado por nuestro Optometrista Director [Jorge Aranda Tello](/jorgearanda/). Especialista en salud visual y diagnóstico optométrico.*
+*Contenido elaborado y revisado por el equipo de Ópticas Jarmar. Clínica Óptica Boutique desde 1966.*

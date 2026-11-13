@@ -79,4 +79,4 @@ También aceptamos el beneficio de visión de cualquier aseguradora; revisa cóm
 
 [Escríbenos por WhatsApp para agendar tu examen de la vista](https://wa.me/526645791970?text=Hola%2C%20quiero%20agendar%20un%20examen%20de%20la%20vista%20por%20cansancio%20visual%20de%20pantallas%20en%20Tijuana).
 
-*Contenido revisado por nuestro Optometrista Director [Jorge Aranda Tello](/jorgearanda/). Especialista en salud visual y diagnóstico optométrico.*
+*Contenido elaborado y revisado por el equipo de Ópticas Jarmar. Clínica Óptica Boutique desde 1966.*

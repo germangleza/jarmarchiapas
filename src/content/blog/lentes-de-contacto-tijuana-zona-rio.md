@@ -70,4 +70,4 @@ Los lentes de contacto son una opción, no una obligación. Muchas personas alte
 
 [Escríbenos por WhatsApp para agendar tu adaptación de lentes de contacto](https://wa.me/526645791970?text=Hola%2C%20quiero%20agendar%20una%20cita%20de%20adaptaci%C3%B3n%20de%20lentes%20de%20contacto%20en%20Tijuana).
 
-*Contenido revisado por nuestro Optometrista Director [Jorge Aranda Tello](/jorgearanda/). Especialista en salud visual y diagnóstico optométrico.*
+*Contenido elaborado y revisado por el equipo de Ópticas Jarmar. Clínica Óptica Boutique desde 1966.*

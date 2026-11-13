@@ -67,4 +67,4 @@ Estamos en **David Alfaro Siqueiros #2795, local 101, Zona Urbana Río**, con **
 
 Si tu visión cambió después del LASIK, no esperes a que empeore: [escríbenos por WhatsApp](https://wa.me/526645791970?text=Hola%2C%20me%20operaron%20de%20LASIK%20y%20quiero%20una%20valoraci%C3%B3n%20para%20lentes%20esclerales) o revisa la página de [queratocono y córneas irregulares en Tijuana](/tijuana/queratocono/) y la de [lentes esclerales en Tijuana](/tijuana/lentes-esclerales/). Esta guía es informativa y no sustituye una consulta presencial.
 
-*Contenido revisado por nuestro Optometrista Director [Jorge Aranda Tello](/jorgearanda/). Especialista en salud visual y diagnóstico optométrico.*
+*Contenido elaborado y revisado por el equipo de Ópticas Jarmar. Clínica Óptica Boutique desde 1966.*

@@ -65,4 +65,4 @@ Si notas alguna de las señales o hace más de un año que no lo revisan, agenda
 
 Más información en [examen de la vista para niños en Tuxtla](/tuxtla/examen-ninos/) y [lentes graduados en Tuxtla](/tuxtla/lentes-graduados/).
 
-*Contenido revisado por nuestro Optometrista Director [Jorge Aranda Tello](/jorgearanda/). Especialista en salud visual y diagnóstico optométrico.*
+*Contenido elaborado y revisado por el equipo de Ópticas Jarmar. Clínica Óptica Boutique desde 1966.*

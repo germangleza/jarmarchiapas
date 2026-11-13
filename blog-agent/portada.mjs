@@ -1,6 +1,6 @@
 // Genera la portada de un post: recorta una foto a 16:9 (1600×900) y la guarda
 // en public/blog/<slug>.jpg con menos de 300 KB.
-// Uso: node seo-agent/portada.mjs <ruta-foto> <slug> [encuadre]
+// Uso: node blog-agent/portada.mjs <ruta-foto> <slug> [encuadre]
 //   encuadre: attention (default, busca la zona más interesante) | entropy |
 //             centre | north | south | east | west
 import { createRequire } from "module";
@@ -9,7 +9,7 @@ import fs from "fs";
 const sharp = createRequire(import.meta.url)("sharp");
 const [foto, slug, encuadre = "attention"] = process.argv.slice(2);
 if (!foto || !slug) {
-  console.error("Uso: node seo-agent/portada.mjs <ruta-foto> <slug> [encuadre]");
+  console.error("Uso: node blog-agent/portada.mjs <ruta-foto> <slug> [encuadre]");
   process.exit(1);
 }
 const salida = `public/blog/${slug}.jpg`;

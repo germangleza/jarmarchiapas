@@ -9,9 +9,22 @@ interface Props {
   author: string;
   image?: string;
   url: string;
+  keywords?: string[];
+  faq?: { question: string; answer: string }[];
+  sources?: { title: string; url: string }[];
 }
-const { title, description, pubDate, updatedDate, author, image, url } =
-  Astro.props;
+const {
+  title,
+  description,
+  pubDate,
+  updatedDate,
+  author,
+  image,
+  url,
+  keywords = [],
+  faq = [],
+  sources = [],
+} = Astro.props;
 
 // Schema BlogPosting: lo que hace que ChatGPT / Perplexity
 // entiendan quién publica, cuándo y de qué trata.
@@ -25,6 +38,7 @@ const schema = {
   author: {
     "@type": "Organization",
     name: author,
+    url: site.url,
   },
   publisher: {
     "@type": site.org.type,
@@ -41,10 +55,33 @@ const schema = {
     "@id": url,
   },
   inLanguage: site.lang,
+  ...(keywords.length ? { keywords: keywords.join(", ") } : {}),
+  ...(sources.length
+    ? { citation: sources.map((s) => ({ "@type": "CreativeWork", name: s.title, url: s.url })) }
+    : {}),
 };
+
+// FAQPage: sale de la sección "## Preguntas frecuentes" del post (texto idéntico).
+const faqSchema = faq.length
+  ? {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: faq.map((f) => ({
+        "@type": "Question",
+        name: f.question,
+        acceptedAnswer: { "@type": "Answer", text: f.answer },
+      })),
+    }
+  : null;
 ---
 
 <script
   type="application/ld+json"
   set:html={JSON.stringify(schema)}
 />
+{faqSchema && (
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify(faqSchema)}
+  />
+)}

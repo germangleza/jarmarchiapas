@@ -1,0 +1,54 @@
+{
+  "enabled": true,
+  "cliente": "Ópticas Jarmar",
+  "sitio": "https://www.jarmar.com",
+  "urlCanonica": true,
+  "zonaHoraria": "America/Mexico_City",
+  "cadencia": {
+    "diasPublicacion": [1, 3, 5],
+    "minDiasEntrePosts": 2,
+    "nota": "3 posts por semana: lunes, miércoles y viernes. 1 = lunes … 7 = domingo."
+  },
+  "publicacion": {
+    "modo": "pr-merge",
+    "revisor": null
+  },
+  "deploy": {
+    "plataforma": "Vercel (automático al hacer push a main)",
+    "workflow": null
+  },
+  "contenido": {
+    "dir": "src/content/blog",
+    "campoFecha": "pubDate",
+    "url": "/blog/{slug}/"
+  },
+  "build": {
+    "comando": "npm run build",
+    "dist": "dist"
+  },
+  "publicDir": "public",
+  "rutasConocidas": [],
+  "reglas": {
+    "aplicarDesde": "2026-11-13",
+    "camposObligatorios": ["title", "description", "pubDate", "keyword", "tldr", "ciudad", "servicios"],
+    "titulo": { "min": 40, "max": 70 },
+    "descripcion": { "min": 120, "max": 160 },
+    "tldr": { "min": 35, "max": 75 },
+    "palabras": { "min": 900, "max": 1700 },
+    "minH2": 4,
+    "minH2Pregunta": 3,
+    "faq": { "requerida": true, "minPreguntas": 3, "maxPreguntas": 5 },
+    "tabla": false,
+    "minFuentesExternas": 2,
+    "minEnlacesInternos": 2,
+    "minEnlacesPosts": 2,
+    "enlaceEnIntro": true,
+    "keywordUnica": true,
+    "imagen": { "requerida": true, "ruta": "public/blog/{slug}.jpg", "maxKB": 300 },
+    "frasesProhibidas": [
+      "revisado por nuestro optometrista director",
+      "resultados garantizados",
+      "garantizamos"
+    ]
+  }
+}

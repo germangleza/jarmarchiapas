@@ -186,4 +186,4 @@ En Ópticas Jarmar realizamos valoraciones para queratocono en:
 
 ---
 
-*Contenido revisado por nuestro Optometrista Director Jorge Aranda Tello. Especialista en adaptación de lentes esclerales y contactología avanzada.*
+*Contenido elaborado y revisado por el equipo de Ópticas Jarmar. Clínica Óptica Boutique desde 1966.*

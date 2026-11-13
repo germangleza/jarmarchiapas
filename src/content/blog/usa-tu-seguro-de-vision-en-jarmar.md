@@ -63,4 +63,4 @@ No te preocupes: de todas formas contamos con promociones y facilidades de pago 
 
 ---
 
-*Contenido revisado por el equipo de Ópticas Jarmar. Clínica Óptica Boutique con más de 60 años cuidando la salud visual de México.*
+*Contenido elaborado y revisado por el equipo de Ópticas Jarmar. Clínica Óptica Boutique desde 1966.*

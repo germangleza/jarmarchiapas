@@ -3,6 +3,7 @@ import BaseLayout from "./BaseLayout.astro";
 import BlogPostSchema from "../components/BlogPostSchema.astro";
 import PostRelaciones from "../components/PostRelaciones.astro";
 import { site } from "../../site.config.mjs";
+import { extraerFaq } from "../lib/blog-seo";
 
 const { post } = Astro.props;
 const { data } = post;
@@ -15,6 +16,8 @@ const url = new URL(`/blog/${post.id}/`, site.url).toString();
 // foto todavía no exista (ver .post-hero--empty en global.css).
 const heroImage = data.image ?? `/blog/${post.id}.jpg`;
 const heroImageUrl = new URL(heroImage, site.url).toString();
+const faq = extraerFaq(post.body);
+const keywords = [data.keyword, ...data.tags].filter(Boolean);
 
 const fmt = (d) =>
   new Intl.DateTimeFormat(site.lang, {
@@ -39,6 +42,9 @@ const fmt = (d) =>
     author={author}
     image={heroImageUrl}
     url={url}
+    keywords={keywords}
+    faq={faq}
+    sources={data.sources}
   />
 
   <article class="article">
@@ -62,9 +68,33 @@ const fmt = (d) =>
         />
       </figure>
 
+      {
+        data.tldr && (
+          <aside class="post-tldr" aria-label="En resumen">
+            <p class="post-tldr-label">En resumen</p>
+            <p>{data.tldr}</p>
+          </aside>
+        )
+      }
+
       <div class="article-body">
         <slot />
       </div>
+
+      {
+        data.sources.length > 0 && (
+          <section class="post-sources" aria-labelledby="fuentes-title">
+            <h2 id="fuentes-title">Fuentes</h2>
+            <ol>
+              {data.sources.map((s) => (
+                <li>
+                  <a href={s.url} rel="noopener" target="_blank">{s.title}</a>
+                </li>
+              ))}
+            </ol>
+          </section>
+        )
+      }
 
       {
         data.tags.length > 0 && (

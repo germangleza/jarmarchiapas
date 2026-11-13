@@ -65,4 +65,4 @@ En Ópticas Jarmar aceptamos el beneficio de visión de cualquier aseguradora. S
 
 [Escríbenos por WhatsApp para agendar tu examen de la vista](https://wa.me/526645791970?text=Hola%2C%20quiero%20agendar%20un%20examen%20de%20la%20vista%20para%20lentes%20progresivos%20en%20Tijuana).
 
-*Contenido elaborado por el equipo de Ópticas Jarmar. Clínica Óptica Boutique desde 1966.*
+*Contenido elaborado y revisado por el equipo de Ópticas Jarmar. Clínica Óptica Boutique desde 1966.*

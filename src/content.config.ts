@@ -12,6 +12,13 @@ const blog = defineCollection({
     updatedDate: z.coerce.date().optional(),
     author: z.string().optional(),
     image: z.string().optional(),
+    // Motor blog-agent (SEO/GEO). Opcionales para no romper posts viejos;
+    // el validador (blog-agent/check-blog.mjs) los exige en posts nuevos.
+    keyword: z.string().optional(), // keyword principal, única en el blog
+    tldr: z.string().optional(), // respuesta de 40–60 palabras (arriba del post + llms.txt)
+    sources: z
+      .array(z.object({ title: z.string(), url: z.string().url() }))
+      .default([]),
     tags: z.array(z.string()).default([]),
     draft: z.boolean().default(false),
     // Obligatorios: relacionan el post con las páginas de servicio de su

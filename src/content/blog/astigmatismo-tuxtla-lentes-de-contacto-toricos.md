@@ -68,4 +68,4 @@ Escríbenos por WhatsApp y cuéntanos que quieres revisar tu astigmatismo:
 
 Y si ya tienes tu graduación, conoce nuestras opciones de [lentes graduados en Tuxtla](/tuxtla/lentes-graduados/) y [lentes de contacto en Tuxtla](/tuxtla/lentes-de-contacto/).
 
-*Contenido revisado por nuestro Optometrista Director [Jorge Aranda Tello](/jorgearanda/). Especialista en salud visual y diagnóstico optométrico.*
+*Contenido elaborado y revisado por el equipo de Ópticas Jarmar. Clínica Óptica Boutique desde 1966.*

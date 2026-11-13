@@ -68,4 +68,4 @@ Más sobre la sucursal en [Ópticas Jarmar Tijuana](/tijuana/).
 
 Si notas alguna señal o hace más de un año que no lo revisan, [escríbenos por WhatsApp para agendar su examen de la vista](https://wa.me/526645791970?text=Hola%2C%20quiero%20agendar%20un%20examen%20de%20la%20vista%20para%20mi%20hijo%2Fa%20en%20Tijuana). También puedes ver los [lentes graduados en Tijuana](/tijuana/lentes-graduados/) y el [examen para niños en Tijuana](/tijuana/examen-ninos/).
 
-*Contenido revisado por nuestro Optometrista Director [Jorge Aranda Tello](/jorgearanda/). Especialista en salud visual y diagnóstico optométrico.*
+*Contenido elaborado y revisado por el equipo de Ópticas Jarmar. Clínica Óptica Boutique desde 1966.*
