@@ -7,7 +7,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "blog": "node scripts/generar-blog.mjs"
+    "blog:check": "node blog-agent/check-blog.mjs"
   },
   "dependencies": {
     "astro": "^5.1.0"

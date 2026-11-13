@@ -1,13 +1,16 @@
-# Backlog de temas — campaña 2
+# Backlog de temas
 
-Sugerencias. El agente puede reemplazar un tema si su investigación encuentra una keyword mejor o si detecta
-canibalización con un post existente (revisa `ls src/content/blog/` y los dos registros). Ninguno repite un tema
-de la campaña 1. Los temas de salud se tratan sin diagnosticar y derivando a oftalmología cuando corresponde.
+Sugerencias ordenadas por ciudad. El agente toma el primero pendiente de la ciudad que toca (ver
+`blog-agent/estrategia.md`) y puede reemplazarlo si su investigación encuentra una keyword mejor o si detecta
+canibalización con un post existente (revisa `ls src/content/blog/`, `blog-agent/registro.md` y
+`blog-agent/archivo/`). Los temas de salud se tratan sin diagnosticar y derivando a oftalmología cuando corresponde.
+
+**Sin gemelos por ciudad:** un tema que aplica igual en las dos ciudades va en "General", no duplicado en Tuxtla y
+Tijuana. Si un tema nuevo ya existe para la otra ciudad, no se agrega aquí.
 
 ## Chiapas (Tuxtla Gutiérrez)
 
 - [ ] Pterigión (carnosidad en el ojo) en Tuxtla: sol, señales y cuándo revisarte (derivación a oftalmología)
-- [ ] Hipermetropía en Tuxtla: qué es, síntomas y opciones de lentes
 - [ ] Lentes de lectura de farmacia vs. lentes graduados en Tuxtla
 - [ ] Lentes de sol para niños en Tuxtla: protección UV desde pequeños
 - [ ] Estrabismo y ojo desviado en niños: señales para revisar en Tuxtla
@@ -17,12 +20,10 @@ de la campaña 1. Los temas de salud se tratan sin diagnosticar y derivando a of
 - [ ] Óptica en Plaza Crystal, Tuxtla (enlazar `/tuxtla/plaza-crystal/`; solo datos verificables del sitio)
 - [ ] Óptica en Col. Arboledas / Plaza Cedros, Tuxtla (enlazar `/tuxtla/arboledas/`; solo datos verificables del sitio)
 - [ ] Embarazo y cambios en la vista: cuándo revisarte en Tuxtla
-- [ ] Lentes de contacto multifocales en Tuxtla: alternativa a los progresivos
 - [ ] Jarmar en tu Empresa en Chiapas: exámenes visuales para colaboradores (enlazar `/optica-movil/`)
 
 ## Tijuana (Zona Río)
 
-- [ ] Lentes de contacto multifocales en Tijuana: para presbicia
 - [ ] Nadar o ir a la playa con lentes de contacto (Rosarito): riesgos y alternativas
 - [ ] Cómo cuidar y limpiar lentes de contacto blandos: errores comunes (ángulo Tijuana)
 - [ ] Lentes graduados deportivos en Tijuana: correr, bici y gimnasio
@@ -31,13 +32,13 @@ de la campaña 1. Los temas de salud se tratan sin diagnosticar y derivando a of
 - [ ] Daltonismo: cómo se detecta y qué opciones hay (ángulo Tijuana)
 - [ ] Salud visual después de los 60 en Tijuana: qué revisar cada año
 - [ ] Lentes de contacto de color: riesgos de comprarlos sin adaptación (ángulo Tijuana)
-- [ ] Hipermetropía en Tijuana (si la de Tuxtla rinde; ángulo distinto: niños / lectura)
 - [ ] Cómo leer tu receta de lentes (esfera, cilindro, eje, adición) — ángulo Tijuana / pacientes de EE.UU.
-- [ ] Ojo rojo y alergia ocular en Tijuana: cuándo revisarte (derivación)
 - [ ] Jarmar en tu Empresa en Tijuana: óptica móvil para maquiladoras y oficinas (solo si hay datos verificables)
 
 ## General / nacional (enlaza a ambas ciudades)
 
+- [ ] Hipermetropía: qué es, síntomas en niños y adultos, y opciones de lentes
+- [ ] Lentes de contacto multifocales: alternativa a los progresivos para la presbicia
 - [ ] Lentes esclerales para queratocono avanzado: qué esperar de la adaptación (sin canibalizar la guía existente)
 - [ ] Ambliopía (ojo flojo): por qué la detección temprana importa
 - [ ] Qué es la presión intraocular y por qué se mide en el examen

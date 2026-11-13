@@ -66,4 +66,4 @@ Mapas y citas de ambas sucursales en [ubicaciones y citas](/tuxtla/ubicacionesyc
 
 ---
 
-*Contenido revisado por nuestro Optometrista Director Jorge Aranda Tello. Especialista en salud visual y diagnóstico optométrico.*
+*Contenido elaborado y revisado por el equipo de Ópticas Jarmar. Clínica Óptica Boutique desde 1966.*

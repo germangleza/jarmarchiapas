@@ -55,4 +55,4 @@ Los resultados y la comodidad dependen de cada paciente, por eso lo ideal es pro
 
 [Escríbenos por WhatsApp para agendar tu cita](https://wa.me/526645791970?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20micas%20para%20lentes%20graduados%20en%20Tijuana) o conoce nuestros [lentes graduados en Tijuana](/tijuana/lentes-graduados/).
 
-*Contenido elaborado por el equipo de Ópticas Jarmar. Clínica Óptica Boutique desde 1966.*
+*Contenido elaborado y revisado por el equipo de Ópticas Jarmar. Clínica Óptica Boutique desde 1966.*

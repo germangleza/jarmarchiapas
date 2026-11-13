@@ -77,4 +77,4 @@ Antes de gastar en unos lentes nuevos, haz un [estudio de la vista en Tuxtla](/t
 
 ¿Pasas muchas horas frente a la pantalla y terminas con los ojos cansados? Escríbenos por WhatsApp a la sucursal de Plaza Cedros ([961 240 6013](https://wa.me/529612406013?text=Hola%2C%20quiero%20agendar%20un%20examen%20de%20la%20vista%20y%20preguntar%20por%20lentes%20con%20filtro%20de%20luz%20azul)) o a Plaza Crystal ([961 185 5475](https://wa.me/529611855475?text=Hola%2C%20quiero%20agendar%20un%20examen%20de%20la%20vista%20y%20preguntar%20por%20lentes%20con%20filtro%20de%20luz%20azul)). Conoce también nuestros [lentes con filtro de luz azul en Tuxtla](/tuxtla/lentes-luz-azul/).
 
-*Contenido elaborado por el equipo de Ópticas Jarmar. Clínica Óptica Boutique desde 1966.*
+*Contenido elaborado y revisado por el equipo de Ópticas Jarmar. Clínica Óptica Boutique desde 1966.*

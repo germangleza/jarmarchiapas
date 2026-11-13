@@ -114,4 +114,4 @@ En **Ópticas Jarmar** contamos con topografía corneal y más de 10 años de ex
 
 ---
 
-*Contenido revisado por nuestro Optometrista Director Jorge Aranda Tello. Especialista en adaptación de lentes esclerales.*
+*Contenido elaborado y revisado por el equipo de Ópticas Jarmar. Clínica Óptica Boutique desde 1966.*

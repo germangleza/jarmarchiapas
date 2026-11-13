@@ -58,4 +58,4 @@ Somos una Clínica Óptica Boutique fundada en 1966, con tres generaciones de la
 
 Consulta también nuestro [estudio de la vista en Tuxtla](/tuxtla/estudio-de-la-vista/) y los [lentes graduados en Tuxtla](/tuxtla/lentes-graduados/).
 
-*Contenido revisado por nuestro Optometrista Director [Jorge Aranda Tello](/jorgearanda/). Especialista en salud visual y diagnóstico optométrico.*
+*Contenido elaborado y revisado por el equipo de Ópticas Jarmar. Clínica Óptica Boutique desde 1966.*

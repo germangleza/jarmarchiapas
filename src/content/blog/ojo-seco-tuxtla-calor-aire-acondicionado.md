@@ -73,4 +73,4 @@ Somos una Clínica Óptica Boutique fundada en 1966, con 4.9★ en Google y más
 
 **¿Tus ojos se sienten secos?** [Escríbenos por WhatsApp](https://wa.me/529612406013?text=Hola%2C%20quiero%20agendar%20una%20revisi%C3%B3n%20por%20ojo%20seco%20en%20Tuxtla) para agendar tu cita, o conoce más sobre [lentes esclerales en Tuxtla](/tuxtla/lentes-esclerales/) y el [estudio de la vista en Tuxtla](/tuxtla/estudio-de-la-vista/).
 
-*Contenido revisado por nuestro Optometrista Director [Jorge Aranda Tello](/jorgearanda/). Especialista en salud visual y diagnóstico optométrico.*
+*Contenido elaborado y revisado por el equipo de Ópticas Jarmar. Clínica Óptica Boutique desde 1966.*

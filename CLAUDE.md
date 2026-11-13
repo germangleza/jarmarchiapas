@@ -4,7 +4,7 @@ Sitio en **Astro** (estático, deploy en Vercel). Dominio de producción: **http
 
 ## Contexto para contenido
 
-**Antes de escribir o modificar contenido, lee [`client-brief.md`](./client-brief.md)** — ahí están el negocio, la audiencia, el posicionamiento, las keywords objetivo, los temas sí/no y las restricciones de salud (guardrails de claims y médicos revisores). Los datos administrativos del cliente están en [`cliente.json`](./cliente.json).
+**Antes de escribir o modificar contenido, lee [`client-brief.md`](./client-brief.md)** — ahí están el negocio, la audiencia, el posicionamiento, las keywords objetivo, los temas sí/no y las restricciones de salud (guardrails de claims). Los datos administrativos del cliente están en [`cliente.json`](./cliente.json).
 
 Es un sitio de **vertical salud**: no dar diagnósticos, no prometer resultados, no inventar precios ni promociones, y siempre invitar a consulta presencial.
 
@@ -14,7 +14,7 @@ Es un sitio de **vertical salud**: no dar diagnósticos, no prometer resultados,
 |---|---|
 | **Config del cliente** (nombre, URL, marca, colores, fuentes, guardrails) | `site.config.mjs` |
 | Config de Astro | `astro.config.mjs` |
-| **Posts del blog** | `src/content/blog/*.md` — un archivo por post |
+| **Posts del blog** | `src/content/blog/*.md` — un archivo por post (flujo en `blog-agent/`) |
 | Schema del frontmatter de los posts | `src/content.config.ts` |
 | **Imágenes de los posts** | `public/blog/<slug>.jpg` — mismo nombre que el `.md`, se enlaza sola (ver `public/blog/README.md`) |
 | Layout base (head, nav, footer, analítica, schema Organization) | `src/layouts/BaseLayout.astro` |
@@ -42,14 +42,28 @@ Otras: `/` (hub nacional), `/tuxtla/`, `/tijuana/`, `/historia/` (+ `/en/history
 
 ⚠️ **Nota de arquitectura:** `/`, `/tuxtla/`, `/tijuana/`, `/en/tijuana/`, `/tijuana/examen`, `/optica-movil` y los perfiles son **páginas standalone** — tienen su propio `<head>` y **no usan `BaseLayout`**. Un cambio global (analítica, meta, schema) hay que replicarlo en cada una.
 
-## Crear un post
+## Blog (motor blog-agent)
 
-1. Nuevo `.md` en `src/content/blog/` con frontmatter: `title`, `description`, `pubDate`, `author`, `tags`, `draft`, y los obligatorios `ciudad` (`tuxtla` | `tijuana` | `general`) y `servicios` (slugs de `src/lib/servicios.ts`). Opcional `image` (solo si la imagen no es `.jpg`).
-2. Subir la imagen a `public/blog/<slug>.jpg` (16:9, ~1600×900, <300 KB).
-3. Enlazar en el texto a las páginas de servicio de la ciudad y a otros posts del clúster. Además, `ciudad` + `servicios` generan solos las tarjetas al final del post y el bloque "Guías…" en `/<ciudad>/<servicio>/`, la página genérica y el hub (`src/lib/blog-relaciones.ts`, componentes `PostRelaciones` y `GuiasCiudad`).
-4. Cerrar los posts clínicos con el revisor (ver `client-brief.md` → Salud).
+El blog lo publica un agente automático **3 veces por semana** (lunes, miércoles y viernes) con el motor
+`blog-agent/`:
 
-El sitemap, `llms.txt` y el ping de IndexNow se actualizan solos en el build/deploy.
+| Archivo | Qué es |
+|---|---|
+| `blog-agent/MANUAL.md` | Flujo del agente (igual en todos los sitios de Maguey; no editar por cliente) |
+| `blog-agent/estrategia.md` | Lo específico de Jarmar: cómo elegir tema, frontmatter, enlaces, datos reales, firma, portada |
+| `blog-agent/config.json` | Activo/dormido, cadencia, modo de publicación y reglas del validador |
+| `blog-agent/check-blog.mjs` | Validador SEO/GEO (`npm run blog:check -- <slug>`) |
+| `blog-agent/backlog.md`, `registro.md`, `archivo/` | Temas pendientes y lo publicado |
+| `blog-agent/fotos/catalogo.md`, `portada.mjs` | Fotos reales para portadas y el script que las recorta |
+| `.github/workflows/blog-check.yml` | CI: build + validador en cada PR que toque el blog |
+
+Para crear un post a mano, sigue `blog-agent/estrategia.md` (frontmatter con `keyword`, `tldr`, `sources`,
+`ciudad`, `servicios`; sección `## Preguntas frecuentes` con `###`, que genera el `FAQPage` JSON-LD solo) y valida
+con `npm run build && npm run blog:check -- <slug>`. Autor y firma: siempre **Equipo Ópticas Jarmar**.
+
+`ciudad` + `servicios` generan solos las tarjetas al final del post y el bloque "Guías…" en `/<ciudad>/<servicio>/`,
+la página genérica y el hub (`src/lib/blog-relaciones.ts`, componentes `PostRelaciones` y `GuiasCiudad`). El
+sitemap, `llms.txt` (usa el `tldr`) y el ping de IndexNow se actualizan solos en el build/deploy.
 
 ## Comandos
 
@@ -57,6 +71,7 @@ El sitemap, `llms.txt` y el ping de IndexNow se actualizan solos en el build/dep
 npm run dev      # desarrollo
 npm run build    # build a dist/ — correr antes de cada commit
 npm run preview  # previsualizar el build
+npm run blog:check -- <slug>   # validar un post (sin slug: auditoría de todo el blog)
 ```
 
 ## Convenciones

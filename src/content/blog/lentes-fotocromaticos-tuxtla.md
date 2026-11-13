@@ -77,4 +77,4 @@ Un examen de la vista completo toma entre 30 y 45 minutos. Con tu graduación al
 - [Agendar en Plaza Cedros](https://wa.me/529612406013?text=Hola%2C%20quiero%20agendar%20una%20consulta%20para%20lentes%20fotocrom%C3%A1ticos%20en%20Tuxtla)
 - [Agendar en Plaza Crystal](https://wa.me/529611855475?text=Hola%2C%20quiero%20agendar%20una%20consulta%20para%20lentes%20fotocrom%C3%A1ticos%20en%20Tuxtla)
 
-*Contenido elaborado por el equipo de Ópticas Jarmar. Clínica Óptica Boutique desde 1966.*
+*Contenido elaborado y revisado por el equipo de Ópticas Jarmar. Clínica Óptica Boutique desde 1966.*

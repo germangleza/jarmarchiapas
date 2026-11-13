@@ -339,3 +339,20 @@ main {
 }
 
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+/* Motor blog-agent: resumen (tldr) y fuentes del post */
+.post-tldr {
+  margin: 8px 0 28px; padding: 18px 22px;
+  background: rgba(58, 143, 224, 0.12);
+  border-left: 3px solid var(--accent); border-radius: 8px;
+}
+.post-tldr p { margin: 0; color: rgba(255,255,255,0.9); line-height: 1.65; }
+.post-tldr .post-tldr-label {
+  font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--accent); font-weight: 600; margin-bottom: 6px;
+}
+.post-sources { margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.12); }
+.post-sources h2 { font-family: var(--font-display); font-size: 1.2rem; color: #fff; margin: 0 0 10px; }
+.post-sources ol { padding-left: 1.4em; font-size: 0.92rem; }
+.post-sources li { margin: 0.35em 0; color: rgba(255,255,255,0.7); }
+.post-sources a { color: var(--accent); word-break: break-word; }

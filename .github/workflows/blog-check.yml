@@ -1,0 +1,30 @@
+name: Blog check (blog-agent)
+
+# Motor blog-agent: en cada PR que toque el blog, corre el build y valida los
+# posts nuevos o modificados con blog-agent/check-blog.mjs (reglas en
+# blog-agent/config.json). Si falla, no se hace merge.
+on:
+  pull_request:
+    paths:
+      - "src/content/blog/**"
+      - "public/blog/**"
+      - "blog-agent/**"
+  workflow_dispatch: {}
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Validar posts nuevos o modificados
+        run: |
+          base="origin/${{ github.base_ref || 'main' }}"
+          node blog-agent/check-blog.mjs --changed "$base"

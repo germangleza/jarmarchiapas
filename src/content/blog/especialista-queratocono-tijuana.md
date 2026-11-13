@@ -80,4 +80,4 @@ Con más de 880 reseñas y 4.9★ en Google, y 60 años de trayectoria desde 196
 
 Escríbenos por WhatsApp y te ayudamos a elegir horario: [agendar mi consulta por WhatsApp](https://wa.me/526645791970?text=Hola%2C%20quiero%20agendar%20una%20consulta%20por%20queratocono%20en%20Tijuana).
 
-*Contenido revisado por nuestro Optometrista Director [Jorge Aranda Tello](/jorgearanda/). Especialista en salud visual y diagnóstico optométrico.*
+*Contenido elaborado y revisado por el equipo de Ópticas Jarmar. Clínica Óptica Boutique desde 1966.*

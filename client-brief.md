@@ -160,7 +160,7 @@ No hay datos de competencia en el sitio. Necesito:
 
 ## Salud
 
-**Médicos revisores identificados**
+**Optometristas del equipo** (perfiles en el sitio; ya no firman los posts del blog)
 
 | Nombre | Rol | Perfil | Especialidad |
 |---|---|---|---|
@@ -168,7 +168,7 @@ No hay datos de competencia en el sitio. Necesito:
 | **Opt. Aarón Linares** | Optometrista | `/aaronlinares/` | Optometría y contactología especializada — Tijuana |
 | **Opt. Héctor Pineda** | Optometrista | `/hectorpineda/` | Optometría y contactología especializada — Chiapas |
 
-Convención actual: los posts clínicos cierran con *"Contenido revisado por nuestro Optometrista Director Jorge Aranda Tello"*. Los posts generales/comerciales firman como *"Equipo Ópticas Jarmar"*.
+Convención (desde noviembre 2026): **todos** los posts los escribe y revisa el **Equipo Ópticas Jarmar** y cierran con *"Contenido elaborado y revisado por el equipo de Ópticas Jarmar. Clínica Óptica Boutique desde 1966."* No se firma con nombres de optometristas (decisión del cliente: las ópticas en México no requieren revisión médica nominal).
 
 **Restricciones de claims (guardrails ya definidos en `site.config.mjs`)**
 1. **No dar diagnósticos médicos** ni interpretar síntomas de un lector como si fuera una consulta.
@@ -180,11 +180,10 @@ Convención actual: los posts clínicos cierran con *"Contenido revisado por nue
 5. **Alcance profesional**: son **optometristas**, no oftalmólogos. No presentar procedimientos médico-quirúrgicos (crosslinking, cirugía refractiva, trasplante de córnea) como servicios propios; mencionarlos como contexto y derivar.
 6. **Sin estadísticas inventadas.** Solo usar cifras verificables o que el propio sitio ya publica (60 años, 4.9★/+880 reseñas, +10 años en esclerales).
 7. **Tono no alarmista**: informar sin generar miedo.
-8. **E-E-A-T**: todo post clínico debe llevar autor/revisor identificable y enlazar a su perfil.
+8. **E-E-A-T**: autor y revisor = Equipo Ópticas Jarmar; la experiencia se demuestra con datos reales de la marca (60 años, +10 años en esclerales, reseñas), fuentes externas citadas y enlaces a las páginas de servicio.
 9. **Consistencia con el schema**: el texto visible y el JSON-LD (FAQ, ratings) deben coincidir.
 
 **❓ Preguntas**
-- ¿Todos los posts clínicos los revisa Jorge Aranda, o quieres repartir según ciudad/tema?
 - ¿Tienen cédula profesional que debamos mostrar en los perfiles? (suma mucho a E-E-A-T en salud)
 - ¿Hay algún claim que legal/dirección haya pedido evitar explícitamente?
 - ¿Podemos publicar casos de pacientes (antes/después, testimonios clínicos) y bajo qué consentimiento?

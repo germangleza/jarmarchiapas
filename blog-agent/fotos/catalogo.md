@@ -4,7 +4,7 @@ Fotos reales de Jarmar disponibles para las portadas del blog. El agente elige l
 corresponda al **tema** y a la **ciudad** del post, y evita repetir la misma foto en posts seguidos
 (revisa la columna "Foto" del registro).
 
-**Para agregar fotos:** súbelas a `seo-agent/fotos/` (horizontales, buena luz, sin pacientes
+**Para agregar fotos:** súbelas a `blog-agent/fotos/` (horizontales, buena luz, sin pacientes
 identificables sin consentimiento) y agrega una fila a esta tabla. Entre más fotos, menos se repiten.
 
 | Archivo | Qué muestra | Ciudad | Úsala para |

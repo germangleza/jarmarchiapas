@@ -79,4 +79,4 @@ Visítanos en el [hub de Ópticas Jarmar Tijuana](/tijuana/):
 
 [Escríbenos por WhatsApp para agendar tu examen de la vista](https://wa.me/526645791970?text=Hola%2C%20quiero%20agendar%20un%20examen%20de%20la%20vista%20porque%20me%20deslumbran%20las%20luces%20al%20manejar%20de%20noche%20en%20Tijuana) o conoce nuestros [lentes graduados en Tijuana](/tijuana/lentes-graduados/).
 
-*Contenido revisado por nuestro Optometrista Director [Jorge Aranda Tello](/jorgearanda/). Especialista en salud visual y diagnóstico optométrico.*
+*Contenido elaborado y revisado por el equipo de Ópticas Jarmar. Clínica Óptica Boutique desde 1966.*

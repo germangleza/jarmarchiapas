@@ -70,4 +70,4 @@ Visítanos en el [hub de Ópticas Jarmar Tijuana](/tijuana/):
 
 Si tu caso es de los que no pueden esperar, acude primero a urgencias. Si la borrosidad es gradual, [escríbenos por WhatsApp para agendar tu examen de la vista](https://wa.me/526645791970?text=Hola%2C%20quiero%20agendar%20un%20examen%20de%20la%20vista%20porque%20veo%20borroso%20en%20Tijuana) o conoce nuestro [estudio de la vista en Tijuana](/tijuana/estudio-de-la-vista/).
 
-*Contenido revisado por nuestro Optometrista Director [Jorge Aranda Tello](/jorgearanda/). Especialista en salud visual y diagnóstico optométrico.*
+*Contenido elaborado y revisado por el equipo de Ópticas Jarmar. Clínica Óptica Boutique desde 1966.*

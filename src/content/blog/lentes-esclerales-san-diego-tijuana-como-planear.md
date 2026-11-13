@@ -60,4 +60,4 @@ Escríbenos por WhatsApp y cuéntanos que vienes de San Diego; te ayudamos a pla
 
 La consulta presencial es indispensable: solo una valoración permite saber si los lentes esclerales son una opción para ti.
 
-*Contenido revisado por nuestro Optometrista Director [Jorge Aranda Tello](/jorgearanda/). Especialista en salud visual y diagnóstico optométrico.*
+*Contenido elaborado y revisado por el equipo de Ópticas Jarmar. Clínica Óptica Boutique desde 1966.*

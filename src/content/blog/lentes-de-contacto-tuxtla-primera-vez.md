@@ -62,4 +62,4 @@ Escríbenos por WhatsApp y cuéntanos que quieres empezar con lentes de contacto
 - [Agendar en Plaza Cedros](https://wa.me/529612406013?text=Hola%2C%20quiero%20agendar%20una%20consulta%20para%20lentes%20de%20contacto%20por%20primera%20vez%20en%20Tuxtla)
 - [Agendar en Plaza Crystal](https://wa.me/529611855475?text=Hola%2C%20quiero%20agendar%20una%20consulta%20para%20lentes%20de%20contacto%20por%20primera%20vez%20en%20Tuxtla)
 
-*Contenido revisado por nuestro Optometrista Director [Jorge Aranda Tello](/jorgearanda/). Especialista en salud visual y diagnóstico optométrico.*
+*Contenido elaborado y revisado por el equipo de Ópticas Jarmar. Clínica Óptica Boutique desde 1966.*

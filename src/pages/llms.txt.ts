@@ -30,7 +30,7 @@ export const GET: APIRoute = async () => {
 ${posts
   .map(
     (p) =>
-      `- [${p.data.title}](${site.url}/blog/${p.id}/): ${p.data.description}`
+      `- [${p.data.title}](${site.url}/blog/${p.id}/): ${p.data.tldr ?? p.data.description}`
   )
   .join("\n")}
 `;

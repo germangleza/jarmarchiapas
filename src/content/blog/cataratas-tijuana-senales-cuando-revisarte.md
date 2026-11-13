@@ -64,4 +64,4 @@ Somos una Clínica Óptica Boutique fundada en 1966, con 4.9★ en Google y más
 
 **¿Tu visión ya no es la de antes?** [Escríbenos por WhatsApp](https://wa.me/526645791970?text=Hola%2C%20quiero%20agendar%20un%20examen%20de%20la%20vista%20en%20Tijuana%20por%20visi%C3%B3n%20nublada) para agendar tu cita, o conoce el [estudio de la vista en Tijuana](/tijuana/estudio-de-la-vista/) y los [lentes graduados en Tijuana](/tijuana/lentes-graduados/).
 
-*Contenido revisado por nuestro Optometrista Director [Jorge Aranda Tello](/jorgearanda/). Especialista en salud visual y diagnóstico optométrico.*
+*Contenido elaborado y revisado por el equipo de Ópticas Jarmar. Clínica Óptica Boutique desde 1966.*

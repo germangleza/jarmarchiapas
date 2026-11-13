@@ -91,4 +91,4 @@ No tienes que resolver esto solo, y no tienes que resolverlo hoy. Escríbenos, c
 
 ---
 
-*Contenido revisado por nuestro Optometrista Director Jorge Aranda Tello. Especialista en adaptación de lentes esclerales y contactología avanzada. Esta guía es informativa y no sustituye la valoración de tu oftalmólogo.*
+*Contenido elaborado y revisado por el equipo de Ópticas Jarmar. Clínica Óptica Boutique desde 1966.*

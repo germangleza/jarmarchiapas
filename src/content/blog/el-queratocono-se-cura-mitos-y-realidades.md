@@ -86,4 +86,4 @@ En Ópticas Jarmar llevamos más de 10 años especializados en la rehabilitació
 
 ---
 
-*Contenido revisado por nuestro Optometrista Director Jorge Aranda Tello. Especialista en diagnóstico y manejo del queratocono y adaptación de lentes esclerales.*
+*Contenido elaborado y revisado por el equipo de Ópticas Jarmar. Clínica Óptica Boutique desde 1966.*

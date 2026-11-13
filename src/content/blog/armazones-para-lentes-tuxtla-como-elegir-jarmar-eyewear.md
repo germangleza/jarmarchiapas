@@ -60,4 +60,4 @@ Conoce todas las opciones de [lentes graduados en Tuxtla](/tuxtla/lentes-graduad
 
 ---
 
-*Contenido elaborado por el equipo de Ópticas Jarmar. Clínica Óptica Boutique desde 1966.*
+*Contenido elaborado y revisado por el equipo de Ópticas Jarmar. Clínica Óptica Boutique desde 1966.*

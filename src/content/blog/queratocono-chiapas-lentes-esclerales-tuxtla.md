@@ -60,4 +60,4 @@ Una consulta presencial es la única forma de saber qué opción te conviene. Es
 
 Más información: [queratocono en Tuxtla](/tuxtla/queratocono/) y [lentes esclerales en Tuxtla](/tuxtla/lentes-esclerales/).
 
-*Contenido revisado por nuestro Optometrista Director [Jorge Aranda Tello](/jorgearanda/). Especialista en salud visual y diagnóstico optométrico.*
+*Contenido elaborado y revisado por el equipo de Ópticas Jarmar. Clínica Óptica Boutique desde 1966.*
