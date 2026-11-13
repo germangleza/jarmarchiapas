@@ -19,7 +19,7 @@ Pueden hacerse con armazón de diseño y, según tu receta, en versión monofoca
 
 ## ¿Por qué importa la protección UV?
 
-La radiación UV es la parte de la luz solar que no vemos pero que llega a los ojos. La exposición acumulada a lo largo de los años se ha asociado con problemas oculares como cataratas y crecimientos en la superficie del ojo. Por eso la regla número uno al comprar es esta:
+La radiación UV es la parte de la luz solar que no vemos pero que llega a los ojos. La exposición acumulada a lo largo de los años se ha asociado con problemas oculares como cataratas y crecimientos en la superficie del ojo, como el [pterigión o carnosidad en el ojo](/blog/pterigion-carnosidad-en-el-ojo-tuxtla/). Por eso la regla número uno al comprar es esta:
 
 - **Verifica que el lente tenga filtro UV**, antes de fijarte en el color o el estilo.
 - **Un lente más oscuro no es necesariamente más protector.** El tinte reduce la luz visible, pero la protección UV depende del tratamiento del lente.
