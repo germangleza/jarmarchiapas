@@ -121,3 +121,10 @@ techo o piso, o no se entiende, repite con otro encuadre u otra foto. Sin fotos 
 Después de `npm run build`, confirma que la relación quedó hecha:
 `grep -l "/blog/<slug>/" dist/<ciudad>/<servicio>/index.html` debe encontrar la página de servicio de cada servicio
 del frontmatter (en un post `general`, la de ambas ciudades).
+
+## Verificación del deploy
+
+Después del merge, el workflow **"Verificar deploy"** espera a que Vercel publique y comprueba que el post nuevo
+responda 200 y aparezca en `llms.txt` (tarda de 2 a 10 minutos). Consulta su ejecución para el commit en `main` con
+`mcp__github__actions_list` (`list_workflow_runs`, `resource_id: verificar-deploy.yml`) hasta que termine. Si falla,
+repórtalo en el resumen con el enlace a la ejecución.

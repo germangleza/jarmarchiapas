@@ -56,6 +56,7 @@ El blog lo publica un agente automático **3 veces por semana** (lunes, miércol
 | `blog-agent/backlog.md`, `registro.md`, `archivo/` | Temas pendientes y lo publicado |
 | `blog-agent/fotos/catalogo.md`, `portada.mjs` | Fotos reales para portadas y el script que las recorta |
 | `.github/workflows/blog-check.yml` | CI: build + validador en cada PR que toque el blog |
+| `.github/workflows/verificar-deploy.yml` | Después de cada push a main: espera a Vercel y comprueba que los posts nuevos respondan 200 y estén en `llms.txt` |
 
 Para crear un post a mano, sigue `blog-agent/estrategia.md` (frontmatter con `keyword`, `tldr`, `sources`,
 `ciudad`, `servicios`; sección `## Preguntas frecuentes` con `###`, que genera el `FAQPage` JSON-LD solo) y valida
