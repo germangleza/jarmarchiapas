@@ -1,0 +1,51 @@
+name: Verificar deploy
+
+# Motor blog-agent: después de cada push a main, espera a que Vercel publique y
+# comprueba que el sitio, llms.txt y cada post nuevo respondan 200 (y que el
+# post aparezca en llms.txt). El agente de blog consulta este workflow para
+# confirmar que su post quedó en línea (config.json → deploy.workflow).
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: {}
+
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Esperar a que el sitio publique los posts nuevos
+        env:
+          SITE: https://www.jarmar.com
+          BEFORE: ${{ github.event.before }}
+        run: |
+          set -e
+          base="$BEFORE"
+          if [ -z "$base" ] || ! git cat-file -e "$base" 2>/dev/null; then base="HEAD~1"; fi
+          slugs=""
+          for f in $(git diff --name-only --diff-filter=A "$base" HEAD -- src/content/blog | grep -E '\.mdx?$' || true); do
+            grep -qE '^draft:\s*true' "$f" && continue
+            slugs="$slugs $(basename "$f" | sed -E 's/\.mdx?$//')"
+          done
+          echo "Posts nuevos:${slugs:- ninguno}"
+
+          urls="$SITE/ $SITE/blog/ $SITE/llms.txt"
+          for s in $slugs; do urls="$urls $SITE/blog/$s/"; done
+          for u in $urls; do
+            code=""
+            for i in $(seq 1 40); do
+              code=$(curl -s -o /dev/null -w "%{http_code}" "$u" || true)
+              [ "$code" = "200" ] && break
+              sleep 15
+            done
+            if [ "$code" != "200" ]; then echo "❌ $u no respondió 200 en 10 minutos (último código: $code)"; exit 1; fi
+            echo "✅ $u"
+          done
+
+          for s in $slugs; do
+            if ! curl -sf "$SITE/llms.txt" | grep -q "/blog/$s/"; then echo "❌ /blog/$s/ no aparece en llms.txt"; exit 1; fi
+          done
+          echo "Deploy verificado."
