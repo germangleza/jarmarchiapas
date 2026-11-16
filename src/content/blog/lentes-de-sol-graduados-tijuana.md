@@ -51,7 +51,7 @@ Sí. Si usas progresivos, es posible fabricar un par de sol con esa misma lógic
 
 ## ¿Y si vivo en Rosarito o en el sur de California?
 
-Muchos pacientes llegan a Zona Río desde otras partes de Baja California y desde Estados Unidos. Atendemos en **español e inglés**. Si vives en EE.UU., podemos **enviar tus lentes a domicilio en Estados Unidos** o puedes recogerlos en la sucursal. Si te interesa saber cómo usar tu cobertura, lee [usa tu seguro de visión en Jarmar](/blog/usa-tu-seguro-de-vision-en-jarmar/): aceptamos el beneficio de visión de cualquier aseguradora. Y si vienes cruzando la frontera, te ayuda [esta guía de óptica cerca de la garita](/blog/optica-en-tijuana-cerca-de-la-garita/).
+Muchos pacientes llegan a Zona Río desde otras partes de Baja California y desde Estados Unidos. Si vas seguido a la playa y usas lentes de contacto, unos lentes de sol graduados te permiten quitártelos antes de entrar al mar; te explicamos por qué en [nadar con lentes de contacto: riesgos y alternativas](/blog/nadar-con-lentes-de-contacto-tijuana/). Atendemos en **español e inglés**. Si vives en EE.UU., podemos **enviar tus lentes a domicilio en Estados Unidos** o puedes recogerlos en la sucursal. Si te interesa saber cómo usar tu cobertura, lee [usa tu seguro de visión en Jarmar](/blog/usa-tu-seguro-de-vision-en-jarmar/): aceptamos el beneficio de visión de cualquier aseguradora. Y si vienes cruzando la frontera, te ayuda [esta guía de óptica cerca de la garita](/blog/optica-en-tijuana-cerca-de-la-garita/).
 
 ## ¿Dónde pedir lentes de sol graduados en Zona Río?
 
