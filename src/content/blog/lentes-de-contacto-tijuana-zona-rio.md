@@ -52,7 +52,7 @@ Varía. Muchas personas se sienten cómodas en pocos días, pero algunas necesit
 
 ## ¿Cuánto tiempo puedo usar mis lentes de contacto al día?
 
-No hay una cifra válida para todos. Tu optometrista te indicará un horario de uso progresivo y la regla básica: si hay enrojecimiento, dolor, ardor persistente o visión que empeora, quita el lente y acude a consulta. No esperes a que "se pase solo".
+No hay una cifra válida para todos. Tu optometrista te indicará un horario de uso progresivo y la regla básica: si hay enrojecimiento, dolor, ardor persistente o visión que empeora, quita el lente y acude a consulta. No esperes a que "se pase solo". Otra regla clave es no mezclarlos con agua: si vas a la alberca o a la playa, revisa por qué [no conviene nadar con lentes de contacto](/blog/nadar-con-lentes-de-contacto-tijuana/) y qué alternativas hay.
 
 ## ¿Cuándo conviene mejor usar lentes de armazón?
 

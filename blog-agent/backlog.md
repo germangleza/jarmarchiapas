@@ -10,7 +10,7 @@ Tijuana. Si un tema nuevo ya existe para la otra ciudad, no se agrega aquí.
 
 ## Chiapas (Tuxtla Gutiérrez)
 
-- [ ] Pterigión (carnosidad en el ojo) en Tuxtla: sol, señales y cuándo revisarte (derivación a oftalmología)
+- [x] Pterigión (carnosidad en el ojo) en Tuxtla: sol, señales y cuándo revisarte (derivación a oftalmología)
 - [ ] Lentes de lectura de farmacia vs. lentes graduados en Tuxtla
 - [ ] Lentes de sol para niños en Tuxtla: protección UV desde pequeños
 - [ ] Estrabismo y ojo desviado en niños: señales para revisar en Tuxtla
@@ -24,7 +24,7 @@ Tijuana. Si un tema nuevo ya existe para la otra ciudad, no se agrega aquí.
 
 ## Tijuana (Zona Río)
 
-- [ ] Nadar o ir a la playa con lentes de contacto (Rosarito): riesgos y alternativas
+- [x] Nadar o ir a la playa con lentes de contacto (Rosarito): riesgos y alternativas
 - [ ] Cómo cuidar y limpiar lentes de contacto blandos: errores comunes (ángulo Tijuana)
 - [ ] Lentes graduados deportivos en Tijuana: correr, bici y gimnasio
 - [ ] Moscas volantes en la vista en Tijuana: cuándo es normal y cuándo urgente (derivación)

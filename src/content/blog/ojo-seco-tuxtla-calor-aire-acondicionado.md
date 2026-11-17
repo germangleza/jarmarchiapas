@@ -42,6 +42,7 @@ Sí. Cuando miras una pantalla parpadeas menos, y el parpadeo es lo que reparte 
 - **Algunos medicamentos**, como ciertos antialérgicos o antidepresivos; no los suspendas sin hablar con tu médico.
 - **Condiciones de salud general**, que un médico debe valorar.
 - **Cirugía ocular previa**, que a veces deja la superficie más sensible.
+- **Una carnosidad en el ojo**, como el pterigión, que puede irritar la superficie; te explicamos qué es en [pterigión en Tuxtla: carnosidad en el ojo y cuándo revisarte](/blog/pterigion-carnosidad-en-el-ojo-tuxtla/).
 
 ## ¿Qué puedes hacer en casa?
 
