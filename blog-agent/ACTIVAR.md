@@ -41,16 +41,34 @@ Pídele a Claude, en el repo del sitio: *"Haz la estrategia SEO/GEO del blog y a
 
 ## Paso 2 · Tarea programada
 
-Una tarea por sitio, **sesión nueva en cada ejecución** (no reanudar la misma sesión), a una hora fija diaria; el
-agente decide si toca publicar con `config.json`. Prompt estándar (solo cambia el repo):
+Una tarea por sitio, a una hora fija diaria; el agente decide si toca publicar con `config.json`.
+
+**Importante: la sesión donde corre la tarea tiene que tener el repo del sitio conectado.** Una tarea programada
+no puede conectar repos por su cuenta (no tiene `add_repo`): si el repo no está, la ejecución termina en segundos
+con "no pude acceder al repo" y no publica nada. Hay dos formas válidas:
+
+1. **Desde claude.ai (recomendada):** crear la tarea en el apartado de tareas programadas / rutinas, con el repo
+   del sitio seleccionado como fuente y "sesión nueva en cada ejecución". Cada corrida empieza limpia y con el repo.
+2. **Desde una sesión de Claude Code:** crear primero una sesión dedicada al blog del sitio con el repo como fuente
+   (`create_session` con `source_url` del repo), confirmar que lo clonó, y crear la tarea con
+   `persistent_session_id` de esa sesión. **No** uses `create_new_session_on_fire` desde una sesión: esas corridas
+   no heredan el repo.
+
+Después de crearla, lánzala una vez a mano (`fire_trigger`) y confirma que la ejecución lee el manual. Una corrida
+que termina en menos de un minuto casi siempre significa que no tiene acceso al repo.
+
+Prompt estándar (solo cambia el repo):
 
 ```text
-Agente de blog de <owner>/<repo>. Ejecución automática: sí debes publicar si toca.
-1. Si el repo no está en la sesión, agrégalo con add_repo (access push) y clónalo.
-2. git fetch origin main y lee COMPLETOS, de origin/main: blog-agent/MANUAL.md, blog-agent/config.json y
-   blog-agent/estrategia.md. Si no existen, no publiques y termina con "Falta el motor blog-agent en main".
+Ejecución automática del agente de blog de <owner>/<repo>: sí debes publicar si toca. Cada ejecución es
+independiente: no te bases en lo que recuerdes de ejecuciones anteriores; relee los archivos.
+1. Trabaja en el clon de <repo> de esta sesión. git fetch origin main y crea una rama nueva desde origin/main
+   (nunca reutilices ramas de ejecuciones anteriores).
+2. Lee COMPLETOS, de origin/main: blog-agent/MANUAL.md, blog-agent/config.json y blog-agent/estrategia.md.
+   Si no existen, no publiques y termina con "Falta el motor blog-agent en main".
 3. Sigue el manual paso a paso. Un solo post por ejecución. Nunca force push. Nunca inventes datos.
-Termina con el resumen que pide el manual y envía la notificación push solo si publicaste o si algo falló.
+Termina con el resumen que pide el manual y envía la notificación push (PushNotification, status proactive)
+solo si publicaste o si algo falló.
 ```
 
 ## Paso 3 · Revisión mensual (recomendado)
