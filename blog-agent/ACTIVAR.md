@@ -54,8 +54,11 @@ con "no pude acceder al repo" y no publica nada. Hay dos formas válidas:
    `persistent_session_id` de esa sesión. **No** uses `create_new_session_on_fire` desde una sesión: esas corridas
    no heredan el repo.
 
-Después de crearla, lánzala una vez a mano (`fire_trigger`) y confirma que la ejecución lee el manual. Una corrida
-que termina en menos de un minuto casi siempre significa que no tiene acceso al repo.
+**Cómo probarla:** espera la primera ejecución programada y revisa que haya leído el manual. Ojo: lanzarla a mano
+(`fire_trigger` o "Ejecutar ahora") abre una sesión nueva **sin** el repo aunque la tarea apunte a una sesión dedicada,
+así que en la opción 2 no sirve como prueba. Para publicar a mano en la opción 2, escribe el prompt estándar
+directamente en la sesión dedicada. Una corrida que termina en menos de un minuto casi siempre significa que no tiene
+acceso al repo.
 
 Prompt estándar (solo cambia el repo):
 
