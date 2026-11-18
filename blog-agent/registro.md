@@ -12,3 +12,4 @@ Fotos de los últimos 3 posts: `jarmar-eyewear-coleccion.jpg`, `optica-jarmar-ti
 |---|---|---|---|---|---|---|
 | 1 | 2026-11-13 | Chiapas | /blog/pterigion-carnosidad-en-el-ojo-tuxtla/ | pterigión en Tuxtla | carnosidad en el ojo, terigio, pinguécula | atencion-opticas-jarmar.jpg |
 | 2 | 2026-11-16 | Tijuana | /blog/nadar-con-lentes-de-contacto-tijuana/ | nadar con lentes de contacto | lentes de contacto en la playa, lentes de contacto en la alberca, goggles graduados | consulta-visual-jarmar.jpg |
+| 3 | 2026-11-18 | Chiapas | /blog/lentes-de-lectura-de-farmacia-vs-graduados-tuxtla/ | lentes de lectura de farmacia | lentes de lectura sin receta, lentes para leer, presbicia | sucursal-jarmar-arboledas.jpg |

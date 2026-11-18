@@ -27,7 +27,7 @@ Los progresivos se asocian con la **presbicia**, o vista cansada: la pérdida gr
 - Después de leer o usar pantallas sientes cansancio, ardor o dolor de cabeza.
 - Ya usas lentes para lejos y ahora te los quitas para ver de cerca.
 
-Estas señales no son un diagnóstico. Lo único que confirma si tienes presbicia, y si un progresivo es la mejor corrección en tu caso, es un examen de la vista completo. Si quieres entender mejor el tema, lee nuestra guía sobre [presbicia o vista cansada](/blog/presbicia-o-vista-cansada/).
+Estas señales no son un diagnóstico. Lo único que confirma si tienes presbicia, y si un progresivo es la mejor corrección en tu caso, es un examen de la vista completo. Si quieres entender mejor el tema, lee nuestra guía sobre [presbicia o vista cansada](/blog/presbicia-o-vista-cansada/). Y si hoy usas lentes para leer comprados sin receta, revisa cuándo te bastan en [lentes de lectura de farmacia vs. graduados en Tuxtla](/blog/lentes-de-lectura-de-farmacia-vs-graduados-tuxtla/).
 
 ## ¿Qué pasa en el examen de la vista antes de recetar progresivos?
 

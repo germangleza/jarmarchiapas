@@ -11,7 +11,7 @@ Tijuana. Si un tema nuevo ya existe para la otra ciudad, no se agrega aquí.
 ## Chiapas (Tuxtla Gutiérrez)
 
 - [x] Pterigión (carnosidad en el ojo) en Tuxtla: sol, señales y cuándo revisarte (derivación a oftalmología)
-- [ ] Lentes de lectura de farmacia vs. lentes graduados en Tuxtla
+- [x] Lentes de lectura de farmacia vs. lentes graduados en Tuxtla
 - [ ] Lentes de sol para niños en Tuxtla: protección UV desde pequeños
 - [ ] Estrabismo y ojo desviado en niños: señales para revisar en Tuxtla
 - [ ] Conjuntivitis y ojo rojo en Tuxtla: cuándo acudir y qué no hacer (derivación)
