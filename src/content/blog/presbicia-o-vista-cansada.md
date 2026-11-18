@@ -69,6 +69,8 @@ Son [lentes graduados](/tijuana/lentes-graduados) con una sola zona de correcci�
 **Ventaja:** sencillos y de adaptación inmediata.  
 **Limitación:** no sirven para ver de lejos — tienes que quitártelos para conducir o ver la televisión.
 
+No es lo mismo que los lectores que se venden en farmacia, que traen la misma graduación en ambos ojos; te explicamos la diferencia en [lentes de lectura de farmacia vs. graduados](/blog/lentes-de-lectura-de-farmacia-vs-graduados-tuxtla/).
+
 ### Lentes bifocales
 
 Tienen dos zonas de visión separadas por una línea visible: la parte superior corrige la visión lejana y la inferior la visión cercana. Fueron durante mucho tiempo el estándar para personas con presbicia más miopía o hipermetropía.
