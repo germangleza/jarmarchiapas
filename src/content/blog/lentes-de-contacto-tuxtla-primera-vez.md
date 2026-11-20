@@ -47,6 +47,8 @@ Los primeros días pueden requerir paciencia: es normal sentir los lentes y tard
 - No duermas con ellos a menos que tu optometrista lo haya indicado para ese lente.
 - No alargues el tiempo de reemplazo del par.
 
+Si quieres la rutina completa, con los errores más comunes y cómo cuidar el estuche, revisa nuestra guía de [cómo limpiar lentes de contacto](/blog/como-limpiar-lentes-de-contacto/).
+
 ## ¿Y si ya uso lentes y quiero cambiar a lentes de contacto?
 
 Puedes combinar ambos: muchas personas usan lentes de contacto para ciertas actividades y sus lentes graduados el resto del tiempo. Si pasas muchas horas frente a pantallas, platícalo en tu consulta; también puede interesarte revisar tus [lentes graduados en Tuxtla](/tuxtla/lentes-graduados/). Si quieres entender qué mide cada examen, consulta [qué incluye un examen de la vista](/blog/que-incluye-un-examen-de-la-vista/).
