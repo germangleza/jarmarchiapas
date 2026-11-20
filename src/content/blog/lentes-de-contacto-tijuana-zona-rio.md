@@ -31,7 +31,7 @@ Existen también **lentes rígidos y esclerales**, que se usan en casos específ
 Depende de cada paciente. Algunas ideas generales:
 
 1. **Diarios:** practicidad e higiene, porque cada día usas un lente nuevo. Suelen elegirse para uso ocasional o para viajar.
-2. **Mensuales:** pueden resultar más económicos a largo plazo, pero exigen limpiar y guardar el lente cada día y respetar la fecha de cambio.
+2. **Mensuales:** pueden resultar más económicos a largo plazo, pero exigen limpiar y guardar el lente cada día y respetar la fecha de cambio. Te lo explicamos paso a paso en [cómo limpiar lentes de contacto](/blog/como-limpiar-lentes-de-contacto/).
 3. **Tu ojo y tu comodidad:** algunas personas sienten más sequedad con ciertos materiales; el optometrista puede ajustar la opción.
 
 Tu optometrista te recomendará según tu graduación, tus horas de pantalla, tu ambiente y tus hábitos.
