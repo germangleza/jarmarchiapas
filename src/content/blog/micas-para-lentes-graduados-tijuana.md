@@ -16,7 +16,7 @@ Las **micas** son los lentes que se montan en el armazón y llevan tu graduació
 Los materiales más comunes son estos:
 
 - **Plástico estándar (CR-39):** es el material básico. Funciona bien con graduaciones bajas.
-- **Policarbonato:** es muy resistente a impactos, por eso suele considerarse para niños, deporte o trabajo con riesgo. Con graduaciones altas puede dar algo de distorsión de color en los bordes.
+- **Policarbonato:** es muy resistente a impactos, por eso suele considerarse para niños, deporte o trabajo con riesgo (lo explicamos en la guía de [lentes graduados deportivos en Tijuana](/blog/lentes-graduados-deportivos-tijuana/)). Con graduaciones altas puede dar algo de distorsión de color en los bordes.
 - **Alto índice:** son micas más delgadas y ligeras con el mismo poder. Se usan sobre todo en graduaciones altas.
 - **Trivex:** un punto intermedio entre resistencia y nitidez, aunque no está disponible en todos los diseños.
 
