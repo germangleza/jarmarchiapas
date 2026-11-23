@@ -59,7 +59,7 @@ Las alternativas a nadar con lentes de contacto dependen de tu graduación y de 
 - **Lentes graduados o de sol graduados para la arena.** Para ver bien mientras no estás en el agua, sin depender de los contactos todo el día.
 - **Lentes de contacto de reemplazo diario, solo si tu optometrista lo aprueba.** Algunas personas los prefieren porque se tiran al final del día, pero eso **no** los vuelve seguros para nadar: la recomendación de los CDC sigue siendo mantenerlos lejos del agua.
 
-Si haces natación de forma frecuente (entrenamiento, triatlón, clases), coméntalo en tu cita: tu rutina influye en qué tipo de lente y qué plan te conviene. En nuestra guía de [lentes de contacto en Zona Río](/blog/lentes-de-contacto-tijuana-zona-rio/) explicamos los tipos que existen y cómo es la adaptación.
+Si haces natación de forma frecuente (entrenamiento, triatlón, clases), coméntalo en tu cita: tu rutina influye en qué tipo de lente y qué plan te conviene. Si también corres o andas en bici, en nuestra guía de [lentes graduados deportivos en Tijuana](/blog/lentes-graduados-deportivos-tijuana/) vemos qué armazón y mica convienen fuera del agua. En nuestra guía de [lentes de contacto en Zona Río](/blog/lentes-de-contacto-tijuana-zona-rio/) explicamos los tipos que existen y cómo es la adaptación.
 
 ## ¿Qué hago si nadé con los lentes puestos?
 

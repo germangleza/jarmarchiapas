@@ -26,7 +26,7 @@ Tijuana. Si un tema nuevo ya existe para la otra ciudad, no se agrega aquí.
 
 - [x] Nadar o ir a la playa con lentes de contacto (Rosarito): riesgos y alternativas
 - [x] Cómo cuidar y limpiar lentes de contacto blandos: errores comunes (publicado como General: /blog/como-limpiar-lentes-de-contacto/)
-- [ ] Lentes graduados deportivos en Tijuana: correr, bici y gimnasio
+- [x] Lentes graduados deportivos en Tijuana: correr, bici y gimnasio
 - [ ] Moscas volantes en la vista en Tijuana: cuándo es normal y cuándo urgente (derivación)
 - [ ] Visión doble en Tijuana: señales de alarma y a quién acudir (derivación)
 - [ ] Daltonismo: cómo se detecta y qué opciones hay (ángulo Tijuana)
