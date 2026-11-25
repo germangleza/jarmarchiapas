@@ -12,7 +12,7 @@ Tijuana. Si un tema nuevo ya existe para la otra ciudad, no se agrega aquí.
 
 - [x] Pterigión (carnosidad en el ojo) en Tuxtla: sol, señales y cuándo revisarte (derivación a oftalmología)
 - [x] Lentes de lectura de farmacia vs. lentes graduados en Tuxtla
-- [ ] Lentes de sol para niños en Tuxtla: protección UV desde pequeños
+- [x] Lentes de sol para niños en Tuxtla: protección UV desde pequeños
 - [ ] Estrabismo y ojo desviado en niños: señales para revisar en Tuxtla
 - [ ] Conjuntivitis y ojo rojo en Tuxtla: cuándo acudir y qué no hacer (derivación)
 - [ ] Orzuelo y chalazión: qué son y cuándo revisarlos en Tuxtla
