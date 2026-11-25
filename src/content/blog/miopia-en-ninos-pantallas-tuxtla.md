@@ -28,7 +28,7 @@ Además, al mirar una pantalla los niños parpadean menos, y eso puede dejar los
 Estos hábitos son sencillos y no sustituyen un examen:
 
 1. **Pausas frecuentes.** Regla 20-20-20: cada 20 minutos de cerca, mirar algo a unos 6 metros (20 pies) durante 20 segundos. Una ventana sirve.
-2. **Más tiempo al aire libre.** Las fuentes de salud visual recomiendan que los niños salgan diario a jugar con luz natural. Las cantidades varían según la fuente, así que piensa en una rutina constante más que en un número exacto.
+2. **Más tiempo al aire libre.** Las fuentes de salud visual recomiendan que los niños salgan diario a jugar con luz natural. Las cantidades varían según la fuente, así que piensa en una rutina constante más que en un número exacto. En días de mucho sol, un sombrero y unos [lentes de sol para niños](/blog/lentes-de-sol-para-ninos-tuxtla/) con filtro UV les permiten jugar afuera con más protección.
 3. **Distancia y postura.** El celular o la tablet no deben quedar pegados a la cara ni usarse acostado. Los libros, a una distancia cómoda.
 4. **Buena iluminación** al hacer tarea, preferentemente con luz natural o una lámpara que no deje sombras.
 5. **Límites razonables** al uso recreativo de pantallas, sobre todo en los más pequeños, y actividades que no sean de cerca.

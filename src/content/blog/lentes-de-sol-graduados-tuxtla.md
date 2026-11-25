@@ -33,7 +33,7 @@ Esto no sustituye una revisión: si notas molestias con la luz, enrojecimiento f
 - **Polarizados:** un filtro especial reduce los reflejos que rebotan en superficies como el pavimento, el agua o el cofre de un auto. Muchas personas los prefieren para manejar o para estar al aire libre por largo rato.
 - **Fotocromáticos:** se oscurecen con la luz solar y se aclaran en interiores. Son prácticos si pasas del exterior al interior varias veces al día. Dentro de un auto suelen oscurecerse menos, porque el parabrisas bloquea buena parte de los rayos que activan el lente.
 
-No hay una opción mejor para todos: depende de tus actividades, del clima de tu día a día y de tu graduación. Si te interesan los fotocromáticos, conoce más en la página de [lentes de sol en Tuxtla](/tuxtla/lentes-de-sol/).
+No hay una opción mejor para todos: depende de tus actividades, del clima de tu día a día y de tu graduación. Si te interesan los fotocromáticos, conoce más en la página de [lentes de sol en Tuxtla](/tuxtla/lentes-de-sol/). Si buscas un par para tus hijos, revisa nuestra guía de [lentes de sol para niños](/blog/lentes-de-sol-para-ninos-tuxtla/).
 
 ## ¿Se pueden hacer lentes de sol graduados con progresivos?
 
