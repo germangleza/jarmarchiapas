@@ -122,6 +122,12 @@ Después de `npm run build`, confirma que la relación quedó hecha:
 `grep -l "/blog/<slug>/" dist/<ciudad>/<servicio>/index.html` debe encontrar la página de servicio de cada servicio
 del frontmatter (en un post `general`, la de ambas ciudades).
 
+## Aprendizaje semanal
+
+Cada domingo, una tarea aparte ejecuta `blog-agent/revision-semanal.md`. Revisa la semana y deja sus conclusiones en
+`blog-agent/registro-semanal.md`; puede cambiar estas reglas. **Antes de escribir un post, lee la sección
+"Cambios de esta semana" de la entrada más reciente del registro** y aplícala.
+
 ## Verificación del deploy
 
 Después del merge, el workflow **"Verificar deploy"** espera a que Vercel publique y comprueba que el post nuevo

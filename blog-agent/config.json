@@ -30,6 +30,20 @@
     "comando": "npm run build",
     "dist": "dist"
   },
+  "lineas": {
+    "campo": "ciudad",
+    "nota": "Solo para métricas: agrupa los posts por el campo ciudad (tuxtla | tijuana | general). No define cadencia por línea."
+  },
+  "revisionSemanal": {
+    "procedimiento": "blog-agent/revision-semanal.md",
+    "registro": "blog-agent/registro-semanal.md",
+    "dia": "domingo",
+    "maxCambiosPorSemana": 3,
+    "searchConsole": {
+      "sheetId": null,
+      "nota": "ID de una hoja de Google Sheets con datos de Search Console (fecha, URL, consulta, impresiones, clics, CTR, posición)."
+    }
+  },
   "publicDir": "public",
   "rutasConocidas": [],
   "reglas": {
