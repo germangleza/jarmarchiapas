@@ -19,7 +19,7 @@ Acude a urgencias o con un oftalmólogo **ese mismo día** si la borrosidad lleg
 
 - Pérdida de visión total o parcial, sobre todo en un solo ojo.
 - Una sombra o cortina que cubre parte de lo que ves.
-- Destellos de luz o muchas más "moscas volantes" de lo habitual.
+- Destellos de luz o muchas más "moscas volantes" de lo habitual (en [moscas volantes en la vista](/blog/moscas-volantes-en-la-vista-tijuana/) explicamos cuándo son normales y cuándo no).
 - Dolor de ojo intenso, náuseas o vómito.
 - Debilidad, cara caída o dificultad para hablar al mismo tiempo que ves borroso.
 - Un golpe en el ojo o contacto con un químico.
