@@ -28,7 +28,7 @@ Como referencia general, **una vez al año**. Si ya tienes un diagnóstico de re
 Busca atención médica sin esperar tu cita de rutina si notas:
 
 - Visión borrosa que aparece o empeora de forma repentina.
-- Manchas oscuras o muchas "moscas volantes" nuevas.
+- Manchas oscuras o muchas "moscas volantes" nuevas (lee [moscas volantes en la vista en Tijuana: cuándo es urgente](/blog/moscas-volantes-en-la-vista-tijuana/)).
 - Zonas de la visión que se apagan o se ven distorsionadas.
 - Cambios frecuentes en la graduación sin explicación.
 
