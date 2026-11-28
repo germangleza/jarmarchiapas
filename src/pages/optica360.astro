@@ -22,7 +22,7 @@ const MOSTRAR_TESTIMONIOS = false;
 
 const TITLE = "Óptica 360 · Generación 2027 | Ópticas Jarmar";
 const DESCRIPTION =
-  "6 meses para convertir tu óptica en una empresa rentable. Programa en línea para dueños de ópticas independientes. Una sola generación en 2027, solo 15 ópticas.";
+  "3 meses para convertir tu óptica en una empresa rentable. Programa en línea para dueños de ópticas independientes. Una sola generación en 2027, solo 15 ópticas.";
 const URL = "https://www.jarmar.com/optica360/";
 
 const problemas = [
@@ -47,23 +47,23 @@ const transformacion = [
 const etapas = [
   {
     titulo: "Etapa 1 · Resultados rápidos",
-    meses: "Meses 1–2",
+    meses: "Mes 1",
     texto: "Encontramos el dinero que tu óptica ya tiene en su base de pacientes, en el mostrador y en el inventario.",
   },
   {
     titulo: "Etapa 2 · Control y diferenciación",
-    meses: "Meses 3–4",
+    meses: "Mes 2",
     texto: "Ordenas tus números, defines lo que te hace distinto y pones tu óptica a punto en Google, redes y WhatsApp.",
   },
   {
     titulo: "Etapa 3 · Sistema y crecimiento",
-    meses: "Meses 5–6",
+    meses: "Mes 3",
     texto: "Estrategias digitales para atraer pacientes nuevos de forma constante, más equipo y operación para crecer sin depender de ti.",
   },
 ];
 
 const formato = [
-  ["💻", "<strong>En línea</strong>, sesiones grupales en vivo, 1 a 2 al mes."],
+  ["💻", "<strong>En línea</strong>, sesiones grupales en vivo, 2 al mes."],
   ["🎥", "<strong>Todas las sesiones se graban</strong>: si no puedes asistir, no te pierdes nada."],
   ["⏱️", "<strong>4 horas a la semana</strong> entre sesión e implementación."],
   ["🛠️", "Implementación sobre tu propia óptica, con plantillas y herramientas listas."],
@@ -72,7 +72,7 @@ const formato = [
 ];
 
 const incluye = [
-  "6 meses de programa en línea con sesiones en vivo.",
+  "3 meses de programa en línea con sesiones en vivo.",
   "Grabación de todas las sesiones.",
   "Diagnóstico 360 inicial y auditoría final.",
   "Plantillas, herramientas y formatos de implementación.",
@@ -88,7 +88,7 @@ const pasosAdmision = [
 
 // Mismo texto en el acordeón y en el JSON-LD FAQPage (regla de CLAUDE.md).
 const faqs = [
-  ["¿Cuándo empieza?", "En marzo de 2027. Son 6 meses, con 1 a 2 sesiones en vivo al mes."],
+  ["¿Cuándo empieza?", "En marzo de 2027. Son 3 meses, con 2 sesiones en vivo al mes."],
   ["¿Es presencial o en línea?", "100% en línea. Puedes participar desde cualquier ciudad."],
   ["¿Cuánto tiempo necesito?", "Alrededor de 4 horas a la semana, entre la sesión y la implementación en tu óptica."],
   ["¿Qué pasa si no puedo asistir a una sesión?", "Todas las sesiones se graban. Puedes verla después y seguir con la implementación."],
@@ -388,7 +388,7 @@ const anio = new Date().getFullYear();
     <section class="hero" id="hero">
       <div class="container">
         <span class="eyebrow">Óptica 360 · Generación 2027</span>
-        <h1>6 meses para convertir tu óptica en una empresa rentable.</h1>
+        <h1>3 meses para convertir tu óptica en una empresa rentable.</h1>
         <p class="sub">Un programa para dueños de ópticas independientes que quieren más control, más ventas y una óptica que no dependa solo de ellos. Construido desde 60 años de operar Ópticas Jarmar.</p>
         <div class="ctas">
           <a class="btn" href={DIAGNOSTICO_URL} data-diagnostico="hero">{CTA_DIAGNOSTICO}</a>
@@ -429,7 +429,7 @@ const anio = new Date().getFullYear();
     <!-- 4 · CÓMO FUNCIONA -->
     <section class="section section--alt">
       <div class="container">
-        <h2 class="centro">6 meses. 3 etapas. Resultados desde el primer mes.</h2>
+        <h2 class="centro">3 meses. 3 etapas. Resultados desde el primer mes.</h2>
         <ol class="etapas">
           {etapas.map((e, i) => (
             <li class="etapa">
